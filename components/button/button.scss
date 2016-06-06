@@ -1,0 +1,13 @@
+//
+//  Button Component
+//
+
+$button-primary-color: black;
+$button-primary-border: 1px solid $black;
+
+
+.button {
+  color: $button-primary-color;
+  background: none;
+  border: $button-primary-border;
+}

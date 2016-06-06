@@ -1,0 +1,17 @@
+{
+  "name": "flystyles",
+  "description": "Flywire CSS Styles Framework",
+  "main": "index.scss",
+  "authors": [
+    "Javier <javier.arques@peertransfer.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/peertransfer/flystyles",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
