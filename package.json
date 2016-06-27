@@ -2,9 +2,14 @@
   "name": "flystyles",
   "version": "0.0.1",
   "description": "Flywire CSS Framework",
-  "main": "src/**/*.*",
+  "main": [
+    "dist/main.css",
+    "dist/main.js"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "css:build": "node_modules/.bin/node-sass src/index.scss dist/main.css",
+    "css:autoprefix": "node_modules/.bin/postcss --use autoprefixer -o dist/main.css dist/main.css",
+    "build": "npm run css:build && npm run css:autoprefix"
   },
   "repository": {
     "type": "git",
@@ -15,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/peertransfer/flystyles/issues"
   },
-  "homepage": "https://github.com/peertransfer/flystyles#readme"
+  "homepage": "https://github.com/peertransfer/flystyles#readme",
+  "devDependencies": {
+    "node-sass": "^3.8.0"
+  }
 }

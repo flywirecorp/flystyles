@@ -1,14 +1,15 @@
 //
 //  Button Component
 //
-@import "../../config";
+@import "../../settings";
 
 $button-primary-color: $color-primary !default;
 $button-primary-border: 1px solid $color-primary !default;
 
 
 .button {
-  color: $button-primary-color;
+  color: $button-primary-color !important;
   background: none;
-  border: $button-primary-border;
+  border: $button-primary-border !important;
+  display: flex;
 }

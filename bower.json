@@ -4,7 +4,7 @@
   "main": [
     "src/**/*.scss",
     "src/**/*.js"
-  ]
+  ],
   "authors": [
     "Javier <javier.arques@peertransfer.com>"
   ],
