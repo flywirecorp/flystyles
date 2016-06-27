@@ -2,10 +2,18 @@
   "name": "flystyles",
   "version": "0.0.1",
   "description": "Flywire CSS Framework",
-  "main": [
-    "dist/main.css",
-    "dist/main.js"
+  "keywords": [
+    "css",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
   ],
+  "style": "dist/main.css",
+  "sass": "src/index.scss",
+  "main": "./dist",
   "scripts": {
     "css:build": "node_modules/.bin/node-sass src/index.scss dist/main.css",
     "css:autoprefix": "node_modules/.bin/postcss --use autoprefixer -o dist/main.css dist/main.css",
