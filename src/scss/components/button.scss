@@ -1,7 +1,9 @@
-//
 //  Button Component
-//
-@import "../../settings/index";
+//  
+//  @group components
+//  @requires settings/colors
+
+@import "../settings/colors";
 
 $button-primary-color: $color-primary !default;
 $button-primary-border: 1px solid $color-primary !default;

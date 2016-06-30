@@ -2,7 +2,8 @@
   "name": "flystyles",
   "description": "Flywire CSS Styles Framework",
   "main": [
-    "src/index.scss",
+    "dist/**/*.*",
+    "src/main.scss",
     "src/**/*.scss",
     "src/**/*.js"
   ],

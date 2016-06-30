@@ -1,0 +1,22 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge
+
+# Permalinks
+permalink:        pretty
+
+# Server
+source:           styleguide
+destination:      styleguide/dist
+host:             0.0.0.0
+port:             9001
+url:              http://flywire.com
+encoding:         UTF-8
+
+collections:
+  components:
+    output: true
+  base:
+    output: true
+  utilities:
+    output: true

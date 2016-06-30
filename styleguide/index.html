@@ -1,0 +1,9 @@
+---
+layout: default
+title: "Index page"
+---
+
+
+{% for component in site.components %}
+<a href="{{ component.url }}">{{ component.title }}</a>
+{% endfor %}
