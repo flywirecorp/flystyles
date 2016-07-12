@@ -2,6 +2,7 @@
 layout: default
 title: Buttons
 scss: _assets/stylesheets/_notices.scss
+published: true
 ---
 # Buttons
 
@@ -10,7 +11,7 @@ Use button styles for actions in forms, dialogs, and more. Includes support for 
 
 ## Examples
 
-Bootstrap includes six predefined button styles, each serving its own semantic purpose.
+Flystyles includes six predefined button styles, each serving its own semantic purpose.
 
 {% example html %}
 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
