@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Buttons
-scss: _assets/stylesheets/_notices.scss
 ---
+
 # Buttons
 
 Use button styles for actions in forms, dialogs, and more. Includes support for a handful of contextual variations, sizes, states, and more.
