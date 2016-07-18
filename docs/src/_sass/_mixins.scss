@@ -18,3 +18,13 @@
 @function rem($pixels) {
   @return #{$pixels / $base-font-size}rem;
 }
+
+
+
+//  Creates a media query (mobile first in mind)
+//  @param {String} $breakpoint to responds
+@mixin media($breakpoint) {
+  @media screen and (min-width: #{map-get($breakpoints, $breakpoint)}) {
+    @content;
+  }
+}

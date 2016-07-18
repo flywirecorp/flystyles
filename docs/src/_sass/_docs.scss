@@ -1,8 +1,6 @@
 //
 //  Docs styles
 //
-@import "variables";
-@import "mixins";
 
 
 //  Base Styles
@@ -31,7 +29,7 @@ body {
 }
 %wrapper,
 .wrapper {
-  max-width: 1024px;
+  max-width: $wrapper-max-width;
   padding: 0 $base-spacing;
   margin: 0 auto;
 }
@@ -59,16 +57,22 @@ body {
 
 // Nav
 .docs-nav {
-  display: block;
+  display: none;
   float: left;
   width: 200px;
   height: 100%;
   background: red;
 
+  @include media(md) {
+    display: block;
+  }
 }
 // Content
 .docs-content {
-  padding-left: 220px;
+  @include media(md) {
+    padding-left: 220px;
+  }
+
 }
 
 // Typography
