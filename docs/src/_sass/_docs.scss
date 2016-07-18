@@ -38,9 +38,13 @@ body {
 //
 // Docs Header
 .docs-header {
-  height: 120px;
+  height: 60px;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0,0,0,.1);
+
+  @include media(md) {
+    height: 120px;
+  }
 }
 .docs-header-content {
   @extend .wrapper;
@@ -51,8 +55,18 @@ body {
 }
 .docs-siteTitle {
   margin: 0 0 0 auto;
-  font-size: 1.15rem;
   text-transform: uppercase;
+  font-size: .9rem;
+
+  @include media(md) {
+    font-size: 1.15rem;
+  }
+}
+.docs-logo {
+  height: 30px;
+  @include media(md) {
+    height: 40px;
+  }
 }
 
 // Nav
@@ -71,6 +85,8 @@ body {
     top: 0;
   }
 }
+
+
 // Content
 .docs-content {
   @include media(md) {

@@ -1,7 +1,7 @@
 <section class="docs-section">
   <header class="docs-section-header">
     {% if doc.title != nil %}
-      <h3 class="docs-type-subsection">{{ doc.title }}</h3>
+      <h3 class="docs-type-subsection" id="{{ doc.slug }}">{{ doc.title }}</h3>
     {% endif %}
     <p class="docs-type-description">{{ doc.description }}</p>
   </header>

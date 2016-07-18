@@ -5,6 +5,9 @@ highlighter:      rouge
 # Permalinks
 permalink:        pretty
 
+title:            Flywire Styleguide
+description:      Common UI patterns used through Flywire apps
+
 # Server
 source:           src
 destination:      dist

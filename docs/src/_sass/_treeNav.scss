@@ -1,0 +1,42 @@
+//
+//  treeNav
+//  Tree Navigation
+
+$treeNav-link-color: #38495b !default;
+$treeNav-link-color-hover: #0091d4 !default;
+
+.treeNav {
+  list-style: none;
+}
+.treeNav-parentLink {
+  display: block;
+  padding: .8rem 2rem;
+  font-weight: 700;
+  color: $treeNav-link-color;
+  text-decoration: none;
+  border-radius: 3px;
+
+  &:hover {
+    background: #E4E9EF;
+  }
+}
+.treeNav-children {
+  padding-left: 3rem;
+  margin: 0;
+  list-style: none;
+}
+.treeNav-childLink {
+  display: block;
+  padding: .8rem;
+  color: $treeNav-link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $treeNav-link-color-hover;
+  }
+  &:active,
+  &:focus {
+    font-weight: 700;
+    color: $treeNav-link-color-hover;
+  }
+}
