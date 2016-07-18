@@ -61,10 +61,14 @@ body {
   float: left;
   width: 200px;
   height: 100%;
-  background: red;
 
   @include media(md) {
     display: block;
+  }
+
+  &.is-fixed {
+    position: fixed;
+    top: 0;
   }
 }
 // Content
