@@ -1,17 +1,17 @@
 //
 //  Docs styles
 //
-//
+@import "variables";
+@import "mixins";
 
-$base-spacing: 1.5rem;
 
 //  Base Styles
 //  TODO: Add to framework
 //
 html {
-  font-size: 14px;
-  line-height: 1.6;
   box-sizing: border-box;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
 }
 *,
 *::after,
@@ -55,4 +55,45 @@ body {
   margin: 0 0 0 auto;
   font-size: 1.15rem;
   text-transform: uppercase;
+}
+
+// Nav
+.docs-nav {
+  display: block;
+  float: left;
+  width: 200px;
+  height: 100%;
+  background: red;
+
+}
+// Content
+.docs-content {
+  padding-left: 220px;
+}
+
+// Typography
+
+.docs-type-section {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+
+}
+.docs-type-subsection {
+  margin: 0;
+  font-size: rem(28px);
+  font-weight: 400;
+}
+.docs-type-description {
+  margin: 0;
+  font-size: rem(16px);
+  color: #6B7886;
+}
+
+// Docs section
+
+.docs-section-header {
+  padding-bottom: $base-spacing/2;
+  margin-bottom: $base-spacing;
+  border-bottom: 1px solid #DADFE4;
 }

@@ -14,9 +14,5 @@ url:              http://flywire.com
 encoding:         UTF-8
 
 collections:
-  components:
-    output: true
-  base:
-    output: true
-  utilities:
-    output: true
+  docs:
+    output: false

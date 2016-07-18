@@ -2,8 +2,11 @@
 layout: default
 title: "Index page"
 ---
+{% assign categories = site.docs | group_by:"category" %}
 
-
-{% for component in site.components %}
-<a href="{{ component.url }}">{{ component.title }}</a>
+{% for category in categories %}
+  <h2 class="doc-type-section">{{ category.name | capitalize }}</h2>
+  {% for doc in category.items %}
+    {% include doc.html %}
+  {% endfor %}
 {% endfor %}
