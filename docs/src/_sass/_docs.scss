@@ -66,6 +66,7 @@ body {
   height: 30px;
   @include media(md) {
     height: 40px;
+    margin-left: 210px;
   }
 }
 

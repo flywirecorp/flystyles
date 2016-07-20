@@ -1,42 +1,80 @@
 //
 //  treeNav
 //  Tree Navigation
-
-$treeNav-link-color: #38495b !default;
-$treeNav-link-color-hover: #0091d4 !default;
+$treeNav-link-color-default: #38495b;
+$treeNav-link-color-active:  #0091d4;
+$treeNav-transition:         200ms all ease-in-out;
 
 .treeNav {
   list-style: none;
 }
 .treeNav-parentLink {
+  position: relative;
   display: block;
-  padding: .8rem 2rem;
+  padding: 0.8rem 2rem;
   font-weight: 700;
-  color: $treeNav-link-color;
+  color: $treeNav-link-color-default;
   text-decoration: none;
   border-radius: 3px;
+  transition: $treeNav-transition;
+
 
   &:hover {
     background: #E4E9EF;
   }
+  &::after {
+    content: '';
+    position: absolute;
+    right: 1rem;
+    top: 1.2rem;
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    background-image: url("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Im0xMjEuMywzNC42Yy0xLjYtMS42LTQuMi0xLjYtNS44LDBsLTUxLDUxLjEtNTEuMS01MS4xYy0xLjYtMS42LTQuMi0xLjYtNS44LDAtMS42LDEuNi0xLjYsNC4yIDAsNS44bDUzLjksNTMuOWMwLjgsMC44IDEuOCwxLjIgMi45LDEuMiAxLDAgMi4xLTAuNCAyLjktMS4ybDUzLjktNTMuOWMxLjctMS42IDEuNy00LjIgMC4xLTUuOHoiIGZpbGw9IiMwMDAwMDAiLz4KICA8L2c+Cjwvc3ZnPgo=");
+    background-size: contain;
+    transition: $treeNav-transition;
+  }
+  .treeNav-parent.is-selected &{
+    color: #fff;
+    background-color: $treeNav-link-color-active;
+    &::after {
+      transform: rotate(180deg);
+      background-image: url("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgogIDxnPgogICAgPHBhdGggZD0ibTEyMS4zLDM0LjZjLTEuNi0xLjYtNC4yLTEuNi01LjgsMGwtNTEsNTEuMS01MS4xLTUxLjFjLTEuNi0xLjYtNC4yLTEuNi01LjgsMC0xLjYsMS42LTEuNiw0LjIgMCw1LjhsNTMuOSw1My45YzAuOCwwLjggMS44LDEuMiAyLjksMS4yIDEsMCAyLjEtMC40IDIuOS0xLjJsNTMuOS01My45YzEuNy0xLjYgMS43LTQuMiAwLjEtNS44eiIgZmlsbD0iI0ZGRkZGRiIvPgogIDwvZz4KPC9zdmc+Cg==");
+    }
+  }
 }
 .treeNav-children {
-  padding-left: 3rem;
+  padding-left: 2rem;
   margin: 0;
   list-style: none;
+  max-height: 0;
+	overflow: hidden;
+
+  // hidden
+  opacity: 0;
+  visibility: hidden;
+
+  // shown
+  .treeNav-parent.is-selected &{
+    visibility: visible;;
+    max-height: 200px;
+    opacity: 1;
+  }
+
+  transition: $treeNav-transition;
 }
 .treeNav-childLink {
   display: block;
-  padding: .8rem;
-  color: $treeNav-link-color;
+  padding: 0.8rem;
+  color: $treeNav-link-color-default;
   text-decoration: none;
+  transition: $treeNav-transition;
 
   &:hover {
-    color: $treeNav-link-color-hover;
+    color: $treeNav-link-color-active;
   }
-  &:active,
-  &:focus {
+  &.is-selected {
     font-weight: 700;
-    color: $treeNav-link-color-hover;
+    color: $treeNav-link-color-active;
   }
 }

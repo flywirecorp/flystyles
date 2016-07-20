@@ -3,7 +3,7 @@
 <nav class="docs-nav treeNav sticky">
   {% for category in categories %}
     <li class="treeNav-parent">
-      <a class="treeNav-parentLink" href="#">{{ category.name | capitalize }}</a>      
+      <a class="treeNav-parentLink" href="#">{{ category.name | capitalize }}</a>
       <ul class="treeNav-children">
       {% for doc in category.items %}
         <li class="treeNav-childItem">
