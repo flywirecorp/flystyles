@@ -51,13 +51,13 @@ eos
         end
 
         rendered_output = example(code) + add_code_tag(output)
-        prefix + rendered_output + suffix
+        "<div class=\'code\'>" + prefix + rendered_output + suffix + '</div>'
       end
 
       def example(output)
-        "<div class=\"bd-example\" data-example-id=\"#{@options[:id]}\">\n#{output}\n</div>"
+        "<div class=\"code-example\" data-example-id=\"#{@options[:id]}\">\n#{output}\n</div>"
       end
-    
+
       def remove_holderjs(code)
         code = code.gsub(/data-src="holder.js.+?"/, 'src="..."')
       end
@@ -68,7 +68,7 @@ eos
         lexer = Rouge::Lexer.find_fancy(@lang, code) || Rouge::Lexers::PlainText
         code = remove_holderjs(code)
         code = formatter.format(lexer.lex(code))
-        "<div class=\"highlight\"><pre>#{code}</pre></div>"
+        "<div class=\"code-highlight highlight\"><pre>#{code}</pre></div>"
       end
 
       def add_code_tag(code)

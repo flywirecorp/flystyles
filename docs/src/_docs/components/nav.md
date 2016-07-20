@@ -5,12 +5,3 @@ category: components
 ---
 
 Esto es un texto de prueba
-
-Esto es un texto de prueba
-Esto es un texto de prueba
-Esto es un texto de prueba
-Esto es un texto de prueba
-
-
-
-Esto es un texto de prueba

@@ -5,7 +5,7 @@ title: "Index page"
 {% assign categories = site.docs | group_by:"category" %}
 
 {% for category in categories %}
-  <h2 class="doc-type-section">{{ category.name | capitalize }}</h2>
+  <h2 class="docs-type-section">{{ category.name | capitalize }}</h2>
   {% for doc in category.items %}
     {% include doc.html %}
   {% endfor %}
