@@ -1,0 +1,55 @@
+//
+//  Config and variables
+//
+//  Copy settings from this file into the provided `_custom.scss` to override
+//  the Flystyles defaults without modifying key, versioned files.
+
+
+
+//  Colors
+//
+// Brand colors
+
+$color-branding-primary-light:     #0090d2 !default;
+$color-branding-primary:           #0084c0 !default;
+$color-branding-primary-dark:      #0f476b !default;
+
+$color-branding-secondary-light:   #e9922f !default;
+$color-branding-secondary:         #db7909 !default;
+$color-branding-secondary-dark:    #c36800 !default;
+
+$color-branding-tertiary-light:    #48b985 !default;
+$color-branding-tertiary:          #319b6a !default;
+$color-branding-tertiary-dark:     #017043 !default;
+
+// UI colors
+
+$color-info:          blue   !default;
+$color-success:       green  !default;
+$color-danger:        red    !default;
+$color-warning:       orange !default;
+
+// Grayscale colors
+
+$color-gray-lighter:  #eee !default;
+$color-gray-light:    #ccc !default;
+$color-gray:          gray !default;
+$color-gray-dark:     #666 !default;
+$color-gray-darker:   #555 !default;
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 544px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$grid-gutter: 30px !default;
+$grid-colums: 12   !default;

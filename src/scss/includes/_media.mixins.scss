@@ -1,0 +1,56 @@
+//
+//  Media Queries Mixins
+//
+//  @requires config
+//
+// $grid-grid-breakpoints: (
+//   xs: 0,
+//   sm: 544px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px
+// ) !default;
+//
+
+
+@import "config";
+
+@mixin media-up($breakpoint) {
+  @media (min-width: map-get($grid-breakpoints, $breakpoint)){
+    @content;
+  }
+}
+
+@mixin media-down($breakpoint) {
+  @media (max-width: map-get($grid-breakpoints, $breakpoint)){
+    @content;
+  }
+}
+
+@mixin media-between($breakpoint-from, $breakpoint-to) {
+  @media (min-width: map-get($grid-breakpoints, $breakpoint-from)) and (max-width: map-get($grid-breakpoints, $breakpoint-to)){
+    @content;
+  }
+}
+
+@mixin media($breakpoint) {
+  @include media-up($breakpoint);
+}
+
+@mixin retina() {
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin print() {
+  @media print {
+    @content;
+  }
+}

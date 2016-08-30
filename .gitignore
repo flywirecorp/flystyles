@@ -16,3 +16,4 @@ node_modules
 *.o
 *.a
 mkmf.log
+.DS_Store

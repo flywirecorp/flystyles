@@ -1,0 +1,90 @@
+//
+//  Grid Components
+//
+//  @group components
+//  @requires config
+//
+
+@import "../includes/media.mixins";
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 544px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$grid-gutter:  30px !default;
+$grid-columns: 12   !default;
+
+//
+//  Grid
+//  creates a grid with the SAME width columns
+//
+//  @html
+//  <div class="grid grid--sm-4 grid--lg-6">
+//    <div class="gridColumn">...</div>
+//    <div class="gridColumn">...</div>
+//    <div class="gridColumn">...</div>
+//    ...
+//
+
+.grid {
+
+}
+
+//
+//  Grid Row
+//  creates a grid where you can define the with of every column
+//  the number of columns is determined by $grid-columns
+//
+//  @html
+//  <div class="gridRow">
+//    <div class="gridColumn gridColumn--md-2">...</div>
+//    <div class="gridColumn gridColumn--md-6">...</div>
+//    <div class="gridColumn gridColumn--md-4">...</div>
+//    ...
+//
+
+// Grid Row
+//
+
+@mixin grid-row() {
+  margin-left:  ($grid-gutter / -2);
+  margin-right: ($grid-gutter / -2);
+}
+.gridRow {
+  @include grid-row();
+}
+
+// Grid Column
+//
+
+@mixin grid-column-base() {
+  position: relative;
+  min-height: 1px; // Prevent collapsing
+  padding-right: ($grid-gutter / 2);
+  padding-left:  ($grid-gutter / 2);
+}
+
+@mixin grid-column-size($size) {
+  float: left;
+  width: percentage($size / 12);
+}
+
+.gridColumn {
+  @include grid-column-base();
+}
+
+// Create breakpoint/size columns variants
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-up($breakpoint) {
+    @for $i from 1 through $grid-columns {
+      .gridColumn--#{$breakpoint}-#{$i} {
+        @include grid-column-size($i);
+      }
+    }
+  }
+}
