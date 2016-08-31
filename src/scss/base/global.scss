@@ -1,0 +1,50 @@
+//
+//  Global styles
+//
+
+html {
+  box-sizing: border-box;
+  font-size: $font-size-root;
+}
+
+// Set box-sizing globally to handle padding and border widths
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+// Default body styles
+body {
+  // Make the `body` use the `font-size-root`
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  // Go easy on the eyes and use something other than `#000` for text
+  color: $body-color;
+  // By default, `<body>` has no `background-color` so we set one as a best practice.
+  background-color: $body-background;
+
+  // Webfont Smoothing and Antialiasing
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Default images
+img {
+  // Get rid of gap under images by making them display: inline-block; by default
+  display: inline-block;
+
+  // Grid defaults to get images and embeds to work properly
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+
+  // IE Fix: Bicubic Scaling for Images
+  -ms-interpolation-mode: bicubic;
+}
+
+// Always hide an element with the `hidden` HTML attribute (from PureCSS).
+[hidden] {
+  display: none !important;
+}

@@ -1,0 +1,34 @@
+//
+//  Lists base styles
+//
+
+// Lists
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+// List items
+li {
+  font-size: inherit;
+}
+
+ // Nested unordered/ordered lists
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+// Definition lists
+dt {
+  font-weight: $dt-font-weight;
+}
+
+dd {
+  margin-bottom: .5rem;
+  margin-left: 0; // Undo browser default
+}

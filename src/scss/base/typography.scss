@@ -1,0 +1,84 @@
+//
+// Typography
+//
+// Remove top margins from headings
+//
+// By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
+// margin for easier control within type scales as it avoids margin collapsing.
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+// Reset margins on paragraphs
+//
+// Similarly, the top margin on `<p>`s get reset. However, we also reset the
+// bottom margin to use `rem` units instead of `em`.
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+blockquote {
+  margin: 0 0 1rem;
+}
+
+// Emphasized text
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+// Strong text
+b,
+strong {
+  font-weight: $global-weight-bold;
+  line-height: inherit;
+}
+
+// Small text
+small {
+  font-size: $small-font-size;
+  line-height: inherit;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: $header-margin-bottom;
+  font-family: $header-font-family;
+  font-style: $header-font-style;
+  font-weight: $header-font-weight;
+  line-height: $header-lineheight;
+  color: $header-color;
+  text-rendering: $header-text-rendering;
+}
+
+// Horizontal rule
+hr {
+  max-width: $hr-width;
+  height: 0;
+  margin: $hr-margin;
+  clear: both;
+  border: 0;
+  border-bottom: $hr-border;
+}

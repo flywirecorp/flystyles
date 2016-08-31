@@ -1,0 +1,18 @@
+//
+// Tables base styles
+//
+
+table {
+  // No longer part of Normalize since v4
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+  caption-side: bottom;
+}
+
+th {
+  // Centered by default, but left-align-ed to match the `td`s below.
+  text-align: left;
+}

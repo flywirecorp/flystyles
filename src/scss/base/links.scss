@@ -1,0 +1,23 @@
+//
+//  Links
+//
+//  default styles for anchor links
+
+a {
+  line-height: inherit;
+  color: $link-color;
+  text-decoration: $link-text-decoration;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    color: $link-color-hover;
+    @if $link-text-decoration-hover != $link-text-decoration {
+      text-decoration: $link-text-decoration-hover;
+    }
+  }
+
+  img {
+    border: 0;
+  }
+}
