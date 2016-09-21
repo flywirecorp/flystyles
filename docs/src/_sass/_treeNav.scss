@@ -7,6 +7,10 @@ $treeNav-transition:         200ms all ease-in-out;
 
 .treeNav {
   list-style: none;
+
+  a, a:link, a:active, a:hover, a:focus {
+    text-decoration: none;
+  }
 }
 .treeNav-parentLink {
   position: relative;
@@ -14,10 +18,8 @@ $treeNav-transition:         200ms all ease-in-out;
   padding: 0.8rem 2rem;
   font-weight: 700;
   color: $treeNav-link-color-default;
-  text-decoration: none;
   border-radius: 3px;
   transition: $treeNav-transition;
-
 
   &:hover {
     background: #E4E9EF;
@@ -44,20 +46,20 @@ $treeNav-transition:         200ms all ease-in-out;
   }
 }
 .treeNav-children {
+  max-height: 0;
   padding-left: 2rem;
   margin: 0;
+  overflow: hidden;
   list-style: none;
-  max-height: 0;
-	overflow: hidden;
 
   // hidden
-  opacity: 0;
   visibility: hidden;
+  opacity: 0;
 
   // shown
   .treeNav-parent.is-selected &{
-    visibility: visible;;
     max-height: 200px;
+    visibility: visible;;
     opacity: 1;
   }
 
@@ -67,7 +69,6 @@ $treeNav-transition:         200ms all ease-in-out;
   display: block;
   padding: 0.8rem;
   color: $treeNav-link-color-default;
-  text-decoration: none;
   transition: $treeNav-transition;
 
   &:hover {

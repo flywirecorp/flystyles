@@ -4,33 +4,15 @@
 //  Base Styles
 //  TODO: Add to framework
 //
-html {
-  box-sizing: border-box;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-}
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-body {
-  padding: 0;
-  margin: 0;
-  font-family: $base-font-family;
-  font-weight: 400;
-  line-height: 1.6;
-  color: #38495B;
-  background: #F8FAFD;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+
+// Wrapper to set max width
 %wrapper,
 .wrapper {
   max-width: $wrapper-max-width;
   padding: 0 $base-spacing;
   margin: 0 auto;
 }
+
 //
 // Layout
 //
@@ -40,10 +22,11 @@ body {
   margin-bottom: 2rem;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0,0,0,.1);
-  @include media(md) {
+  @include media-up(md) {
     height: 120px;
   }
 }
+
 .docs-header-content {
   @extend .wrapper;
   display: flex;
@@ -51,41 +34,48 @@ body {
   justify-content: flex-end;
   align-items: center;
 }
+
 .docs-siteTitle {
   margin: 0 0 0 auto;
   text-transform: uppercase;
-  font-size: 0.9rem;
-  @include media(md) {
+  font-size: .9rem;
+  font-weight: $font-weight-semi-bold;
+  @include media-up(md) {
     font-size: 1.15rem;
   }
 }
+
 .docs-logo {
   height: 30px;
-  @include media(md) {
+  @include media-up(md) {
     height: 40px;
     margin-left: 220px;
   }
 }
-// Nav
+
+// Docs Nav
 .docs-nav {
   display: none;
   float: left;
   width: 200px;
   height: 100%;
-  @include media(md) {
+  @include media-up(md) {
     display: block;
   }
+
   &.is-fixed {
     position: fixed;
     top: 0;
   }
 }
-// Content
+
+// Docs Content
 .docs-content {
-  @include media(md) {
+  @include media-up(md) {
     padding-left: 230px;
   }
 }
+
 // Typography
 .docs-type-section {
   margin: 0 0 1rem;
@@ -93,51 +83,88 @@ body {
   font-weight: 700;
   line-height: 1;
 }
+
 .docs-type-subsection {
-  margin: 0;
+  margin: 0 0 .3rem;
   font-size: rem(28px);
   font-weight: 400;
 }
+
 .docs-type-description {
   margin: 0;
   font-size: rem(16px);
   color: #6B7886;
 }
+
 // Docs section
 .docs-section {
   display: block;
   margin-bottom: 2rem;
 }
+
 .docs-section-header {
-  padding-bottom: $base-spacing/2;
-  margin-bottom: $base-spacing;
+  padding-bottom: $spacer-sm;
+  margin-bottom: $spacer-lg;
   border-bottom: 1px solid #DADFE4;
 }
+
 // Code Examples
+
+code {
+  padding: .2rem .4rem;
+  font-size: 90%;
+  color: #bd4147;
+  background: #f0f4fb;
+  border-radius: 3px;
+  font-family: $base-font-family;
+}
+
 .code {
   margin-bottom: 2rem;
   overflow: hidden;
   border: 1px solid #D1DAE6;
   border-radius: 3px;
 }
+
 .code-example {
   padding: 2rem;
   background: #fff;
   border-bottom: 1px solid #D1DAE6;
 }
+
 .code-highlight {
   background: #e0e6ed;
 }
+
 pre {
   margin: 0;
+  overflow: auto;
+  background: #f0f4fb;
+  font-size: 14px;
 }
-code {
+figure {
+  margin: 0 0 $spacer-lg;
+}
+
+pre code {
   display: block;
   padding: 2rem;
-  margin: 0;
-  background: #f0f4fb;
   font-family: $base-font-family;
+  font-size: inherit;
+  color: inherit;
+  background: #f0f4fb;
 }
+
+.bd-example-row .gridRow > .gridColumn, .bd-example-row .gridRow > [class^="gridColumn"] {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  background-color: rgba(#7A8FA2, 1);
+  border: 2px solid #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #fff;
+}
+
 // Colors examples
 .color {
   margin-bottom: 2rem;
@@ -147,8 +174,9 @@ code {
   border: 1px solid #D1DAE6;
   border-radius: 3px;
 }
+
 .color-example {
-  position: relative;;
+  position: relative;
   display: flex;
   padding-top: 50%;
   font-weight: 600;
@@ -156,34 +184,50 @@ code {
   justify-content: center;
   align-items: center;
 }
+
 .color-code {
   padding: rem(10px);
   font-size: rem(13px);
 }
+
 // Block grid
-.blockGrid--3cols {
+.blockGrid--3cols,
+.blockGrid--4cols {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-
-  @include media(sm) {
+  @include media-up(sm) {
     flex-direction: row;
     flex-wrap: wrap;
   }
 }
+
 .blockGrid--3cols > div {
   flex-basis: 31%;
 }
+
+.blockGrid--4cols > div {
+  flex-basis: 23%;
+}
+
 .color-name {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+  font-size: 90%;
 
+  &--dark {
+    color: rgba(0,0,0,.6);
+  }
+}
 
 // Utilities
 .u-alpha-50 {
   opacity: .5;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 0 rgba(0,0,0,.3);
 }
