@@ -8,7 +8,8 @@
   "scripts": {
     "css:build": "node_modules/.bin/node-sass src/scss/flystyles.scss dist/flystyles.css",
     "css:autoprefix": "node_modules/.bin/postcss --use autoprefixer -o dist/flystyles.css dist/flystyles.css",
-    "build": "npm run css:build && npm run css:autoprefix"
+    "css:minify": "node_modules/.bin/cleancss -o dist/flystyles.min.css dist/flystyles.css",
+    "build": "npm run css:build && npm run css:autoprefix && npm run css:minify"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/peertransfer/flystyles#readme",
   "devDependencies": {
+    "clean-css": "^3.4.19",
     "node-sass": "^3.8.0"
   }
 }
