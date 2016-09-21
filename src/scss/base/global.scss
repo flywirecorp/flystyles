@@ -4,8 +4,13 @@
 
 html {
   box-sizing: border-box;
-  font-size: $font-size-root;
+  font-size: $font-size-root * .9;
+
+  @include media-up(md) {
+    font-size: $font-size-root;
+  }
 }
+
 
 // Set box-sizing globally to handle padding and border widths
 *,

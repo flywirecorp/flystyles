@@ -12,9 +12,6 @@
 // ) !default;
 //
 
-
-@import "config";
-
 @mixin media-up($breakpoint) {
   @media (min-width: map-get($grid-breakpoints, $breakpoint)){
     @content;

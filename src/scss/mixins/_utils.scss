@@ -1,0 +1,17 @@
+//
+//  Utilities
+//
+
+// Removes the unit (e.g. px, em, rem) from a value, returning the number only.
+// @param {Number} $num - Number to strip unit from.
+// @returns {Number} The same number, sans unit.
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+// Converts pixels to rem
+// @param {String} $pixels
+// @returns {String} returns the unit in rem's
+@function rem($pixels) {
+  @return #{$pixels / $font-size-root}rem;
+}

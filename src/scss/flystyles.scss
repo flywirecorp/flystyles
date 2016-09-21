@@ -3,18 +3,29 @@
 //
 //  create your own configuration calling the components you need
 //
-//
 
 //  Config file
 //
 //  create your own customized Flystyles duplicating config file
 //  and setting your custom values
+
 @import "config";
 
+//  Mixins files
+//
+//  Mixins used around the whole framework, those files dont's output anything
 
-//  Base
+@import "mixins/mixins";
+
+// Base
 //
-//
+// Load HTML default styles
+
+@import "base/base";
+
 
 // Components
 //
+// load the components that you need
+
+@import "components/grid";

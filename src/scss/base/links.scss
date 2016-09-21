@@ -11,9 +11,9 @@ a {
 
   &:focus,
   &:hover {
-    color: $link-color-hover;
-    @if $link-text-decoration-hover != $link-text-decoration {
-      text-decoration: $link-text-decoration-hover;
+    color: $link-hover-color;
+    @if $link-hover-text-decoration != $link-text-decoration {
+      text-decoration: $link-hover-text-decoration;
     }
   }
 

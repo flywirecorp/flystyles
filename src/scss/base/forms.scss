@@ -14,26 +14,27 @@ textarea {
   min-height: 50px;
   // Textareas should really only resize vertically so they don't break their (horizontal) containers.
   resize: vertical;
-  border-radius: $global-radius;
+  border-radius: $global-border-radius;
 }
 
 // Make select elements are 100% width by default
 select {
   width: 100%;
-  border-radius: $global-radius;
+  border-radius: $global-border-radius;
 }
 
 // Reset <button> styles created by most browsers
 button {
-  @include disable-mouse-outline;
+  padding: 0;
+  line-height: 1;
+  background: transparent;
+  border: 0;
+  border-radius: $global-border-radius;
+  outline: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: transparent;
-  padding: 0;
-  border: 0;
-  border-radius: $global-radius;
-  line-height: 1;
 }
+
 
 // Work around a Firefox/IE bug where the transparent `button` background
 // results in a loss of the default `button` focus styles.
@@ -55,16 +56,13 @@ textarea {
   // ensures we don't need to unnecessarily redeclare the global font stack.
   line-height: inherit;
   // iOS adds rounded borders by default
-  border-radius: $global-radius;
+  border-radius: $global-border-radius;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
-  // Apply a disabled cursor for radios and checkboxes.
-  //
-  // Note: Neither radios nor checkboxes can be readonly.
   &:disabled {
-    cursor: $cursor-disabled;
+    cursor: not-allowed;
   }
 }
 

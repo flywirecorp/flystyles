@@ -2,10 +2,8 @@
 //  Grid Component
 //
 //  @group components
-//  @requires includes/config
-//  @requires includes/media.mixins
 
-@import "../includes/media.mixins";
+@import "../mixins/mixins";
 
 $grid-breakpoints: (
   xs: 0,
@@ -49,7 +47,14 @@ $grid-columns: 12 !default;
 @mixin grid-row() {
   margin-left: ($grid-gutter / -2);
   margin-right: ($grid-gutter / -2);
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
+
 
 .gridRow {
   @include grid-row();

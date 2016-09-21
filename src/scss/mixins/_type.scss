@@ -1,0 +1,52 @@
+//
+//  Typograpy mixins
+//
+
+// Headings
+@mixin type-heading() {
+  margin-top: 0;
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+
+@mixin type-h1 {
+  font-size: $type-h1-font-size;
+  font-weight: $type-h1-font-weight;
+}
+
+@mixin type-h2 {
+  font-size: $type-h2-font-size;
+  font-weight: $type-h2-font-weight;
+}
+
+@mixin type-h3 {
+  font-size: $type-h3-font-size;
+  font-weight: $type-h3-font-weight;
+}
+
+@mixin type-h4 {
+  font-size: $type-h4-font-size;
+  font-weight: $type-h4-font-weight;
+}
+
+@mixin type-h5 {
+  font-size: $type-h5-font-size;
+  font-weight: $type-h5-font-weight;
+}
+
+@mixin type-h6 {
+  font-size: $type-h6-font-size;
+  font-weight: $type-h6-font-weight;
+}
+
+
+// Horizontal rule
+
+@mixin hr {
+  margin-top: $spacer-y;
+  margin-bottom: $spacer-y;
+  border: 0;
+  border-top: $hr-border-width solid $hr-border-color;
+}
