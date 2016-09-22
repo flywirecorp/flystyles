@@ -3,13 +3,7 @@
 {% include head.html %}
 
 <body>
-
-  <header class="docs-header">
-    <div class="docs-header-content">
-      <img src="/images/logo.svg" alt="flywire" class="docs-logo">
-      <h1 class="docs-siteTitle">UI Pattern Library</h1>
-    </div>
-  </header>
+  {% include header.html %}
 
   <main class="wrapper">
     {% include nav.html %}
@@ -17,12 +11,13 @@
     <article class="docs-content">
       {{ content }}
     </article>
-    </div>
-    <script type="text/javascript" src="/javascript/Sticky.js"></script>
-    <script type="text/javascript" src="/javascript/SmoothScroll.js"></script>
-    <script type="text/javascript" src="/javascript/TreeNav.js"></script>
-    <script type="text/javascript" src="/javascript/ScrollSpy.js"></script>
-    <script type="text/javascript" src="/javascript/main.js"></script>
+  </main>
+
+  <script type="text/javascript" src="/javascript/Sticky.js"></script>
+  <script type="text/javascript" src="/javascript/SmoothScroll.js"></script>
+  <script type="text/javascript" src="/javascript/TreeNav.js"></script>
+  <script type="text/javascript" src="/javascript/ScrollSpy.js"></script>
+  <script type="text/javascript" src="/javascript/main.js"></script>
 </body>
 
 </html>
