@@ -4,24 +4,24 @@ title: "CSS Guidelines"
 order: 4
 ---
 
-## CSS Guidelines
+# CSS Guidelines
 
-1. [Format] (#css-guidelines_1-format)
- * [Declaration order](#css-guidelines_1-format_declaration-order)
- * [Sass specific](#css-guidelines_1-format_sass-specific)
-2. [Naming Conventions](#css-guidelines_2-naming-conventions)
- * [Components](https://lounge.peertransfer.com/wiki/tech/frontend/CSS-Guidelines#css-guidelines_2-naming-conventions_components)
- * [Utilities](https://lounge.peertransfer.com/wiki/tech/frontend/CSS-Guidelines#css-guidelines_2-naming-conventions_utilities)
- * [JS Hacks](https://lounge.peertransfer.com/wiki/tech/frontend/CSS-Guidelines#css-guidelines_2-naming-conventions_js-hacks)
-3. [Commenting](https://lounge.peertransfer.com/wiki/tech/frontend/CSS-Guidelines#css-guidelines_3-commenting) (NOT FINISHED)
-  * [Sass comments](https://lounge.peertransfer.com/wiki/tech/frontend/CSS-Guidelines#css-guidelines_3-commenting_sass-comments)
-  * [CSS Comments](https://lounge.peertransfer.com/wiki/tech/frontend/CSS-Guidelines#css-guidelines_3-commenting_css-comments)
-4. [Sass specific](https://lounge.peertransfer.com/wiki/tech/frontend/CSS-Guidelines#css-guidelines_4-sass-specific)
-  * [Variables](https://lounge.peertransfer.com/wiki/tech/frontend/CSS-Guidelines#css-guidelines_4-sass-specific_variables)
+1. [Format](#format)
+ * [Declaration order](#declaration-order)
+ * [Sass specific](#sass-specific)
+2. [Naming Conventions](#naming-conventions)
+ * [Components](#components)
+ * [Utilities](#utilities)
+ * [JS Hacks](#js-hacks)
+3. [Commenting](#commenting) (NOT FINISHED)
+  * [Sass comments](#sass-comments)
+  * [CSS Comments](#css-comments)
+4. [Sass specific](#sass-specific)
+  * [Variables](#specific_variables)
 5. Tooling (TODO)
-6. [Further reading](https://lounge.peertransfer.com/wiki/tech/frontend/CSS-Guidelines#css-guidelines_6-further-reading)
+6. [Further reading](#further-reading)
 
-### 1. Format
+## 1. Format
 
 The chosen code format must ensure that code is: easy to read; easy to clearly
 comment; minimizes the chance of accidentally introducing errors; and results
@@ -80,7 +80,7 @@ readability and produce more useful diffs.
 }
 ```
 
-##### Declaration order
+### Declaration order
 
 If declarations are to be consistently ordered, it should be in accordance with
 a single, simple principle.
@@ -119,9 +119,9 @@ a single, simple principle.
 }
 ```
 
-### 2.Naming conventions
+## 2.Naming conventions
 
-#### Components
+### Components
 
 The CSS responsible for component-specific styling.
 
@@ -143,7 +143,7 @@ This has several benefits when reading and writing HTML and CSS:
 * It helps to decouple presentation semantics from document semantics.
 
 
-##### componentName
+#### componentName
 
 The component's name must be written in camel case.
 
@@ -157,7 +157,7 @@ The component's name must be written in camel case.
 </article>
 ```
 
-##### componentName--modifierName
+#### componentName--modifierName
 
 A component modifier is a class that modifies the presentation of the base
 component in some form (e.g., for a certain configuration of the component).
@@ -176,7 +176,7 @@ addition_ to the base component class.
 <button class="button button--default" type="button">…</button>
 ```
 
-##### componentName-descendentName
+#### componentName-descendentName
 
 A component descendent is a class that is attached to a descendent node of a
 component. It's responsible for applying presentation directly to the
@@ -195,7 +195,7 @@ written in camel case.
 </article>
 ```
 
-##### componentName.is-stateOfComponent
+#### componentName.is-stateOfComponent
 
 Use `is-stateName` to reflect changes to a component's state. The state name
 must be camel case. **Never style these classes directly; they should always be
@@ -216,14 +216,14 @@ the component).
 </article>
 ```
 
-#### Utilities
+### Utilities
 
 Low-level structural and positional traits. Utilities can be applied directly
 to any element within a component.
 
 Syntax: `u-[sm-|md-|lg-]<utilityName>`
 
-##### u-utilityName
+#### u-utilityName
 
 Utilities must use a camel case name. What follows is an example of how various
 utilities can be used to create a simple structure within a component.
@@ -239,13 +239,13 @@ utilities can be used to create a simple structure within a component.
 </div>
 ```
 
-##### Responsive utilities
+#### Responsive utilities
 
 Certain utilities have responsive variants using the patterns: `u-sm-<name>`,
 `u-md-<name>`, and `u-lg-<name>` for small, medium, and large Media Query
 breakpoints.
 
-##### Visibility utilities
+#### Visibility utilities
 
 Syntax: `u-[sm-|smUp-|smDown-]|[lg-|lgUp-|lgDown-]|[lg-|lgUp-|lgDown-]]hidden`
 
@@ -253,7 +253,7 @@ Syntax: `u-[sm-|smUp-|smDown-]|[lg-|lgUp-|lgDown-]|[lg-|lgUp-|lgDown-]]hidden`
 Visibility classes let you show or hide elements based on screen size or device orientation. You can use visibility classes to control which elements users see depending on their browsing environment.
 
 
-#### JS Hacks
+### JS Hacks
 
 Data-* attributes are used to bind the HTML to a JS Component. For example:
 
@@ -263,11 +263,11 @@ Data-* attributes are used to bind the HTML to a JS Component. For example:
 ```
 
 
-### 3. Commenting
+## 3. Commenting
 
 We need to create classes self explanatory, to not be necessary to explain the code. But at times the code is not enough.
 
-##### Sass comments
+#### Sass comments
 
 We use Sass comments `//`, instead of CSS `/* */`. These comments will never be visible in the compiled CSS.
 
@@ -324,13 +324,13 @@ When you have to explain some line of CSS, when needed:
 
 ```css
 .selector {
-  // why z-index is used?   
+  // why z-index is used?
   z-index: 3;
 }
 ```
 
 
-##### CSS Comments
+#### CSS Comments
 
 CSS comments follows the [Idiomatic CSS style guide ](https://github.com/necolas/idiomatic-css):
 
@@ -363,7 +363,7 @@ CSS comments follows the [Idiomatic CSS style guide ](https://github.com/necolas
 ```
 
 
-### 4. Sass specific
+## 4. Sass specific
 
 * Limit nesting to 1 level deep. Reassess any nesting more than 2 levels deep.
   This prevents overly-specific CSS selectors.
@@ -396,14 +396,14 @@ CSS comments follows the [Idiomatic CSS style guide ](https://github.com/necolas
 }
 ```
 
-#### Variables
+### Variables
 
 Only create variables when it makes sense to do so. Do not initiate new variables for the heck of it, it won’t help. A new variable should be created only when all of the following criteria are met:
 
 * The value is repeated at least twice
 * The value is likely to be updated at least once
 
-##### !default Flag
+#### !default Flag
 
 When building a library, a framework, a grid system or any piece of Sass that is intended to be distributed and used by external developers, all configuration variables should be defined with the `!default` flag so they can be overwritten.
 
@@ -423,7 +423,7 @@ $baseline: 2em;
 // $baseline == 2em;
 ```
 
-#### Multiple Variables Or Maps
+### Multiple Variables Or Maps
 
 There are advantages of using maps rather than multiple distinct variables. The main one is the ability to loop over a map, which is not possible with distinct variables.
 
@@ -443,11 +443,11 @@ $z-indexes: (
 }
 ```
 
-### 5. Tooling (TODO)
+## 5. Tooling (TODO)
 
 Tools to help frontend development: linters (eslint, scsslint), .editorconf, documentation (sassdoc.doc)
 
-### 6. Further reading
+## 6. Further reading
 
 * [Suit CSS, Nicolas Gallagher](https://github.com/suitcss/suit/tree/master/doc)
 * [Idiomatic CSS, Nicolas Gallagher](https://github.com/necolas/idiomatic-css)
