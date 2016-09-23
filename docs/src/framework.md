@@ -119,9 +119,7 @@ netlify deploy dist
 ```
 scss/
 |
-|
-|– inc/
-|   |– _settings.scss     # Default variables
+|– mixins/
 |   |– _responsive.scss   # Responsive mixins
 |   |– _typography.scss   # Typography mixins
 |   …                     # Etc
@@ -150,6 +148,7 @@ scss/
 |   …                     # Etc.
 |
 |
+ - _config.scss           # Flystyles variables
  – main.scss              # Main Sass file
 
 ```
@@ -179,14 +178,13 @@ _carousel.scss
 _thumbnails.scss
 ```
 
-### INC FOLDER
+### MIXINS FOLDER
 
-The `inc/` folder gathers all Sass tools and helpers used across the project. Every global variable, function, mixin and placeholder should be put in here. This files dont's produce any output.
+The `mixins/` folder gathers all Sass tools and helpers used across the project. Every global variable, function, mixin and placeholder should be put in here. This files dont's produce any output.
 
 ```
-_settings.scss
-_responsive.mixins.scss
-_typography.mixins.scss
+_responsive.scss
+_typography.scss
 ```
 
 ### THEMES FOLDER
@@ -209,7 +207,10 @@ _spacing.scss
 _responsive.scss
 ```
 
+### CONFIG FILE `_config.scss`
 
-### MAIN FILE `main.scss`
+The configuration file where all variables are defined. Copy this file to override the Flystyles defaults without modifying key, versioned files.
+
+### MAIN FILE `flystyles.scss`
 
 The main file should be the only Sass file from the whole code base not to begin with an underscore. This file should not contain anything but @import and comments.

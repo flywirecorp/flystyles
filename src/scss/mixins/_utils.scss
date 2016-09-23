@@ -15,3 +15,12 @@
 @function rem($pixels) {
   @return #{$pixels / $font-size-root}rem;
 }
+
+// Clearfix
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

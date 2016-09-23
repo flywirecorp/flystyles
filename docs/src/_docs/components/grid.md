@@ -37,6 +37,25 @@ Don’t want your columns to simply stack in smaller devices? Use the extra smal
 {% endexample %}
 </div>
 
+##### Same width columns grid
+
+Add a class of the format `.gridRow--[breakpoint]-[columns-per-row]` to change the size of all columns within the row. By default, the max number of columns you can use with block grid are `$grid-columns`.
+
+<div class="bd-example-row">
+{% example html %}
+
+<div class="gridRow gridRow--sm-1 gridRow--md-2 gridRow--lg-4">
+  <div class="gridColumn"></div>
+  <div class="gridColumn"></div>
+  <div class="gridColumn"></div>
+  <div class="gridColumn"></div>
+  <div class="gridColumn"></div>
+  <div class="gridColumn"></div>
+</div>
+
+{% endexample %}
+</div>
+
 
 ##### Grid Configuration
 

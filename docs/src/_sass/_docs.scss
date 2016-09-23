@@ -207,8 +207,8 @@ code {
 pre {
   margin: 0;
   overflow: auto;
-  background: #f0f4fb;
   font-size: 14px;
+  background: #f0f4fb;
 }
 figure {
   margin: 0 0 $spacer-lg;
@@ -223,13 +223,14 @@ pre code {
 }
 
 .bd-example-row .gridRow > .gridColumn, .bd-example-row .gridRow > [class^="gridColumn"] {
+  min-height: 4rem;
   padding-top: .75rem;
   padding-bottom: .75rem;
+  font-size: 14px;
+  color: #fff;
   background-color: rgba(#7A8FA2, 1);
   border: 2px solid #fff;
   border-radius: 6px;
-  font-size: 14px;
-  color: #fff;
 }
 
 // Colors examples
