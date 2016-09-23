@@ -69,13 +69,14 @@
 .docs-menu {
   padding: 0;
   margin: $spacer 0;
+  font-size: .7rem;
   font-weight: 600;
   text-transform: uppercase;
-  font-size: .9rem;
   list-style: none;
 
   @include media-up(md) {
     margin: 0;
+    font-size: .9rem;
   }
 
   li {
