@@ -221,7 +221,7 @@ the component).
 Low-level structural and positional traits. Utilities can be applied directly
 to any element within a component.
 
-Syntax: `u-[sm-|md-|lg-]<utilityName>`
+Syntax: `u-<utilityName>-[sm-|md-|lg-]`
 
 #### u-utilityName
 
@@ -230,10 +230,10 @@ utilities can be used to create a simple structure within a component.
 
 ```html
 <div class="u-cf">
-  <a class="u-floatLeft" href="{{url}}">
-    <img class="u-block" src="{{src}}" alt="">
+  <a class="u-float-left" href="{{url}}">
+    <img class="u-display-block" src="{{src}}" alt="">
   </a>
-  <p class="u-sizeFill u-textBreak">
+  <p class="u-textAlign-sm-center u-textAlign-md-left">
     …
   </p>
 </div>
@@ -241,9 +241,7 @@ utilities can be used to create a simple structure within a component.
 
 #### Responsive utilities
 
-Certain utilities have responsive variants using the patterns: `u-sm-<name>`,
-`u-md-<name>`, and `u-lg-<name>` for small, medium, and large Media Query
-breakpoints.
+Certain utilities have responsive variants using the patterns: `u-<property>-<breakpoint>-<value>`.
 
 #### Visibility utilities
 

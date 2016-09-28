@@ -2,17 +2,12 @@
 //  Global styles
 //
 
-@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700';
+//@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700';
 
 html {
   box-sizing: border-box;
-  font-size: $font-size-root * .9;
-
-  @include media-up(md) {
-    font-size: $font-size-root;
-  }
+  font-size: $font-size-root;
 }
-
 
 // Set box-sizing globally to handle padding and border widths
 *,
@@ -54,4 +49,10 @@ img {
 // Always hide an element with the `hidden` HTML attribute (from PureCSS).
 [hidden] {
   display: none !important;
+}
+
+// Highlighted or selected text styles
+::selection {
+  text-shadow: none;
+  background: rgba($color-brand-primary, .3);
 }

@@ -50,6 +50,15 @@ $spacer-md: $spacer !default;
 $spacer-lg: 1.5rem !default;
 $spacer-xl: 2rem !default;
 
+$spacers: (
+  0:  0,
+  xs: $spacer-xs,
+  sm: $spacer-sm,
+  md: $spacer-md,
+  lg: $spacer-lg,
+  xl: $spacer-lg
+);
+
 // Grid breakpoints
 //
 // Define the minimum dimensions at which your layout will change,
@@ -77,6 +86,12 @@ $font-size-lg: 1.25rem !default;
 $font-size-sm: .875rem !default;
 $font-size-xs: .75rem !default;
 
+$font-sizes: (
+  'xs': $font-size-xs,
+  'sm': $font-size-sm,
+  'lg': $font-size-lg
+);
+
 $line-height-base: 1.5 !default;
 $line-height-lg: (4 / 3) !default;
 $line-height-sm: 1.5 !default;
@@ -101,7 +116,6 @@ $global-border-radius: $border-radius !default;
 $body-background: #fff !default;
 $body-color: #38495b !default;
 
-
 // Headings
 
 $headings-margin-bottom: $spacer-y;
@@ -109,22 +123,18 @@ $headings-font-family: inherit !default;
 $headings-line-height: 1.1 !default;
 $headings-color: inherit !default;
 
-$type-h1-font-size: #{60px / $font-size-root}rem !default;
+$type-h1-font-size: 2.5rem !default;
+$type-h2-font-size: 2rem !default;
+$type-h3-font-size: 1.75rem !default;
+$type-h4-font-size: 1.5rem !default;
+$type-h5-font-size: 1.2rem !default;
+$type-h6-font-size: 1rem !default;
+
 $type-h1-font-weight: $font-weight-light !default;
-
-$type-h2-font-size: #{38px / $font-size-root}rem !default;
 $type-h2-font-weight: $font-weight-regular !default;
-
-$type-h3-font-size: #{32px / $font-size-root}rem !default;
 $type-h3-font-weight: $font-weight-regular !default;
-
-$type-h4-font-size: #{26px / $font-size-root}rem !default;
 $type-h4-font-weight: $font-weight-regular !default;
-
-$type-h5-font-size: #{20px / $font-size-root}rem !default;
 $type-h5-font-weight: $font-weight-semi-bold !default;
-
-$type-h6-font-size: #{18px / $font-size-root}rem !default;
 $type-h6-font-weight: $font-weight-semi-bold !default;
 
 $hr-border-width: 1px !default;

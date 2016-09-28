@@ -1,0 +1,68 @@
+//
+//  Text Utilities
+//
+
+
+// Font Weights
+
+.u-fontWeight-light {
+  font-weight: 300 !important;
+}
+.u-fontWeight-normal {
+  font-weight: 400 !important;
+}
+.u-fontWeight-semiBold {
+  font-weight: 600 !important;
+}
+.u-fontWeight-bold {
+  font-weight: 700 !important;
+}
+
+// Font Sizes
+.u-fontSize-xs {
+  font-size: $font-size-xs !important;
+}
+.u-fontSize-sm {
+  font-size: $font-size-sm !important;
+}
+.u-fontSize-lg {
+  font-size: $font-size-lg !important;
+}
+
+// Transformation
+
+.u-textTransform-lowercase {
+  text-transform: lowercase !important;
+}
+
+.u-textTransform-uppercase {
+  text-transform: uppercase !important;
+}
+
+.u-textTransform-capitalize {
+  text-transform: capitalize !important;
+}
+
+// Alignment
+
+.u-textAlign-left {
+  text-align: left !important;
+}
+
+.u-textAlign-right {
+  text-align: right !important;
+}
+
+.u-textAlign-center {
+  text-align: center !important;
+}
+
+// Responsive alignment
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-up($breakpoint) {
+    .u-#{$breakpoint}-textAlign-left   { text-align: left !important; }
+    .u-#{$breakpoint}-textAlign-right  { text-align: right !important; }
+    .u-#{$breakpoint}-textAlign-center { text-align: center !important; }
+  }
+}

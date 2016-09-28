@@ -18,6 +18,10 @@ address {
   line-height: inherit;
 }
 
+abbr[title] {
+  text-decoration: none;
+}
+
 blockquote {
   margin: 0 0 1rem;
 }

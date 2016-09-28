@@ -1,0 +1,9 @@
+//
+//  Helpers
+//
+
+.clearfix,
+.u-cf,
+.u-clearfix {
+  @include clearfix;
+}

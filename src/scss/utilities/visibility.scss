@@ -1,0 +1,19 @@
+
+//
+// Visibility utilities
+//
+
+// Responsive visibility utilities
+
+@each $bp in map-keys($grid-breakpoints) {
+  .u-hidden-#{$bp}-up {
+    @include media-up($bp) {
+      display: none !important;
+    }
+  }
+  .u-hidden-#{$bp}-down {
+    @include media-down($bp) {
+      display: none !important;
+    }
+  }
+}

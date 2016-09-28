@@ -1,0 +1,22 @@
+//
+//  Spacing utilities
+//
+
+// Margin
+@each $size in map-keys($spacers) {
+  .u-margin-#{$size} { margin: map-get($spacers, $size) !important;}
+  .u-marginTop-#{$size} { margin-top: map-get($spacers, $size) !important;}
+  .u-marginBottom-#{$size} { margin-bottom: map-get($spacers, $size) !important;}
+}
+
+// Margin Horizontal (left and right)
+.u-marginHorizontal-neg {
+  margin-right: -$spacer;
+  margin-left: -$spacer;
+}
+
+// Margin Vertical (top and bottom)
+.u-marginVertical-md {
+  margin-right: $spacer !important;
+  margin-left: $spacer !important;
+}

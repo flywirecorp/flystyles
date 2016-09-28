@@ -1,0 +1,19 @@
+//
+//  Border
+//
+
+$border: 1px solid #d8d8d8;
+
+@include media-up(md) {
+  .u-md-borderLeft {
+    border-left: $border !important;
+  }
+}
+
+.u-borderLeft {
+  border-left: $border;
+}
+
+.u-borderRight {
+  border-right: $border;
+}

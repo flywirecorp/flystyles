@@ -21,7 +21,7 @@ npm install git+ssh@github.com:peertransfer/flystyles.git#v0.0.1
 The project has a gem, so just include in Gemfile
 
 ```bash
-gem 'flystyles', git: 'https://github.com/peertransfer/flystyles.git'
+gem 'flystyles', git: 'git@github.com:peertransfer/flystyles.git', 'tag': 'v0.0.4'
 ```
 and execute `bundle`.
 

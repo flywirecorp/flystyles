@@ -14,6 +14,7 @@
 @mixin type-h1 {
   font-size: $type-h1-font-size;
   font-weight: $type-h1-font-weight;
+  margin-bottom: $spacer-lg;
 }
 
 @mixin type-h2 {
