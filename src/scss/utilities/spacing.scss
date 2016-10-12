@@ -7,6 +7,10 @@
   .u-margin-#{$size} { margin: map-get($spacers, $size) !important;}
   .u-marginTop-#{$size} { margin-top: map-get($spacers, $size) !important;}
   .u-marginBottom-#{$size} { margin-bottom: map-get($spacers, $size) !important;}
+
+  .u-padding-#{$size} { padding: map-get($spacers, $size) !important;}
+  .u-paddingTop-#{$size} { padding-top: map-get($spacers, $size) !important;}
+  .u-paddingBottom-#{$size} { padding-bottom: map-get($spacers, $size) !important;}
 }
 
 // Margin Horizontal (left and right)

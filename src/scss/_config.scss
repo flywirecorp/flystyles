@@ -57,14 +57,20 @@ $spacers: (
   md: $spacer-md,
   lg: $spacer-lg,
   xl: $spacer-lg
-);
+) !default;
 
 // Grid breakpoints
 //
 // Define the minimum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
 
-$grid-breakpoints: (xs: 0, sm: 544px, md: 768px, lg: 992px, xl: 1200px) !default;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 544px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
 
 // Grid columns
 //
@@ -82,14 +88,19 @@ $font-family-base: $font-family-open-sans !default;
 
 $font-size-root: 16px !default;
 $font-size-base: 1rem !default;
-$font-size-lg: 1.25rem !default;
-$font-size-sm: .875rem !default;
+
 $font-size-xs: .75rem !default;
+$font-size-sm: .875rem !default;
+$font-size-md: $font-size-base !default;
+$font-size-lg: 1.25rem !default;
+$font-size-xl: 1.5rem !default;
 
 $font-sizes: (
   'xs': $font-size-xs,
   'sm': $font-size-sm,
-  'lg': $font-size-lg
+  'md': $font-size-md,
+  'lg': $font-size-lg,
+  'xl': $font-size-xl
 );
 
 $line-height-base: 1.5 !default;
@@ -139,6 +150,7 @@ $type-h6-font-weight: $font-weight-semi-bold !default;
 
 $hr-border-width: 1px !default;
 $hr-border-color: $color-gray-light !default;
+$hr-border: $hr-border-width solid $hr-border-color;
 
 $dt-font-weight: $font-weight-semi-bold !default;
 
@@ -151,3 +163,4 @@ $link-hover-text-decoration: underline !default;
 // Components
 //
 // components specific config
+$divider-border: $hr-border !default;

@@ -2,18 +2,23 @@
 //  Border
 //
 
-$border: 1px solid #d8d8d8;
-
-@include media-up(md) {
-  .u-md-borderLeft {
-    border-left: $border !important;
-  }
-}
-
 .u-borderLeft {
-  border-left: $border;
+  border-left: $divider-border !important;
 }
 
 .u-borderRight {
-  border-right: $border;
+  border-right: $divider-border !important;
+}
+
+// Responsive borders
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-up($breakpoint){
+    .u-#{$breakpoint}-borderLeft {
+      border-left: $divider-border !important;
+    }
+
+    .u-#{$breakpoint}-borderRight {
+      border-right: $divider-border !important;
+    }
+  }
 }

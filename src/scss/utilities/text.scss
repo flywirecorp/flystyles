@@ -6,27 +6,24 @@
 // Font Weights
 
 .u-fontWeight-light {
-  font-weight: 300 !important;
+  font-weight: $font-weight-light !important;
 }
 .u-fontWeight-normal {
-  font-weight: 400 !important;
+  font-weight: $font-weight-regular !important;
 }
 .u-fontWeight-semiBold {
-  font-weight: 600 !important;
+  font-weight: $font-weight-semi-bold !important;
 }
 .u-fontWeight-bold {
-  font-weight: 700 !important;
+  font-weight: $font-weight-bold !important;
 }
 
 // Font Sizes
-.u-fontSize-xs {
-  font-size: $font-size-xs !important;
-}
-.u-fontSize-sm {
-  font-size: $font-size-sm !important;
-}
-.u-fontSize-lg {
-  font-size: $font-size-lg !important;
+
+@each $size in map-keys($font-sizes) {
+  .u-fontSize-#{$size} {
+    font-size: map-get($font-sizes, $size) !important;
+  }
 }
 
 // Transformation
@@ -60,9 +57,17 @@
 // Responsive alignment
 
 @each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-up($breakpoint) {
-    .u-#{$breakpoint}-textAlign-left   { text-align: left !important; }
-    .u-#{$breakpoint}-textAlign-right  { text-align: right !important; }
-    .u-#{$breakpoint}-textAlign-center { text-align: center !important; }
+  @include media-up($breakpoint){
+    .u-#{$breakpoint}-textAlign-left {
+      text-align: left !important;
+    }
+
+    .u-#{$breakpoint}-textAlign-right {
+      text-align: right !important;
+    }
+
+    .u-#{$breakpoint}-textAlign-center {
+      text-align: center !important;
+    }
   }
 }
