@@ -58,7 +58,7 @@ $treeNav-transition:         200ms all ease-in-out;
 
   // shown
   .treeNav-parent.is-selected &{
-    max-height: 200px;
+    max-height: 1000px;
     visibility: visible;;
     opacity: 1;
   }

@@ -2,6 +2,7 @@
 title: Typography
 description: Base typography styles for headings and paragraphs.
 category: base
+file: base/typography.scss
 ---
 
 Those are the default styles for the default typography HTML tags.

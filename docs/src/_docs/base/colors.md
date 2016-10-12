@@ -2,6 +2,7 @@
 title: Colors
 category: base
 description: All colors used in Flywire's apps
+file: _config.scss
 colors:
   brand:
     - name: Primary Light
@@ -62,7 +63,7 @@ colors:
       color: "#7A8FA2"
     - name: Gray Dark
       variable: $color-gray-dark
-      color: "#666"                                                                                   
+      color: "#666"
 ---
 
 ##### Brand Colors

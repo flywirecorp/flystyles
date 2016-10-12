@@ -2,6 +2,7 @@
 title: Grid
 description: Responsive grid system
 category: components
+file: components/grid.scss
 ---
 
 Flystyles includes a **mobile-first** grid system for building layouts. It’s based on a 12 column layout and has multiple tiers, one for each media query range.
@@ -14,7 +15,7 @@ Start by adding an element with a class of `.gridRow`. This will create a horizo
 
 Don’t want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding `gridColumn--xs-*` and `.gridColumn--md-*` to your columns. See the example below for a better idea of how it all works.
 
-<div class="bd-example-row">
+<div class="exampleView">
 {% example html %}
 <!-- Stack the columns on mobile by making one full-width and the other half-width -->
 <div class="gridRow">
@@ -41,16 +42,16 @@ Don’t want your columns to simply stack in smaller devices? Use the extra smal
 
 Add a class of the format `.gridRow--[breakpoint]-[columns-per-row]` to change the size of all columns within the row. By default, the max number of columns you can use with block grid are `$grid-columns`.
 
-<div class="bd-example-row">
+<div class="exampleView">
 {% example html %}
 
 <div class="gridRow gridRow--sm-1 gridRow--md-2 gridRow--lg-4">
-  <div class="gridColumn"></div>
-  <div class="gridColumn"></div>
-  <div class="gridColumn"></div>
-  <div class="gridColumn"></div>
-  <div class="gridColumn"></div>
-  <div class="gridColumn"></div>
+  <div class="gridColumn">.gridColumn</div>
+  <div class="gridColumn">.gridColumn</div>
+  <div class="gridColumn">.gridColumn</div>
+  <div class="gridColumn">.gridColumn</div>
+  <div class="gridColumn">.gridColumn</div>
+  <div class="gridColumn">.gridColumn</div>
 </div>
 
 {% endexample %}

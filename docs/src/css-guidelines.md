@@ -241,11 +241,11 @@ utilities can be used to create a simple structure within a component.
 
 #### Responsive utilities
 
-Certain utilities have responsive variants using the patterns: `u-<property>-<breakpoint>-<value>`.
+Certain utilities have responsive variants using the patterns: `u-<breakpoint>-<property>-<value>`.
 
 #### Visibility utilities
 
-Syntax: `u-[sm-|smUp-|smDown-]|[lg-|lgUp-|lgDown-]|[lg-|lgUp-|lgDown-]]hidden`
+Syntax: `u-[sm|smUp|smDown]|[lg|lgUp|lgDown]|...]-hidden`
 
 
 Visibility classes let you show or hide elements based on screen size or device orientation. You can use visibility classes to control which elements users see depending on their browsing environment.

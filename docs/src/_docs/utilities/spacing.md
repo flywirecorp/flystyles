@@ -1,19 +1,32 @@
 ---
-title: Utilities
+title: Spacing
 category: utilities
 id: spacing
+file: utilities/spacing.scss
 ---
 
-### Spacing Utilities
+Assign margin or padding to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The classes are named using the format: `.u-{property}-{size}`.
 
-### Spacing Utilities
+Where `property` is one of:
 
+  - `margin`, `marginTop`, `marginBottom`: for classes that set margin
+  - `padding`, `paddingTop`, `paddingBottom`: for classes that set padding
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+And size is `0`, `xs`, `sm`, `md`, `lg`, `xl` with this configurable values:
 
-### Spacing Utilities
+```scss
+// config.scss
+$spacer-xs: .3rem !default;
+$spacer-sm: .5rem !default;
+$spacer-md: 1rem !default;
+$spacer-lg: 1.5rem !default;
+$spacer-xl: 2rem !default;
+```
 
+For example:
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+{% example html %}
+<span class="u-margin-0 u-padding-xs">.u-margin-0 .u-padding-xs</span>
+{% endexample %}

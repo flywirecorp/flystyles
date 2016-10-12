@@ -1,8 +1,18 @@
 <section class="docs-section">
   <header class="docs-section-header">
-    {% if doc.title != nil %}
-      <h3 class="docs-type-subsection" id="{{ doc.slug }}">{{ doc.title }}</h3>
-    {% endif %}
+    <div class="docs-type-subsection">
+      {% if doc.title != nil %}
+        <h3 class="docs-type-subsection-title" id="{{ doc.slug }}">{{ doc.title }}</h3>
+      {% endif %}
+
+      {% if doc.file != nil %}
+      <p class="docs-type-subsection-file">
+        <img src="/images/file.svg" alt="file icon"/>
+        {{ doc.file }}
+      </p>
+      {% endif %}
+    </div>
+
     <p class="docs-type-description">{{ doc.description }}</p>
   </header>
   <div class="docs-section-content">

@@ -8,7 +8,7 @@
 // Wrapper to set max width
 %wrapper,
 .wrapper {
-  max-width: $wrapper-max-width;
+  //max-width: $wrapper-max-width;
   padding: 0 $base-spacing;
   margin: 0 auto;
 }
@@ -21,8 +21,8 @@
 
 .fullPage {
   .docs-content {
-    padding: 0;
     max-width: 768px;
+    padding: 0;
     margin: auto;
   }
   .docs-logo {
@@ -110,7 +110,7 @@
 .docs-nav {
   display: none;
   float: left;
-  width: 200px;
+  width: 250px;
   height: 100%;
   @include media-up(md) {
     display: block;
@@ -125,7 +125,7 @@
 // Docs Content
 .docs-content {
   @include media-up(md) {
-    padding-left: 230px;
+    padding-left: 280px;
   }
 }
 
@@ -138,7 +138,12 @@
 }
 
 .docs-type-subsection {
-  margin: 0 0 .3rem;
+  display: flex;
+  margin-bottom: .3rem;
+  align-items: center;
+}
+.docs-type-subsection-title {
+  margin: 0;
   font-size: rem(28px);
   font-weight: 400;
 }
@@ -147,6 +152,20 @@
   margin: 0;
   font-size: rem(16px);
   color: #6B7886;
+}
+
+.docs-type-subsection-file {
+  margin-left: auto;
+  margin-bottom: 0;
+  font-size: rem(12px);
+  color: rgba(0,0,0,.5);
+
+  img {
+    width: rem(10px);
+    height: auto;
+    margin-right: .3rem;
+    vertical-align: -3px;
+  }
 }
 
 // Docs section
@@ -222,16 +241,6 @@ pre code {
   background: #f0f4fb;
 }
 
-.bd-example-row .gridRow > .gridColumn, .bd-example-row .gridRow > [class^="gridColumn"] {
-  min-height: 4rem;
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  font-size: 14px;
-  color: #fff;
-  background-color: rgba(#7A8FA2, 1);
-  border: 2px solid #fff;
-  border-radius: 6px;
-}
 
 // Colors examples
 .color {
@@ -298,4 +307,26 @@ pre code {
 
 .text-shadow {
   text-shadow: 1px 1px 0 rgba(0,0,0,.3);
+}
+
+
+// Example view
+
+.exampleView .gridRow > .gridColumn,
+.exampleView .gridRow > [class^="gridColumn"] {
+  min-height: 4rem;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 14px;
+  color: #fff;
+  background-color: rgba(#7A8FA2, 1);
+  border: 2px solid #fff;
+  border-radius: 6px;
+}
+
+.code-example span {
+  display: inline-block;
+  padding: 1rem;
+  margin: .5rem;
+  background: rgba(0,0,0,.03);
 }
