@@ -1,4 +1,137 @@
 //  Button Component
 //
 //  @group components
-//  @requires settings/colors
+
+// Configurtation
+
+$button-font-weight: 700 !default;
+$button-font-family: $font-family-base !default;
+$button-border-radius: $global-border-radius !default;
+
+$button-size-base: 2.5rem !default;
+$button-font-size-base: .8rem !default;
+$button-outline-color: #939fac !default;
+
+$button-sizes: (
+  'xs': (size: $button-size-base * .6, font-size: rem(10px)),
+  'sm': (size: $button-size-base * .8, font-size: rem(11px)),
+  'md': (size: $button-size-base * 1, font-size: rem(12px)),
+  'lg': (size: $button-size-base * 1.5, font-size: rem(14px)),
+  'xl': (size: $button-size-base * 2, font-size: rem(15px))
+) !default;
+
+$button-styles: (
+  'primary': $color-brand-primary,
+  'secondary': $color-brand-secondary,
+  'tertiary': $color-brand-tertiary,
+  'danger': $color-danger
+) !default;
+
+//
+// button mixins
+//
+
+@mixin button-base {
+  display: inline-block;
+  font-family: $button-font-family;
+  font-weight: $button-font-weight;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 0;
+  border-radius: $button-border-radius;
+  outline: 0;
+  transition: all 200ms ease-out;
+}
+
+@mixin button-size($size, $font-size) {
+  height: $size;
+  padding: 0 $size;
+  font-size: $font-size;
+  line-height: $size;
+}
+
+@mixin button-style($bg) {
+  background: $bg;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: lighten($bg, 5%);
+  }
+
+  &:active,
+  &.button--active,
+  &.is-active {
+    background-color: darken($bg, 15%);
+  }
+}
+
+@mixin button-style-outline($outline-color, $bg) {
+  background: transparent;
+  color: $outline-color;
+  border: 1px solid $outline-color;
+
+  &:hover {
+    color: #fff;
+    background-color: $bg;
+    border-color: $bg;
+  }
+}
+
+// base styles
+//
+
+.button {
+  @include button-base;
+  @include button-size($button-size-base, $button-font-size-base);
+}
+
+// size variations
+//
+
+@each $size in map-keys($button-sizes) {
+  $current: map-get($button-sizes, $size);
+  .button--#{$size} {
+    @include button-size(map-get($current, "size"), map-get($current, "font-size"));
+  }
+}
+
+// style variations
+//
+
+@each $style in map-keys($button-styles) {
+  .button--#{$style} {
+    @include button-style(map-get($button-styles, $style));
+  }
+}
+
+.button--outline {
+  @include button-style-outline($button-outline-color, $color-brand-primary);
+}
+
+@each $style in map-keys($button-styles) {
+  .button--outline#{capitalize($style)} {
+    $current: map-get($button-styles, $style);
+    @include button-style-outline($current, $current);
+  }
+}
+
+
+// block button
+//
+.button--block {
+  display: block;
+  width: 100%;
+}
+
+// button disabled
+
+.button--disabled, .button:disabled {
+  cursor: not-allowed;
+  opacity: .65;
+}

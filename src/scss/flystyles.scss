@@ -15,20 +15,20 @@
 //
 //  Mixins used around the whole framework, those files dont's output anything
 
-@import "mixins/mixins";
+@import "mixins/all";
 
 // Base
 //
 // Load HTML default styles
 
-@import "base/base";
+@import "base/all";
 
 // Utilities
 //
-@import "utilities/utilities";
+@import "utilities/all";
 
 // Components
 //
 // load the components that you need
 
-@import "components/grid";
+@import "components/all";
