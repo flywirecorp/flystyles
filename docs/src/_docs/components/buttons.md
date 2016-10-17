@@ -2,7 +2,9 @@
 title: Buttons
 description:
 category: components
+file: components/button.scss
 ---
+
 
 Use button styles for actions in forms, dialogs, and more. Includes support for a handful of contextual variations, sizes, states, and more.
 

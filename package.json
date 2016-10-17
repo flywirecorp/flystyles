@@ -1,6 +1,6 @@
 {
   "name": "flystyles",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Flywire CSS Framework",
   "style": "dist/main.css",
   "sass": "src/index.scss",
