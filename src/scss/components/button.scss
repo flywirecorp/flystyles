@@ -2,31 +2,6 @@
 //
 //  @group components
 
-// Configurtation
-
-$button-font-weight: 700 !default;
-$button-font-family: $font-family-base !default;
-$button-border-radius: $global-border-radius !default;
-
-$button-size-base: 2.5rem !default;
-$button-font-size-base: .8rem !default;
-$button-outline-color: #939fac !default;
-
-$button-sizes: (
-  'xs': (size: $button-size-base * .6, font-size: rem(10px)),
-  'sm': (size: $button-size-base * .8, font-size: rem(11px)),
-  'md': (size: $button-size-base * 1, font-size: rem(12px)),
-  'lg': (size: $button-size-base * 1.5, font-size: rem(14px)),
-  'xl': (size: $button-size-base * 2, font-size: rem(15px))
-) !default;
-
-$button-styles: (
-  'primary': $color-brand-primary,
-  'secondary': $color-brand-secondary,
-  'tertiary': $color-brand-tertiary,
-  'danger': $color-danger
-) !default;
-
 //
 // button mixins
 //

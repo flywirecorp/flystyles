@@ -162,5 +162,32 @@ $link-hover-text-decoration: underline !default;
 
 // Components
 //
-// components specific config
+
+// divider
+
 $divider-border: $hr-border !default;
+
+// button
+
+$button-font-weight: 700 !default;
+$button-font-family: $font-family-base !default;
+$button-border-radius: $global-border-radius !default;
+
+$button-size-base: 2.6rem !default;
+$button-font-size-base: .8rem !default;
+$button-outline-color: #939fac !default;
+
+$button-sizes: (
+  'xs': (size: $button-size-base * .6, font-size: .6rem),
+  'sm': (size: $button-size-base * .8, font-size: .68rem),
+  'md': (size: $button-size-base * 1, font-size: .75rem),
+  'lg': (size: $button-size-base * 1.5, font-size: .875rem),
+  'xl': (size: $button-size-base * 2, font-size: .9rem)
+) !default;
+
+$button-styles: (
+  'primary': $color-brand-primary,
+  'secondary': $color-brand-secondary,
+  'tertiary': $color-brand-tertiary,
+  'danger': $color-danger
+) !default;
