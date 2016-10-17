@@ -3,6 +3,7 @@
 //
 //  @group components
 
+@import "../config";
 
 .gridRow {
   @include grid-row();
