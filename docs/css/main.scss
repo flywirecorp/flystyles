@@ -1,12 +1,7 @@
 ---
-layout: full
-title: "CSS Guidelines"
+# Front matter comment to ensure Jekyll properly reads file.
 ---
-@charset 'utf-8';
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-
-// Import docs files
 @import "variables";
 @import "docs";
 @import "syntax-highlighting";

@@ -21,6 +21,12 @@ baseurl:          ""
 url:              http://peertransfer.github.io/flystyles/
 encoding:         UTF-8
 
+# Data
 collections:
   docs:
     output: false
+
+# Assets
+sass:
+  sass_dir:          _scss
+  style:            :compressed
