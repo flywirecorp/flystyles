@@ -1,9 +1,28 @@
 ---
-# Front matter comment to ensure Jekyll properly reads file.
+layout: null
+# Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "variables";
-@import "docs";
-@import "syntax-highlighting";
-@import "treeNav";
-@import "github-markdown";
+// Base styles
+$base-font-size: 14px !default;
+$base-line-height: 1.6 !default;
+$base-spacing: 1rem;
+$base-font-family: 'Open Sans', sans-serif;
+
+$wrapper-max-width: 1024px !default;
+
+// Breakpoints
+$breakpoints: (
+  xs: 0,
+  sm: 544px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+// Import partials from `sass_dir`
+@import
+  "docs",
+  "syntax-highlighting",
+  "treeNav",
+  "github-markdown";
