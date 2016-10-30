@@ -1,19 +1,24 @@
+# Project
+title:            Flywire Styleguide
+description:      Common UI patterns used through Flywire apps
+
 # Dependencies
 markdown:         kramdown
 highlighter:      rouge
 
+kramdown:
+  auto_ids: true
+
 # Permalinks
 permalink:        pretty
-
-title:            Flywire Styleguide
-description:      Common UI patterns used through Flywire apps
 
 # Server
 source:           docs/src
 destination:      docs/dist
 host:             0.0.0.0
 port:             9001
-url:              http://flywire.com
+baseurl:          ""
+url:              http://peertransfer.github.io/flystyles/
 encoding:         UTF-8
 
 collections:
