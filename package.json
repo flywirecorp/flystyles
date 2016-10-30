@@ -1,28 +1,33 @@
 {
   "name": "flystyles",
-  "version": "0.0.5",
-  "description": "Flywire CSS Framework",
-  "style": "dist/main.css",
-  "sass": "src/index.scss",
+  "version": "1.0.0",
+  "description": "Flywire UI Framework",
+  "author": "Javier Arques <javier.arques@flywire.com>",
+  "style": "dist/flystyles.css",
+  "sass": "src/flystyles.scss",
   "main": "./dist",
   "scripts": {
-    "css:build": "node_modules/.bin/node-sass src/scss/flystyles.scss dist/flystyles.css",
+    "css:build": "node_modules/.bin/node-sass src/flystyles.scss dist/flystyles.css",
     "css:autoprefix": "node_modules/.bin/postcss --use autoprefixer -o dist/flystyles.css dist/flystyles.css",
     "css:minify": "node_modules/.bin/cleancss -o dist/flystyles.min.css dist/flystyles.css",
-    "build": "npm run css:build && npm run css:autoprefix && npm run css:minify"
+    "build": "npm run css:build && npm run css:autoprefix && npm run css:minify",
+    "docs": "node docs.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/peertransfer/flystyles.git"
   },
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/peertransfer/flystyles/issues"
   },
   "homepage": "https://github.com/peertransfer/flystyles#readme",
   "devDependencies": {
+    "autoprefixer": "^6.5.1",
+    "browser-sync": "^2.16.0",
+    "child_process": "^1.0.2",
     "clean-css": "^3.4.19",
-    "node-sass": "^3.8.0"
+    "node-sass": "^3.8.0",
+    "postcss-cli": "^2.6.0"
   }
 }

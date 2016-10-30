@@ -1,9 +1,10 @@
 //
 //  Grid Component
 //
-//  @group components
 
-@import "../config";
+@import "../../config";
+@import "../../styles/mixins/media";
+@import "./mixins";
 
 .gridRow {
   @include grid-row();
@@ -21,7 +22,7 @@
       .gridRow--#{$breakpoint}-#{$per-row} {
         .gridColumn {
           float: left;
-          width: 100%/$per-row;
+          width: 100% / $per-row;
           &:nth-of-type(n) { clear: none; }
           &:nth-of-type(#{$per-row}n+1) { clear: both; }
         }

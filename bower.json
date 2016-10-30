@@ -1,15 +1,11 @@
 {
   "name": "flystyles",
-  "description": "Flywire CSS Styles Framework",
+  "description": "Flywire UI Framework",
   "main": [
-    "dist/main.css",
-    "dist/main.js",    
-    "src/main.scss",
-    "src/**/*.scss",
-    "src/**/*.js"
+    "dist/**/"
   ],
   "authors": [
-    "Javier <javier.arques@peertransfer.com>"
+    "Javier Arques <javier.arques@peertransfer.com>"
   ],
   "license": "ISC",
   "homepage": "https://github.com/peertransfer/flystyles",

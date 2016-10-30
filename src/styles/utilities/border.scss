@@ -12,7 +12,7 @@
 
 // Responsive borders
 @each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-up($breakpoint){
+  @include media-up($breakpoint) {
     .u-#{$breakpoint}-borderLeft {
       border-left: $divider-border !important;
     }

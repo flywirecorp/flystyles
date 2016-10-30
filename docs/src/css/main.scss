@@ -2,12 +2,12 @@
 layout: full
 title: "CSS Guidelines"
 ---
-@charset "utf-8";
+@charset 'utf-8';
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 
 // Import framework file
-@import "../../../src/scss/flystyles.scss";
+@import "../../../src/flystyles.scss";
 
 // Import docs files
 @import "variables";

@@ -9,8 +9,8 @@ title:            Flywire Styleguide
 description:      Common UI patterns used through Flywire apps
 
 # Server
-source:           src
-destination:      dist
+source:           docs/src
+destination:      docs/dist
 host:             0.0.0.0
 port:             9001
 url:              http://flywire.com

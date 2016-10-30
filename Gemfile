@@ -1,3 +1,5 @@
 source 'https://rubygems.org'
 
-gemspec
+group :development, :test do
+  gem 'jekyll', '~> 3.1.2'
+end

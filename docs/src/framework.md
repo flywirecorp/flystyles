@@ -19,7 +19,12 @@ bower install git@github.com:peertransfer/flystyles.git#0.0.1
 
 ### npm
 ```bash
-npm install git+ssh@github.com:peertransfer/flystyles.git#v0.0.1
+npm install flystyles
+```
+
+### yarn
+```bash
+yarn add flystyles
 ```
 
 ### rails
@@ -54,13 +59,14 @@ All components in flysyles are documented in `/docs` folder. The styleguide is c
 
 ## Installation
 
-First go to `/docs` folder and install jekyll:
+Docs are made using [Jekyll](https://jekyllrb.com/).
+To install Jekyll:
 
 ```bash
 bundle install
 ```
 
-To create the build files (in `/dist` folder) execute:
+To create the build files (in `/docs/dist` folder) execute:
 
 ```bash
 bundle exec jekyll build
@@ -96,23 +102,16 @@ category: components
 
 To help in developing workflow, a Browser Sync is provided that watch local changes and refresh the browser. That way, when we need a new component, It can be created directly in the styleguide that gets the styles from Flystyles, achieving the Styleguide Driven Development (SDD).
 
-To run the server, execute in `/docs` folder:
+To run the server, execute:
 
 ```bash
 npm install
-npm run serve
+npm run docs
 ```
 
 ### Deploy
 
-For the moment, the project is hosted on Netlifly [flystyles.netlify.com](http://flystyles.netlify.com/). To deploy the build files, you have to create an account in Netlifly, install `netlify-cli` and deploy:
-
-```bash
-npm install netlify-cli -g
-cd docs/
-netlify deploy dist
-```
-
+Deployed to Github Pages.
 
 ## Architecture
 
@@ -130,12 +129,6 @@ scss/
 |   |- _animations.scss   # CSS Animations
 |   …                     # Etc.
 |
-|– components/
-|   |– _buttons.scss      # Buttons
-|   |– _carousel.scss     # Carousel
-|   |– _cover.scss        # Cover
-|   |– _dropdown.scss     # Dropdown
-|   …                     # Etc.
 |
 |– utilities/
 |   |– _spacing.scss      # Margins, paddings, ...
@@ -148,6 +141,12 @@ scss/
 |   …                     # Etc.
 |
 |
+components/
+|
+|   |– button/_button.scss  # Buttons
+|   |– grid/_grid.scss      # Grid
+|   …                       # Etc.
+
  - _config.scss           # Flystyles variables
  – main.scss              # Main Sass file
 
