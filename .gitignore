@@ -1,19 +1,48 @@
-*.scssc
+# Ignore docs files
+_gh_pages
+_site
+
+# Ignore ruby files
+.ruby-version
+.bundle
+vendor/cache
+vendor/bundle
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.log
+*.orig
+*.rej
+*.swo
+*.swp
+*.vi
+*.zip
+*~
+
+# OS or Editor folders
+._*
+.cache
+.DS_Store
+.idea
+.project
+.settings
+.tmproj
+*.esproj
+*.sublime-project
+*.sublime-workspace
+nbproject
+Thumbs.db
+
+# SCSS-Lint
+scss-lint-report.xml
+
+# sass
+.sass-cache
+
+# Jekyll metadata
+docs/.jekyll-metadata
+
+# Folders to ignore
 bower_components
 node_modules
-.sass-cache
-/.bundle/
-/.yardoc
-/Gemfile.lock
-/_yardoc/
-/coverage/
-/doc/
-/pkg/
-/spec/reports/
-/tmp/
-*.bundle
-*.so
-*.o
-*.a
-mkmf.log
-.DS_Store
