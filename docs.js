@@ -27,7 +27,7 @@ bs.watch("./**/*.scss", function(event, file) {
 });
 
 // Provide a callback to capture ALL events to HTML
-bs.watch(["./docs/src/**/*.html", "./docs/src/**/*.md"], function(event, file) {
+bs.watch(["./docs/**/*.html", "./docs/**/*.md"], function(event, file) {
 
   if (event === "change") {
     var build = exec('bundle exec jekyll build');
@@ -49,5 +49,5 @@ bs.watch(["./docs/src/**/*.html", "./docs/src/**/*.md"], function(event, file) {
 
 // Now init the Browsersync server
 bs.init({
-  server: "./docs/dist"
+  server: "./_docs"
 });
