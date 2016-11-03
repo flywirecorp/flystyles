@@ -14,7 +14,7 @@ permalink:        pretty
 
 # Server
 source:           docs
-destination:      _docs
+destination:      _site
 host:             0.0.0.0
 port:             9001
 baseurl:          ""
@@ -30,3 +30,7 @@ collections:
 sass:
   sass_dir:          _scss
   style:            :compressed
+
+# Gem dependencies
+gems:
+  - octopress-autoprefixer

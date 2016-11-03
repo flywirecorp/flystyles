@@ -315,8 +315,8 @@ pre code {
 
 // Example view
 
-.exampleView .gridRow > .gridColumn,
-.exampleView .gridRow > [class^="gridColumn"] {
+.exampleView .GridRow > .GridColumn,
+.exampleView .GridRow > [class^="GridColumn"] {
   min-height: 4rem;
   padding-top: .75rem;
   padding-bottom: .75rem;

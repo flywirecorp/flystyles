@@ -1,5 +1,5 @@
 # Ignore docs files
-_docs
+_site
 
 # Ignore ruby files
 .ruby-version

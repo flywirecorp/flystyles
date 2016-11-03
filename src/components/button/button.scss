@@ -3,13 +3,14 @@
 //
 
 @import "../../config";
+@import "./config";
 @import "../../styles/mixins/utils";
 @import "./mixins";
 
 // base styles
 //
 
-.button {
+.Button {
   @include button-base;
   @include button-size($button-size-base, $button-font-size-base);
 }
@@ -19,7 +20,7 @@
 
 @each $size in map-keys($button-sizes) {
   $current: map-get($button-sizes, $size);
-  .button--#{$size} {
+  .Button--#{$size} {
     @include button-size(map-get($current, "size"), map-get($current, "font-size"));
   }
 }
@@ -28,17 +29,17 @@
 //
 
 @each $style in map-keys($button-styles) {
-  .button--#{$style} {
+  .Button--#{$style} {
     @include button-style(map-get($button-styles, $style));
   }
 }
 
-.button--outline {
+.Button--outline {
   @include button-style-outline($button-outline-color, $color-brand-primary);
 }
 
 @each $style in map-keys($button-styles) {
-  .button--outline#{capitalize($style)} {
+  .Button--outline#{capitalize($style)} {
     $current: map-get($button-styles, $style);
     @include button-style-outline($current, $current);
   }
@@ -48,7 +49,7 @@
 // block button
 //
 
-.button--block {
+.Button--block {
   display: block;
   width: 100%;
 }
@@ -56,7 +57,7 @@
 // button disabled
 //
 
-.button--disabled, .button:disabled {
+.Button--disabled, .Button:disabled {
   cursor: not-allowed;
   opacity: .65;
 }

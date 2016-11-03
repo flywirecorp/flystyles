@@ -1,0 +1,43 @@
+//
+// Input Component
+//
+@import "../config";
+@import "../mixins";
+
+// base styles
+//
+
+.Input {
+  @include form-field-base;
+  @include form-field-size($form-field-height-base, $font-size-base);
+}
+
+// size variations
+//
+@each $size in map-keys($form-field-sizes) {
+  $current: map-get($form-field-sizes, $size);
+
+  .Input--#{$size} {
+    @include form-field-size(map-get($current, "size"), map-get($current, "font-size"));
+  }
+}
+
+// state styles
+
+.Input {
+  @include state-variation("error") {
+    background-image: background-image(danger-icon($color-danger));
+    background-repeat: no-repeat;
+    background-position: calc(100% - .5rem) center;
+    background-size: 1rem;
+    border-color: $color-danger;
+  }
+
+  @include state-variation("success") {
+    background-image: background-image(success-icon($color-success));
+    background-repeat: no-repeat;
+    background-position: calc(100% - .5rem) center;
+    background-size: 1rem;
+    border-color: $color-success;
+  }
+}

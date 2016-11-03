@@ -320,8 +320,8 @@ camelcase@^3.0.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-3.0.0.tgz#32fc4b9fcdaf845fcdf7e73bb97cac2261f0ab0a"
 
 caniuse-db@^1.0.30000539, caniuse-db@^1.0.30000554:
-  version "1.0.30000570"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000570.tgz#21843913855f4873974850ee8ef9e628f53bc8de"
+  version "1.0.30000572"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000572.tgz#81d0aa6b7de2d785c8dcab135502983276cc707d"
 
 caseless@~0.11.0:
   version "0.11.0"
@@ -1242,8 +1242,8 @@ lodash@^3.10.1:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
 lodash@^4.0.0, lodash@^4.14.0, lodash@~4.16.4:
-  version "4.16.4"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.16.4.tgz#01ce306b9bad1319f2a5528674f88297aeb70127"
+  version "4.16.5"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.16.5.tgz#77d88feac548009b1a5c4ca7b49ac431ce346ae8"
 
 loud-rejection@^1.0.0:
   version "1.6.0"

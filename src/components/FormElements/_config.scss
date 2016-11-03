@@ -1,0 +1,48 @@
+//
+//  form fields config
+//
+
+@import "../../config";
+
+// form fields
+
+$form-field-border-radius: 3px !default;
+$form-field-font-family: $font-family-base !default;
+$form-field-background: #fff !default;
+$form-field-color: #444 !default;
+$form-field-border-width: 1px !default;
+$form-field-border-color: #ccc !default;
+$form-field-placeholder-color: #939fac !default;
+
+$form-field-height-base: 2.6rem !default;
+$form-field-height-xs: $form-field-height-base * .6 !default;
+$form-field-height-sm: $form-field-height-base * .8 !default;
+$form-field-height-md: $form-field-height-base !default;
+$form-field-height-lg: $form-field-height-base * 1.5 !default;
+$form-field-height-xl: $form-field-height-base * 2 !default;
+
+$form-field-sizes: (
+  'xs': (size: $form-field-height-xs, font-size: $font-size-xs),
+  'sm': (size: $form-field-height-sm, font-size: $font-size-sm),
+  'md': (size: $form-field-height-md, font-size: $font-size-md),
+  'lg': (size: $form-field-height-lg, font-size: $font-size-lg),
+  'xl': (size: $form-field-height-xl, font-size: $font-size-xl)
+) !default;
+
+
+// labels
+
+$label-color: $body-color;
+$label-font-weight: $font-weight-semi-bold !default;
+$label-font-size: $font-size-md !default;
+$label-margin: 0 0 .3rem 0 !default;
+
+// form group
+
+$form-group-margin: 0 0 $spacer-lg 0 !default;
+$form-group-description-color: $color-gray !default;
+$form-group-description-font-size: $font-size-sm !default;
+
+// Select
+
+$select-arrow-color: #494949 !default;

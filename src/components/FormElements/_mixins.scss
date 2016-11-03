@@ -1,0 +1,59 @@
+//
+//  forms mixins
+//
+
+@mixin form-field-base {
+  display: block;
+  width: 100%;
+  font-family: $form-field-font-family;
+  color: $form-field-color;
+  background-color: $form-field-background;
+  border: $form-field-border-width solid $form-field-border-color;
+  border-radius: $form-field-border-radius;
+  outline: 0;
+  transition: 200ms border ease-in-out;
+
+
+  &:hover {
+    border-color: #9399AC;
+  }
+
+  &:focus {
+    border-color: $color-brand-primary;
+  }
+
+  &::placeholder {
+    color: $form-field-placeholder-color;
+    opacity: 1;
+  }
+}
+
+@mixin form-field-size ($height, $font-size) {
+  height: $height;
+  padding: 0 $height / 5;
+  line-height: $height;
+  font-size: $font-size;
+}
+
+@function arrow-icon($color) {
+  @return '<svg viewBox="308 47 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M317.821,47.8485 L317.107,47.1685 C316.909,46.9785 316.589,46.9785 316.393,47.1685 L312.999,50.4465 L309.577,47.1425 C309.377,46.9525 309.059,46.9525 308.861,47.1425 L308.147,47.8225 C307.951,48.0085 307.951,48.3125 308.147,48.5005 L312.641,52.8305 C312.839,53.0165 313.159,53.0165 313.355,52.8305 L317.821,48.5285 C318.019,48.3405 318.019,48.0365 317.821,47.8485 Z" id="Imported-Layers" stroke="none" fill="#{$color}" fill-rule="evenodd"></path></svg>';
+}
+
+@function danger-icon($color) {
+  @return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#{$color}" d="M19.3 16.8c.2.4.2.9 0 1.3s-.7.7-1.2.7H1.9c-.5 0-.9-.3-1.2-.7-.2-.4-.3-.9 0-1.3L8.8 1.9c.3-.4.7-.7 1.2-.7s.9.3 1.2.7l8.1 14.9zm-7.8-9.9c0-.1 0-.1-.1-.2s-.2-.1-.3-.1H8.8c-.1 0-.2.1-.3.1V7l.2 4.8c0 .1.1.2.3.2h2c.2 0 .3-.1.4-.2l.1-4.9zm-.2 6.8c0-.2-.1-.3-.3-.3H9c-.2 0-.3.2-.3.3v2c0 .2.1.3.3.3h2c.2 0 .3-.2.3-.3v-2z"/></svg>';
+}
+
+@function success-icon($color) {
+  @return '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="200 41 16 13"><path fill="none" stroke="#{$color}" stroke-width="2" d="M214.595 42.493L205 52l-3.877-3.97" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+}
+
+@function background-image($image, $type: "svg+xml", $encoding: "utf8") {
+  @return url('data:image\/#{$type};#{encoding},#{$image}');
+}
+
+@mixin state-variation($state) {
+  .has-#{$state} &,
+  &--#{$state} {
+    @content;
+  }
+}

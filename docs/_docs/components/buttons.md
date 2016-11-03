@@ -2,7 +2,7 @@
 title: Buttons
 description:
 category: components
-file: components/button.scss
+file: components/FormElements/Button/Button.scss
 ---
 
 
@@ -10,68 +10,68 @@ Use button styles for actions in forms, dialogs, and more. Includes support for 
 
 ##### Button tags
 
-The `button` class can be used with `<input>`, `<a>` or `<button>` indistinctly.
+The `Button` class can be used with `<input>`, `<a>` or `<button>` indistinctly.
 
 {% example html %}
-<a class="button button--primary" href="#" role="button">Link</a>
-<button class="button button--primary" type="submit">Button</button>
-<input class="button button--primary" type="button" value="Input [button]">
-<input class="button button--primary" type="submit" value="Input [submit]">
-<input class="button button--primary" type="reset" value="Input [reset]">
+<a class="Button Button--primary" href="#" role="button">Link</a>
+<button class="Button Button--primary" type="submit">Button</button>
+<input class="Button Button--primary" type="button" value="Input [button]">
+<input class="Button Button--primary" type="submit" value="Input [submit]">
+<input class="Button Button--primary" type="reset" value="Input [reset]">
 {% endexample %}
 
 
 ##### Size variations
 
-Size variations: `xs`, `sm`, `md`, `lg` and `xl`, usage: `button button--{size}`.
+Size variations: `xs`, `sm`, `md`, `lg` and `xl`, usage: `button Button--{size}`.
 
 {% example html %}
-<button class="button button--primary button--xs" type="button">extra small</button>
-<button class="button button--primary button--sm" type="button">small</button>
-<button class="button button--primary button--md" type="button">medium</button>
-<button class="button button--primary button--lg" type="button">large</button>
-<button class="button button--primary button--xl" type="button">extra large</button>
+<button class="Button Button--primary Button--xs" type="button">extra small</button>
+<button class="Button Button--primary Button--sm" type="button">small</button>
+<button class="Button Button--primary Button--md" type="button">medium</button>
+<button class="Button Button--primary Button--lg" type="button">large</button>
+<button class="Button Button--primary Button--xl" type="button">extra large</button>
 {% endexample %}
 
 ##### Block Button
 
-Create block level buttons—those that span the full width of a parent—by adding `.button--block`;
+Create block level buttons—those that span the full width of a parent—by adding `.Button--block`;
 
 {% example html %}
-<button class="button button--primary button--block button--lg" type="button">Full width button</button>
+<button class="Button Button--primary Button--block Button--lg" type="button">Full width button</button>
 {% endexample %}
 
 ##### Style variations
 
 {% example html %}
-<button class="button button--primary" type="button">primary</button>
-<button class="button button--secondary" type="button">secondary</button>
-<button class="button button--tertiary" type="button">tertiary</button>
-<button class="button button--danger" type="button">danger</button>
+<button class="Button Button--primary" type="button">primary</button>
+<button class="Button Button--secondary" type="button">secondary</button>
+<button class="Button Button--tertiary" type="button">tertiary</button>
+<button class="Button Button--danger" type="button">danger</button>
 {% endexample %}
 
 
 ##### Outline styles
 
 {% example html %}
-<button class="button button--outline" type="button">outline</button>
-<button class="button button--outlinePrimary" type="button">primary</button>
-<button class="button button--outlineSecondary" type="button">secondary</button>
-<button class="button button--outlineTertiary" type="button">tertiary</button>
-<button class="button button--outlineDanger" type="button">danger</button>
+<button class="Button Button--outline" type="button">outline</button>
+<button class="Button Button--outlinePrimary" type="button">primary</button>
+<button class="Button Button--outlineSecondary" type="button">secondary</button>
+<button class="Button Button--outlineTertiary" type="button">tertiary</button>
+<button class="Button Button--outlineDanger" type="button">danger</button>
 {% endexample %}
 
 
 ##### Disabled Button
 
 {% example html %}
-<button class="button button--primary" type="button" disabled>disabled by attribute</button>
-<button class="button button--primary button--disabled" type="button">disabled by class</button>
+<button class="Button Button--primary" type="button" disabled>disabled by attribute</button>
+<button class="Button Button--primary Button--disabled" type="button">disabled by class</button>
 {% endexample %}
 
 ##### Active state button
 
 {% example html %}
-<button class="button button--primary is-active" type="button">Active by state</button>
-<button class="button button--primary button--active" type="button">Active by class</button>
+<button class="Button Button--primary is-active" type="button">Active by state</button>
+<button class="Button Button--primary Button--active" type="button">Active by class</button>
 {% endexample %}

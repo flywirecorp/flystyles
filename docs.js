@@ -49,5 +49,5 @@ bs.watch(["./docs/**/*.html", "./docs/**/*.md"], function(event, file) {
 
 // Now init the Browsersync server
 bs.init({
-  server: "./_docs"
+  server: "./_site"
 });

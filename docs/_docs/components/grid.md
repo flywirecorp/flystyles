@@ -9,49 +9,49 @@ Flystyles includes a **mobile-first** grid system for building layouts. It’s b
 
 ##### Responsive classes
 
-Start by adding an element with a class of `.gridRow`. This will create a horizontal block to contain vertical columns. Then add elements with a .gridColumn class within that row. Specify the widths of each column in each media query with the `.gridColumn--xs-*`, `.gridColumn--sm-*`, `.gridColumn--md-*`, `.gridColumn--lg-*` and `.gridColumn--xs-*` classes.
+Start by adding an element with a class of `.GridRow`. This will create a horizontal block to contain vertical columns. Then add elements with a .GridColumn class within that row. Specify the widths of each column in each media query with the `.GridColumn--xs-*`, `.GridColumn--sm-*`, `.GridColumn--md-*`, `.GridColumn--lg-*` and `.GridColumn--xs-*` classes.
 
 ##### Example: Mobile and desktop
 
-Don’t want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding `gridColumn--xs-*` and `.gridColumn--md-*` to your columns. See the example below for a better idea of how it all works.
+Don’t want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding `GridColumn--xs-*` and `.GridColumn--md-*` to your columns. See the example below for a better idea of how it all works.
 
 <div class="exampleView">
 {% example html %}
 <!-- Stack the columns on mobile by making one full-width and the other half-width -->
-<div class="gridRow">
-  <div class="gridColumn gridColumn--xs-12 gridColumn--md-8">.gridColumn--xs-12 .gridColumn--md-8</div>
-  <div class="gridColumn gridColumn--xs-6 gridColumn--md-4">.gridColumn--xs-6 .gridColumn--md-4</div>
+<div class="GridRow">
+  <div class="GridColumn GridColumn--xs-12 GridColumn--md-8">.GridColumn--xs-12 .GridColumn--md-8</div>
+  <div class="GridColumn GridColumn--xs-6 GridColumn--md-4">.GridColumn--xs-6 .GridColumn--md-4</div>
 </div>
 
 <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-<div class="gridRow">
-  <div class="gridColumn gridColumn--xs-6 gridColumn--md-4">.gridColumn--xs-6 .gridColumn--md-4</div>
-  <div class="gridColumn gridColumn--xs-6 gridColumn--md-4">.gridColumn--xs-6 .gridColumn--md-4</div>
-  <div class="gridColumn gridColumn--xs-6 gridColumn--md-4">.gridColumn--xs-6 .gridColumn--md-4</div>
+<div class="GridRow">
+  <div class="GridColumn GridColumn--xs-6 GridColumn--md-4">.GridColumn--xs-6 .GridColumn--md-4</div>
+  <div class="GridColumn GridColumn--xs-6 GridColumn--md-4">.GridColumn--xs-6 .GridColumn--md-4</div>
+  <div class="GridColumn GridColumn--xs-6 GridColumn--md-4">.GridColumn--xs-6 .GridColumn--md-4</div>
 </div>
 
 <!-- Columns are always 50% wide, on mobile and desktop -->
-<div class="gridRow">
-  <div class="gridColumn gridColumn--xs-6">.gridColumn--xs-6</div>
-  <div class="gridColumn gridColumn--xs-6">.gridColumn--xs-6</div>
+<div class="GridRow">
+  <div class="GridColumn GridColumn--xs-6">.GridColumn--xs-6</div>
+  <div class="GridColumn GridColumn--xs-6">.GridColumn--xs-6</div>
 </div>
 {% endexample %}
 </div>
 
 ##### Same width columns grid
 
-Add a class of the format `.gridRow--[breakpoint]-[columns-per-row]` to change the size of all columns within the row. By default, the max number of columns you can use with block grid are `$grid-columns`.
+Add a class of the format `.GridRow--[breakpoint]-[columns-per-row]` to change the size of all columns within the row. By default, the max number of columns you can use with block grid are `$grid-columns`.
 
 <div class="exampleView">
 {% example html %}
 
-<div class="gridRow gridRow--sm-1 gridRow--md-2 gridRow--lg-4">
-  <div class="gridColumn">.gridColumn</div>
-  <div class="gridColumn">.gridColumn</div>
-  <div class="gridColumn">.gridColumn</div>
-  <div class="gridColumn">.gridColumn</div>
-  <div class="gridColumn">.gridColumn</div>
-  <div class="gridColumn">.gridColumn</div>
+<div class="GridRow GridRow--sm-1 GridRow--md-2 GridRow--lg-4">
+  <div class="GridColumn">.GridColumn</div>
+  <div class="GridColumn">.GridColumn</div>
+  <div class="GridColumn">.GridColumn</div>
+  <div class="GridColumn">.GridColumn</div>
+  <div class="GridColumn">.GridColumn</div>
+  <div class="GridColumn">.GridColumn</div>
 </div>
 
 {% endexample %}

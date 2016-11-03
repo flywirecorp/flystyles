@@ -6,11 +6,11 @@
 @import "../../styles/mixins/media";
 @import "./mixins";
 
-.gridRow {
+.GridRow {
   @include grid-row();
 }
 
-.gridColumn {
+.GridColumn {
   @include grid-column-base();
 }
 
@@ -19,8 +19,8 @@
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-up($breakpoint) {
     @for $per-row from 1 through $grid-columns {
-      .gridRow--#{$breakpoint}-#{$per-row} {
-        .gridColumn {
+      .GridRow--#{$breakpoint}-#{$per-row} {
+        .GridColumn {
           float: left;
           width: 100% / $per-row;
           &:nth-of-type(n) { clear: none; }
@@ -35,7 +35,7 @@
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-up($breakpoint) {
     @for $i from 1 through $grid-columns {
-      .gridColumn--#{$breakpoint}-#{$i} {
+      .GridColumn--#{$breakpoint}-#{$i} {
         @include grid-column-size($i);
       }
     }
