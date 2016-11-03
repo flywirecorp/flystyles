@@ -9,43 +9,43 @@
 //  create your own customized Flystyles duplicating config file
 //  and setting your custom values
 
-@import "config";
+@import "./config";
 
 //  Mixins files
 //
 //  Mixins used around the whole framework, those files dont's output anything
 
-@import "styles/mixins/media";
-@import "styles/mixins/type";
-@import "styles/mixins/utils";
+@import "./styles/mixins/media";
+@import "./styles/mixins/type";
+@import "./styles/mixins/utils";
 
 // Base
 //
 // Load HTML default styles
 
-@import "styles/base/normalize";
-@import "styles/base/forms";
-@import "styles/base/global";
-@import "styles/base/links";
-@import "styles/base/lists";
-@import "styles/base/tables";
-@import "styles/base/typography";
+@import "./styles/base/normalize";
+@import "./styles/base/forms";
+@import "./styles/base/global";
+@import "./styles/base/links";
+@import "./styles/base/lists";
+@import "./styles/base/tables";
+@import "./styles/base/typography";
 
 // Utilities
 //
 
-@import "styles/utilities/border";
-@import "styles/utilities/display";
-@import "styles/utilities/float";
-@import "styles/utilities/helpers";
-@import "styles/utilities/spacing";
-@import "styles/utilities/text";
-@import "styles/utilities/visibility";
+@import "./styles/utilities/border";
+@import "./styles/utilities/display";
+@import "./styles/utilities/float";
+@import "./styles/utilities/helpers";
+@import "./styles/utilities/spacing";
+@import "./styles/utilities/text";
+@import "./styles/utilities/visibility";
 
 // Components
 //
 // load the components that you need
 
-@import "components/Button/Button";
-@import "components/Grid/Grid";
-@import "components/FormElements/FormElements";
+@import "./components/Button/Button";
+@import "./components/Grid/Grid";
+@import "./components/FormElements/FormElements";
