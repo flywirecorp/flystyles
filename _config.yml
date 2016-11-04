@@ -14,7 +14,7 @@ permalink:        pretty
 
 # Server
 source:           docs
-destination:      _site
+destination:      _gh_pages
 host:             0.0.0.0
 port:             9001
 baseurl:          ""
@@ -25,6 +25,11 @@ encoding:         UTF-8
 collections:
   docs:
     output: false
+
+# Assets
+sass:
+  sass_dir:          _scss
+  style:            :compressed
 
 # Gem dependencies
 gems:

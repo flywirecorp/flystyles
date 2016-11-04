@@ -1,10 +1,9 @@
 //
 //  Docs styles
 //
-//  Base Styles
-//  TODO: Add to framework
-//
 
+// Import flystyles
+@import "../../src/flystyles";
 
 // Wrapper to set max width
 %wrapper,
@@ -52,9 +51,9 @@
 
 .docs-siteTitle {
   margin: 0 0 0 auto;
-  text-transform: uppercase;
   font-size: .9rem;
   font-weight: $font-weight-semi-bold;
+  text-transform: uppercase;
   @include media-up(md) {
     font-size: 1.15rem;
   }
