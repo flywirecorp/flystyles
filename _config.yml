@@ -26,11 +26,6 @@ collections:
   docs:
     output: false
 
-# Assets
-sass:
-  sass_dir:          _scss
-  style:            :compressed
-
 # Gem dependencies
 gems:
   - octopress-autoprefixer
