@@ -5,52 +5,52 @@
 
 // Font Weights
 
-.u-fontWeight-light {
+.fontWeight-light {
   font-weight: $font-weight-light !important;
 }
-.u-fontWeight-normal {
+.fontWeight-normal {
   font-weight: $font-weight-regular !important;
 }
-.u-fontWeight-semiBold {
+.fontWeight-semiBold {
   font-weight: $font-weight-semi-bold !important;
 }
-.u-fontWeight-bold {
+.fontWeight-bold {
   font-weight: $font-weight-bold !important;
 }
 
 // Font Sizes
 
 @each $size in map-keys($font-sizes) {
-  .u-fontSize-#{$size} {
+  .fontSize-#{$size} {
     font-size: map-get($font-sizes, $size) !important;
   }
 }
 
 // Transformation
 
-.u-textTransform-lowercase {
+.textTransform-lowercase {
   text-transform: lowercase !important;
 }
 
-.u-textTransform-uppercase {
+.textTransform-uppercase {
   text-transform: uppercase !important;
 }
 
-.u-textTransform-capitalize {
+.textTransform-capitalize {
   text-transform: capitalize !important;
 }
 
 // Alignment
 
-.u-textAlign-left {
+.textAlign-left {
   text-align: left !important;
 }
 
-.u-textAlign-right {
+.textAlign-right {
   text-align: right !important;
 }
 
-.u-textAlign-center {
+.textAlign-center {
   text-align: center !important;
 }
 
@@ -58,15 +58,15 @@
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-up($breakpoint){
-    .u-#{$breakpoint}-textAlign-left {
+    .from#{capitalize($breakpoint)}-textAlign-left {
       text-align: left !important;
     }
 
-    .u-#{$breakpoint}-textAlign-right {
+    .from#{capitalize($breakpoint)}-textAlign-right {
       text-align: right !important;
     }
 
-    .u-#{$breakpoint}-textAlign-center {
+    .from#{capitalize($breakpoint)}-textAlign-center {
       text-align: center !important;
     }
   }

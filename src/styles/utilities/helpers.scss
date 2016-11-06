@@ -3,7 +3,6 @@
 //
 
 .clearfix,
-.u-cf,
-.u-clearfix {
+.cf{
   @include clearfix;
 }

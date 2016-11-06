@@ -7,13 +7,13 @@ file: utilities/text.scss
 
 ##### Font Weight
 
-Utility classes to change font weight `.u-fontWeight-{light|normal|semiBold|bold}`.
+Utility classes to change font weight `.fontWeight-{light|normal|semiBold|bold}`.
 
 {% example html %}
-<p class='u-fontWeight-light'>.u-fontWeight-light</p>
-<p class='u-fontWeight-normal'>.u-fontWeight-normal</p>
-<p class='u-fontWeight-semiBold'>.u-fontWeight-semiBold</p>
-<p class='u-fontWeight-bold'>.u-fontWeight-bold</p>
+<p class='fontWeight-light'>.fontWeight-light</p>
+<p class='fontWeight-normal'>.fontWeight-normal</p>
+<p class='fontWeight-semiBold'>.fontWeight-semiBold</p>
+<p class='fontWeight-bold'>.fontWeight-bold</p>
 {% endexample %}
 
 Based on this config variables:
@@ -28,14 +28,14 @@ $font-weight-extra-bold: 800;
 
 ##### Font size
 
-Utility classes to change font size `.u-fontSize-{xs|sm|md|lg|xl}`.
+Utility classes to change font size `.fontSize-{xs|sm|md|lg|xl}`.
 
 {% example html %}
-<p class='u-fontSize-xs'>.u-fontSize-xs</p>
-<p class='u-fontSize-sm'>.u-fontSize-sm</p>
-<p class='u-fontSize-md'>.u-fontSize-md</p>
-<p class='u-fontSize-lg'>.u-fontSize-lg</p>
-<p class='u-fontSize-xl'>.u-fontSize-xl</p>
+<p class='fontSize-xs'>.fontSize-xs</p>
+<p class='fontSize-sm'>.fontSize-sm</p>
+<p class='fontSize-md'>.fontSize-md</p>
+<p class='fontSize-lg'>.fontSize-lg</p>
+<p class='fontSize-xl'>.fontSize-xl</p>
 {% endexample %}
 
 Based on this config variables:
@@ -51,32 +51,32 @@ $font-size-xl:  1.5rem;
 
 ##### Text Transformation
 
-Change text yo uppercase, lowercase or capitalize first letter. Use: `.u-textTransform-{lowercase|uppercase|capitalize}`
+Change text yo uppercase, lowercase or capitalize first letter. Use: `.textTransform-{lowercase|uppercase|capitalize}`
 
 {% example html %}
-<span class='u-textTransform-lowercase'>LOWERCASE</span>
-<span class='u-textTransform-uppercase'>uppercase</span>
-<span class='u-textTransform-capitalize'>capitalize</span>
+<span class='textTransform-lowercase'>LOWERCASE</span>
+<span class='textTransform-uppercase'>uppercase</span>
+<span class='textTransform-capitalize'>capitalize</span>
 {% endexample %}
 
 ##### Text Alignment
 
-Simply set text alignment: `u-textAlign-{left|center|right}`.
+Simply set text alignment: `textAlign-{left|center|right}`.
 
 {% example html %}
-<p class='u-textAlign-left'>.u-textAlign-left</p>
-<p class='u-textAlign-center'>.u-textAlign-center</p>
-<p class='u-textAlign-right'>.u-textAlign-right</p>
+<p class='textAlign-left'>.textAlign-left</p>
+<p class='textAlign-center'>.textAlign-center</p>
+<p class='textAlign-right'>.textAlign-right</p>
 {% endexample %}
 
 
 ##### Responsive Text Alignment
 
-For left, right, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system: `.u-{size}-textAlign-{left-center-right}`.
+For left, right, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system: `.{size}-textAlign-{left-center-right}`.
 
 {% example html %}
-<p class='u-xs-textAlign-center'>Center text on all viewport sizes.</p>
-<p class='u-md-textAlign-center'>Center text on viewports sized MD (medium) or wider.</p>
-<p class='u-lg-textAlign-center'>Center text on viewports sized LG (large) or wider.</p>
-<p class='u-xl-textAlign-center'>Center text on viewports sized XL (extra-large) or wider.</p>
+<p class='fromXSmall-textAlign-center'>Center text on all viewport sizes.</p>
+<p class='fromMedium-textAlign-center'>Center text on viewports sized MD (medium) or wider.</p>
+<p class='fromLarge-textAlign-center'>Center text on viewports sized LG (large) or wider.</p>
+<p class='fromXLarge-textAlign-center'>Center text on viewports sized XL (extra-large) or wider.</p>
 {% endexample %}

@@ -4,23 +4,23 @@
 
 // Margin
 @each $size in map-keys($spacers) {
-  .u-margin-#{$size} { margin: map-get($spacers, $size) !important;}
-  .u-marginTop-#{$size} { margin-top: map-get($spacers, $size) !important;}
-  .u-marginBottom-#{$size} { margin-bottom: map-get($spacers, $size) !important;}
+  .margin-#{$size} { margin: map-get($spacers, $size) !important;}
+  .marginTop-#{$size} { margin-top: map-get($spacers, $size) !important;}
+  .marginBottom-#{$size} { margin-bottom: map-get($spacers, $size) !important;}
 
-  .u-padding-#{$size} { padding: map-get($spacers, $size) !important;}
-  .u-paddingTop-#{$size} { padding-top: map-get($spacers, $size) !important;}
-  .u-paddingBottom-#{$size} { padding-bottom: map-get($spacers, $size) !important;}
+  .padding-#{$size} { padding: map-get($spacers, $size) !important;}
+  .paddingTop-#{$size} { padding-top: map-get($spacers, $size) !important;}
+  .paddingBottom-#{$size} { padding-bottom: map-get($spacers, $size) !important;}
 }
 
 // Margin Horizontal (left and right)
-.u-marginHorizontal-neg {
+.marginHorizontal-neg {
   margin-right: -$spacer;
   margin-left: -$spacer;
 }
 
 // Margin Vertical (top and bottom)
-.u-marginVertical-md {
+.marginVertical-md {
   margin-right: $spacer !important;
   margin-left: $spacer !important;
 }

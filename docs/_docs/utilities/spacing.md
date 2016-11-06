@@ -7,7 +7,7 @@ file: utilities/spacing.scss
 
 Assign margin or padding to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties.
 
-The classes are named using the format: `.u-{property}-{size}`.
+The classes are named using the format: `.{property}-{size}`.
 
 Where `property` is one of:
 
@@ -28,5 +28,5 @@ $spacer-xl: 2rem !default;
 For example:
 
 {% example html %}
-<span class="u-margin-0 u-padding-xs">.u-margin-0 .u-padding-xs</span>
+<span class="margin-0 padding-xs">.margin-0 .padding-xs</span>
 {% endexample %}

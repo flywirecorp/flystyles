@@ -6,13 +6,13 @@
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-up($breakpoint) {
-    .u-#{$breakpoint}-float-left {
+    .from#{capitalize($breakpoint)}-float-left {
       float: left !important;
     }
-    .u-#{$breakpoint}-float-right {
+    .from#{capitalize($breakpoint)}-float-right {
       float: right !important;
     }
-    .u-#{$breakpoint}-float-none {
+    .from#{capitalize($breakpoint)}-float-none {
       float: none !important;
     }
   }

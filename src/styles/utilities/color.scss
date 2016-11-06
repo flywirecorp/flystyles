@@ -1,0 +1,44 @@
+//
+//  Color utilities
+//
+
+
+.color-white {
+  color: #fff !important;
+}
+
+.color-primary {
+  color: $color-brand-primary !important;
+}
+
+.color-secondary {
+  color: $color-brand-secondary !important;
+}
+
+.color-tertiary {
+  color: $color-brand-tertiary !important;
+}
+
+.color-gray {
+  color: $color-gray !important;
+}
+
+.color-gray-light {
+  color: $color-gray-light !important;
+}
+
+.color-gray-lighter {
+  color: $color-gray-lighter !important;
+}
+
+.color-success {
+  color: $color-success !important;
+}
+
+.color-danger {
+  color: $color-danger !important;
+}
+
+.color-warning {
+  color: $color-warning !important;
+}

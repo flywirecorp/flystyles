@@ -2,22 +2,22 @@
 //  Border
 //
 
-.u-borderLeft {
+.borderLeft {
   border-left: $divider-border !important;
 }
 
-.u-borderRight {
+.borderRight {
   border-right: $divider-border !important;
 }
 
 // Responsive borders
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-up($breakpoint) {
-    .u-#{$breakpoint}-borderLeft {
+    .from#{capitalize($breakpoint)}-borderLeft {
       border-left: $divider-border !important;
     }
 
-    .u-#{$breakpoint}-borderRight {
+    .from#{capitalize($breakpoint)}-borderRight {
       border-right: $divider-border !important;
     }
   }

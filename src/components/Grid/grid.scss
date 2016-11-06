@@ -19,7 +19,7 @@
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-up($breakpoint) {
     @for $per-row from 1 through $grid-columns {
-      .GridRow--#{$breakpoint}-#{$per-row} {
+      .GridRow--from#{capitalize($breakpoint)}-#{$per-row} {
         .GridColumn {
           float: left;
           width: 100% / $per-row;
@@ -35,7 +35,7 @@
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-up($breakpoint) {
     @for $i from 1 through $grid-columns {
-      .GridColumn--#{$breakpoint}-#{$i} {
+      .GridColumn--from#{capitalize($breakpoint)}-#{$i} {
         @include grid-column-size($i);
       }
     }

@@ -125,7 +125,7 @@ a single, simple principle.
 
 The CSS responsible for component-specific styling.
 
-Syntax: `<componentName>[-descendentName][--modifierName]`
+Syntax: `<ComponentName>[-descendentName][--modifierName]`
 
 We use a BEM-like naming convention., meaning Block, Element, Modifier, is a front-end methodology coined by developers working at Yandex. Whilst BEM is a complete methodology, here we are only concerned with its naming convention. Further, the naming convention here only is BEM-like; the principles are exactly the same, but the actual syntax differs slightly.
 
@@ -145,19 +145,19 @@ This has several benefits when reading and writing HTML and CSS:
 
 #### componentName
 
-The component's name must be written in camel case.
+The component's name must be written in upper camel case.
 
 ```css
-.myComponent { /* … */ }
+.MyComponent { /* … */ }
 ```
 
 ```html
-<article class="myComponent">
+<article class="MyComponent">
   …
 </article>
 ```
 
-#### componentName--modifierName
+#### ComponentName--modifierName
 
 A component modifier is a class that modifies the presentation of the base
 component in some form (e.g., for a certain configuration of the component).
@@ -167,73 +167,69 @@ addition_ to the base component class.
 
 ```css
 /* Core button */
-.button { /* … */ }
+.Button { /* … */ }
 /* Default button style */
-.button--default { /* … */ }
+.Button--default { /* … */ }
 ```
 
 ```html
-<button class="button button--default" type="button">…</button>
+<button class="Button Button--default" type="button">…</button>
 ```
 
-#### componentName-descendentName
+#### ComponentName-descendentName
 
-A component descendent is a class that is attached to a descendent node of a
-component. It's responsible for applying presentation directly to the
+A component descendent is a class that is attached to a descendent node of a component. It's responsible for applying presentation directly to the
 descendent on behalf of a particular component. Descendent names must be
 written in camel case.
 
 ```html
-<article class="tweet">
-  <header class="tweet-header">
-    <img class="tweet-avatar" src="{{src}}" alt="{{alt}}">
+<article class="Tweet">
+  <header class="Tweet-header">
+    <img class="Tweet-avatar" src="{{src}}" alt="{{alt}}">
     …
   </header>
-  <div class="tweet-bodyText">
+  <div class="Tweet-bodyText">
     …
   </div>
 </article>
 ```
 
-#### componentName.is-stateOfComponent
+#### ComponentName.is-stateOfComponent
 
-Use `is-stateName` to reflect changes to a component's state. The state name
-must be camel case. **Never style these classes directly; they should always be
-used as an adjoining class.**
+Use `is-stateName` to reflect changes to a component's state. The state name must be camel case.
+**Never style these classes directly; they should always be used as an adjoining class.**
 
 This means that the same state names can be used in multiple contexts, but
 every component must define its own styles for the state (as they are scoped to
 the component).
 
 ```css
-.tweet { /* … */ }
-.tweet.is-expanded { /* … */ }
+.Tweet { /* … */ }
+.Tweet.is-expanded { /* … */ }
 ```
 
 ```html
-<article class="tweet is-expanded">
+<article class="Tweet is-expanded">
   …
 </article>
 ```
 
 ### Utilities
 
-Low-level structural and positional traits. Utilities can be applied directly
-to any element within a component.
+Low-level structural and positional traits. Utilities can be applied directly to any element within a component.
 
-Syntax: `u-<utilityName>-[sm-|md-|lg-]`
+Syntax: `<property>-<value>-[sm|md|lg]`
 
-#### u-utilityName
+#### property-value-size
 
-Utilities must use a camel case name. What follows is an example of how various
-utilities can be used to create a simple structure within a component.
+Utilities must use a camel case name. What follows is an example of how various utilities can be used to create a simple structure within a component.
 
 ```html
-<div class="u-cf">
-  <a class="u-float-left" href="{{url}}">
-    <img class="u-display-block" src="{{src}}" alt="">
+<div class="clearfix">
+  <a class="float-left" href="{{url}}">
+    <img class="display-block" src="{{src}}" alt="">
   </a>
-  <p class="u-textAlign-sm-center u-textAlign-md-left">
+  <p class="fromSmallSize-textAlign-center fromMediumSize-textAlign-left">
     …
   </p>
 </div>
@@ -241,11 +237,11 @@ utilities can be used to create a simple structure within a component.
 
 #### Responsive utilities
 
-Certain utilities have responsive variants using the patterns: `u-<breakpoint>-<property>-<value>`.
+Certain utilities have responsive variants using the patterns: `from<breakpoint>-<property>-<value>`. For examle: `fromMedium-textAlign-center`.
 
 #### Visibility utilities
 
-Syntax: `u-[sm|smUp|smDown]|[lg|lgUp|lgDown]|...]-hidden`
+Syntax: `fromSmallSize-hidden` or `upToLargeSize-hidden`.
 
 
 Visibility classes let you show or hide elements based on screen size or device orientation. You can use visibility classes to control which elements users see depending on their browsing environment.
@@ -304,23 +300,23 @@ At the beginning of a file:
 
 At the beginning of a section:
 
-```css
+```scss
 
-.component {
+.Component {
   ...
 }
 
 // Variations
 //
 // Variation
-.component--variation {
+.Component--variation {
   ...
 }
 ```
 
 When you have to explain some line of CSS, when needed:
 
-```css
+```scss
 .selector {
   // why z-index is used?
   z-index: 3;

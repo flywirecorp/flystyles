@@ -5,12 +5,15 @@ id: visibility
 file: utilities/visibility.scss
 ---
 
-Visibility classes let you show or hide elements based on screen size or device orientation, use: `u-{breakpoint}{Up|Down}-hidden`.
-For example, `u-lgUp-hidden` will hide the element from large size, that is, when the viewport width is bigger than 992px.
+Visibility classes let you show or hide elements based on screen size or device orientation.
+You can use it from a breakpoint, or up to a breakpoint, for example:
+`fromSmall-hidden` or `upToSmall-hidden`.
+
+For example, `fromLarge-hidden` will hide the element from large size, that is, when the viewport width is bigger than 992px.
 
 
 {% example html %}
-<span class='u-mdUp-hidden'>Hidden on medium up</span>
-<span class='u-smDown-hidden'>Hidden on small down</span>
-<span class='u-lgUp-hidden'>Hidden on large up</span>
+<span class='fromMedium-hidden'>Hidden on medium up</span>
+<span class='upToSmall-hidden'>Hidden on small down</span>
+<span class='fromLarge-hidden'>Hidden on large up</span>
 {% endexample %}

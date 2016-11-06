@@ -6,12 +6,12 @@
 // Responsive visibility utilities
 
 @each $bp in map-keys($grid-breakpoints) {
-  .u-#{$bp}Up-hidden {
+  .from#{capitalize($bp)}-hidden {
     @include media-up($bp) {
       display: none !important;
     }
   }
-  .u-#{$bp}Down-hidden {
+  .upTo#{capitalize($bp)}-hidden {
     @include media-down($bp) {
       display: none !important;
     }

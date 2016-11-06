@@ -75,16 +75,16 @@ file: components/FormElements/
 
 ##### Input sizes
 
-Set heights using classes like `.Input--{size}`. Combine with `u-fontSize-{size}` utils to have a better results.
+Set heights using classes like `.Input--{size}`. Combine with `fontSize-{size}` utils to have a better results.
 
 {% example html %}
 <div class='FormGroup'>
-  <label class='Label u-fontSize-xs'>Extra small input</label>
+  <label class='Label fontSize-xs'>Extra small input</label>
   <input type='text' class='Input Input--xs' placeholder='extra-small input'/>
 </div>
 
 <div class='FormGroup'>
-  <label class='Label u-fontSize-sm'>Small input</label>
+  <label class='Label fontSize-sm'>Small input</label>
   <input type='email' class='Input Input--sm' placeholder='small input'/>
 </div>
 
@@ -94,7 +94,7 @@ Set heights using classes like `.Input--{size}`. Combine with `u-fontSize-{size}
 </div>
 
 <div class='FormGroup'>
-  <label class='Label u-fontSize-lg'>Large Select</label>
+  <label class='Label fontSize-lg'>Large Select</label>
   <select class="Select Select--lg" id="exampleSelect1">
     <option>1</option>
     <option>2</option>
@@ -105,7 +105,7 @@ Set heights using classes like `.Input--{size}`. Combine with `u-fontSize-{size}
 </div>
 
 <div class='FormGroup'>
-  <label class='Label u-fontSize-xl'>Extra large field</label>
+  <label class='Label fontSize-xl'>Extra large field</label>
   <input type='text' class='Input Input--xl' placeholder='extra-large input'/>
 </div>
 {% endexample %}

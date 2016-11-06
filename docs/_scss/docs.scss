@@ -2,13 +2,11 @@
 //  Docs styles
 //
 
-// Import flystyles
-@import "../../src/flystyles";
+
 
 // Wrapper to set max width
 %wrapper,
 .wrapper {
-  //max-width: $wrapper-max-width;
   padding: 0 $base-spacing;
   margin: 0 auto;
 }
@@ -36,7 +34,7 @@
   background: #fff;
   box-shadow: 0 1px 4px rgba(0,0,0,.1);
 
-  @include media-up(md) {
+  @include media-up(medium) {
     height: 120px;
   }
 }
@@ -54,14 +52,14 @@
   font-size: .9rem;
   font-weight: $font-weight-semi-bold;
   text-transform: uppercase;
-  @include media-up(md) {
+  @include media-up(medium) {
     font-size: 1.15rem;
   }
 }
 
 .docs-logo {
   height: 30px;
-  @include media-up(md) {
+  @include media-up(medium) {
     height: 40px;
   }
 }
@@ -74,7 +72,7 @@
   text-transform: uppercase;
   list-style: none;
 
-  @include media-up(md) {
+  @include media-up(medium) {
     margin: 0;
     font-size: .9rem;
   }
@@ -83,7 +81,7 @@
     display: block;
     margin-bottom: .5rem;
 
-    @include media-up(md) {
+    @include media-up(medium) {
       display: inline-block;
       margin-left: 1rem;
     }
@@ -91,7 +89,7 @@
       display: inline-block;
       color: #38495B;
 
-      @include media-up(md) {
+      @include media-up(medium) {
         padding-bottom: 1rem;
       }
 
@@ -112,7 +110,7 @@
   float: left;
   width: 250px;
   height: 100%;
-  @include media-up(md) {
+  @include media-up(medium) {
     display: block;
   }
 
@@ -124,7 +122,7 @@
 
 // Docs Content
 .docs-content {
-  @include media-up(md) {
+  @include media-up(medium) {
     padding-left: 280px;
   }
 }
@@ -203,7 +201,7 @@ code {
   color: #bd4147;
   background: #f0f4fb;
   border-radius: 3px;
-  font-family: $base-font-family;
+  font-family: $font-family-base;
 }
 
 .code {
@@ -274,7 +272,7 @@ pre code {
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-  @include media-up(sm) {
+  @include media-up(small) {
     flex-direction: row;
     flex-wrap: wrap;
   }

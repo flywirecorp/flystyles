@@ -65,11 +65,11 @@ $spacers: (
 // adapting to different screen sizes, for use in media queries.
 
 $grid-breakpoints: (
-  xs: 0,
-  sm: 544px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
+  xSmall: 0,
+  small: 544px,
+  medium: 768px,
+  large: 992px,
+  xLarge: 1200px
 ) !default;
 
 // Grid columns
