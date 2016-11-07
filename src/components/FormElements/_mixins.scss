@@ -15,7 +15,7 @@
 
 
   &:hover {
-    border-color: #9399ac;
+    border-color: $form-field-border-color-hover;
   }
 
   &:focus {
@@ -26,6 +26,16 @@
     color: $form-field-placeholder-color;
     opacity: 1;
   }
+}
+
+@mixin form-field-select {
+  @include form-field-base;
+
+  background-image: background-image(arrow-down-icon($form-field-placeholder-color));
+  background-repeat: no-repeat;
+  background-position: calc(100% - .8rem) center;
+  background-size: .8rem;
+  appearance: none;
 }
 
 @mixin form-field-size ($height, $font-size) {
@@ -39,7 +49,7 @@
   @return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="559 483 11 6"><path fill="#{$color}" fill-rule="evenodd" d="M560.148 487.442c-.198.188-.198.492 0 .68l.714.68c.198.19.518.19.714 0l3.394-3.28 3.422 3.306c.2.19.518.19.716 0l.714-.68c.196-.187.196-.49 0-.678l-4.494-4.33c-.198-.186-.518-.186-.714 0l-4.466 4.302"/></svg>';
 }
 @function arrow-down-icon($color) {
-  @return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="559 483 11 6"><path fill="#{$color}}" fill-rule="evenodd" d="M560.148 484.53c-.198-.19-.198-.493 0-.68l.714-.682c.198-.19.518-.19.714 0l3.394 3.28 3.422-3.305c.2-.19.518-.19.716 0l.714.68c.196.186.196.49 0 .678l-4.494 4.33c-.198.187-.518.187-.714 0l-4.466-4.3"/></svg>';
+  @return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="559 483 11 6"><path fill="#{$color}" fill-rule="evenodd" d="M560.148 484.53c-.198-.19-.198-.493 0-.68l.714-.682c.198-.19.518-.19.714 0l3.394 3.28 3.422-3.305c.2-.19.518-.19.716 0l.714.68c.196.186.196.49 0 .678l-4.494 4.33c-.198.187-.518.187-.714 0l-4.466-4.3"/></svg>';
 }
 
 @function danger-icon($color) {

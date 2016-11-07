@@ -6,18 +6,12 @@
 @import "../FormElements/mixins";
 
 .Dropdown-search {
-  @include form-field-base();
+  @include form-field-select;
   @include form-field-size($form-field-height-base, $font-size-base);
 
-  background-image: background-image(arrow-down-icon($select-arrow-color));
-  background-repeat: no-repeat;
-  background-position: calc(100% - .5rem) center;
-  background-size: 1rem;
-  appearance: none;
-
   .is-searching & {
-    background-image: background-image(arrow-up-icon($select-arrow-color));
-    border: 1px solid $form-field-border-color-focus;
+    background-image: background-image(arrow-up-icon(#9399ac)) !important;
+    border: 1px solid $form-field-border-color-focus !important;
   }
 }
 
@@ -34,25 +28,28 @@
 .Dropdown-options {
   position: relative;
   top: -3px;
-  display: none;
-  max-height: 200px;
+  max-height: 0;
   padding: 0;
   margin: 0;
   overflow-y: scroll;
   list-style: none;
+  visibility: hidden;
   background: #fff;
   border: 1px solid $form-field-border-color;
   border-top: 1px solid lighten($form-field-border-color, 10%);
   border-bottom-right-radius: $form-field-border-radius;
   border-bottom-left-radius: $form-field-border-radius;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
 
   .is-searching & {
-    display: block;
-    border: 1px solid $form-field-border-color-focus;
-    border-top: 1px solid lighten($form-field-border-color, 10%);
+    max-height: 200px;
+    visibility: visible;
+    border: 1px solid $form-field-border-color-focus !important;
+    border-top: 1px solid lighten($form-field-border-color, 10%) !important;
+    opacity: 1;
   }
 }
-
 
 .Dropdown-option {
   padding: rem(4px) rem(8px);
