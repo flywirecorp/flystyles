@@ -19,7 +19,7 @@
   }
 
   &:focus {
-    border-color: $color-brand-primary;
+    border-color: $form-field-border-color-focus;
   }
 
   &::placeholder {
@@ -35,8 +35,11 @@
   font-size: $font-size;
 }
 
-@function arrow-icon($color) {
-  @return '<svg viewBox="308 47 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M317.821,47.8485 L317.107,47.1685 C316.909,46.9785 316.589,46.9785 316.393,47.1685 L312.999,50.4465 L309.577,47.1425 C309.377,46.9525 309.059,46.9525 308.861,47.1425 L308.147,47.8225 C307.951,48.0085 307.951,48.3125 308.147,48.5005 L312.641,52.8305 C312.839,53.0165 313.159,53.0165 313.355,52.8305 L317.821,48.5285 C318.019,48.3405 318.019,48.0365 317.821,47.8485 Z" id="Imported-Layers" stroke="none" fill="#{$color}" fill-rule="evenodd"></path></svg>';
+@function arrow-up-icon($color) {
+  @return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="559 483 11 6"><path fill="#{$color}" fill-rule="evenodd" d="M560.148 487.442c-.198.188-.198.492 0 .68l.714.68c.198.19.518.19.714 0l3.394-3.28 3.422 3.306c.2.19.518.19.716 0l.714-.68c.196-.187.196-.49 0-.678l-4.494-4.33c-.198-.186-.518-.186-.714 0l-4.466 4.302"/></svg>';
+}
+@function arrow-down-icon($color) {
+  @return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="559 483 11 6"><path fill="#{$color}}" fill-rule="evenodd" d="M560.148 484.53c-.198-.19-.198-.493 0-.68l.714-.682c.198-.19.518-.19.714 0l3.394 3.28 3.422-3.305c.2-.19.518-.19.716 0l.714.68c.196.186.196.49 0 .678l-4.494 4.33c-.198.187-.518.187-.714 0l-4.466-4.3"/></svg>';
 }
 
 @function danger-icon($color) {

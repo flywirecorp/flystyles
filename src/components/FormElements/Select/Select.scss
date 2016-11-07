@@ -11,7 +11,7 @@
   @include form-field-base;
   @include form-field-size($form-field-height-base, $font-size-base);
 
-  background-image: background-image(arrow-icon($select-arrow-color));
+  background-image: background-image(arrow-down-icon($select-arrow-color));
   background-repeat: no-repeat;
   background-position: calc(100% - .5rem) center;
   background-size: 1rem;
