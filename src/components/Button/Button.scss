@@ -38,6 +38,10 @@
   @include button-style-outline($button-outline-color, $color-brand-primary);
 }
 
+.Button--outlineWhite {
+  @include button-style-outline($color-white, $color-brand-primary);
+}
+
 @each $style in map-keys($button-styles) {
   .Button--outline#{capitalize($style)} {
     $current: map-get($button-styles, $style);

@@ -1,0 +1,9 @@
+//
+//  Background utilities
+//
+
+@each $color in map-keys($colors) {
+  .bg-#{$color} {
+    background-color: map-get($colors, $color) !important;
+  }
+}

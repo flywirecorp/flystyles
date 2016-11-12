@@ -1,19 +1,60 @@
 //
 //  Spacing utilities
 //
+// Example: maginTop-0
 
-// Margin
 @each $size in map-keys($spacers) {
-  .margin-#{$size} { margin: map-get($spacers, $size) !important;}
-  .marginTop-#{$size} { margin-top: map-get($spacers, $size) !important;}
-  .marginBottom-#{$size} { margin-bottom: map-get($spacers, $size) !important;}
+  .margin-#{$size} {
+    margin: map-get($spacers, $size) !important;
+  }
+  .marginTop-#{$size} {
+    margin-top: map-get($spacers, $size) !important;
+  }
+  .marginBottom-#{$size} {
+    margin-bottom: map-get($spacers, $size) !important;
+  }
+  .padding-#{$size} {
+    padding: map-get($spacers, $size) !important;
+  }
+  .paddingTop-#{$size} {
+    padding-top: map-get($spacers, $size) !important;
+  }
+  .paddingBottom-#{$size} {
+    padding-bottom: map-get($spacers, $size) !important;
+  }
+}
 
-  .padding-#{$size} { padding: map-get($spacers, $size) !important;}
-  .paddingTop-#{$size} { padding-top: map-get($spacers, $size) !important;}
-  .paddingBottom-#{$size} { padding-bottom: map-get($spacers, $size) !important;}
+// Responsive classes
+//
+// Example: fromSmall-maginBottom-xl
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-up($breakpoint) {
+    @each $size in map-keys($spacers) {
+      .from#{capitalize($breakpoint)}-margin-#{$size} {
+        margin: map-get($spacers, $size) !important;
+      }
+      .from#{capitalize($breakpoint)}-marginTop-#{$size} {
+        margin-top: map-get($spacers, $size) !important;
+      }
+      .from#{capitalize($breakpoint)}-marginBottom-#{$size} {
+        margin-bottom: map-get($spacers, $size) !important;
+      }
+      .from#{capitalize($breakpoint)}-padding-#{$size} {
+        padding: map-get($spacers, $size) !important;
+      }
+      .from#{capitalize($breakpoint)}-paddingTop-#{$size} {
+        padding-top: map-get($spacers, $size) !important;
+      }
+      .from#{capitalize($breakpoint)}-paddingBottom-#{$size} {
+        padding-bottom: map-get($spacers, $size) !important;
+      }
+    }
+  }
 }
 
 // Margin Horizontal (left and right)
+
 .marginHorizontal-neg {
   margin-right: -$spacer;
   margin-left: -$spacer;
