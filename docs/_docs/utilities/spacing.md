@@ -32,3 +32,14 @@ For example:
 <p class="margin-0 padding-xs">margin-0 padding-xs</p>
 <p class="margin-sm padding-xxl">margin-sm padding-xxl</p>
 {% endexample %}
+
+
+##### Responsive Spacing classes
+
+Margins and paddings can be applied responsively. For example:
+`.fromSmall-marginTop-0`, remove margin top from `Small` breackpoint (544px). That is, from 544px the element won't have margin top.
+
+{% example html %}
+<p class="marginTop-xxl padding-xxl fromMedium-marginTop-0">margin-0 padding-xs</p>
+<p class="margin-sm padding-xxl fromLarge-padding-0">margin-sm padding-xxl</p>
+{% endexample %}

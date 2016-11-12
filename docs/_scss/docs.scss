@@ -200,7 +200,6 @@ code {
   font-size: 90%;
   color: #bd4147;
   background: #f0f4fb;
-  border-radius: 3px;
   font-family: $font-family-base;
 }
 
@@ -208,12 +207,11 @@ code {
   margin-bottom: 2rem;
   overflow: hidden;
   border: 1px solid #D1DAE6;
-  border-radius: 3px;
+  overflow: hidden;
 }
 
 .code-example {
   padding: 2rem;
-  background: #fff;
   border-bottom: 1px solid #D1DAE6;
 }
 

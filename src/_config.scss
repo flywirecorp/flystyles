@@ -27,13 +27,33 @@ $color-info:     #38b1e8 !default;
 $color-success:  #6abb4f !default;
 $color-danger:   #e14b3b !default;
 $color-warning:  #dfbd1e !default;
+$color-white:    #fff !default;
+$color-black:    #000 !default;
 
 // Grayscale colors
 
 $color-gray-lighter: #eee !default;
 $color-gray-light:   #ccc !default;
-$color-gray:         #7a8Fa2 !default;
+$color-gray:         #7a8fa2 !default;
 $color-gray-dark:    #666 !default;
+$color-gray-darker:  #333 !default;
+
+$colors: (
+  "primary": $color-brand-primary,
+  "secondary": $color-brand-secondary,
+  "tertiary": $color-brand-tertiary,
+  "white": $color-white,
+  "black": $color-black,
+  "info": $color-info,
+  "success": $color-success,
+  "warning": $color-warning,
+  "danger": $color-danger,
+  "grayLighter": $color-gray-lighter,
+  "grayLight": $color-gray-light,
+  "gray": $color-gray,
+  "grayDark": $color-gray-dark,
+  "grayDarker": $color-gray-darker
+) !default;
 
 // Spacing
 //
