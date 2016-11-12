@@ -838,22 +838,40 @@ hr {
   padding-bottom: 1.5rem !important; }
 
 .margin-xl {
-  margin: 1.5rem !important; }
+  margin: 2rem !important; }
 
 .marginTop-xl {
-  margin-top: 1.5rem !important; }
+  margin-top: 2rem !important; }
 
 .marginBottom-xl {
-  margin-bottom: 1.5rem !important; }
+  margin-bottom: 2rem !important; }
 
 .padding-xl {
-  padding: 1.5rem !important; }
+  padding: 2rem !important; }
 
 .paddingTop-xl {
-  padding-top: 1.5rem !important; }
+  padding-top: 2rem !important; }
 
 .paddingBottom-xl {
-  padding-bottom: 1.5rem !important; }
+  padding-bottom: 2rem !important; }
+
+.margin-xxl {
+  margin: 3rem !important; }
+
+.marginTop-xxl {
+  margin-top: 3rem !important; }
+
+.marginBottom-xxl {
+  margin-bottom: 3rem !important; }
+
+.padding-xxl {
+  padding: 3rem !important; }
+
+.paddingTop-xxl {
+  padding-top: 3rem !important; }
+
+.paddingBottom-xxl {
+  padding-bottom: 3rem !important; }
 
 .marginHorizontal-neg {
   margin-right: -1rem;
