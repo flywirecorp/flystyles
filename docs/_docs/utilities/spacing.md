@@ -14,7 +14,7 @@ Where `property` is one of:
   - `margin`, `marginTop`, `marginBottom`: for classes that set margin
   - `padding`, `paddingTop`, `paddingBottom`: for classes that set padding
 
-And size is `0`, `xs`, `sm`, `md`, `lg`, `xl` with this configurable values:
+And size is `0`, `xs`, `sm`, `md`, `lg`, `xl`, `xxl` with this configurable values:
 
 ```scss
 // config.scss
@@ -23,10 +23,12 @@ $spacer-sm: .5rem !default;
 $spacer-md: 1rem !default;
 $spacer-lg: 1.5rem !default;
 $spacer-xl: 2rem !default;
+$spacer-xxl: 3rem !default;
 ```
 
 For example:
 
 {% example html %}
-<span class="margin-0 padding-xs">.margin-0 .padding-xs</span>
+<p class="margin-0 padding-xs">margin-0 padding-xs</p>
+<p class="margin-sm padding-xxl">margin-sm padding-xxl</p>
 {% endexample %}
