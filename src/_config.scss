@@ -49,14 +49,16 @@ $spacer-sm: .5rem !default;
 $spacer-md: $spacer !default;
 $spacer-lg: 1.5rem !default;
 $spacer-xl: 2rem !default;
+$spacer-xxl: 3rem !default;
 
 $spacers: (
-  0:  0,
-  xs: $spacer-xs,
-  sm: $spacer-sm,
-  md: $spacer-md,
-  lg: $spacer-lg,
-  xl: $spacer-lg
+  0:   0,
+  xs:  $spacer-xs,
+  sm:  $spacer-sm,
+  md:  $spacer-md,
+  lg:  $spacer-lg,
+  xl:  $spacer-xl,
+  xxl: $spacer-xxl
 ) !default;
 
 // Grid breakpoints
