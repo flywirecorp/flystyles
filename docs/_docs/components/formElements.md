@@ -42,33 +42,6 @@ file: components/FormElements/
     <label class="Label" for="exampleTextarea">Example textarea</label>
     <textarea class="Textarea" id="exampleTextarea" rows="3"></textarea>
   </div>
-  <fieldset class="FormGroup">
-    <legend>Radio buttons</legend>
-    <div class="form-check">
-      <label class="Label" class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-        Option one is this and that&mdash;be sure to include why it's great
-      </label>
-    </div>
-    <div class="form-check">
-    <label class="Label" class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-        Option two can be something else and selecting it will deselect option one
-      </label>
-    </div>
-    <div class="form-check disabled">
-    <label class="Label" class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-        Option three is disabled
-      </label>
-    </div>
-  </fieldset>
-  <div class="form-check">
-    <label class="Label" class="form-check-label">
-      <input type="checkbox" class="form-check-input">
-      Check me out
-    </label>
-  </div>
   <button type="submit" class="Button Button--primary">Submit</button>
 </form>
 {% endexample %}
