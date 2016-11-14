@@ -2,7 +2,7 @@
 title: Buttons
 description:
 category: components
-file: components/FormElements/Button/Button.scss
+file: components/Button/Button.scss
 ---
 
 

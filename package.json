@@ -13,7 +13,7 @@
     "build": "npm run css:build && npm run css:autoprefix && npm run css:minify",
     "docs": "node docs.js",
     "version": "npm run build && git add -A dist",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags && npm publish"
   },
   "repository": {
     "type": "git",

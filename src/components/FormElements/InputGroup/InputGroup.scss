@@ -1,0 +1,53 @@
+//
+//  Input Group Component
+//
+@import "../config";
+@import "../mixins";
+
+.InputGroup {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+}
+
+.InputGroup-input {
+  display: table-cell;
+  margin: 0;
+  white-space: nowrap;
+  vertical-align: middle;
+
+  .InputGroup &:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .InputGroup &:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .InputGroup &:not(:first-child):not(:last-child) {
+    border-radius: 0;
+  }
+}
+
+.InputGroup-context {
+  display: table-cell;
+  width: 1%;
+  height: 100%;
+  padding: 0 $spacer;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background: $input-group-context-background;
+  border: $form-field-border;
+
+  .InputGroup &:last-child {
+    border-left: 0;
+    border-top-right-radius: $form-field-border-radius;
+    border-bottom-right-radius: $form-field-border-radius;
+  }
+  .InputGroup &:first-child {
+    border-right: 0;
+    border-top-left-radius: $form-field-border-radius;
+    border-bottom-left-radius: $form-field-border-radius;
+  }
+}
