@@ -105,3 +105,44 @@ Flystyles includes validation styles for danger, warning, and success states on 
 </div>
 
 {% endexample %}
+
+
+#### Input groups
+
+Easily extend form controls by adding text, buttons, or button groups on either side of textual `<input>`s.
+
+{% example html %}
+
+<div class="FormGroup">
+  <label class="Label" for="prefixed">Input with prefix</label>
+  <div class="InputGroup">
+    <span class="InputGroup-context">http://</span>
+    <input type="url" class="Input InputGroup-input" placeholder="Enter your website" id="prefixed" />
+  </div>
+</div>
+
+<div class="FormGroup">
+  <label class="Label" for="sufixed">Input with sufix</label>
+  <div class="InputGroup">
+    <input type="mail" class="Input InputGroup-input" placeholder="Enter your email" id="sufixed" />
+    <span class="InputGroup-context">@flywire.com</span>
+  </div>
+</div>
+
+<div class="FormGroup">
+  <label class="Label" for="sufixed2">Prefixed and sufixed input</label>
+  <div class="InputGroup">
+    <span class="InputGroup-context">$</span>
+    <input type="mail" class="Input InputGroup-input" placeholder="Enter your email" id="sufixed2" />
+    <span class="InputGroup-context">.00</span>
+  </div>
+</div>
+
+<div class="FormGroup">
+  <label class="Label" for="sufixed">Input with sufix</label>
+  <div class="InputGroup">
+    <input type="mail" class="Input Input--xl InputGroup-input" placeholder="Enter your email" id="sufixed" />
+    <span class="InputGroup-context fontSize-lg">@flywire.com</span>
+  </div>
+</div>
+{% endexample %}
