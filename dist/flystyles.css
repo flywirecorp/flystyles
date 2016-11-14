@@ -1672,9 +1672,9 @@ hr {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  height: 2.6rem;
-  padding: 0 0.52rem;
-  line-height: 2.6rem;
+  height: 42px;
+  padding: 0 8.4px;
+  line-height: 42px;
   font-size: 1rem; }
   .Dropdown-search:hover {
     border-color: #9399ac; }
@@ -2380,9 +2380,9 @@ hr {
   outline: 0;
   -webkit-transition: 200ms border ease-in-out;
   transition: 200ms border ease-in-out;
-  height: 2.6rem;
-  padding: 0 0.52rem;
-  line-height: 2.6rem;
+  height: 42px;
+  padding: 0 8.4px;
+  line-height: 42px;
   font-size: 1rem; }
   .Input:hover {
     border-color: #9399ac; }
@@ -2402,33 +2402,33 @@ hr {
     opacity: 1; }
 
 .Input--xs {
-  height: 1.56rem;
-  padding: 0 0.312rem;
-  line-height: 1.56rem;
+  height: 25.2px;
+  padding: 0 5.04px;
+  line-height: 25.2px;
   font-size: 0.75rem; }
 
 .Input--sm {
-  height: 2.08rem;
-  padding: 0 0.416rem;
-  line-height: 2.08rem;
+  height: 33.6px;
+  padding: 0 6.72px;
+  line-height: 33.6px;
   font-size: 0.875rem; }
 
 .Input--md {
-  height: 2.6rem;
-  padding: 0 0.52rem;
-  line-height: 2.6rem;
+  height: 42px;
+  padding: 0 8.4px;
+  line-height: 42px;
   font-size: 1rem; }
 
 .Input--lg {
-  height: 3.9rem;
-  padding: 0 0.78rem;
-  line-height: 3.9rem;
+  height: 63px;
+  padding: 0 12.6px;
+  line-height: 63px;
   font-size: 1.25rem; }
 
 .Input--xl {
-  height: 5.2rem;
-  padding: 0 1.04rem;
-  line-height: 5.2rem;
+  height: 84px;
+  padding: 0 16.8px;
+  line-height: 84px;
   font-size: 1.5rem; }
 
 .has-error .Input, .Input--error {
@@ -2444,6 +2444,44 @@ hr {
   background-position: calc(100% - .5rem) center;
   background-size: 1rem;
   border-color: #6abb4f; }
+
+.InputGroup {
+  display: table;
+  width: 100%;
+  border-collapse: separate; }
+
+.InputGroup-input {
+  display: table-cell;
+  margin: 0;
+  white-space: nowrap;
+  vertical-align: middle; }
+  .InputGroup .InputGroup-input:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
+  .InputGroup .InputGroup-input:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; }
+  .InputGroup .InputGroup-input:not(:first-child):not(:last-child) {
+    border-radius: 0; }
+
+.InputGroup-context {
+  display: table-cell;
+  width: 1%;
+  height: 100%;
+  padding: 0 1rem;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background: #f8fafd;
+  border: 1px solid #ccc; }
+  .InputGroup .InputGroup-context:last-child {
+    border-left: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px; }
+  .InputGroup .InputGroup-context:first-child {
+    border-right: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px; }
 
 .FormGroup {
   display: block;
@@ -2494,9 +2532,9 @@ hr {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  height: 2.6rem;
-  padding: 0 0.52rem;
-  line-height: 2.6rem;
+  height: 42px;
+  padding: 0 8.4px;
+  line-height: 42px;
   font-size: 1rem; }
   .Select:hover {
     border-color: #9399ac; }
@@ -2516,37 +2554,37 @@ hr {
     opacity: 1; }
 
 .Select--xs {
-  height: 1.56rem;
-  padding: 0 0.312rem;
-  line-height: 1.56rem;
+  height: 25.2px;
+  padding: 0 5.04px;
+  line-height: 25.2px;
   font-size: 0.75rem;
   background-position: calc(100% - 0.75rem) center; }
 
 .Select--sm {
-  height: 2.08rem;
-  padding: 0 0.416rem;
-  line-height: 2.08rem;
+  height: 33.6px;
+  padding: 0 6.72px;
+  line-height: 33.6px;
   font-size: 0.875rem;
   background-position: calc(100% - 0.875rem) center; }
 
 .Select--md {
-  height: 2.6rem;
-  padding: 0 0.52rem;
-  line-height: 2.6rem;
+  height: 42px;
+  padding: 0 8.4px;
+  line-height: 42px;
   font-size: 1rem;
   background-position: calc(100% - 1rem) center; }
 
 .Select--lg {
-  height: 3.9rem;
-  padding: 0 0.78rem;
-  line-height: 3.9rem;
+  height: 63px;
+  padding: 0 12.6px;
+  line-height: 63px;
   font-size: 1.25rem;
   background-position: calc(100% - 1.25rem) center; }
 
 .Select--xl {
-  height: 5.2rem;
-  padding: 0 1.04rem;
-  line-height: 5.2rem;
+  height: 84px;
+  padding: 0 16.8px;
+  line-height: 84px;
   font-size: 1.5rem;
   background-position: calc(100% - 1.5rem) center; }
 
