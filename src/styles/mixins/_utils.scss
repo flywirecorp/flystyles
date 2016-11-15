@@ -31,7 +31,7 @@
 
 
 @function background-image($image, $type: "svg+xml", $encoding: "utf8") {
-  @return url('data:image\/#{$type};#{encoding},#{$image}');
+  @return url('data:image\/#{$type};#{$encoding},#{$image}');
 }
 
 @mixin state-variation($state) {
