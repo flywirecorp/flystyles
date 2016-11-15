@@ -1,7 +1,6 @@
 //
 // Icon Component
 //
-
 @import "config";
 @import "mixins";
 
@@ -19,7 +18,6 @@
 
 // Sizes
 //
-
 @each $size in map-keys($icon-sizes) {
   .Icon--#{$size} {
     width: map-get($icon-sizes, $size);
@@ -29,9 +27,18 @@
 
 // Icons
 //
-
 @each $icon in map-keys($icons) {
   .Icon--#{$icon} {
     background-image: icon(map-get($icons, $icon));
   }
+}
+
+.Prueba {
+  background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M224 387.814V512L32 320l192-192v126.912C447.375 260.152 437.794 103.016 380.93 0 521.287 151.707 491.48 394.785 224 387.814z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  width: 30%;
+  padding-bottom: 30%;
+  margin: 0 auto;
 }

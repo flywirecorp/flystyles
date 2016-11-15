@@ -33,7 +33,7 @@
 @mixin form-field-select {
   @include form-field-base;
 
-  background-image: background-image(arrow-down-icon($form-field-placeholder-color));
+  background-image: svg-url(arrow-down-icon($form-field-placeholder-color));
   background-repeat: no-repeat;
   background-position: calc(100% - .8rem) center;
   background-size: .8rem;
