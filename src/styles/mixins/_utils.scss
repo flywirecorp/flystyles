@@ -28,3 +28,15 @@
 @function capitalize($string) {
   @return to-upper-case(str-slice($string, 1, 1)) + str-slice($string, 2);
 }
+
+
+@function background-image($image, $type: "svg+xml", $encoding: "utf8") {
+  @return url('data:image\/#{$type};#{encoding},#{$image}');
+}
+
+@mixin state-variation($state) {
+  .has-#{$state} &,
+  &--#{$state} {
+    @content;
+  }
+}

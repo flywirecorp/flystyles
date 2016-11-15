@@ -2,6 +2,8 @@
 //  forms mixins
 //
 
+@import "../../styles/mixins/all";
+
 @mixin form-field-base {
   display: block;
   width: 100%;
@@ -58,15 +60,4 @@
 
 @function success-icon($color) {
   @return '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="200 41 16 13"><path fill="none" stroke="#{$color}" stroke-width="2" d="M214.595 42.493L205 52l-3.877-3.97" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-}
-
-@function background-image($image, $type: "svg+xml", $encoding: "utf8") {
-  @return url('data:image\/#{$type};#{encoding},#{$image}');
-}
-
-@mixin state-variation($state) {
-  .has-#{$state} &,
-  &--#{$state} {
-    @content;
-  }
 }
