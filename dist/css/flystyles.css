@@ -1665,7 +1665,7 @@ hr {
   outline: 0;
   -webkit-transition: 200ms border ease-in-out;
   transition: 200ms border ease-in-out;
-  background-image: url('data:image/svg+xml;encoding,<svg xmlns="http://www.w3.org/2000/svg" viewBox="559 483 11 6"><path fill="#939fac" fill-rule="evenodd" d="M560.148 484.53c-.198-.19-.198-.493 0-.68l.714-.682c.198-.19.518-.19.714 0l3.394 3.28 3.422-3.305c.2-.19.518-.19.716 0l.714.68c.196.186.196.49 0 .678l-4.494 4.33c-.198.187-.518.187-.714 0l-4.466-4.3"/></svg>');
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="559 483 11 6"><path fill="#939fac" fill-rule="evenodd" d="M560.148 484.53c-.198-.19-.198-.493 0-.68l.714-.682c.198-.19.518-.19.714 0l3.394 3.28 3.422-3.305c.2-.19.518-.19.716 0l.714.68c.196.186.196.49 0 .678l-4.494 4.33c-.198.187-.518.187-.714 0l-4.466-4.3"/></svg>');
   background-repeat: no-repeat;
   background-position: calc(100% - .8rem) center;
   background-size: .8rem;
@@ -1693,7 +1693,7 @@ hr {
     color: #939fac;
     opacity: 1; }
   .is-searching .Dropdown-search {
-    background-image: url('data:image/svg+xml;encoding,<svg xmlns="http://www.w3.org/2000/svg" viewBox="559 483 11 6"><path fill="#9399ac" fill-rule="evenodd" d="M560.148 487.442c-.198.188-.198.492 0 .68l.714.68c.198.19.518.19.714 0l3.394-3.28 3.422 3.306c.2.19.518.19.716 0l.714-.68c.196-.187.196-.49 0-.678l-4.494-4.33c-.198-.186-.518-.186-.714 0l-4.466 4.302"/></svg>') !important;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="559 483 11 6"><path fill="#9399ac" fill-rule="evenodd" d="M560.148 487.442c-.198.188-.198.492 0 .68l.714.68c.198.19.518.19.714 0l3.394-3.28 3.422 3.306c.2.19.518.19.716 0l.714-.68c.196-.187.196-.49 0-.678l-4.494-4.33c-.198-.186-.518-.186-.714 0l-4.466 4.302"/></svg>') !important;
     border: 1px solid #0084c0 !important; }
 
 .has-error .Dropdown-search, .Dropdown-search--error {
@@ -1734,6 +1734,16 @@ hr {
     background-color: #0084c0; }
   .Dropdown-option .is-highlighted {
     border-bottom: 1px dotted #aaa; }
+
+.Icon {
+  display: inline-block; }
+  .Icon::before {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem; }
+
+.Icon--calendar::before {
+  content: url("../assets/icons/calendar.svg"); }
 
 .GridRow {
   margin-left: -15px;
@@ -2432,14 +2442,14 @@ hr {
   font-size: 1.5rem; }
 
 .has-error .Input, .Input--error {
-  background-image: url('data:image/svg+xml;encoding,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#e14b3b" d="M19.3 16.8c.2.4.2.9 0 1.3s-.7.7-1.2.7H1.9c-.5 0-.9-.3-1.2-.7-.2-.4-.3-.9 0-1.3L8.8 1.9c.3-.4.7-.7 1.2-.7s.9.3 1.2.7l8.1 14.9zm-7.8-9.9c0-.1 0-.1-.1-.2s-.2-.1-.3-.1H8.8c-.1 0-.2.1-.3.1V7l.2 4.8c0 .1.1.2.3.2h2c.2 0 .3-.1.4-.2l.1-4.9zm-.2 6.8c0-.2-.1-.3-.3-.3H9c-.2 0-.3.2-.3.3v2c0 .2.1.3.3.3h2c.2 0 .3-.2.3-.3v-2z"/></svg>');
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#e14b3b" d="M19.3 16.8c.2.4.2.9 0 1.3s-.7.7-1.2.7H1.9c-.5 0-.9-.3-1.2-.7-.2-.4-.3-.9 0-1.3L8.8 1.9c.3-.4.7-.7 1.2-.7s.9.3 1.2.7l8.1 14.9zm-7.8-9.9c0-.1 0-.1-.1-.2s-.2-.1-.3-.1H8.8c-.1 0-.2.1-.3.1V7l.2 4.8c0 .1.1.2.3.2h2c.2 0 .3-.1.4-.2l.1-4.9zm-.2 6.8c0-.2-.1-.3-.3-.3H9c-.2 0-.3.2-.3.3v2c0 .2.1.3.3.3h2c.2 0 .3-.2.3-.3v-2z"/></svg>');
   background-repeat: no-repeat;
   background-position: calc(100% - .5rem) center;
   background-size: 1rem;
   border-color: #e14b3b; }
 
 .has-success .Input, .Input--success {
-  background-image: url('data:image/svg+xml;encoding,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="200 41 16 13"><path fill="none" stroke="#6abb4f" stroke-width="2" d="M214.595 42.493L205 52l-3.877-3.97" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="200 41 16 13"><path fill="none" stroke="#6abb4f" stroke-width="2" d="M214.595 42.493L205 52l-3.877-3.97" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   background-repeat: no-repeat;
   background-position: calc(100% - .5rem) center;
   background-size: 1rem;
@@ -2525,7 +2535,7 @@ hr {
   outline: 0;
   -webkit-transition: 200ms border ease-in-out;
   transition: 200ms border ease-in-out;
-  background-image: url('data:image/svg+xml;encoding,<svg xmlns="http://www.w3.org/2000/svg" viewBox="559 483 11 6"><path fill="#939fac" fill-rule="evenodd" d="M560.148 484.53c-.198-.19-.198-.493 0-.68l.714-.682c.198-.19.518-.19.714 0l3.394 3.28 3.422-3.305c.2-.19.518-.19.716 0l.714.68c.196.186.196.49 0 .678l-4.494 4.33c-.198.187-.518.187-.714 0l-4.466-4.3"/></svg>');
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="559 483 11 6"><path fill="#939fac" fill-rule="evenodd" d="M560.148 484.53c-.198-.19-.198-.493 0-.68l.714-.682c.198-.19.518-.19.714 0l3.394 3.28 3.422-3.305c.2-.19.518-.19.716 0l.714.68c.196.186.196.49 0 .678l-4.494 4.33c-.198.187-.518.187-.714 0l-4.466-4.3"/></svg>');
   background-repeat: no-repeat;
   background-position: calc(100% - .8rem) center;
   background-size: .8rem;

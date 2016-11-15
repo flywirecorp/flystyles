@@ -1,0 +1,12 @@
+@import "../config";
+
+$icon-sizes: (
+  xs: 14px,
+  sm: 18px,
+  md: 24px,
+  lg: 36px,
+  xl: 48px,
+  xxl: 64px
+) !default;
+
+$icons: ('calendar') !default;

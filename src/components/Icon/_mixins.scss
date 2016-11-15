@@ -1,0 +1,6 @@
+@import "../mixins/all";
+
+@mixin icon-size($size) {
+  width: map-get($icon-sizes, $size);
+  height: map-get($icon-sizes, $size);
+}
