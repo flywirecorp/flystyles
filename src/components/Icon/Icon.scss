@@ -27,8 +27,8 @@
 
 // Icons
 
-@each $icon in $icons {
+@each $icon in map-keys($icons) {
   .Icon--#{$icon} {
-    background-repeat: icon($icon);
+    background-image: icon(map-get($icons, $icon));
   }
 }

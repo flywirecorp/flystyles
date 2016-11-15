@@ -9,4 +9,6 @@ $icon-sizes: (
   xxl: 64px
 ) !default;
 
-$icons: ('calendar') !default;
+$icons: (
+  calendar: 'calendar.svg'
+) !default;
