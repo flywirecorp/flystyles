@@ -1,4 +1,4 @@
-@import "../mixins/all";
+@import "../../mixins/all";
 
 @mixin icon-size($size) {
   width: map-get($icon-sizes, $size);
