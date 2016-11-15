@@ -6,6 +6,7 @@
 @import "mixins";
 
 // Icon base
+//
 
 .Icon {
   display: inline-block;
@@ -17,6 +18,7 @@
 }
 
 // Sizes
+//
 
 @each $size in map-keys($icon-sizes) {
   .Icon--#{$size} {
@@ -26,6 +28,7 @@
 }
 
 // Icons
+//
 
 @each $icon in map-keys($icons) {
   .Icon--#{$icon} {
