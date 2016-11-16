@@ -13,6 +13,8 @@ Flystyles offers a SVG iconset.
 <span class="Icon Icon--calendar Icon--xl margin-md"></span>
 <span class="Icon Icon--arrowDown Icon--xl margin-md"></span>
 <span class="Icon Icon--arrowUp Icon--xl margin-md"></span>
+<span class="Icon Icon--arrowLeft Icon--xl margin-md"></span>
+<span class="Icon Icon--arrowRight Icon--xl margin-md"></span>
 <span class="Icon Icon--success Icon--xl margin-md"></span>
 <span class="Icon Icon--danger Icon--xl margin-md"></span>
 {% endexample %}

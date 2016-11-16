@@ -26,6 +26,16 @@
 // style variations
 //
 
+.Button--default {
+  @include button-style(#fff, $body-color);
+  border: $input-border;
+
+  &:hover {
+    border: 1px solid darken($input-border-color, 15%);
+  }
+}
+
+
 @each $style in map-keys($button-styles) {
   .Button--#{$style} {
     @include button-style(map-get($button-styles, $style));

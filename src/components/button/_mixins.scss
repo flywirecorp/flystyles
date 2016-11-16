@@ -26,12 +26,12 @@
   line-height: $size;
 }
 
-@mixin button-style($bg) {
+@mixin button-style($bg, $color: #fff) {
   background: $bg;
-  color: #fff;
+  color: $color;
 
   &:hover {
-    color: #fff;
+    color: $color;
     text-decoration: none;
     background-color: lighten($bg, 5%);
   }

@@ -1,15 +1,12 @@
 // configuration
 
-@import "../../config";
 @import "./config";
 @import "./mixins";
-
-@import "../Icon/config";
-@import "../Icon/mixins";
 
 // components
 
 @import "Autocomplete/Autocomplete";
+@import "Datepicker/Datepicker";
 @import "Input/Input";
 @import "InputGroup/InputGroup";
 @import "FormGroup/FormGroup";

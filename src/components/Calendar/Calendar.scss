@@ -1,0 +1,107 @@
+//
+//  Calendar component
+//
+
+@import "config";
+@import "../../styles/mixins/all";
+
+//  Parent
+//
+
+.Calendar {
+  max-width: 320px;
+  overflow: hidden;
+  font-size: $calendar-font-size;
+  font-weight: $font-weight-regular;
+  text-align: center;
+  border: $calendar-border;
+  border-radius: $calendar-border-radius;
+}
+
+// Header element
+//
+
+.Calendar-header {
+  display: table;
+  width: 100%;
+  background: #f8fafd;
+}
+.Calendar-header-nav {
+  display: table-cell;
+  width: auto;
+  padding: $spacer-sm;
+  vertical-align: middle;
+  &:first-child {
+    text-align: left;
+  }
+  &:last-child {
+    text-align: right;
+  }
+}
+.Calendar-header-button {
+  padding: 0 rem(10px);
+}
+.Calendar-header-button,
+.Calendar-header-select {
+  width: auto !important;
+}
+
+// Table element
+//
+
+.Calendar-table {
+  width: 100%;
+  overflow: hidden;
+  table-layout: fixed;
+  border: 0;
+  border-bottom-right-radius: $calendar-border-radius;
+  border-bottom-left-radius: $calendar-border-radius;
+}
+
+// Weekday element
+//
+
+.Calendar-weekday {
+  color: $calendar-weekday-color;
+  text-align: center;
+}
+
+.Calendar-weekday,
+.Calendar-day {
+  padding: 3.3% 0;
+  transition: all 200ms ease-in-out;
+}
+
+// Day element
+//
+
+.Calendar-day {
+  text-align: center;
+  cursor: pointer;
+  border: $calendar-border;
+
+  &:hover {
+    background-color: #f5f8fa;
+  }
+
+  &.is-selected,
+  &--selected {
+    font-weight: $font-weight-semi-bold;
+    color: #fff;
+    background: $calendar-day-color-active;
+    border-color: transparent;
+  }
+
+  &.is-disabled,
+  &--disabled {
+    color: rgba($calendar-day-color, .5);
+    cursor: auto;
+    background: #f1f3f6;
+  }
+  tr &:first-child {
+    border-left: 0;
+  }
+  tr &:last-child {
+    border-right: 0;
+  }
+}

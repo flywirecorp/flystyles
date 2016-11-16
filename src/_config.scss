@@ -194,6 +194,9 @@ $input-height-md: $input-height-base;
 $input-height-lg: $input-height-base * 1.5;
 $input-height-xl: $input-height-base * 2;
 
+$input-border-color: #ccc !default;
+$input-border: 1px solid $input-border-color !default;
+
 // divider
 
 $divider-border: $hr-border !default;
