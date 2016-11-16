@@ -1,21 +1,25 @@
 //
-//  Drowpdown component
+//  Autocomplete component
 //
 
-@import "../FormElements/config";
-@import "../FormElements/mixins";
+@import "./config";
+@import "../mixins";
 
-.Dropdown-search {
+.Autocomplete {
+  position: relative;
+}
+
+.Autocomplete-search {
   @include form-field-select;
   @include form-field-size($form-field-height-base, $font-size-base);
 
   .is-searching & {
-    background-image: background-image(arrow-up-icon(#9399ac)) !important;
+    background-image: svg-icon(arrowUp);
     border: 1px solid $form-field-border-color-focus !important;
   }
 }
 
-.Dropdown-search {
+.Autocomplete-search {
   @include state-variation("error") {
     border-color: $color-danger;
   }
@@ -25,9 +29,10 @@
   }
 }
 
-.Dropdown-options {
-  position: relative;
-  top: -3px;
+.Autocomplete-options {
+  position: absolute;
+  top: calc(100% - 3px);
+  width: 100%;
   max-height: 0;
   padding: 0;
   margin: 0;
@@ -43,7 +48,7 @@
   transition: all 200ms ease-in-out;
 
   .is-searching & {
-    max-height: 200px;
+    max-height: $autocomplete-visible-options * $autocomplete-option-height;
     visibility: visible;
     border: 1px solid $form-field-border-color-focus !important;
     border-top: 1px solid lighten($form-field-border-color, 10%) !important;
@@ -51,9 +56,13 @@
   }
 }
 
-.Dropdown-option {
+.Autocomplete-option {
+  height: $autocomplete-option-height;
   padding: rem(4px) rem(8px);
+  overflow: hidden;
   font-size: rem(15px);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   &.is-active {
     color: #fff;

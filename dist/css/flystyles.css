@@ -1654,7 +1654,7 @@ hr {
   cursor: not-allowed;
   opacity: .65; }
 
-.Dropdown-search {
+.Autocomplete-search {
   display: block;
   width: 100%;
   font-family: "Open Sans", "Lucida Grande", Verdana, Arial, sans-serif;
@@ -1676,33 +1676,33 @@ hr {
   padding: 0 8.4px;
   line-height: 42px;
   font-size: 1rem; }
-  .Dropdown-search:hover {
+  .Autocomplete-search:hover {
     border-color: #9399ac; }
-  .Dropdown-search:focus {
+  .Autocomplete-search:focus {
     border-color: #0084c0; }
-  .Dropdown-search::-webkit-input-placeholder {
+  .Autocomplete-search::-webkit-input-placeholder {
     color: #939fac;
     opacity: 1; }
-  .Dropdown-search::-moz-placeholder {
+  .Autocomplete-search::-moz-placeholder {
     color: #939fac;
     opacity: 1; }
-  .Dropdown-search:-ms-input-placeholder {
+  .Autocomplete-search:-ms-input-placeholder {
     color: #939fac;
     opacity: 1; }
-  .Dropdown-search::placeholder {
+  .Autocomplete-search::placeholder {
     color: #939fac;
     opacity: 1; }
-  .is-searching .Dropdown-search {
+  .is-searching .Autocomplete-search {
     background-image: background-image(arrow-up-icon(#9399ac)) !important;
     border: 1px solid #0084c0 !important; }
 
-.has-error .Dropdown-search, .Dropdown-search--error {
+.has-error .Autocomplete-search, .Autocomplete-search--error {
   border-color: #e14b3b; }
 
-.has-success .Dropdown-search, .Dropdown-search--success {
+.has-success .Autocomplete-search, .Autocomplete-search--success {
   border-color: #6abb4f; }
 
-.Dropdown-options {
+.Autocomplete-options {
   position: relative;
   top: -3px;
   max-height: 0;
@@ -1719,20 +1719,20 @@ hr {
   opacity: 0;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out; }
-  .is-searching .Dropdown-options {
+  .is-searching .Autocomplete-options {
     max-height: 200px;
     visibility: visible;
     border: 1px solid #0084c0 !important;
     border-top: 1px solid #e6e6e6 !important;
     opacity: 1; }
 
-.Dropdown-option {
+.Autocomplete-option {
   padding: 0.25rem 0.5rem;
   font-size: 0.9375rem; }
-  .Dropdown-option.is-active {
+  .Autocomplete-option.is-active {
     color: #fff;
     background-color: #0084c0; }
-  .Dropdown-option .is-highlighted {
+  .Autocomplete-option .is-highlighted {
     border-bottom: 1px dotted #aaa; }
 
 .Icon {

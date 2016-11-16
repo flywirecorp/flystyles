@@ -1,5 +1,13 @@
 @import "../../config";
 
+
+$button-size-base: $input-height-base !default;
+$button-size-xs: $input-height-xs !default;
+$button-size-sm: $input-height-sm !default;
+$button-size-md: $input-height-md !default;
+$button-size-lg: $input-height-lg !default;
+$button-size-xl: $input-height-xl !default;
+
 $button-font-weight: 700 !default;
 $button-font-family: $font-family-base !default;
 $button-border-radius: $global-border-radius !default;
@@ -8,11 +16,11 @@ $button-outline-color: #939fac !default;
 $button-size-base: $input-height-base;
 
 $button-sizes: (
-  'xs': (size: $input-height-xs, font-size: .6rem),
-  'sm': (size: $input-height-sm, font-size: .68rem),
-  'md': (size: $input-height-md, font-size: .75rem),
-  'lg': (size: $input-height-lg, font-size: .875rem),
-  'xl': (size: $input-height-xl, font-size: .9rem)
+  'xs': (size: $button-size-xs, font-size: .6rem),
+  'sm': (size: $button-size-sm, font-size: .68rem),
+  'md': (size: $button-size-md, font-size: .75rem),
+  'lg': (size: $button-size-lg, font-size: .875rem),
+  'xl': (size: $button-size-xl, font-size: .9rem)
 ) !default;
 
 $button-styles: (

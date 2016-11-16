@@ -4,8 +4,12 @@
 @import "./config";
 @import "./mixins";
 
+@import "../Icon/config";
+@import "../Icon/mixins";
+
 // components
 
+@import "Autocomplete/Autocomplete";
 @import "Input/Input";
 @import "InputGroup/InputGroup";
 @import "FormGroup/FormGroup";
