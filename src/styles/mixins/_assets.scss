@@ -30,7 +30,3 @@ $asset-base-path: '../assets' !default;
 @function font($file) {
   @return asset('fonts', $file);
 }
-
-@function icon($file) {
-  @return asset('icons', $file);
-}

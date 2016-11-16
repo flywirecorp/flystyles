@@ -26,7 +26,7 @@
 
 .Input {
   @include state-variation("error") {
-    background-image: svg-url(danger-icon($color-danger));
+    background-image: svg-icon(danger);
     background-repeat: no-repeat;
     background-position: calc(100% - .5rem) center;
     background-size: 1rem;
@@ -34,7 +34,7 @@
   }
 
   @include state-variation("success") {
-    background-image: svg-url(success-icon($color-success));
+    background-image: svg-icon(success);
     background-repeat: no-repeat;
     background-position: calc(100% - .5rem) center;
     background-size: 1rem;

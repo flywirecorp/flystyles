@@ -32,8 +32,8 @@
 
 @mixin form-field-select {
   @include form-field-base;
-
-  background-image: svg-url(arrow-down-icon($form-field-placeholder-color));
+  
+  background-image: svg-icon(arrowDown);
   background-repeat: no-repeat;
   background-position: calc(100% - .8rem) center;
   background-size: .8rem;
@@ -45,19 +45,4 @@
   padding: 0 $height / 5;
   line-height: $height;
   font-size: $font-size;
-}
-
-@function arrow-up-icon($color) {
-  @return '<svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="185 19 10 7"><path fill="#{$color}" fill-rule="evenodd" d="M194.82 25.09l-.713.68c-.198.19-.518.19-.714 0L190 22.494l-3.423 3.304c-.2.19-.518.19-.716 0l-.713-.68c-.196-.186-.196-.49 0-.678l4.494-4.33c.2-.187.52-.187.715 0l4.466 4.3c.2.19.2.493 0 .68z"/></svg>';
-}
-@function arrow-down-icon($color) {
-  @return '<svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="185 19 10 7"><path fill="#{$color}" fill-rule="evenodd" d="M194.82 20.819l-.713-.68c-.198-.192-.518-.192-.714-.002L190 23.416l-3.423-3.303c-.2-.19-.518-.19-.716 0l-.713.68c-.196.186-.196.49 0 .678l4.494 4.33c.2.186.52.186.715 0l4.466-4.302c.2-.188.2-.492 0-.68z"/></svg>';
-}
-
-@function danger-icon($color) {
-  @return '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="#{$color}" d="M19.3 16.8c.2.4.2.9 0 1.3s-.7.7-1.2.7H1.9c-.5 0-.9-.3-1.2-.7-.2-.4-.3-.9 0-1.3L8.8 1.9c.3-.4.7-.7 1.2-.7s.9.3 1.2.7l8.1 14.9zm-7.8-9.9c0-.1 0-.1-.1-.2s-.2-.1-.3-.1H8.8c-.1 0-.2.1-.3.1V7l.2 4.8c0 .1.1.2.3.2h2c.2 0 .3-.1.4-.2l.1-4.9zm-.2 6.8c0-.2-.1-.3-.3-.3H9c-.2 0-.3.2-.3.3v2c0 .2.1.3.3.3h2c.2 0 .3-.2.3-.3v-2z"/></svg>';
-}
-
-@function success-icon($color) {
-  @return '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="200 41 16 13"><path fill="none" stroke="#{$color}" stroke-width="2" d="M214.595 42.493L205 52l-3.877-3.97" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 }
