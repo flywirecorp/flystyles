@@ -1,6 +1,7 @@
 // Create a Browsersync instance
-var bs = require("browser-sync").create();
-var exec = require('child_process').exec;
+const bs = require("browser-sync").create();
+const exec = require('child_process').exec;
+
 
 // Provide a callback to capture ALL events to CSS
 // files - then filter for 'change' and reload all
@@ -49,5 +50,5 @@ bs.watch(["./docs/**/*.html", "./docs/**/*.md"], function(event, file) {
 
 // Now init the Browsersync server
 bs.init({
-  server: "./_site"
+  server: './_site'
 });

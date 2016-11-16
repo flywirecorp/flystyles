@@ -1,0 +1,18 @@
+@import "../../styles/mixins/all";
+
+@mixin icon-base() {
+  display: inline-block;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@mixin icon-size($size) {
+  width: map-get($icon-sizes, $size);
+  height: map-get($icon-sizes, $size);
+}
+
+@function svg-icon($icon) {
+  @return svg-url(map-get($icons, $icon));
+}

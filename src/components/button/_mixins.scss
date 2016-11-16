@@ -1,6 +1,7 @@
 //
 //  Button mixins
 //
+@import "../../styles/mixins/all";
 
 @mixin button-base {
   display: inline-block;
