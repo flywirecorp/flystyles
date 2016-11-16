@@ -10,7 +10,7 @@ bs.watch("./**/*.scss", function(event, file) {
 
   if (event === "change") {
     //bs.reload("*.css");
-    var build = exec('npm run jekyll:build');
+    var build = exec('bundle exec jekyll build');
 
     build.stdout.on('data', function(data) {
       console.log(data);
@@ -31,7 +31,7 @@ bs.watch("./**/*.scss", function(event, file) {
 bs.watch(["./docs/**/*.html", "./docs/**/*.md"], function(event, file) {
 
   if (event === "change") {
-    var build = exec('npm run jekyll:build');
+    var build = exec('bundle exec jekyll build');
 
     build.stdout.on('data', function(data) {
       console.log(data);
