@@ -53,7 +53,7 @@ Create block level buttons—those that span the full width of a parent—by add
 
 ##### Outline styles
 
-<div class='bg-black'>
+<div class='bg-primary'>
 {% example html %}
 <button class="Button Button--outline" type="button">outline</button>
 <button class="Button Button--outlineWhite" type="button">white</button>
