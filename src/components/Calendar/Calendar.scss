@@ -9,11 +9,10 @@
 //
 
 .Calendar {
-  max-width: 320px;
-  overflow: hidden;
   font-size: $calendar-font-size;
   font-weight: $font-weight-regular;
   text-align: center;
+  background: $calendar-background;
   border: $calendar-border;
   border-radius: $calendar-border-radius;
 }
@@ -22,28 +21,41 @@
 //
 
 .Calendar-header {
-  display: table;
-  width: 100%;
-  background: #f8fafd;
-}
-.Calendar-header-nav {
-  display: table-cell;
-  width: auto;
+  display: flex;
   padding: $spacer-sm;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  background: #f8fafd;
+  text-align: center;
+  border-top-left-radius: $calendar-border-radius;
+  border-top-right-radius: $calendar-border-radius;
+}
+
+.Calendar-header-nav {
+  display: inline-block;
+  width: 30%;
+  padding-right: $spacer-sm;
   vertical-align: middle;
+
   &:first-child {
+    width: 15%;
     text-align: left;
   }
   &:last-child {
+    width: 15%;
+    padding-right: 0;
     text-align: right;
   }
+
+  .Button {
+    display: inline-block;
+    width: auto !important;
+    padding: 0 rem(10px);
+  }
 }
-.Calendar-header-button {
-  padding: 0 rem(10px);
-}
-.Calendar-header-button,
-.Calendar-header-select {
-  width: auto !important;
+
+.Calendar-header-nav--month {
+  width: 40%;
 }
 
 // Table element
@@ -90,6 +102,11 @@
     color: #fff;
     background: $calendar-day-color-active;
     border-color: transparent;
+  }
+
+  &.is-current,
+  &--current {
+    color: $calendar-day-color-active;
   }
 
   &.is-disabled,

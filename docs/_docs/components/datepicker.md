@@ -6,28 +6,25 @@ file: components/Datepicker/Datepicker.scss
 ---
 
 {% example html %}
-<div class='Datepicker'>
 
-  <div class="FormGroup">
-    <label class="Label" for="birthday">Birthday</label>
-    <div class="InputGroup">
-      <input type="mail" class="Datepicker-input Input InputGroup-input" placeholder="dd/mm/aaaa" id="birthday" />
-      <span class="InputGroup-context">
-        <span class="Icon Icon--calendar"></span>
-      </span>
-    </div>
+<div class="FormGroup Datepicker is-open">
+  <label class="Label" for="birthday">Birthday</label>
+  <div class="InputGroup">
+    <input type="mail" class="Datepicker-input Input InputGroup-input" placeholder="dd/mm/aaaa" id="birthday" />
+    <span class="InputGroup-context">
+      <span class="Icon Icon--calendar"></span>
+    </span>
   </div>
-
   <div class='Calendar Datepicker-calendar'>
 
     <nav class="Calendar-header">
-      <div class="Calendar-header-nav">
-        <button class="Button Button--default Button--sm Calendar-header-button" type="button">
+      <div class="Calendar-header-nav Calendar-header-nav--prev">
+        <button class="Button Button--default Button--sm" type="button">
           <span class="Icon Icon--arrowLeft Icon--xs"></span>
         </button>
       </div>
-      <div class="Calendar-header-nav">
-        <select class="Select Select--sm Calendar-header-select">
+      <div class="Calendar-header-nav Calendar-header-nav--month">
+        <select class="Select Select--sm">
           <option value="01">January</option>
           <option value="02">February</option>
           <option value="03">March</option>
@@ -35,14 +32,14 @@ file: components/Datepicker/Datepicker.scss
           <option value="05">May</option>
         </select>
       </div>
-      <div class="Calendar-header-nav">
-        <select class="Select Select--sm Calendar-header-select">
+      <div class="Calendar-header-nav Calendar-header-nav--year">
+        <select class="Select Select--sm">
             <option value="2016">2016</option>
             <option value="2015">2015</option>
         </select>
       </div>
-      <div class="Calendar-header-nav">
-        <button class="Button Button--default Button--sm Calendar-header-button" type="button">
+      <div class="Calendar-header-nav Calendar-header-nav--next">
+        <button class="Button Button--default Button--sm" type="button">
           <span class="Icon Icon--arrowRight Icon--xs"></span>
         </button>
       </div>
@@ -102,7 +99,7 @@ file: components/Datepicker/Datepicker.scss
           <td class="Calendar-day">28</td>
           <td class="Calendar-day">29</td>
           <td class="Calendar-day">30</td>
-          <td class="Calendar-day">31</td>
+          <td class="Calendar-day is-current">31</td>
           <td class="Calendar-day is-disabled">1</td>
           <td class="Calendar-day is-disabled">2</td>
         </tr>
@@ -110,6 +107,6 @@ file: components/Datepicker/Datepicker.scss
 
     </table>
   </div>
-
 </div>
+
 {% endexample %}
