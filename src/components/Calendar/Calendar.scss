@@ -1,0 +1,124 @@
+//
+//  Calendar component
+//
+
+@import "config";
+@import "../../styles/mixins/all";
+
+//  Parent
+//
+
+.Calendar {
+  font-size: $calendar-font-size;
+  font-weight: $font-weight-regular;
+  text-align: center;
+  background: $calendar-background;
+  border: $calendar-border;
+  border-radius: $calendar-border-radius;
+}
+
+// Header element
+//
+
+.Calendar-header {
+  display: flex;
+  padding: $spacer-sm;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  background: #f8fafd;
+  text-align: center;
+  border-top-left-radius: $calendar-border-radius;
+  border-top-right-radius: $calendar-border-radius;
+}
+
+.Calendar-header-nav {
+  display: inline-block;
+  width: 30%;
+  padding-right: $spacer-sm;
+  vertical-align: middle;
+
+  &:first-child {
+    width: 15%;
+    text-align: left;
+  }
+  &:last-child {
+    width: 15%;
+    padding-right: 0;
+    text-align: right;
+  }
+
+  .Button {
+    display: inline-block;
+    width: auto !important;
+    padding: 0 rem(10px);
+  }
+}
+
+.Calendar-header-nav--month {
+  width: 40%;
+}
+
+// Table element
+//
+
+.Calendar-table {
+  width: 100%;
+  overflow: hidden;
+  table-layout: fixed;
+  border: 0;
+  border-bottom-right-radius: $calendar-border-radius;
+  border-bottom-left-radius: $calendar-border-radius;
+}
+
+// Weekday element
+//
+
+.Calendar-weekday {
+  color: $calendar-weekday-color;
+  text-align: center;
+}
+
+.Calendar-weekday,
+.Calendar-day {
+  padding: 3.3% 0;
+  transition: all 200ms ease-in-out;
+}
+
+// Day element
+//
+
+.Calendar-day {
+  text-align: center;
+  cursor: pointer;
+  border: $calendar-border;
+
+  &:hover {
+    background-color: #f5f8fa;
+  }
+
+  &.is-selected,
+  &--selected {
+    font-weight: $font-weight-semi-bold;
+    color: #fff;
+    background: $calendar-day-color-active;
+    border-color: transparent;
+  }
+
+  &.is-current,
+  &--current {
+    color: $calendar-day-color-active;
+  }
+
+  &.is-disabled,
+  &--disabled {
+    color: rgba($calendar-day-color, .5);
+    cursor: auto;
+    background: #f1f3f6;
+  }
+  tr &:first-child {
+    border-left: 0;
+  }
+  tr &:last-child {
+    border-right: 0;
+  }
+}

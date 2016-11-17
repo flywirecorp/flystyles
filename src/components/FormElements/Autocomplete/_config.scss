@@ -1,4 +1,4 @@
 @import "../config";
 
 $autocomplete-visible-options: 6 !default;
-$autocomplete-option-height: 2rem !default;
+$autocomplete-option-height: $input-height-base !default;

@@ -1,0 +1,56 @@
+@import "../config";
+@import "../mixins";
+
+@import "../../Calendar/Calendar";
+@import "../Input/Input";
+
+
+.Datepicker {
+  position: relative;
+}
+
+.Datepicker-calendar {
+  position: absolute;
+  top: calc(100% + 4px);
+  display: none;
+  max-width: 100%;
+
+  @include media-up(small) {
+    max-width: 320px;
+  }
+
+  // Top triangle
+
+  &::before {
+    content: '';
+    display: inline-block;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid #ccc;
+    border-top: 0;
+    border-bottom-color: $input-border-color;
+    position: absolute;
+
+    top: -9px;
+    left: 18px;
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #fff;
+    border-top: 0;
+    position: absolute;
+
+    border-bottom-color: #f8fafd;
+    left: 19px;
+    top: -8px;
+  }
+
+  // Show when Datepicker is open
+  .Datepicker.is-open & {
+    display: block;
+  }
+}

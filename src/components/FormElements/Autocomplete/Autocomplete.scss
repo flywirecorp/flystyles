@@ -58,7 +58,8 @@
 
 .Autocomplete-option {
   height: $autocomplete-option-height;
-  padding: rem(4px) rem(8px);
+  line-height: $autocomplete-option-height;
+  padding: 0 rem(8px);
   overflow: hidden;
   font-size: rem(15px);
   text-overflow: ellipsis;
