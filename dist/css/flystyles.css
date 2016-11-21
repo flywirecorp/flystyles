@@ -1619,9 +1619,9 @@ hr {
   color: #fff;
   border: 1px solid #fff; }
   .Button--outlineWhite:hover {
-    color: #fff;
-    background-color: #0084c0;
-    border-color: #0084c0; }
+    color: #0084c0;
+    background-color: #fff;
+    border-color: #fff; }
 
 .Button--outlinePrimary {
   background: transparent;
