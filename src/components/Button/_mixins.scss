@@ -44,14 +44,14 @@
   }
 }
 
-@mixin button-style-outline($outline-color, $bg) {
+@mixin button-style-outline($outline-color, $bg, $bg-hover: $bg, $color-hover: #fff) {
   background: transparent;
   color: $outline-color;
   border: 1px solid $outline-color;
 
   &:hover {
-    color: #fff;
-    background-color: $bg;
-    border-color: $bg;
+    color: $color-hover;
+    background-color: $bg-hover;
+    border-color: $bg-hover;
   }
 }
