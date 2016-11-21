@@ -8,14 +8,8 @@ order: 2
 
 ## Installation
 
-The project can be installed via Bower, npm or rails indicating the git repository and the release (tag/version).
-The repository is private, so you will need a ssh key and permissions to see the repository.
+The project can be installed via npm or yarn.
 
-### bower
-
-```bash
-bower install git@github.com:peertransfer/flystyles.git#0.0.1
-```
 
 ### npm
 ```bash
@@ -27,14 +21,6 @@ npm install flystyles
 yarn add flystyles
 ```
 
-### rails
-
-The project has a gem, so just include in Gemfile
-
-```bash
-gem 'flystyles', git: 'https://github.com/peertransfer/flystyles.git'
-```
-and execute `bundle`.
 
 # Build commands
 
@@ -66,7 +52,7 @@ To install Jekyll:
 bundle install
 ```
 
-To create the build files (in `/docs/dist` folder) execute:
+To create the build files (in `_site` folder) execute:
 
 ```bash
 bundle exec jekyll build
@@ -93,7 +79,7 @@ To document a new component, a new markdown file has to be added to `src/_docs/c
 ```
 ---
 title: Buttons
-description:
+description: Button component description
 category: components
 ---
 ```
@@ -109,46 +95,48 @@ npm install
 npm run docs
 ```
 
-### Deploy
+#### Deploy
 
-Deployed to Github Pages.
+For the moment, the project is hosted on Netlifly [flystyles.netlify.com](http://flystyles.netlify.com/). The project is deployed whenever you push to master automatically.
+
+#### Create a new version
+
+To create a new version you have to use the npm command [version](https://docs.npmjs.com/cli/version). It will generate the new dist files, add a release tag and push to master.
+
+```bash
+npm version [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease | from-git]
+```
 
 ## Architecture
 
 ```
-scss/
+src/
 |
-|– mixins/
-|   |– _responsive.scss   # Responsive mixins
-|   |– _typography.scss   # Typography mixins
-|   …                     # Etc
+|- styles
 |
-|– base/
-|   |– _normalize.scss    # Reset/normalize
-|   |– _typography.scss   # Typography rules
-|   |- _animations.scss   # CSS Animations
-|   …                     # Etc.
+|   – mixins/
+|      |– _responsive.scss   # Responsive mixins
+|      |– _typography.scss   # Typography mixins
+|      …                     # Etc
 |
+|   – base/
+|       |– _normalize.scss    # Reset/normalize
+|       |– _typography.scss   # Typography rules
+|       |- _animations.scss   # CSS Animations
+|       …                     # Etc.
 |
-|– utilities/
-|   |– _spacing.scss      # Margins, paddings, ...
-|   |– _responsive.scss   # Brakpoints visibility classes
-|   …                     # Etc.
+|   – utilities/
+|       |– _spacing.scss      # Margins, paddings, ...
+|       |– _responsive.scss   # Brakpoints visibility classes
+|       …                     # Etc.
 |
-|– themes/
-|   |– _theme.scss        # Default theme
-|   |– _admin.scss        # Admin theme
-|   …                     # Etc.
+|- components/
+|   |– Button/_Button.scss    # Buttons
+|   |– Grid/_Grid.scss        # Grid
+|   …                         # Etc.
 |
-|
-components/
-|
-|   |– button/_button.scss  # Buttons
-|   |– grid/_grid.scss      # Grid
-|   …                       # Etc.
-
- - _config.scss           # Flystyles variables
- – main.scss              # Main Sass file
+|- _config.scss           # Flystyles variables
+|– main.scss              # Main Sass file
 
 ```
 

@@ -33,8 +33,6 @@ bs.watch('./**/*.scss', (event, file) => {
     });
 
     build.stderr.on('data', (data) => console.log(data));
-
-    build.on('close', (code) => console.log(code));
   }
 });
 
@@ -50,7 +48,5 @@ bs.watch(['./docs/**/*.md'], (event, file) => {
     });
 
     build.stderr.on('data', (data) => console.log(data));
-
-    build.on('close', (code) => console.log(code));
   }
 });
