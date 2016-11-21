@@ -47,7 +47,7 @@
 }
 
 .Button--outlineWhite {
-  @include button-style-outline($color-white, $color-brand-primary);
+  @include button-style-outline($color-white, $color-brand-primary, $color-white, $color-brand-primary);
 }
 
 @each $style in map-keys($button-styles) {
