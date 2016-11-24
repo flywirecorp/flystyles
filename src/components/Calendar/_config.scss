@@ -1,7 +1,7 @@
 @import "../../config";
 
-$calendar-border: 1px solid $form-field-border-color;
-$calendar-border-radius: $global-border-radius;
+$calendar-border: 1px solid $form-field-border-color !default;
+$calendar-border-radius: $global-border-radius !default;
 $calendar-weekday-color: $color-gray-dark !default;
 $calendar-day-color: $body-color !default;
 $calendar-day-color-active: rgba($color-brand-primary, .85) !default;
