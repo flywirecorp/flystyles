@@ -1,0 +1,42 @@
+//
+//  Grid Component
+//
+
+@import "../../config";
+@import "./mixins";
+
+.GridRow {
+  @include grid-row();
+}
+
+.GridColumn {
+  @include grid-column-base();
+}
+
+// gridRow variations, same width cols
+// inspired by foundation block grid
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-up($breakpoint) {
+    @for $per-row from 1 through $grid-columns {
+      .GridRow--from#{capitalize($breakpoint)}-#{$per-row} {
+        .GridColumn {
+          float: left;
+          width: 100% / $per-row;
+          &:nth-of-type(n) { clear: none; }
+          &:nth-of-type(#{$per-row}n+1) { clear: both; }
+        }
+      }
+    }
+  }
+}
+
+// Create breakpoint/size columns variants
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-up($breakpoint) {
+    @for $i from 1 through $grid-columns {
+      .GridColumn--from#{capitalize($breakpoint)}-#{$i} {
+        @include grid-column-size($i);
+      }
+    }
+  }
+}
