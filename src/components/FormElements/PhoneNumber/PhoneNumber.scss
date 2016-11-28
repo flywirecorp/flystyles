@@ -1,0 +1,44 @@
+@import "./config";
+
+.PhoneNumber,
+.PhoneNumber.FormGroup {
+  display: table;
+  width: 100%;
+}
+
+.PhoneNumber-input {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.PhoneNumber-input-inner,
+.PhoneNumber-input-inner.Input {
+  border-left: 0 !important;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.PhoneNumber-menu {
+  display: table-cell;
+  width: $phone-number-menu-input-width;
+  vertical-align: top;
+}
+
+.PhoneNumber-menu-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.PhoneNumber-menu-options {
+  top: calc(100% - 1px);
+  width: $phone-number-menu-options-width;
+}
+
+.PhoneNumber-option-dial {
+  color: $phone-number-option-dial-color;
+
+  .is-active & {
+    color: $phone-number-option-dial-color-active;
+  }
+}
