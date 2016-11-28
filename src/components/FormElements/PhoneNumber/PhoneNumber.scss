@@ -24,12 +24,6 @@
   vertical-align: top;
 }
 
-.PhoneNumber-menu-input {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
 .PhoneNumber-menu-options {
   top: calc(100% - 1px);
   width: $phone-number-menu-options-width;
@@ -40,5 +34,23 @@
 
   .is-active & {
     color: $phone-number-option-dial-color-active;
+  }
+}
+
+.PhoneNumber-option-flag,
+.PhoneNumber-option-country {
+  margin-right: .5rem;
+}
+
+.PhoneNumber-menu-options {
+  transition: $phone-number-options-transition;
+}
+
+.PhoneNumber-menu-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+
+  .is-searching & {
+    border-bottom-left-radius: 0;
   }
 }

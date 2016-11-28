@@ -148,7 +148,7 @@ Easily extend form controls by adding text, buttons, or button groups on either 
 {% endexample %}
 
 
-#### Phone Number Input
+#### Phone Number Input opened
 
 Special component for typing a Telephone Number. This component is created by a mix of multiple components (FormGroup, Input, Autocomplete, and Flag).
 
@@ -186,4 +186,21 @@ __Requires:__ `FormGroup`, `Input`, `Autocomplete`, `Flag`.
   </div>
 </div>
 
+{% endexample %}
+
+#### Phone Number Input closed
+{% example html %}
+<div class="FormGroup">
+  <label class="Label" for="tel">Mobile phone</label>
+  <div class="PhoneNumber">
+    <div class='Autocomplete PhoneNumber-menu'>
+      <span class='Autocomplete-search PhoneNumber-menu-input'>
+        <span class='Flag Flag--es'></span>
+      </span>
+    </div>
+    <div class="PhoneNumber-input">
+      <input id="tel" type="text" class="Input PhoneNumber-input-inner" />
+    </div>
+  </div>
+</div>
 {% endexample %}
