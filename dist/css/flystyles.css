@@ -1972,11 +1972,6 @@ hr {
   width: 60px;
   vertical-align: top; }
 
-.PhoneNumber-menu-input {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0; }
-
 .PhoneNumber-menu-options {
   top: calc(100% - 1px);
   width: 300px; }
@@ -1985,6 +1980,20 @@ hr {
   color: rgba(56, 73, 91, 0.5); }
   .is-active .PhoneNumber-option-dial {
     color: rgba(255, 255, 255, 0.5); }
+
+.PhoneNumber-option-flag,
+.PhoneNumber-option-country {
+  margin-right: .5rem; }
+
+.PhoneNumber-menu-options {
+  -webkit-transition: none;
+  transition: none; }
+
+.PhoneNumber-menu-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+  .is-searching .PhoneNumber-menu-input {
+    border-bottom-left-radius: 0; }
 
 .Input {
   display: block;
