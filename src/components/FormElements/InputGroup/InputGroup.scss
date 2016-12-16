@@ -27,6 +27,13 @@
   .InputGroup &:not(:first-child):not(:last-child) {
     border-radius: 0;
   }
+
+  &:hover {
+    .InputGroup-input,
+    .InputGroup-context {
+      border-color: $form-field-border-color-hover;
+    }
+  }
 }
 
 .InputGroup-context {
@@ -34,6 +41,7 @@
   width: 1%;
   height: 100%;
   padding: 0 $spacer;
+  color: $input-group-context-color;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;

@@ -143,9 +143,9 @@ This has several benefits when reading and writing HTML and CSS:
 * It helps to decouple presentation semantics from document semantics.
 
 
-#### componentName
+#### ComponentName
 
-The component's name must be written in upper camel case.
+The component's name must be written in **UpperCamelCase**.
 
 ```css
 .MyComponent { /* … */ }
@@ -161,7 +161,7 @@ The component's name must be written in upper camel case.
 
 A component modifier is a class that modifies the presentation of the base
 component in some form (e.g., for a certain configuration of the component).
-Modifier names must be written in camel case and be separated from the
+Modifier names must be written in camelCase and be separated from the
 component name by two hyphens. The class should be included in the HTML _in
 addition_ to the base component class.
 
@@ -180,7 +180,7 @@ addition_ to the base component class.
 
 A component descendent is a class that is attached to a descendent node of a component. It's responsible for applying presentation directly to the
 descendent on behalf of a particular component. Descendent names must be
-written in camel case.
+written in camelCase.
 
 ```html
 <article class="Tweet">
@@ -196,7 +196,7 @@ written in camel case.
 
 #### ComponentName.is-stateOfComponent
 
-Use `is-stateName` to reflect changes to a component's state. The state name must be camel case.
+Use `is-stateName` or `has-stateName` to reflect changes to a component's state. Normally used for javascript interactions. The state name must be camelCase.
 **Never style these classes directly; they should always be used as an adjoining class.**
 
 This means that the same state names can be used in multiple contexts, but
@@ -214,6 +214,12 @@ the component).
 </article>
 ```
 
+```html
+<input class="Input has-error">
+  …
+</article>
+```
+
 ### Utilities
 
 Low-level structural and positional traits. Utilities can be applied directly to any element within a component.
@@ -222,7 +228,7 @@ Syntax: `<property>-<value>-[sm|md|lg]`
 
 #### property-value-size
 
-Utilities must use a camel case name. What follows is an example of how various utilities can be used to create a simple structure within a component.
+Utilities must use a camelCase name. What follows is an example of how various utilities can be used to create a simple structure within a component.
 
 ```html
 <div class="clearfix">
