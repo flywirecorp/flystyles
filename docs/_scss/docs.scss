@@ -244,7 +244,6 @@ pre code {
   overflow: hidden;
   text-align: center;
   background: #fff;
-  border: 1px solid #D1DAE6;
   border-radius: 3px;
 }
 
@@ -261,6 +260,20 @@ pre code {
 .color-code {
   padding: rem(10px);
   font-size: rem(13px);
+}
+
+.color--light {
+  .color-name, .color-code {
+    color: rgba(0,0,0,.5);
+  }
+}
+
+.color-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 90%;
 }
 
 // Block grid
@@ -284,17 +297,7 @@ pre code {
   flex-basis: 23%;
 }
 
-.color-name {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 90%;
 
-  &--dark {
-    color: rgba(0,0,0,.6);
-  }
-}
 
 // Utilities
 .u-alpha-50 {

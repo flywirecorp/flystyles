@@ -18,5 +18,8 @@ Change color.
 <p class='color-grayLight'>This is gray light color</p>
 <p class='color-grayLighter'>This is gray lighter color</p>
 <p class='color-grayDark'>This is gray dark color</p>
-<p class='color-grayDarker'>This is gray darker color</p>
+<p class='color-asphalt'>This is asphalt color</p>
+<p class='color-asphaltLight'>This is asphalt light color</p>
+<p class='color-asphaltLighter'>This is asphalt lighter color</p>
+<p class='color-asphaltDark'>This is asphalt dark color</p>
 {% endexample %}

@@ -9,39 +9,66 @@
 
 // Brand colors
 
-$color-brand-primary-light:   #0090d2 !default;
 $color-brand-primary:         #0084c0 !default;
-$color-brand-primary-dark:    #0f476b !default;
+$color-brand-primary-light:   lighten($color-brand-primary, 10%) !default;
+$color-brand-primary-dark:    darken($color-brand-primary, 10%) !default;
 
-$color-brand-secondary-light: #e9922f !default;
-$color-brand-secondary:       #db7909 !default;
-$color-brand-secondary-dark:  #c36800 !default;
+$color-brand-secondary:       #48B985 !default;
+$color-brand-secondary-light: lighten($color-brand-secondary, 10%) !default;
+$color-brand-secondary-dark:  darken($color-brand-secondary, 10%) !default;
 
-$color-brand-tertiary-light:  #48b985 !default;
-$color-brand-tertiary:        #319b6a !default;
-$color-brand-tertiary-dark:   #017043 !default;
+$color-brand-tertiary:        #0f476b !default;
+$color-brand-tertiary-light:  lighten($color-brand-tertiary, 10%) !default;
+$color-brand-tertiary-dark:   darken($color-brand-tertiary, 10%) !default;
+
+$color-brand-quaternary:       #017043 !default;
+$color-brand-quaternary-light: lighten($color-brand-quaternary, 10%) !default;
+$color-brand-quaternary-dark:  darken($color-brand-quaternary, 10%) !default;
 
 // UI colors
 
-$color-info:     #38b1e8 !default;
-$color-success:  #6abb4f !default;
-$color-danger:   #e14b3b !default;
-$color-warning:  #dfbd1e !default;
+$color-success:        #00ca71 !default;
+$color-success-light:  #b0f7cf !default;
+$color-success-dark:   #33a06c !default;
+
+$color-warning:        #fbd53a !default;
+$color-warning-light:  #ffebc1 !default;
+$color-warning-dark:   #ffbb2f !default;
+
+$color-danger:        #d63442 !default;
+$color-danger-light:  #ffd8db !default;
+$color-danger-dark:   #c01423 !default;
+
+$color-info:        #3497ff !default;
+$color-info-light:  #cee6ff !default;
+$color-info-dark:   #0069d7 !default;
+
+$color-highlight:       #aa9ce5 !default;
+$color-highlight-light: #d7d1f3 !default;
+$color-highlight-dark:  #7860db !default;
+
 $color-white:    #fff !default;
 $color-black:    #000 !default;
 
 // Grayscale colors
 
-$color-gray-lighter: #eee !default;
-$color-gray-light:   #ccc !default;
-$color-gray:         #7a8fa2 !default;
-$color-gray-dark:    #666 !default;
-$color-gray-darker:  #333 !default;
+$color-gray-dark:    #c3cfdd !default;
+$color-gray:         #dae4ef !default;
+$color-gray-light:   #e7eff7 !default;
+$color-gray-lighter: #f8fafd !default;
+
+$color-asphalt-dark:    #1f2d3d !default;
+$color-asphalt:         #38495b !default;
+$color-asphalt-light:   #576a7e !default;
+$color-asphalt-lighter: #96a7b9 !default;
+
+
 
 $colors: (
   "primary": $color-brand-primary,
   "secondary": $color-brand-secondary,
   "tertiary": $color-brand-tertiary,
+  "quaternary": $color-brand-quaternary,
   "white": $color-white,
   "black": $color-black,
   "info": $color-info,
@@ -52,7 +79,10 @@ $colors: (
   "grayLight": $color-gray-light,
   "gray": $color-gray,
   "grayDark": $color-gray-dark,
-  "grayDarker": $color-gray-darker
+  "asphaltLighter": $color-asphalt-lighter,
+  "asphaltLight": $color-asphalt-light,
+  "asphalt": $color-asphalt,
+  "asphaltDark": $color-asphalt-dark  
 ) !default;
 
 // Spacing
