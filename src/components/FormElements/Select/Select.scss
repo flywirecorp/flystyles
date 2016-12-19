@@ -1,6 +1,7 @@
 //
 // Select Component
 //
+
 @import "../config";
 @import "../mixins";
 
@@ -14,6 +15,7 @@
 
 // size variations
 //
+
 @each $size in map-keys($form-field-sizes) {
   $current: map-get($form-field-sizes, $size);
   $select-size: map-get($current, "size");
@@ -25,9 +27,23 @@
   }
 }
 
-// multiple select
+// select multiple
+//
 
 .Select--multiple {
   height: auto;
   background-image: none;
+}
+
+// state variations
+//
+
+.Select {
+  @include state-variation("error") {
+    border-color: $color-danger;
+  }
+
+  @include state-variation("success") {
+    border-color: $color-success;
+  }
 }

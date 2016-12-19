@@ -1,11 +1,23 @@
 //
 //  Textarea component
 //
+
 @import "../config";
 @import "../mixins";
+
+// base styles
+//
 
 .Textarea {
   @include form-field-base;
   padding: $font-size-base / 2;
   font-size: $font-size-md;
+}
+
+// state variations
+//
+
+.Textarea {
+  @include form-field-error;
+  @include form-field-success;
 }

@@ -87,6 +87,7 @@ Set heights using classes like `.Input--{size}`. Combine with `fontSize-{size}` 
 #### Validation
 
 Flystyles includes validation styles for danger, warning, and success states on form controls.
+These styles can be applied either by adding the class `has-error` or `has-success` to the parent `FormGroup`, or adding to the child form element the variation `--error` or `--success`.
 
 {% example html %}
 
@@ -98,10 +99,24 @@ Flystyles includes validation styles for danger, warning, and success states on 
 </div>
 
 <div class="FormGroup has-error">
-  <label class="Label" for="inputError1">Input with danger</label>
+  <label class="Label" for="inputError1">Input with error</label>
   <input type="text" class="Input Input--error" id="inputError1">
   <p class="FormGroup-feedback FormGroup-feedback--error">Sorry, that username's taken. Try another?</p>
   <p class="FormGroup-hint">Example help text that remains unchanged.</p>
+</div>
+
+<div class="FormGroup has-error">
+  <label class="Label" for="textAreaError">Textarea with error</label>
+  <textarea class="Textarea" id="textAreaError">
+  </textarea>
+</div>
+
+<div class="FormGroup has-error">
+  <label class="Label" for="selectError">Select with error</label>
+  <select class="Select" id="selectError">
+    <option>Option 1</option>
+  </select>
+</div>
 </div>
 
 {% endexample %}

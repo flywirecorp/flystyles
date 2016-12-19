@@ -29,15 +29,6 @@
   @return to-upper-case(str-slice($string, 1, 1)) + str-slice($string, 2);
 }
 
-
-@mixin state-variation($state) {
-  .has-#{$state} &,
-  &--#{$state} {
-    @content;
-  }
-}
-
-
 //
 //  Function to replace characters in a string
 //
