@@ -5,6 +5,12 @@
 @import "../../styles/mixins/all";
 @import "../Icon/mixins";
 
+@mixin inactive-field {
+  border-color: $form-field-disabled-border-color;
+  background-color: $form-field-disabled-background-color;
+}
+
+
 @mixin form-field-base {
   display: block;
   width: 100%;
@@ -28,6 +34,14 @@
   &::placeholder {
     color: $form-field-placeholder-color;
     opacity: 1;
+  }
+
+  &[readonly], &:disabled {
+    @include inactive-field;
+  }
+
+  &:disabled {
+    cursor: $form-field-disabled-cursor;
   }
 }
 

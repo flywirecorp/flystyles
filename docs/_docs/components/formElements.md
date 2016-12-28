@@ -46,6 +46,20 @@ file: components/FormElements/
 </form>
 {% endexample %}
 
+##### Readonly & disabled fields
+
+{% example html %}
+<div class='FormGroup'>
+  <label class='Label'>Read only input</label>
+  <input type='text' class='Input' value='This is the value' readonly />
+</div>
+
+<div class='FormGroup'>
+  <label class='Label'>Disabled input</label>
+  <input type='text' class='Input' value='This is the value' disabled />
+</div>
+{% endexample %}
+
 ##### Input sizes
 
 Set heights using classes like `.Input--{size}`. Combine with `fontSize-{size}` utils to have a better results.

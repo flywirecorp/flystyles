@@ -25,6 +25,10 @@ $form-field-height-md: $input-height-md !default;
 $form-field-height-lg: $input-height-lg !default;
 $form-field-height-xl: $input-height-xl !default;
 
+$form-field-disabled-border-color: #ccc !default;
+$form-field-disabled-background-color: #f5f5f5 !default;
+$form-field-disabled-cursor: not-allowed !default;
+
 $form-field-sizes: (
   'xs': (size: $form-field-height-xs, font-size: $font-size-xs),
   'sm': (size: $form-field-height-sm, font-size: $font-size-sm),
