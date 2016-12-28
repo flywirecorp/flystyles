@@ -1709,6 +1709,11 @@ hr {
   .Autocomplete-search::placeholder {
     color: #939fac;
     opacity: 1; }
+  .Autocomplete-search[readonly], .Autocomplete-search:disabled {
+    border-color: #ccc;
+    background-color: #f5f5f5; }
+  .Autocomplete-search:disabled {
+    cursor: not-allowed; }
   .is-searching .Autocomplete-search {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='185 19 10 7'%3E%3Cpath fill='%23ccc' fill-rule='evenodd' d='M194.82 25.09l-.713.68c-.198.19-.518.19-.714 0L190 22.494l-3.423 3.304c-.2.19-.518.19-.716 0l-.713-.68c-.196-.186-.196-.49 0-.678l4.494-4.33c.2-.187.52-.187.715 0l4.466 4.3c.2.19.2.493 0 .68z'/%3E%3C/svg%3E");
     border: 1px solid #0084c0 !important; }
@@ -1762,6 +1767,7 @@ hr {
   font-size: 0.9375rem;
   font-weight: 400;
   text-align: center;
+  text-transform: capitalize;
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 3px; }
@@ -1871,6 +1877,11 @@ hr {
   .Input::placeholder {
     color: #939fac;
     opacity: 1; }
+  .Input[readonly], .Input:disabled {
+    border-color: #ccc;
+    background-color: #f5f5f5; }
+  .Input:disabled {
+    cursor: not-allowed; }
 
 .Input--xs {
   height: 25.2px;
@@ -1952,6 +1963,9 @@ hr {
   .Datepicker.is-open .Datepicker-calendar {
     display: block; }
 
+.Datepicker .InputGroup-context {
+  cursor: pointer; }
+
 .PhoneNumber,
 .PhoneNumber.FormGroup {
   display: table;
@@ -2026,6 +2040,11 @@ hr {
   .Input::placeholder {
     color: #939fac;
     opacity: 1; }
+  .Input[readonly], .Input:disabled {
+    border-color: #ccc;
+    background-color: #f5f5f5; }
+  .Input:disabled {
+    cursor: not-allowed; }
 
 .Input--xs {
   height: 25.2px;
@@ -2089,12 +2108,16 @@ hr {
     border-bottom-right-radius: 0; }
   .InputGroup .InputGroup-input:not(:first-child):not(:last-child) {
     border-radius: 0; }
+  .InputGroup-input:hover .InputGroup-input,
+  .InputGroup-input:hover .InputGroup-context {
+    border-color: #9399ac; }
 
 .InputGroup-context {
   display: table-cell;
   width: 1%;
   height: 100%;
   padding: 0 1rem;
+  color: #939fac;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -2179,6 +2202,11 @@ hr {
   .Select::placeholder {
     color: #939fac;
     opacity: 1; }
+  .Select[readonly], .Select:disabled {
+    border-color: #ccc;
+    background-color: #f5f5f5; }
+  .Select:disabled {
+    cursor: not-allowed; }
 
 .Select--xs {
   height: 25.2px;
@@ -2219,6 +2247,12 @@ hr {
   height: auto;
   background-image: none; }
 
+.has-error .Select, .Select--error {
+  border-color: #e14b3b; }
+
+.has-success .Select, .Select--success {
+  border-color: #6abb4f; }
+
 .Textarea {
   display: block;
   width: 100%;
@@ -2248,6 +2282,25 @@ hr {
   .Textarea::placeholder {
     color: #939fac;
     opacity: 1; }
+  .Textarea[readonly], .Textarea:disabled {
+    border-color: #ccc;
+    background-color: #f5f5f5; }
+  .Textarea:disabled {
+    cursor: not-allowed; }
+
+.has-error .Textarea, .Textarea--error {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%23e14b3b' d='M19.3 16.8c.2.4.2.9 0 1.3s-.7.7-1.2.7H1.9c-.5 0-.9-.3-1.2-.7-.2-.4-.3-.9 0-1.3L8.8 1.9c.3-.4.7-.7 1.2-.7s.9.3 1.2.7l8.1 14.9zm-7.8-9.9c0-.1 0-.1-.1-.2s-.2-.1-.3-.1H8.8c-.1 0-.2.1-.3.1V7l.2 4.8c0 .1.1.2.3.2h2c.2 0 .3-.1.4-.2l.1-4.9zm-.2 6.8c0-.2-.1-.3-.3-.3H9c-.2 0-.3.2-.3.3v2c0 .2.1.3.3.3h2c.2 0 .3-.2.3-.3v-2z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: calc(100% - .5rem) center;
+  background-size: 1rem;
+  border-color: #e14b3b; }
+
+.has-success .Textarea, .Textarea--success {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='13' viewBox='200 41 16 13'%3E%3Cpath fill='none' stroke='%236abb4f' stroke-width='2' d='M214.595 42.493L205 52l-3.877-3.97' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: calc(100% - .5rem) center;
+  background-size: 1rem;
+  border-color: #6abb4f; }
 
 .Flag {
   display: inline-block;
