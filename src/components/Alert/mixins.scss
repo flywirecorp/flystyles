@@ -1,0 +1,15 @@
+//
+// Alert mixins
+
+@import "../../styles/mixins/all";
+@import "../Icon/config";
+@import "../Icon/mixins";
+
+@mixin alert-variant($color, $icon, $icon-size: 1rem) {
+  color: $color;
+  background-color: lighten($color, 37%);
+  background-image: svg-icon($icon);
+  background-repeat: no-repeat;
+  background-size: 1.4rem 1.3rem;
+  background-position: $spacer-lg center;
+}

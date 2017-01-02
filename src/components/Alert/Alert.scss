@@ -1,0 +1,35 @@
+//
+//  Alert Component
+//
+
+@import "./config";
+@import "./mixins";
+
+// base styles
+//
+
+.Alert {
+  padding: $alert-padding;
+  margin-bottom: $alert-margin-bottom;
+  border: $alert-border-width solid transparent;
+  border-radius: $alert-border-radius;
+}
+
+// Variants
+//
+
+.Alert--danger {
+  @include alert-variant($color-danger, danger);
+}
+
+.Alert--warning {
+  @include alert-variant($color-warning, warning);
+}
+
+.Alert--info {
+  @include alert-variant($color-info, info);
+}
+
+.Alert--success {
+  @include alert-variant($color-success, success);
+}
