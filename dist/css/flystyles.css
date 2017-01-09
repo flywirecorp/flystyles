@@ -1727,6 +1727,8 @@ hr {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
   height: 42px;
   padding: 0 8.4px;
   line-height: 42px;
@@ -1752,6 +1754,8 @@ hr {
     background-color: #f5f5f5; }
   .Autocomplete-search:disabled {
     cursor: not-allowed; }
+  .Autocomplete-search::-ms-expand {
+    display: none; }
   .is-searching .Autocomplete-search {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='185 19 10 7'%3E%3Cpath fill='%23ccc' fill-rule='evenodd' d='M194.82 25.09l-.713.68c-.198.19-.518.19-.714 0L190 22.494l-3.423 3.304c-.2.19-.518.19-.716 0l-.713-.68c-.196-.186-.196-.49 0-.678l4.494-4.33c.2-.187.52-.187.715 0l4.466 4.3c.2.19.2.493 0 .68z'/%3E%3C/svg%3E");
     border: 1px solid #0084c0 !important; }
@@ -1789,10 +1793,10 @@ hr {
 
 .Autocomplete-option {
   height: 42px;
-  line-height: 42px;
   padding: 0 0.5rem;
   overflow: hidden;
   font-size: 0.9375rem;
+  line-height: 42px;
   text-overflow: ellipsis;
   white-space: nowrap; }
   .Autocomplete-option.is-active {
@@ -2220,6 +2224,8 @@ hr {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
   height: 42px;
   padding: 0 8.4px;
   line-height: 42px;
@@ -2245,6 +2251,8 @@ hr {
     background-color: #f5f5f5; }
   .Select:disabled {
     cursor: not-allowed; }
+  .Select::-ms-expand {
+    display: none; }
 
 .Select--xs {
   height: 25.2px;
