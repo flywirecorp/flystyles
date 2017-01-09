@@ -45,7 +45,7 @@
   border-bottom-right-radius: $form-field-border-radius;
   border-bottom-left-radius: $form-field-border-radius;
   opacity: 0;
-  transition: all 200ms ease-in-out;
+  transition: $autocomplete-options-transition;
 
   .is-searching & {
     max-height: $autocomplete-visible-options * $autocomplete-option-height;
@@ -58,10 +58,10 @@
 
 .Autocomplete-option {
   height: $autocomplete-option-height;
-  line-height: $autocomplete-option-height;
   padding: 0 rem(8px);
   overflow: hidden;
   font-size: rem(15px);
+  line-height: $autocomplete-option-height;
   text-overflow: ellipsis;
   white-space: nowrap;
 

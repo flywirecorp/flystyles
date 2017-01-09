@@ -53,6 +53,12 @@
   background-position: calc(100% - .8rem) center;
   background-size: .8rem;
   appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+
+  &::-ms-expand {
+    display: none;
+  }
 }
 
 @mixin form-field-size ($height, $font-size) {
