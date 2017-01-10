@@ -13,6 +13,20 @@
   @include form-field-size($form-field-height-base, $font-size-base);
 }
 
+select.Select {
+  // Remove arrow IE10-11
+  &::-ms-expand {
+    display: none;
+  }
+
+  // Hack for IE9
+  @media all and (min-width:0\0) and (min-resolution: .001dpcm) {
+    padding-right: 0 !important;
+    text-indent: 0;
+    background-image: none !important;
+  }
+}
+
 // size variations
 //
 

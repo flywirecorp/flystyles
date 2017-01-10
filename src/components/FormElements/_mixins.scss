@@ -55,10 +55,6 @@
   appearance: none;
   text-indent: 1px;
   text-overflow: "";
-
-  &::-ms-expand {
-    display: none;
-  }
 }
 
 @mixin form-field-size ($height, $font-size) {
