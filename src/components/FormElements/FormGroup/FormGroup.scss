@@ -16,9 +16,11 @@
 
 .FormGroup-hint {
   display: block;
-  margin: 0;
-  font-size: $form-group-description-font-size;
-  color: $form-group-description-color;
+  margin: $form-group-hint-margin;
+  font-size: $form-group-hint-font-size;
+  font-weight: $form-group-hint-font-weight;
+  line-height: $form-group-hint-line-height;
+  color: $form-group-hint-color;
 }
 
 .FormGroup-feedback {
