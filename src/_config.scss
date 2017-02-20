@@ -151,7 +151,7 @@ $body-color: #38495b !default;
 
 // Headings
 
-$headings-margin-bottom: $spacer-y;
+$headings-margin-bottom: $spacer-y !default;
 $headings-font-family: inherit !default;
 $headings-line-height: 1.1 !default;
 $headings-color: inherit !default;
@@ -172,7 +172,7 @@ $type-h6-font-weight: $font-weight-semi-bold !default;
 
 $hr-border-width: 1px !default;
 $hr-border-color: $color-gray-light !default;
-$hr-border: $hr-border-width solid $hr-border-color;
+$hr-border: $hr-border-width solid $hr-border-color !default;
 
 $dt-font-weight: $font-weight-semi-bold !default;
 
@@ -188,11 +188,11 @@ $link-hover-text-decoration: underline !default;
 // forms
 
 $input-height-base: 42px !default;
-$input-height-xs: $input-height-base * .6;
-$input-height-sm: $input-height-base * .8;
-$input-height-md: $input-height-base;
-$input-height-lg: $input-height-base * 1.5;
-$input-height-xl: $input-height-base * 2;
+$input-height-xs: $input-height-base * .6 !default;
+$input-height-sm: $input-height-base * .8 !default;
+$input-height-md: $input-height-base !default;
+$input-height-lg: $input-height-base * 1.5 !default;
+$input-height-xl: $input-height-base * 2 !default;
 
 $input-border-color: #ccc !default;
 $input-border: 1px solid $input-border-color !default;
