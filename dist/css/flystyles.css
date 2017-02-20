@@ -1727,6 +1727,8 @@ hr {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
   height: 42px;
   padding: 0 8.4px;
   line-height: 42px;
@@ -1789,10 +1791,10 @@ hr {
 
 .Autocomplete-option {
   height: 42px;
-  line-height: 42px;
   padding: 0 0.5rem;
   overflow: hidden;
   font-size: 0.9375rem;
+  line-height: 42px;
   text-overflow: ellipsis;
   white-space: nowrap; }
   .Autocomplete-option.is-active {
@@ -2181,6 +2183,8 @@ hr {
   display: block;
   margin: 0;
   font-size: 0.875rem;
+  font-weight: inherit;
+  line-height: 1.3;
   color: #7a8fa2; }
 
 .FormGroup-feedback {
@@ -2198,7 +2202,9 @@ hr {
   margin: 0 0 0.3rem 0;
   font-size: 1rem;
   font-weight: 600;
+  line-height: 1.3;
   color: #38495b;
+  text-transform: none;
   cursor: pointer; }
 
 .Select {
@@ -2220,6 +2226,8 @@ hr {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
   height: 42px;
   padding: 0 8.4px;
   line-height: 42px;
@@ -2245,6 +2253,15 @@ hr {
     background-color: #f5f5f5; }
   .Select:disabled {
     cursor: not-allowed; }
+
+select.Select::-ms-expand {
+  display: none; }
+
+@media all and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
+  select.Select {
+    padding-right: 0 !important;
+    text-indent: 0;
+    background-image: none !important; } }
 
 .Select--xs {
   height: 25.2px;
