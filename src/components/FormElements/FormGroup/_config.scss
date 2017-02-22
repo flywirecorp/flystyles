@@ -1,0 +1,14 @@
+@import "../../../config";
+
+// form group
+
+$form-group-margin: 0 0 $spacer-lg 0 !default;
+$form-group-description-color: $color-gray !default;
+$form-group-description-font-size: $font-size-sm !default;
+
+// form group - hint
+$form-group-hint-margin: 0 !default;
+$form-group-hint-font-size: $font-size-sm !default;
+$form-group-hint-line-height: 1.3 !default;
+$form-group-hint-color: $color-gray !default;
+$form-group-hint-font-weight: inherit !default;

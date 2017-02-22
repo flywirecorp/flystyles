@@ -1,5 +1,5 @@
-@import "../config";
+@import "../../../config";
 
 $autocomplete-visible-options: 6 !default;
-$autocomplete-option-height: $input-height-base !default;
+$autocomplete-option-height: $form-field-height-base !default;
 $autocomplete-options-transition: all 200ms ease-in-out !default;

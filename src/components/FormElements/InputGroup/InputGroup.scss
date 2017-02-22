@@ -1,8 +1,8 @@
 //
 //  Input Group Component
 //
-@import "../config";
-@import "../mixins";
+@import "./config";
+@import "../../../styles/mixins/all";
 
 .InputGroup {
   display: table;

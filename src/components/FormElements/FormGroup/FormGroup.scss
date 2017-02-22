@@ -2,8 +2,9 @@
 //  forGroup component
 //  gather all the components that a form field needs
 //
-@import "../config";
-@import "../mixins";
+
+@import "./config";
+@import "../../../styles/mixins/all";
 
 .FormGroup {
   display: block;

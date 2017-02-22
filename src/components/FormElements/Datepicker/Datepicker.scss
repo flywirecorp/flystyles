@@ -1,9 +1,5 @@
-@import "../config";
-@import "../mixins";
-
-@import "../../Calendar/Calendar";
-@import "../Input/Input";
-
+@import "../../../config";
+@import "../../../styles/mixins/all";
 
 .Datepicker {
   position: relative;
@@ -28,7 +24,7 @@
     border-right: 9px solid transparent;
     border-bottom: 9px solid #ccc;
     border-top: 0;
-    border-bottom-color: $input-border-color;
+    border-bottom-color: $form-field-border-color;
     position: absolute;
 
     top: -9px;

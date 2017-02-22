@@ -2,7 +2,7 @@
 //  Calendar component
 //
 
-@import "config";
+@import "./config";
 @import "../../styles/mixins/all";
 
 //  Parent
@@ -24,12 +24,12 @@
 .Calendar-header {
   display: flex;
   padding: $spacer-sm;
-  flex-wrap: nowrap;
-  justify-content: space-around;
   background: #f8fafd;
   text-align: center;
   border-top-left-radius: $calendar-border-radius;
   border-top-right-radius: $calendar-border-radius;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 }
 
 .Calendar-header-nav {

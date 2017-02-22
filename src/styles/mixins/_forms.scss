@@ -2,14 +2,12 @@
 //  forms mixins
 //
 
-@import "../../styles/mixins/all";
-@import "../Icon/mixins";
+@import "./utils";
 
 @mixin inactive-field {
   border-color: $form-field-disabled-border-color;
   background-color: $form-field-disabled-background-color;
 }
-
 
 @mixin form-field-base {
   display: block;
@@ -21,7 +19,6 @@
   border-radius: $form-field-border-radius;
   outline: 0;
   transition: 200ms border ease-in-out;
-
 
   &:hover {
     border-color: $form-field-border-color-hover;

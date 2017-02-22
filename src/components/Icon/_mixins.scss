@@ -12,7 +12,3 @@
   width: map-get($icon-sizes, $size);
   height: map-get($icon-sizes, $size);
 }
-
-@function svg-icon($icon) {
-  @return svg-url(map-get($icons, $icon));
-}

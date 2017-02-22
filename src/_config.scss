@@ -181,22 +181,34 @@ $link-text-decoration: none !default;
 $link-hover-color: darken($link-color, 15%) !default;
 $link-hover-text-decoration: underline !default;
 
-
-// Components
-//
-
 // forms
 
-$input-height-base: 42px !default;
-$input-height-xs: $input-height-base * .6 !default;
-$input-height-sm: $input-height-base * .8 !default;
-$input-height-md: $input-height-base !default;
-$input-height-lg: $input-height-base * 1.5 !default;
-$input-height-xl: $input-height-base * 2 !default;
+$form-field-border-radius: 3px !default;
+$form-field-font-family: $font-family-base !default;
+$form-field-background: #fff !default;
+$form-field-color: #444 !default;
+$form-field-border-width: 1px !default;
+$form-field-border-color: #ccc !default;
+$form-field-border: $form-field-border-width solid $form-field-border-color !default;
+$form-field-border-color-focus: $color-brand-primary !default;
+$form-field-border-color-hover: #9399ac !default;
+$form-field-placeholder-color: #939fac !default;
 
-$input-border-color: #ccc !default;
-$input-border: 1px solid $input-border-color !default;
+$form-field-height-base: 42px !default;
+$form-field-height-xs: $form-field-height-base * .6 !default;
+$form-field-height-sm: $form-field-height-base * .8 !default;
+$form-field-height-md: $form-field-height-base !default;
+$form-field-height-lg: $form-field-height-base * 1.5 !default;
+$form-field-height-xl: $form-field-height-base * 2 !default;
 
-// divider
+$form-field-disabled-border-color: #ccc !default;
+$form-field-disabled-background-color: #f5f5f5 !default;
+$form-field-disabled-cursor: not-allowed !default;
 
-$divider-border: $hr-border !default;
+$form-field-sizes: (
+  'xs': (size: $form-field-height-xs, font-size: $font-size-xs),
+  'sm': (size: $form-field-height-sm, font-size: $font-size-sm),
+  'md': (size: $form-field-height-md, font-size: $font-size-md),
+  'lg': (size: $form-field-height-lg, font-size: $font-size-lg),
+  'xl': (size: $form-field-height-xl, font-size: $font-size-xl)
+) !default;

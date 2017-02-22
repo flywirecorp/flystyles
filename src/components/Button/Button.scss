@@ -28,10 +28,10 @@
 
 .Button--default {
   @include button-style(#fff, $body-color);
-  border: $input-border;
+  border: $form-field-border;
 
   &:hover {
-    border: 1px solid darken($input-border-color, 15%);
+    border: 1px solid darken($form-field-border-color, 15%);
   }
 }
 

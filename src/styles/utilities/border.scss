@@ -3,22 +3,22 @@
 //
 
 .borderLeft {
-  border-left: $divider-border !important;
+  border-left: $hr-border !important;
 }
 
 .borderRight {
-  border-right: $divider-border !important;
+  border-right: $hr-border !important;
 }
 
 // Responsive borders
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-up($breakpoint) {
     .from#{capitalize($breakpoint)}-borderLeft {
-      border-left: $divider-border !important;
+      border-left: $hr-border !important;
     }
 
     .from#{capitalize($breakpoint)}-borderRight {
-      border-right: $divider-border !important;
+      border-right: $hr-border !important;
     }
   }
 }
