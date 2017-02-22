@@ -26,8 +26,9 @@
   "homepage": "https://github.com/peertransfer/flystyles#readme",
   "devDependencies": {
     "autoprefixer": "^6.7.4",
-    "browser-sync": "^2.16.0",
-    "clean-css": "^4.0.7",
-    "node-sass": "^4.5.0"
+    "browser-sync": "^2.18.8",
+    "clean-css-cli": "^4.0.7",
+    "node-sass": "^4.5.0",
+    "postcss-cli": "^3.0.0-beta"
   }
 }
