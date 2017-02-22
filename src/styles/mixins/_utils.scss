@@ -50,7 +50,3 @@
   $svg: str-replace($svg,'#','%23');
   @return url("data:image/svg+xml;charset=utf8,#{$svg}");
 }
-
-@function svg-icon($icon) {
-  @return svg-url(map-get($icons, $icon));
-}

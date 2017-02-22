@@ -25,6 +25,6 @@
 //
 @each $icon in map-keys($icons) {
   .Icon--#{$icon} {
-    background-image: svg-icon($icon);
+    background-image: svg-url(map-get($icons, $icon));
   }
 }

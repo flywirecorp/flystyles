@@ -14,7 +14,7 @@
   @include form-field-size($form-field-height-base, $font-size-base);
 
   .is-searching & {
-    background-image: svg-icon(arrowUp);
+    background-image: svg-url(map-get($icons, arrowUp));
     border: 1px solid $form-field-border-color-focus !important;
   }
 }
