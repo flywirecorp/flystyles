@@ -183,7 +183,7 @@ $link-hover-text-decoration: underline !default;
 
 // forms
 
-$form-field-border-radius: 3px !default;
+$form-field-border-radius: $global-border-radius !default;
 $form-field-font-family: $font-family-base !default;
 $form-field-background: #fff !default;
 $form-field-color: #444 !default;
