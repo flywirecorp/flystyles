@@ -110,6 +110,8 @@
   float: left;
   width: 250px;
   height: 100%;
+  overflow-y: scroll; 
+
   @include media-up(medium) {
     display: block;
   }

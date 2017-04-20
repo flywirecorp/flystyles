@@ -37,7 +37,7 @@ bs.watch('./**/*.scss', (event, file) => {
 });
 
 // Provide a callback to capture ALL events to HTML
-bs.watch(['./docs/**/*.md'], (event, file) => {
+bs.watch(['./docs/**/*.*'], (event, file) => {
 
   if (event === 'change') {
     const build = exec('bundle exec jekyll build');
