@@ -57,7 +57,7 @@
 // Responsive alignment
 
 @each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-up($breakpoint){
+  @include media-up($breakpoint) {
     .from#{capitalize($breakpoint)}-textAlign-left {
       text-align: left !important;
     }

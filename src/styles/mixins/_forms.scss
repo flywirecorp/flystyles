@@ -3,6 +3,7 @@
 //
 
 @import "./utils";
+@import "../../components/Icon/config";
 
 @mixin inactive-field {
   border-color: $form-field-disabled-border-color;
