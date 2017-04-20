@@ -4,23 +4,38 @@
 // Example: maginTop-0
 
 @each $size in map-keys($spacers) {
+  $current-space: map-get($spacers, $size);
+
   .margin-#{$size} {
-    margin: map-get($spacers, $size) !important;
+    margin: $current-space !important;
   }
   .marginTop-#{$size} {
-    margin-top: map-get($spacers, $size) !important;
+    margin-top: $current-space !important;
+  }
+  .marginRight-#{$size} {
+    margin-right: $current-space !important;
   }
   .marginBottom-#{$size} {
-    margin-bottom: map-get($spacers, $size) !important;
+    margin-bottom: $current-space !important;
   }
+  .marginLeft-#{$size} {
+    margin-left: $current-space !important;
+  }
+
   .padding-#{$size} {
-    padding: map-get($spacers, $size) !important;
+    padding: $current-space !important;
   }
   .paddingTop-#{$size} {
-    padding-top: map-get($spacers, $size) !important;
+    padding-top: $current-space !important;
+  }
+  .paddingRight-#{$size} {
+    padding-right: $current-space !important;
   }
   .paddingBottom-#{$size} {
-    padding-bottom: map-get($spacers, $size) !important;
+    padding-bottom: $current-space !important;
+  }
+  .paddingLeft-#{$size} {
+    padding-left: $current-space !important;
   }
 }
 
