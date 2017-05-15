@@ -46,6 +46,7 @@
   border-bottom-left-radius: $form-field-border-radius;
   opacity: 0;
   transition: $autocomplete-options-transition;
+  z-index: 1;
 
   .is-searching & {
     max-height: $autocomplete-visible-options * $autocomplete-option-height;
