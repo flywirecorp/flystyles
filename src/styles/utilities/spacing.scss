@@ -55,6 +55,12 @@
       .from#{capitalize($breakpoint)}-marginBottom-#{$size} {
         margin-bottom: map-get($spacers, $size) !important;
       }
+      .from#{capitalize($breakpoint)}-marginLeft-#{$size} {
+        margin-left: map-get($spacers, $size) !important;
+      }
+      .from#{capitalize($breakpoint)}-marginRight-#{$size} {
+        margin-right: map-get($spacers, $size) !important;
+      }
       .from#{capitalize($breakpoint)}-padding-#{$size} {
         padding: map-get($spacers, $size) !important;
       }
@@ -63,6 +69,12 @@
       }
       .from#{capitalize($breakpoint)}-paddingBottom-#{$size} {
         padding-bottom: map-get($spacers, $size) !important;
+      }
+      .from#{capitalize($breakpoint)}-paddingLeft-#{$size} {
+        padding-left: map-get($spacers, $size) !important;
+      }
+      .from#{capitalize($breakpoint)}-paddingRight-#{$size} {
+        padding-right: map-get($spacers, $size) !important;
       }
     }
   }
