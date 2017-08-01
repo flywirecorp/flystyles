@@ -1,0 +1,8 @@
+$separator-space: $spacer-lg !default;
+$separator-border: 1px solid #e5e8ea !default;
+
+.Separator {
+  margin: $separator-space 0;
+  border: 0;
+  border-top: $separator-border;
+}
