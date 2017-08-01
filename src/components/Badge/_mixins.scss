@@ -1,0 +1,13 @@
+@import "./config";
+
+@mixin badge($background: $badge-background) {
+  display: inline-block;
+  padding: 0 $spacer-sm;
+  line-height: $spacer;
+  color: #fff;
+  font-size: rem(11px);
+  font-weight: $font-weight-semi-bold;
+  text-transform: uppercase;
+  background: $background;
+  border-radius: $badge-border-radius;
+}
