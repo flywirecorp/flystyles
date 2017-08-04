@@ -25,17 +25,19 @@
 }
 
 .FormGroup-feedback {
-  display: block;
+  display: none;
   margin: 0;
   font-size: $font-size-sm;
   font-weight: $font-weight-semi-bold;
   color: $form-group-description-color;
 
   @include state-variation(error) {
+    display: block;
     color: $color-danger;
   }
 
   @include state-variation(success) {
+    display: block;
     color: $color-success;
   }
 }
