@@ -54,3 +54,17 @@ Autocomplete component with autocomplete.
 </div>
 
 {% endexample %}
+
+
+##### Autocomplete with search disabled
+
+{% example html %}
+<div class='FormGroup'>
+  <label class='Label' for='drowpdown-example'>This is a label</label>
+  <div class='Autocomplete Autocomplete--searchDisabled'>
+    <input id='drowdown-example' readonly type='text' class='Autocomplete-search' placeholder='Select one option...' />
+  </div>
+  <p class='FormGroup-feedback'>This field is required</p>
+</div>
+
+{% endexample %}

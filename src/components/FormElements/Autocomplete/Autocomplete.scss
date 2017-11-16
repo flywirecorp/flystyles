@@ -9,14 +9,25 @@
   position: relative;
 }
 
-.Autocomplete-search,
-.Autocomplete--noReadOnly .Autocomplete-search {
+.Autocomplete-search {
   @include form-field-select;
   @include form-field-size($form-field-height-base, $font-size-base);
 
   .is-searching & {
     background-image: svg-url(map-get($icons, arrowUp));
     border: 1px solid $form-field-border-color-focus !important;
+  }
+
+  .Autocomplete--searchDisabled & {
+    background-color: $form-field-background;
+
+    &:hover {
+      border-color: $form-field-border-color-hover;
+    }
+
+    &:focus {
+      border-color: $form-field-border-color-focus;
+    }
   }
 }
 
