@@ -9,7 +9,8 @@
   position: relative;
 }
 
-.Autocomplete-search {
+.Autocomplete-search,
+.Autocomplete--noReadOnly .Autocomplete-search {
   @include form-field-select;
   @include form-field-size($form-field-height-base, $font-size-base);
 
