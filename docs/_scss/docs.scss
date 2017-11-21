@@ -2,13 +2,19 @@
 //  Docs styles
 //
 
-
+body {
+  background: #f8fafd;
+}
 
 // Wrapper to set max width
 %wrapper,
 .wrapper {
   padding: 0 $base-spacing;
   margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
 //
@@ -19,8 +25,6 @@
 
 .fullPage {
   .docs-content {
-    max-width: 768px;
-    padding: 0;
     margin: auto;
   }
   .docs-logo {
@@ -30,11 +34,8 @@
 
 // Docs Header
 .docs-header {
-  margin-bottom: 2rem;
-  background: #fff;
-  box-shadow: 0 1px 4px rgba(0,0,0,.1);
-
   @include media-up(medium) {
+    margin-bottom: 2rem;
     height: 120px;
   }
 }
@@ -49,7 +50,7 @@
 
 .docs-siteTitle {
   margin: 0 0 0 auto;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: $font-weight-semi-bold;
   text-transform: uppercase;
   @include media-up(medium) {
@@ -57,29 +58,30 @@
   }
 }
 
-.docs-logo {
-  height: 30px;
-  @include media-up(medium) {
-    height: 40px;
-  }
+.docs-menu-mobile {
+  width: 220px;
+  margin: 2rem 0;
+  margin-left: 1rem;
 }
 // Docs header menu
 .docs-menu {
   padding: 0;
-  margin: $spacer 0;
-  font-size: .7rem;
-  font-weight: 600;
-  text-transform: uppercase;
+  margin: 1rem 0;
+  font-size: 0.7rem;
+  font-weight: 400;
   list-style: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
 
   @include media-up(medium) {
     margin: 0;
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   li {
     display: block;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 
     @include media-up(medium) {
       display: inline-block;
@@ -87,7 +89,8 @@
     }
     a {
       display: inline-block;
-      color: #38495B;
+      padding: 1rem;
+      color: #38495b;
 
       @include media-up(medium) {
         padding-bottom: 1rem;
@@ -99,7 +102,8 @@
     }
 
     &.active a {
-      border-bottom: 3px solid #0091D4;
+      font-weight: 600;
+      border-bottom: 3px solid #0091d4;
     }
   }
 }
@@ -110,7 +114,7 @@
   float: left;
   width: 250px;
   height: 100%;
-  overflow-y: scroll; 
+  overflow-y: scroll;
 
   @include media-up(medium) {
     display: block;
@@ -124,8 +128,13 @@
 
 // Docs Content
 .docs-content {
+  padding: 36px;
+  background: #fff;
+  border: 1px solid #dae0e4;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
   @include media-up(medium) {
-    padding-left: 280px;
+    margin-left: 280px;
   }
 }
 
@@ -139,7 +148,7 @@
 
 .docs-type-subsection {
   display: flex;
-  margin-bottom: .3rem;
+  margin-bottom: 0.3rem;
   align-items: center;
 }
 .docs-type-subsection-title {
@@ -151,19 +160,19 @@
 .docs-type-description {
   margin: 0;
   font-size: rem(16px);
-  color: #6B7886;
+  color: #6b7886;
 }
 
 .docs-type-subsection-file {
   margin-left: auto;
   margin-bottom: 0;
   font-size: rem(12px);
-  color: rgba(0,0,0,.5);
+  color: rgba(0, 0, 0, 0.5);
 
   img {
     width: rem(10px);
     height: auto;
-    margin-right: .3rem;
+    margin-right: 0.3rem;
     vertical-align: -3px;
   }
 }
@@ -177,7 +186,7 @@
 .docs-section-header {
   padding-bottom: $spacer-sm;
   margin-bottom: $spacer-lg;
-  border-bottom: 1px solid #DADFE4;
+  border-bottom: 1px solid #dadfe4;
 }
 
 // Docs footer
@@ -191,14 +200,13 @@
 
   p {
     margin: 0;
-
   }
 }
 
 // Code Examples
 
 code {
-  padding: .2rem .4rem;
+  padding: 0.2rem 0.4rem;
   font-size: 90%;
   color: #bd4147;
   background: #f0f4fb;
@@ -208,13 +216,13 @@ code {
 .code {
   margin-bottom: 2rem;
   overflow: hidden;
-  border: 1px solid #D1DAE6;
+  border: 1px solid #d1dae6;
   overflow: hidden;
 }
 
 .code-example {
   padding: 2rem;
-  border-bottom: 1px solid #D1DAE6;
+  border-bottom: 1px solid #d1dae6;
 }
 
 .code-highlight {
@@ -239,14 +247,13 @@ pre code {
   background: #f0f4fb;
 }
 
-
 // Colors examples
 .color {
   margin-bottom: 2rem;
   overflow: hidden;
   text-align: center;
   background: #fff;
-  border: 1px solid #D1DAE6;
+  border: 1px solid #d1dae6;
   border-radius: 3px;
 }
 
@@ -294,30 +301,29 @@ pre code {
   font-size: 90%;
 
   &--dark {
-    color: rgba(0,0,0,.6);
+    color: rgba(0, 0, 0, 0.6);
   }
 }
 
 // Utilities
 .u-alpha-50 {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .text-shadow {
-  text-shadow: 1px 1px 0 rgba(0,0,0,.3);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
 }
-
 
 // Example view
 
 .exampleView .GridRow > .GridColumn,
 .exampleView .GridRow > [class^="GridColumn"] {
   min-height: 4rem;
-  padding-top: .75rem;
-  padding-bottom: .75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   font-size: 14px;
   color: #fff;
-  background-color: rgba(#7A8FA2, 1);
+  background-color: rgba(#7a8fa2, 1);
   border: 2px solid #fff;
   border-radius: 6px;
 }

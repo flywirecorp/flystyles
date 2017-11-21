@@ -1,14 +1,13 @@
 var Sticky = (function() {
-  'use strict';
+  "use strict";
 
-  var CSS_CLASS_ACTIVE = 'is-fixed';
+  var CSS_CLASS_ACTIVE = "is-fixed";
 
   var Sticky = {
     element: null,
     position: 0,
     init: function(element) {
-      if (! element)
-        return false;
+      if (!element) return false;
 
       this.element = element;
       this.addEvents();
@@ -16,7 +15,7 @@ var Sticky = (function() {
       this.onScroll();
     },
     addEvents: function() {
-      window.addEventListener('scroll', this.onScroll.bind(this));
+      window.addEventListener("scroll", this.onScroll.bind(this));
     },
     aboveScroll: function() {
       return this.position < window.scrollY;
@@ -37,5 +36,6 @@ var Sticky = (function() {
   };
 
   return Sticky;
-
 })();
+
+Sticky.init(document.querySelector(".sticky"));

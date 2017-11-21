@@ -1,18 +1,15 @@
 var ScrollSpy = (function() {
-  'use strict';
+  "use strict";
 
   var sections = null;
   var navLinks = null;
-  var SELECTED = 'is-selected';
+  var SELECTED = "is-selected";
 
   function getClosestSection() {
-    console.log(sections);
-
     var sectionsLength = sections.length;
 
-    for(var index=0; index<sectionsLength; index++) {
-      if (isBelowScroll(sections.item(index)))
-        break;
+    for (var index = 0; index < sectionsLength; index++) {
+      if (isBelowScroll(sections.item(index))) break;
     }
 
     selectLink(sections.item(index).id);
@@ -24,12 +21,11 @@ var ScrollSpy = (function() {
   }
 
   function selectLink(id) {
-    
-    Array.prototype.forEach.call(navLinks, function(element){
+    Array.prototype.forEach.call(navLinks, function(element) {
       element.classList.remove(SELECTED);
     });
 
-    var currentLink = document.querySelector('a[href="#'+id+'"]');
+    var currentLink = document.querySelector('a[href="#' + id + '"]');
     if (currentLink) {
       currentLink.classList.add(SELECTED);
       // TODO: THIS IS HARDCODED, FIND REAL PARENT
@@ -38,12 +34,10 @@ var ScrollSpy = (function() {
   }
 
   function init(content, nav) {
-    sections = content.querySelectorAll('[id]');
-    navLinks = nav.querySelectorAll('a');
+    sections = content.querySelectorAll("[id]");
+    navLinks = nav.querySelectorAll("a");
 
-    console.log(sections.length, navLinks);
-
-    window.addEventListener('scroll', function(event) {
+    window.addEventListener("scroll", function(event) {
       getClosestSection();
     });
 
@@ -51,5 +45,9 @@ var ScrollSpy = (function() {
   }
 
   return init;
-
 })();
+
+ScrollSpy(
+  document.querySelector(".docs-content"),
+  document.querySelector(".docs-nav")
+);

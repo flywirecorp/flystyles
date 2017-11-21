@@ -7,10 +7,14 @@
   "sass": "src/flystyles.scss",
   "main": "./dist",
   "scripts": {
-    "css:build": "node_modules/.bin/node-sass src/flystyles.scss dist/css/flystyles.css",
-    "css:autoprefix": "node_modules/.bin/postcss --use autoprefixer -o dist/css/flystyles.css dist/css/flystyles.css",
-    "css:minify": "node_modules/.bin/cleancss -o dist/css/flystyles.min.css dist/css/flystyles.css",
-    "build": "npm run css:build && npm run css:autoprefix && npm run css:minify",
+    "css:build":
+      "node_modules/.bin/node-sass src/flystyles.scss dist/css/flystyles.css",
+    "css:autoprefix":
+      "node_modules/.bin/postcss --use autoprefixer -o dist/css/flystyles.css dist/css/flystyles.css",
+    "css:minify":
+      "node_modules/.bin/cleancss -o dist/css/flystyles.min.css dist/css/flystyles.css",
+    "build":
+      "npm run css:build && npm run css:autoprefix && npm run css:minify",
     "docs": "node docs.js",
     "start": "node docs.js",
     "version": "npm run build && git add -A dist",
@@ -28,8 +32,13 @@
   "devDependencies": {
     "autoprefixer": "^6.7.4",
     "browser-sync": "^2.18.8",
-    "clean-css-cli": "^4.0.7",
-    "node-sass": "^4.5.0",
+    "clean-css-cli": "^4.1.10",
+    "node-sass": "^4.6.1",
     "postcss-cli": "^3.0.0-beta"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
   }
 }

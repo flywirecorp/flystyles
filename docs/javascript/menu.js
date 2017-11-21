@@ -1,7 +1,3 @@
-//
-//  Global
-//
-
 document
   .querySelector('[data-js="mobile-menu"]')
   .addEventListener("change", function(e) {

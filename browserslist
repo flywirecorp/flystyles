@@ -1,6 +1,5 @@
-# Browserslist
-# Browsers that we support
-# https://github.com/ai/browserslist
-
 > 1%
-IE > 8
+last 2 versions
+ie >= 10
+Android >= 4
+ios >= 7
