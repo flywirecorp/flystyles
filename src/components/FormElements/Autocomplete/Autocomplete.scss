@@ -3,7 +3,7 @@
 //
 
 @import "./config";
-@import "../../../styles/mixins/all";
+@import "../../../mixins";
 
 .Autocomplete {
   position: relative;
@@ -32,6 +32,7 @@
 }
 
 .Autocomplete-search {
+  appearance: none;
   @include state-variation("error") {
     border-color: $color-danger;
   }
@@ -85,5 +86,15 @@
 
   .is-highlighted {
     border-bottom: 1px dotted #aaa;
+  }
+}
+
+// REFACTOR
+.Autocomplete--noReadOnly .Autocomplete-search[readonly] {
+  background-color: #fff;
+  border-color: $form-field-border-color;
+
+  .has-error & {
+    border-color: $color-danger;
   }
 }

@@ -4,26 +4,41 @@
 
 @import "../mixins/type";
 
+h1,
 .type-h1 {
   @include type-h1;
 }
 
+h2,
 .type-h2 {
   @include type-h2;
 }
 
+h3,
 .type-h3 {
   @include type-h3;
 }
 
+h4,
 .type-h4 {
   @include type-h4;
 }
 
+h5,
 .type-h5 {
   @include type-h5;
 }
 
+h6,
 .type-h6 {
   @include type-h6;
+}
+
+p,
+.type-regular {
+  @include type-regular;
+}
+
+.type-lead {
+  @include type-lead;
 }

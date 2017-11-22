@@ -1,21 +1,7 @@
-//  Mixins files
-//
-//  Mixins used around the whole framework, those files dont's output anything
-
-@import "styles/mixins/all";
-
-// Base
-//
-// Load HTML default styles
-@import "styles/base/all";
-
-// Utilities
-//
-@import "styles/utilities/all";
-
-// Components
-//
-// load the components that you need
+@import "config";
+@import "mixins";
+@import "reboot";
+@import "utilities";
 
 @import "components/Alert/Alert";
 @import "components/Badge/Badge";

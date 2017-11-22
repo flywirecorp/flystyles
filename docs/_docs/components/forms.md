@@ -1,5 +1,5 @@
 ---
-title: Form Elements
+title: Forms
 description: Inputs, Labels, Selects, ...
 category: components
 file: components/FormElements/
@@ -130,7 +130,6 @@ These styles can be applied either by adding the class `has-error` or `has-succe
   <select class="Select" id="selectError">
     <option>Option 1</option>
   </select>
-</div>
 </div>
 
 {% endexample %}

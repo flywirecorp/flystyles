@@ -9,3 +9,41 @@
   text-transform: $label-text-transform;
   cursor: pointer;
 }
+
+// REFACTOR
+
+// Floating label
+.FormGroup--floatingLabel .Label {
+  position: absolute;
+  top: ($form-field-height-base / 2) - ($font-size-root / 2);
+  left: 10px;
+  z-index: 1;
+  text-transform: none;
+  transition: $transition-default;
+}
+
+.FormGroup--floatingLabel {
+  &.is-focused .Label,
+  &.has-value .Label,
+  .Input:focus + .Label,
+  .Select:focus + .Label,
+  .Textarea:focus + .Label,
+  .Input.is-focus + .Label,
+  .Select.is-focus + .Label,
+  .Textarea.is-focus + .Label,
+  .Input.has-value + .Label,
+  .Select.has-value + .Label,
+  .Textarea.has-value + .Label,
+  .Autocomplete.is-searching {
+    font-size: rem(12px);
+    transform: translateY(-10px);
+  }
+}
+
+.FormGroup--symbolFirst .Label {
+  left: 54px;
+}
+
+.PhoneNumber + .Label {
+  left: 73px;
+}

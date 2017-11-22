@@ -3,7 +3,7 @@
 //
 
 @import "./config";
-@import "../../../styles/mixins/all";
+@import "../../../mixins";
 
 // base styles
 //
@@ -20,7 +20,7 @@ select.Select {
   }
 
   // Hack for IE9
-  @media all and (min-width:0\0) and (min-resolution: .001dpcm) {
+  @media all and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
     padding-right: 0 !important;
     text-indent: 0;
     background-image: none !important;

@@ -42,7 +42,30 @@
   font-weight: $type-h6-font-weight;
 }
 
+@mixin type-regular {
+  margin-bottom: 32px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #444;
 
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  @include media-up(large) {
+    font-size: 16px;
+  }
+}
+
+@mixin type-lead {
+  margin-bottom: 32px;
+  font-size: rem(18px);
+  color: #666;
+
+  @include media-up(large) {
+    font-size: rem(20px);
+  }
+}
 // Horizontal rule
 
 @mixin hr {

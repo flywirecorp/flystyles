@@ -3,7 +3,7 @@
 //
 
 @import "./utils";
-@import "../../components/Icon/config";
+@import "../components/Icon/config";
 
 @mixin inactive-field {
   border-color: $form-field-disabled-border-color;
@@ -19,6 +19,7 @@
   border: $form-field-border-width solid $form-field-border-color;
   border-radius: $form-field-border-radius;
   outline: 0;
+  appearance: none;
   transition: 200ms border ease-in-out;
 
   &:hover {
@@ -34,12 +35,23 @@
     opacity: 1;
   }
 
-  &[readonly], &:disabled {
+  &[readonly],
+  &:disabled {
     @include inactive-field;
   }
 
   &:disabled {
     cursor: $form-field-disabled-cursor;
+  }
+
+  .FormGroup--floatingLabel & {
+    padding-top: 15px;
+    font-size: rem(15px);
+    line-height: 44px;
+  }
+
+  .FormGroup--floatingLabel &::placeholder {
+    color: transparent;
   }
 }
 
@@ -48,11 +60,15 @@
   padding-right: $spacer-xl !important;
   background-image: svg-url(map-get($icons, arrowDown));
   background-repeat: no-repeat;
-  background-position: calc(100% - .8rem) center;
-  background-size: .8rem;
+  background-position: calc(100% - 0.8rem) center;
+  background-size: 0.8rem;
   appearance: none;
   text-indent: 1px;
   text-overflow: "";
+
+  .FormGroup--floatingLabel & {
+    line-height: 36px;
+  }
 }
 
 @mixin form-field-size ($height, $font-size) {
@@ -73,7 +89,7 @@
   @include state-variation("error") {
     background-image: svg-url(map-get($icons, danger));
     background-repeat: no-repeat;
-    background-position: calc(100% - .5rem) center;
+    background-position: calc(100% - 0.5rem) center;
     background-size: 5px;
     border-color: $color-danger;
   }
@@ -83,7 +99,7 @@
   @include state-variation("success") {
     background-image: svg-url(map-get($icons, success));
     background-repeat: no-repeat;
-    background-position: calc(100% - .5rem) center;
+    background-position: calc(100% - 0.5rem) center;
     background-size: 1rem;
     border-color: $color-success;
   }
