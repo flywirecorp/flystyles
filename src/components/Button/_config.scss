@@ -9,10 +9,5 @@ $button-font-size-base: 0.8rem !default;
 $button-outline-color: #939fac !default;
 $button-size-base: $form-field-height-base;
 
-$button-styles: (
-    "primary": $color-brand-primary,
-    "secondary": $color-brand-secondary,
-    "tertiary": $color-brand-tertiary,
-    "danger": $color-danger
-  )
+$button-styles: ("primary": $color-brand-primary, "danger": $color-danger)
   !default;

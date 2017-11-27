@@ -39,13 +39,6 @@ select.Select {
 //
 
 .Select {
-  @include state-variation("error") {
-    border: $form-field-border-error;
-    box-shadow: $form-field-box-shadow-error;
-  }
-
-  @include state-variation("success") {
-    border: $form-field-border-success;
-    box-shadow: $form-field-box-shadow-success;
-  }
+  @include select-success;
+  @include select-error;
 }

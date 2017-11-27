@@ -5,9 +5,18 @@
 @import "./utils";
 @import "../components/Icon/config";
 
-@mixin inactive-field {
+@mixin disabled-field {
+  color: $form-field-disabled-color;
   border-color: $form-field-disabled-border-color;
   background-color: $form-field-disabled-background-color;
+  cursor: $form-field-disabled-cursor;
+}
+
+@mixin read-only-field {
+  color: $form-field-read-only-color;
+  border-color: $form-field-read-only-border-color;
+  background-color: $form-field-read-only-background-color;
+  cursor: $form-field-read-only-cursor;
 }
 
 @mixin form-field-base {
@@ -39,13 +48,12 @@
     opacity: 1;
   }
 
-  &[readonly],
   &:disabled {
-    @include inactive-field;
+    @include disabled-field;
   }
 
-  &:disabled {
-    cursor: $form-field-disabled-cursor;
+  &[readonly] {
+    @include read-only-field;
   }
 
   .FormGroup--floatingLabel & {
@@ -93,8 +101,8 @@
   @include state-variation("error") {
     background-image: svg-url(map-get($icons, danger));
     background-repeat: no-repeat;
-    background-position: calc(100% - 0.5rem) center;
-    background-size: 5px;
+    background-position: calc(100% - 1rem) center;
+    background-size: 3px 14px;
     box-shadow: $form-field-box-shadow-error;
     border: $form-field-border-error;
   }
@@ -104,9 +112,23 @@
   @include state-variation("success") {
     background-image: svg-url(map-get($icons, success));
     background-repeat: no-repeat;
-    background-position: calc(100% - 0.5rem) center;
-    background-size: 1rem;
+    background-position: calc(100% - 1rem) center;
+    background-size: 16px 13px;
     box-shadow: $form-field-box-shadow-success;
     border: $form-field-border-success;
+  }
+}
+
+@mixin select-error {
+  @include state-variation("error") {
+    border: $form-field-border-error;
+    box-shadow: $form-field-box-shadow-error;
+  }
+}
+
+@mixin select-success {
+  @include state-variation("success") {
+    border: $form-field-border-success;
+    box-shadow: $form-field-box-shadow-success;
   }
 }
