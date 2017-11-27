@@ -25,7 +25,7 @@ $color-brand-tertiary-dark: #017043 !default;
 
 $color-info: #38b1e8 !default;
 $color-success: #6abb4f !default;
-$color-danger: #e14b3b !default;
+$color-danger: #ed2941 !default;
 $color-warning: #d59a22 !default;
 $color-white: #fff !default;
 $color-black: #000 !default;
@@ -204,7 +204,7 @@ $form-field-border: $form-field-border-width solid $form-field-border-color
   !default;
 
 $form-field-border-color-focus: $color-brand-primary !default;
-$form-field-border-width-focus: 2px !default;
+$form-field-border-width-focus: 1px !default;
 $form-field-border-focus: $form-field-border-width-focus solid
   $form-field-border-color-focus !default;
 
@@ -220,8 +220,14 @@ $form-field-disabled-border-color: #ccc !default;
 $form-field-disabled-background-color: #f5f5f5 !default;
 $form-field-disabled-cursor: not-allowed !default;
 
-$form-field-border-success: 2px solid $color-success !default;
-$form-field-border-error: 2px solid $color-danger !default;
+$form-field-border-success: 1px solid $color-success !default;
+$form-field-border-error: 1px solid $color-danger !default;
+
+$form-field-box-shadow: inset 0 0 0 1px transparent !default;
+$form-field-box-shadow-hover: inset 0 0 0 1px transparent !default;
+$form-field-box-shadow-focus: inset 0 0 0 1px $color-brand-primary !default;
+$form-field-box-shadow-error: inset 0 0 0 1px $color-danger !default;
+$form-field-box-shadow-success: inset 0 0 0 1px $color-success !default;
 
 // Tables
 //

@@ -21,15 +21,17 @@
   border-radius: $form-field-border-radius;
   outline: 0;
   appearance: none;
-  transition: 200ms border, background, color ease-in-out;
+  transition: 200ms border, background, box-shadow, color ease-in-out;
   will-change: border, background, color;
 
   &:hover {
     border: $form-field-border-hover;
+    box-shadow: $form-field-box-shadow-hover;
   }
 
   &:focus {
     border: $form-field-border-focus;
+    box-shadow: $form-field-box-shadow-focus;
   }
 
   &::placeholder {
@@ -93,6 +95,7 @@
     background-repeat: no-repeat;
     background-position: calc(100% - 0.5rem) center;
     background-size: 5px;
+    box-shadow: $form-field-box-shadow-error;
     border: $form-field-border-error;
   }
 }
@@ -103,6 +106,7 @@
     background-repeat: no-repeat;
     background-position: calc(100% - 0.5rem) center;
     background-size: 1rem;
+    box-shadow: $form-field-box-shadow-success;
     border: $form-field-border-success;
   }
 }

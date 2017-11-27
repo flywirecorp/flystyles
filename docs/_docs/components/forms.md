@@ -12,11 +12,12 @@ file: components/FormElements/
   <div class="FormGroup">
     <label class="Label" for="exampleInputEmail1">Email address</label>
     <input type="email" class="Input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <p id="emailHelp" class="FormGroup-hint">We'll never share your email with anyone else.</p>
+    <p class="FormGroup-hint">We'll never share your email with anyone else.</p>
   </div>
   <div class="FormGroup">
     <label class="Label" for="exampleInputPassword1">Password</label>
     <input type="password" class="Input" id="exampleInputPassword1" placeholder="Password">
+    <p class="FormGroup-hint">Try to use a difficult one.</p>
   </div>
   <div class="FormGroup">
     <label class="Label" for="exampleSelect1">Example select</label>
@@ -27,6 +28,7 @@ file: components/FormElements/
       <option>4</option>
       <option>5</option>
     </select>
+    <p class="FormGroup-hint">This is an important decission.</p>
   </div>
   <div class="FormGroup">
     <label class="Label" for="exampleSelect2">Example multiple select</label>
@@ -37,10 +39,12 @@ file: components/FormElements/
       <option>4</option>
       <option>5</option>
     </select>
+    <p class="FormGroup-hint">This is an important decission.</p>
   </div>
   <div class="FormGroup">
     <label class="Label" for="exampleTextarea">Example textarea</label>
     <textarea class="Textarea" id="exampleTextarea" rows="3"></textarea>
+    <p class="FormGroup-hint">Write a long text here, please.</p>
   </div>
   <button type="submit" class="Button Button--primary">Submit</button>
 </form>

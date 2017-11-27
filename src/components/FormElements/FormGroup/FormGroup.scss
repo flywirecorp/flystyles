@@ -23,6 +23,17 @@
   font-weight: $form-group-hint-font-weight;
   line-height: $form-group-hint-line-height;
   color: $form-group-hint-color;
+
+  will-change: transform, opacity;
+  transition: 200ms transform, opacity cubic-bezier(0.53, 0.01, 0.36, 1.63);
+
+  opacity: 0;
+  transform: translateY(-10px);
+
+  .FormGroup.is-focused & {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .FormGroup-feedback {
