@@ -7,8 +7,16 @@ $form-group-description-color: $color-gray !default;
 $form-group-description-font-size: $font-size-sm !default;
 
 // form group - hint
-$form-group-hint-margin: 0 !default;
-$form-group-hint-font-size: $font-size-sm !default;
-$form-group-hint-line-height: 1.3 !default;
-$form-group-hint-color: $color-gray !default;
-$form-group-hint-font-weight: inherit !default;
+$form-group-hint-margin: 8px 0 0 0 !default;
+$form-group-hint-font-size: 12px !default;
+$form-group-hint-line-height: 1.4 !default;
+$form-group-hint-color: #657a8d !default;
+$form-group-hint-font-weight: $font-weight-semi-bold !default;
+
+// form group - feedback
+$form-group-feedback-margin: 8px 0 0 0 !default;
+$form-group-feedback-font-size: 12px !default;
+$form-group-feedback-line-height: 1.4 !default;
+$form-group-feedback-font-weight: $font-weight-semi-bold !default;
+$form-group-feedback-color: #657a8d !default;
+$form-group-feedback-font-weight: $font-weight-semi-bold !default;

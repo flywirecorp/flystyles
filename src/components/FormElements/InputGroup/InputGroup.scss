@@ -1,8 +1,5 @@
-//
-//  Input Group Component
-//
 @import "./config";
-@import "../../../styles/mixins/all";
+@import "../../../mixins";
 
 .InputGroup {
   display: table;
@@ -31,7 +28,7 @@
   &:hover {
     .InputGroup-input,
     .InputGroup-context {
-      border-color: $form-field-border-color-hover;
+      border: $form-field-border-hover;
     }
   }
 }

@@ -15,39 +15,19 @@ colors:
       variable: $color-brand-primary-dark
       color: "#0F476B"
 
-    - name: Secondary Light
-      variable: $color-brand-secondary-light
-      color: "#E9922F"
-    - name: Secondary
-      variable: $color-brand-secondary
-      color: "#DB7909"
-    - name: Secondary Dark
-      variable: $color-brand-secondary-dark
-      color: "#C36800"
-
-    - name: Tertiary Light
-      variable: $color-brand-tertiary-light
-      color: "#48B985"
-    - name: Tertiary
-      variable: $color-brand-tertiary
-      color: "#319B6A"
-    - name: Tertiary Dark
-      variable: $color-brand-tertiary-dark
-      color: "#017043"
-
   ui:
     - name: Info
       variable: $color-info
-      color: "#38b1e8"
+      color: "#008bff"
     - name: Success
       variable: $color-success
-      color: "#6abb4f"
+      color: "#48b985"
     - name: Danger
       variable: $color-danger
-      color: "#e14b3b"
+      color: "#d63442"
     - name: Warning
       variable: $color-warning
-      color: "#dfbd1e"
+      color: "#edc200"
 
   grayscale:
     - name: Gray Lighter

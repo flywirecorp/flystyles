@@ -39,7 +39,7 @@
 
 .PhoneNumber-option-flag,
 .PhoneNumber-option-country {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .PhoneNumber-menu-options {
@@ -52,5 +52,10 @@
 
   .is-searching & {
     border-bottom-left-radius: 0;
+  }
+
+  .FormGroup--floatingLabel & {
+    padding: 0 9.6px;
+    line-height: 48px;
   }
 }

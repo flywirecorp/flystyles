@@ -1,7 +1,7 @@
 //
 //  Button mixins
 //
-@import "../../styles/mixins/all";
+@import "../../mixins";
 
 @mixin button-base {
   display: inline-block;
@@ -17,6 +17,10 @@
   border-radius: $button-border-radius;
   outline: 0;
   transition: all 200ms ease-out;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
 }
 
 @mixin button-size($size, $font-size) {

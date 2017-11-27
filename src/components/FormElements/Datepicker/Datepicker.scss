@@ -1,5 +1,5 @@
 @import "../../../config";
-@import "../../../styles/mixins/all";
+@import "../../../mixins";
 
 .Datepicker {
   position: relative;
@@ -18,7 +18,7 @@
   // Top triangle
 
   &::before {
-    content: '';
+    content: "";
     display: inline-block;
     border-left: 9px solid transparent;
     border-right: 9px solid transparent;
@@ -32,7 +32,7 @@
   }
 
   &::after {
-    content: '';
+    content: "";
     display: inline-block;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
@@ -54,4 +54,9 @@
 // Calendar icon
 .Datepicker .InputGroup-context {
   cursor: pointer;
+  width: 50px;
+}
+
+.Datepicker-calendar {
+  z-index: 1;
 }

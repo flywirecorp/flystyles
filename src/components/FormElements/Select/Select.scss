@@ -3,14 +3,14 @@
 //
 
 @import "./config";
-@import "../../../styles/mixins/all";
+@import "../../../mixins";
 
 // base styles
 //
 
 .Select {
   @include form-field-select;
-  @include form-field-size($form-field-height-base, $font-size-base);
+  @include form-field-size($form-field-height-base, $form-field-font-size);
 }
 
 select.Select {
@@ -20,24 +20,10 @@ select.Select {
   }
 
   // Hack for IE9
-  @media all and (min-width:0\0) and (min-resolution: .001dpcm) {
+  @media all and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
     padding-right: 0 !important;
     text-indent: 0;
     background-image: none !important;
-  }
-}
-
-// size variations
-//
-
-@each $size in map-keys($form-field-sizes) {
-  $current: map-get($form-field-sizes, $size);
-  $select-size: map-get($current, "size");
-  $select-font-size: map-get($current, "font-size");
-
-  .Select--#{$size} {
-    @include form-field-size($select-size, $select-font-size);
-    background-position: calc(100% - #{$select-font-size}) center;
   }
 }
 
@@ -53,11 +39,6 @@ select.Select {
 //
 
 .Select {
-  @include state-variation("error") {
-    border-color: $color-danger;
-  }
-
-  @include state-variation("success") {
-    border-color: $color-success;
-  }
+  @include select-success;
+  @include select-error;
 }

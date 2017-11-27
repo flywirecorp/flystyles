@@ -4,9 +4,10 @@
 //
 
 @import "./config";
-@import "../../../styles/mixins/all";
+@import "../../../mixins";
 
 .FormGroup {
+  position: relative;
   display: block;
   margin: $form-group-margin;
 }
@@ -22,14 +23,31 @@
   font-weight: $form-group-hint-font-weight;
   line-height: $form-group-hint-line-height;
   color: $form-group-hint-color;
+
+  will-change: transform, opacity;
+  transition: 200ms transform, opacity cubic-bezier(0.53, 0.01, 0.36, 1.63);
+
+  opacity: 0;
+  transform: translateY(-10px);
+
+  .FormGroup.is-focused & {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .FormGroup-feedback {
   display: none;
-  margin: 0;
-  font-size: $font-size-sm;
-  font-weight: $font-weight-semi-bold;
-  color: $form-group-description-color;
+  margin: $form-group-feedback-margin;
+  font-size: $form-group-feedback-font-size;
+  font-weight: $form-group-feedback-font-weight;
+  color: $form-group-feedback-color;
+  font-size: $form-group-feedback-font-size;
+  line-height: $form-group-feedback-line-height;
+
+  animation-name: slideInUp;
+  animation-duration: 200ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   @include state-variation(error) {
     display: block;
@@ -39,5 +57,17 @@
   @include state-variation(success) {
     display: block;
     color: $color-success;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

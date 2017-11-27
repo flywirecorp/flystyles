@@ -1,5 +1,5 @@
 ---
-title: Form Elements
+title: Forms
 description: Inputs, Labels, Selects, ...
 category: components
 file: components/FormElements/
@@ -12,11 +12,12 @@ file: components/FormElements/
   <div class="FormGroup">
     <label class="Label" for="exampleInputEmail1">Email address</label>
     <input type="email" class="Input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <p id="emailHelp" class="FormGroup-hint">We'll never share your email with anyone else.</p>
+    <p class="FormGroup-hint">We'll never share your email with anyone else.</p>
   </div>
   <div class="FormGroup">
     <label class="Label" for="exampleInputPassword1">Password</label>
     <input type="password" class="Input" id="exampleInputPassword1" placeholder="Password">
+    <p class="FormGroup-hint">Try to use a difficult one.</p>
   </div>
   <div class="FormGroup">
     <label class="Label" for="exampleSelect1">Example select</label>
@@ -27,6 +28,7 @@ file: components/FormElements/
       <option>4</option>
       <option>5</option>
     </select>
+    <p class="FormGroup-hint">This is an important decission.</p>
   </div>
   <div class="FormGroup">
     <label class="Label" for="exampleSelect2">Example multiple select</label>
@@ -37,17 +39,18 @@ file: components/FormElements/
       <option>4</option>
       <option>5</option>
     </select>
+    <p class="FormGroup-hint">This is an important decission.</p>
   </div>
   <div class="FormGroup">
     <label class="Label" for="exampleTextarea">Example textarea</label>
     <textarea class="Textarea" id="exampleTextarea" rows="3"></textarea>
+    <p class="FormGroup-hint">Write a long text here, please.</p>
   </div>
   <button type="submit" class="Button Button--primary">Submit</button>
 </form>
 {% endexample %}
 
 ##### Readonly & disabled fields
-
 {% example html %}
 <div class='FormGroup'>
   <label class='Label'>Read only input</label>
@@ -60,46 +63,7 @@ file: components/FormElements/
 </div>
 {% endexample %}
 
-##### Input sizes
-
-Set heights using classes like `.Input--{size}`. Combine with `fontSize-{size}` utils to have a better results.
-
-{% example html %}
-<div class='FormGroup'>
-  <label class='Label fontSize-xs'>Extra small input</label>
-  <input type='text' class='Input Input--xs' placeholder='extra-small input'/>
-</div>
-
-<div class='FormGroup'>
-  <label class='Label fontSize-sm'>Small input</label>
-  <input type='email' class='Input Input--sm' placeholder='small input'/>
-</div>
-
-<div class='FormGroup'>
-  <label class='Label'>Medium input field</label>
-  <input type='number' class='Input Input--md' placeholder='medium input'/>
-</div>
-
-<div class='FormGroup'>
-  <label class='Label fontSize-lg'>Large Select</label>
-  <select class="Select Select--lg" id="exampleSelect1">
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-  </select>
-</div>
-
-<div class='FormGroup'>
-  <label class='Label fontSize-xl'>Extra large field</label>
-  <input type='text' class='Input Input--xl' placeholder='extra-large input'/>
-</div>
-{% endexample %}
-
-
 #### Validation
-
 Flystyles includes validation styles for danger, warning, and success states on form controls.
 These styles can be applied either by adding the class `has-error` or `has-success` to the parent `FormGroup`, or adding to the child form element the variation `--error` or `--success`.
 
@@ -130,7 +94,6 @@ These styles can be applied either by adding the class `has-error` or `has-succe
   <select class="Select" id="selectError">
     <option>Option 1</option>
   </select>
-</div>
 </div>
 
 {% endexample %}

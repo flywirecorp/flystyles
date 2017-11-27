@@ -1,30 +1,13 @@
 @import "../../config";
 
 $button-size-base: $form-field-height-base !default;
-$button-size-xs: $form-field-height-xs !default;
-$button-size-sm: $form-field-height-sm !default;
-$button-size-md: $form-field-height-md !default;
-$button-size-lg: $form-field-height-lg !default;
-$button-size-xl: $form-field-height-xl !default;
 
 $button-font-weight: 700 !default;
 $button-font-family: $font-family-base !default;
 $button-border-radius: $global-border-radius !default;
-$button-font-size-base: .8rem !default;
+$button-font-size-base: 0.8rem !default;
 $button-outline-color: #939fac !default;
 $button-size-base: $form-field-height-base;
 
-$button-sizes: (
-  'xs': (size: $button-size-xs, font-size: .6rem),
-  'sm': (size: $button-size-sm, font-size: .68rem),
-  'md': (size: $button-size-md, font-size: .75rem),
-  'lg': (size: $button-size-lg, font-size: .875rem),
-  'xl': (size: $button-size-xl, font-size: .9rem)
-) !default;
-
-$button-styles: (
-  'primary': $color-brand-primary,
-  'secondary': $color-brand-secondary,
-  'tertiary': $color-brand-tertiary,
-  'danger': $color-danger
-) !default;
+$button-styles: ("primary": $color-brand-primary, "danger": $color-danger)
+  !default;

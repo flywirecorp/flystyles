@@ -3,7 +3,7 @@
 //
 
 @import "./config";
-@import "../../styles/mixins/all";
+@import "../../mixins";
 
 //  Parent
 //
@@ -99,7 +99,7 @@
 
   &.is-selected,
   &--selected {
-    font-weight: $font-weight-semi-bold;
+    font-weight: $font-weight-bold;
     color: #fff;
     background: $calendar-day-color-active;
     border-color: transparent;
@@ -112,10 +112,15 @@
 
   &.is-disabled,
   &--disabled {
-    color: rgba($calendar-day-color, .5);
+    color: rgba($calendar-day-color, 0.5);
     cursor: auto;
     background: #f1f3f6;
   }
+
+  &.is-current.is-selected {
+    color: #fff;
+  }
+
   tr &:first-child {
     border-left: 0;
   }

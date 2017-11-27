@@ -9,3 +9,43 @@
   text-transform: $label-text-transform;
   cursor: pointer;
 }
+
+// Floating label variation
+.FormGroup--floatingLabel .Label {
+  position: absolute;
+  top: ($form-field-height-base / 2) - ($font-size-root / 2);
+  left: 10px;
+  z-index: 1;
+  text-transform: none;
+  font-size: $label-floating-font-size;
+  color: $label-floating-color;
+
+  will-change: font-size, transform;
+  transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.FormGroup--floatingLabel {
+  &.is-focused .Label,
+  &.has-value .Label,
+  .Input:focus + .Label,
+  .Select:focus + .Label,
+  .Textarea:focus + .Label,
+  .Input.is-focus + .Label,
+  .Select.is-focus + .Label,
+  .Textarea.is-focus + .Label,
+  .Input.has-value + .Label,
+  .Select.has-value + .Label,
+  .Textarea.has-value + .Label,
+  .Autocomplete.is-searching {
+    font-size: $label-floating-font-size-focus;
+    transform: translateY(-10px);
+  }
+}
+
+.FormGroup--symbolFirst .Label {
+  left: 54px;
+}
+
+.PhoneNumber + .Label {
+  left: 73px;
+}
