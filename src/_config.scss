@@ -145,7 +145,7 @@ $font-weight-base: $font-weight-regular !default;
 
 // Border radius
 
-$border-radius: 3px !default;
+$border-radius: 2px !default;
 $border-radius-lg: 0.3rem !default;
 $border-radius-sm: 0.2rem !default;
 $global-border-radius: $border-radius !default;
@@ -195,20 +195,33 @@ $paragraph-margin-bottom: $spacer-y !default;
 
 $form-field-border-radius: $global-border-radius !default;
 $form-field-font-family: $font-family-base !default;
-$form-field-background: #fff !default;
-$form-field-color: #444 !default;
+$form-field-font-size: $font-size-sm !default;
+$form-field-background: #fdfdfd !default;
+$form-field-color: $body-color !default;
 $form-field-border-width: 1px !default;
-$form-field-border-color: #ccc !default;
+$form-field-border-color: #dae0e4 !default;
 $form-field-border: $form-field-border-width solid $form-field-border-color
   !default;
+
 $form-field-border-color-focus: $color-brand-primary !default;
-$form-field-border-color-hover: #9399ac !default;
-$form-field-placeholder-color: #939fac !default;
+$form-field-border-width-focus: 2px !default;
+$form-field-border-focus: $form-field-border-width-focus solid
+  $form-field-border-color-focus !default;
+
+$form-field-border-color-hover: darken($form-field-border-color, 10%) !default;
+$form-field-border-width-hover: 1px !default;
+$form-field-border-hover: $form-field-border-width-hover solid
+  $form-field-border-color-hover !default;
+
+$form-field-placeholder-color: rgba(#657a8d, 0.6) !default;
 
 $form-field-height-base: 48px !default;
 $form-field-disabled-border-color: #ccc !default;
 $form-field-disabled-background-color: #f5f5f5 !default;
 $form-field-disabled-cursor: not-allowed !default;
+
+$form-field-border-success: 2px solid $color-success !default;
+$form-field-border-error: 2px solid $color-danger !default;
 
 // Tables
 //

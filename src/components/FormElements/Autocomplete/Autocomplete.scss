@@ -11,22 +11,22 @@
 
 .Autocomplete-search {
   @include form-field-select;
-  @include form-field-size($form-field-height-base, $font-size-base);
+  @include form-field-size($form-field-height-base, $form-field-font-size);
 
   .is-searching & {
     background-image: svg-url(map-get($icons, arrowUp));
-    border: 1px solid $form-field-border-color-focus !important;
+    border: $form-field-border-focus !important;
   }
 
   .Autocomplete--searchDisabled & {
     background-color: $form-field-background;
 
     &:hover {
-      border-color: $form-field-border-color-hover;
+      border: $form-field-border-hover;
     }
 
     &:focus {
-      border-color: $form-field-border-color-focus;
+      border: $form-field-border-focus;
     }
   }
 }
@@ -64,7 +64,7 @@
   .is-searching & {
     max-height: $autocomplete-visible-options * $autocomplete-option-height;
     visibility: visible;
-    border: 1px solid $form-field-border-color-focus !important;
+    border: $form-field-border-focus !important;
     border-top: 1px solid lighten($form-field-border-color, 10%) !important;
     opacity: 1;
   }

@@ -1,6 +1,3 @@
-//
-//  Input Group Component
-//
 @import "./config";
 @import "../../../mixins";
 
@@ -31,7 +28,7 @@
   &:hover {
     .InputGroup-input,
     .InputGroup-context {
-      border-color: $form-field-border-color-hover;
+      border: $form-field-border-hover;
     }
   }
 }

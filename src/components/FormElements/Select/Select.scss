@@ -10,7 +10,7 @@
 
 .Select {
   @include form-field-select;
-  @include form-field-size($form-field-height-base, $font-size-base);
+  @include form-field-size($form-field-height-base, $form-field-font-size);
 }
 
 select.Select {
@@ -40,10 +40,10 @@ select.Select {
 
 .Select {
   @include state-variation("error") {
-    border-color: $color-danger;
+    border: $form-field-border-error;
   }
 
   @include state-variation("success") {
-    border-color: $color-success;
+    border: $form-field-border-success;
   }
 }

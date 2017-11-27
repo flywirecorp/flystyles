@@ -1,15 +1,9 @@
-//
-// Input Component
-//
 @import "../../../config";
 @import "../../../mixins";
 
-// base styles
-//
-
 .Input {
   @include form-field-base;
-  @include form-field-size($form-field-height-base, $font-size-base);
+  @include form-field-size($form-field-height-base, $form-field-font-size);
 }
 
 // state variations
