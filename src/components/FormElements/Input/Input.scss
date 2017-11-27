@@ -12,17 +12,6 @@
   @include form-field-size($form-field-height-base, $font-size-base);
 }
 
-// size variations
-//
-
-@each $size in map-keys($form-field-sizes) {
-  $current: map-get($form-field-sizes, $size);
-
-  .Input--#{$size} {
-    @include form-field-size(map-get($current, "size"), map-get($current, "font-size"));
-  }
-}
-
 // state variations
 //
 

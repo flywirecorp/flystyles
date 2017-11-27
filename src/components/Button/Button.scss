@@ -13,16 +13,6 @@
   @include button-size($button-size-base, $button-font-size-base);
 }
 
-// size variations
-//
-
-@each $size in map-keys($button-sizes) {
-  $current: map-get($button-sizes, $size);
-  .Button--#{$size} {
-    @include button-size(map-get($current, "size"), map-get($current, "font-size"));
-  }
-}
-
 // style variations
 //
 

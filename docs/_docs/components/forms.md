@@ -47,7 +47,6 @@ file: components/FormElements/
 {% endexample %}
 
 ##### Readonly & disabled fields
-
 {% example html %}
 <div class='FormGroup'>
   <label class='Label'>Read only input</label>
@@ -60,46 +59,7 @@ file: components/FormElements/
 </div>
 {% endexample %}
 
-##### Input sizes
-
-Set heights using classes like `.Input--{size}`. Combine with `fontSize-{size}` utils to have a better results.
-
-{% example html %}
-<div class='FormGroup'>
-  <label class='Label fontSize-xs'>Extra small input</label>
-  <input type='text' class='Input Input--xs' placeholder='extra-small input'/>
-</div>
-
-<div class='FormGroup'>
-  <label class='Label fontSize-sm'>Small input</label>
-  <input type='email' class='Input Input--sm' placeholder='small input'/>
-</div>
-
-<div class='FormGroup'>
-  <label class='Label'>Medium input field</label>
-  <input type='number' class='Input Input--md' placeholder='medium input'/>
-</div>
-
-<div class='FormGroup'>
-  <label class='Label fontSize-lg'>Large Select</label>
-  <select class="Select Select--lg" id="exampleSelect1">
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-  </select>
-</div>
-
-<div class='FormGroup'>
-  <label class='Label fontSize-xl'>Extra large field</label>
-  <input type='text' class='Input Input--xl' placeholder='extra-large input'/>
-</div>
-{% endexample %}
-
-
 #### Validation
-
 Flystyles includes validation styles for danger, warning, and success states on form controls.
 These styles can be applied either by adding the class `has-error` or `has-success` to the parent `FormGroup`, or adding to the child form element the variation `--error` or `--success`.
 

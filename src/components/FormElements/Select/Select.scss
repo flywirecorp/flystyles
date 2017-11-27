@@ -27,20 +27,6 @@ select.Select {
   }
 }
 
-// size variations
-//
-
-@each $size in map-keys($form-field-sizes) {
-  $current: map-get($form-field-sizes, $size);
-  $select-size: map-get($current, "size");
-  $select-font-size: map-get($current, "font-size");
-
-  .Select--#{$size} {
-    @include form-field-size($select-size, $select-font-size);
-    background-position: calc(100% - #{$select-font-size}) center;
-  }
-}
-
 // select multiple
 //
 
