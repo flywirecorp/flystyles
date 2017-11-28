@@ -9,27 +9,34 @@
 //
 
 .Alert {
-  padding: $alert-padding;
+  padding: 16px;
+  padding-left: 56px;
   margin-bottom: $alert-margin-bottom;
   border: $alert-border-width solid transparent;
   border-radius: $alert-border-radius;
+  color: $alert-color;
+  font-size: $alert-font-size;
+
+  @include media-up(medium) {
+    padding-left: 72px;
+  }
 }
 
 // Variants
 //
 
 .Alert--danger {
-  @include alert-variant($color-danger, danger);
+  @include alert-variant($color-danger, alertDanger);
 }
 
 .Alert--warning {
-  @include alert-variant($color-warning, warning);
+  @include alert-variant($color-warning, alertWarning);
 }
 
 .Alert--info {
-  @include alert-variant($color-info, info);
+  @include alert-variant($color-info, alertInfo);
 }
 
 .Alert--success {
-  @include alert-variant($color-success, success);
+  @include alert-variant($color-success, alertSuccess);
 }
