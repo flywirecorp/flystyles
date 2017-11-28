@@ -1,15 +1,4 @@
-$accordion-border-color: #cacad1 !default;
-$accordion-border-width: 1px !default;
-$accordion-title-font-size: rem(18px) !default;
-$accordion-title-color: #38495b !default;
-$accordion-title-font-weight: $font-weight-semi-bold !default;
-$accordion-header-active-background: #f8fafd !default;
-$accordion-header-success-border-color: #3eb734 !default;
-$accordion-header-padding: 32px !default;
-$accordion-box-shadow: 0 1px 4px rgba(#000, 0.05) !default;
-$accordion-content-color: #657a8d !default;
-$accordion-content-font-size: rem(14px) !default;
-$accordion-content-padding: 32px !default;
+@import "./config";
 
 .Accordion {
   border: $accordion-border-width solid $accordion-border-color;
@@ -51,9 +40,7 @@ $accordion-content-padding: 32px !default;
     height: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: svg-url(
-      '<svg width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path stroke="#637282" stroke-width="1.5" d="M9 1L5 5 1 1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"/></svg>'
-    );
+    background-image: svg-url(map-get($icons, arrowDown));
     transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
