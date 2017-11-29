@@ -14,9 +14,9 @@
   @include form-field-size($form-field-height-base, $form-field-font-size);
 
   .is-searching & {
-    background-image: svg-url(map-get($icons, arrowUp));
-    border: $form-field-border-focus;
-    box-shadow: $form-field-box-shadow-focus;
+    background-image: svg-url(map-get($icons, arrowUp)) !important;
+    border: $form-field-border-focus !important;
+    box-shadow: $form-field-box-shadow-focus !important;
   }
 
   .Autocomplete--searchDisabled & {
@@ -55,7 +55,7 @@
   border-bottom-left-radius: $form-field-border-radius;
   opacity: 0;
   transition: $autocomplete-options-transition;
-  z-index: 1;
+  z-index: 2;
 
   .is-searching & {
     max-height: $autocomplete-visible-options * $autocomplete-option-height;
