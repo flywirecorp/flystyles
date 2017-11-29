@@ -30,13 +30,7 @@
   .Input:focus + .Label,
   .Select:focus + .Label,
   .Textarea:focus + .Label,
-  .Input.is-focus + .Label,
-  .Select.is-focus + .Label,
-  .Textarea.is-focus + .Label,
-  .Input.has-value + .Label,
-  .Select.has-value + .Label,
-  .Textarea.has-value + .Label,
-  .Autocomplete.is-searching {
+  .Autocomplete.is-searching + .Label {
     font-size: $label-floating-font-size-focus;
     transform: translateY(-10px);
   }
