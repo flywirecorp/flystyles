@@ -19,21 +19,21 @@ Don’t want your columns to simply stack in smaller devices? Use the extra smal
 {% example html %}
 <!-- Stack the columns on mobile by making one full-width and the other half-width -->
 <div class="GridRow">
-  <div class="GridColumn GridColumn--fromXSmall-12 GridColumn--fromMedium-8">.GridColumn--fromXSmall-12 .GridColumn--fromMedium-8</div>
-  <div class="GridColumn GridColumn--fromXSmall-6 GridColumn--fromMedium-4">.GridColumn--fromXSmall-6 .GridColumn--fromMedium-4</div>
+  <div class="GridColumn GridColumn--fromXSmall-12 GridColumn--fromMedium-8">GridColumn GridColumn--fromXSmall-12 GridColumn--fromMedium-8</div>
+  <div class="GridColumn GridColumn--fromXSmall-6 GridColumn--fromMedium-4">GridColumn GridColumn--fromXSmall-6 GridColumn--fromMedium-4</div>
 </div>
 
 <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
 <div class="GridRow">
-  <div class="GridColumn GridColumn--fromXSmall-6 GridColumn--fromMedium-4">.GridColumn--fromXSmall-6 .GridColumn--fromMedium-4</div>
-  <div class="GridColumn GridColumn--fromXSmall-6 GridColumn--fromMedium-4">.GridColumn--fromXSmall-6 .GridColumn--fromMedium-4</div>
-  <div class="GridColumn GridColumn--fromXSmall-6 GridColumn--fromMedium-4">.GridColumn--fromXSmall-6 .GridColumn--fromMedium-4</div>
+  <div class="GridColumn GridColumn--fromXSmall-6 GridColumn--fromMedium-4">GridColumn GridColumn--fromXSmall-6 GridColumn--fromMedium-4</div>
+  <div class="GridColumn GridColumn--fromXSmall-6 GridColumn--fromMedium-4">GridColumn GridColumn--fromXSmall-6 GridColumn--fromMedium-4</div>
+  <div class="GridColumn GridColumn--fromXSmall-6 GridColumn--fromMedium-4">GridColumn GridColumn--fromXSmall-6 GridColumn--fromMedium-4</div>
 </div>
 
 <!-- Columns are always 50% wide, on mobile and desktop -->
 <div class="GridRow">
-  <div class="GridColumn GridColumn--fromXSmall-6">.GridColumn--fromXSmall-6</div>
-  <div class="GridColumn GridColumn--fromXSmall-6">.GridColumn--fromXSmall-6</div>
+  <div class="GridColumn GridColumn--fromXSmall-6">GridColumn GridColumn--fromXSmall-6</div>
+  <div class="GridColumn GridColumn--fromXSmall-6">GridColumn GridColumn--fromXSmall-6</div>
 </div>
 {% endexample %}
 </div>
@@ -46,12 +46,12 @@ Add a class of the format `.GridRow--[breakpoint]-[columns-per-row]` to change t
 {% example html %}
 
 <div class="GridRow GridRow--fromSmall-1 GridRow--fromMedium-2 GridRow--fromLarge-4">
-  <div class="GridColumn">.GridColumn</div>
-  <div class="GridColumn">.GridColumn</div>
-  <div class="GridColumn">.GridColumn</div>
-  <div class="GridColumn">.GridColumn</div>
-  <div class="GridColumn">.GridColumn</div>
-  <div class="GridColumn">.GridColumn</div>
+  <div class="GridColumn">GridColumn</div>
+  <div class="GridColumn">GridColumn</div>
+  <div class="GridColumn">GridColumn</div>
+  <div class="GridColumn">GridColumn</div>
+  <div class="GridColumn">GridColumn</div>
+  <div class="GridColumn">GridColumn</div>
 </div>
 
 {% endexample %}
