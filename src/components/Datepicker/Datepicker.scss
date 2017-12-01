@@ -8,6 +8,7 @@
 .Datepicker-calendar {
   position: absolute;
   top: calc(100% + 4px);
+  z-index: 2;
   display: none;
   max-width: 100%;
 
@@ -45,7 +46,6 @@
     top: -8px;
   }
 
-  // Show when Datepicker is open
   .Datepicker.is-open & {
     display: block;
   }
@@ -55,8 +55,4 @@
 .Datepicker .InputGroup-context {
   cursor: pointer;
   width: 50px;
-}
-
-.Datepicker-calendar {
-  z-index: 1;
 }
