@@ -7,7 +7,7 @@ file: components/Datepicker/Datepicker.scss
 
 {% example html %}
 
-<div class="FormGroup Datepicker is-open">
+<div class="FormGroup FormGroup--floatingLabel Datepicker is-open">
   <label class="Label" for="birthday">Birthday</label>
   <div class="InputGroup">
     <input type="mail" class="Datepicker-input Input InputGroup-input" placeholder="dd/mm/aaaa" id="birthday" />
@@ -19,12 +19,12 @@ file: components/Datepicker/Datepicker.scss
 
     <nav class="Calendar-header">
       <div class="Calendar-header-nav Calendar-header-nav--prev">
-        <button class="Button Button--default Button--sm" type="button">
+        <button class="Button Button--default Calendar-header-navItem" type="button">
           <span class="Icon Icon--arrowLeft Icon--xs"></span>
         </button>
       </div>
       <div class="Calendar-header-nav Calendar-header-nav--month">
-        <select class="Select Select--sm">
+        <select class="Select Calendar-header-navItem">
           <option value="01">January</option>
           <option value="02">February</option>
           <option value="03">March</option>
@@ -33,13 +33,13 @@ file: components/Datepicker/Datepicker.scss
         </select>
       </div>
       <div class="Calendar-header-nav Calendar-header-nav--year">
-        <select class="Select Select--sm">
+        <select class="Select Calendar-header-navItem">
             <option value="2016">2016</option>
             <option value="2015">2015</option>
         </select>
       </div>
       <div class="Calendar-header-nav Calendar-header-nav--next">
-        <button class="Button Button--default Button--sm" type="button">
+        <button class="Button Button--default Calendar-header-navItem" type="button">
           <span class="Icon Icon--arrowRight Icon--xs"></span>
         </button>
       </div>

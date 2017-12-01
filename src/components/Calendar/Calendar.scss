@@ -1,12 +1,5 @@
-//
-//  Calendar component
-//
-
 @import "./config";
 @import "../../mixins";
-
-//  Parent
-//
 
 .Calendar {
   font-size: $calendar-font-size;
@@ -18,9 +11,6 @@
   border-radius: $calendar-border-radius;
 }
 
-// Header element
-//
-
 .Calendar-header {
   display: flex;
   padding: $spacer-sm;
@@ -29,38 +19,15 @@
   border-top-left-radius: $calendar-border-radius;
   border-top-right-radius: $calendar-border-radius;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
-.Calendar-header-nav {
-  display: inline-block;
-  width: 30%;
-  padding-right: $spacer-sm;
-  vertical-align: middle;
-
-  &:first-child {
-    width: 15%;
-    text-align: left;
-  }
-  &:last-child {
-    width: 15%;
-    padding-right: 0;
-    text-align: right;
-  }
-
-  .Button {
-    display: inline-block;
-    width: auto !important;
-    padding: 0 rem(10px);
-  }
+.Calendar-header-navItem {
+  width: auto !important;
+  height: 36px !important;
+  line-height: 36px !important;
+  padding: 0 12px !important;
 }
-
-.Calendar-header-nav--month {
-  width: 40%;
-}
-
-// Table element
-//
 
 .Calendar-table {
   width: 100%;
@@ -70,9 +37,6 @@
   border-bottom-right-radius: $calendar-border-radius;
   border-bottom-left-radius: $calendar-border-radius;
 }
-
-// Weekday element
-//
 
 .Calendar-weekday {
   color: $calendar-weekday-color;
@@ -84,9 +48,6 @@
   padding: 3.3% 0;
   transition: all 200ms ease-in-out;
 }
-
-// Day element
-//
 
 .Calendar-day {
   text-align: center;
