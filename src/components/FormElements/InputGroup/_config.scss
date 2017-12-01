@@ -1,4 +1,4 @@
 @import "../../../config";
 
-$input-group-context-background: #f8fafd !default;
-$input-group-context-color: #939fac !default;
+$input-group-context-background: $form-field-background !default;
+$input-group-context-color: $body-color !default;
