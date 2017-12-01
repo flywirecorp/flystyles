@@ -39,22 +39,8 @@ file: components/FormElements/
   </div>
 
   <div class="FormGroup FormGroup--floatingLabel">
-    <textarea class="Textarea" id="exampleTextarea2" rows="3"></textarea>
     <label class="Label" for="exampleTextarea2">Example textarea</label>
-  </div>
-
-  <div class="FormGroup FormGroup--floatingLabel">
-    <div class="PhoneNumber">
-      <div class='Autocomplete PhoneNumber-menu'>
-        <span class='Autocomplete-search PhoneNumber-menu-input'>
-          <span class='Flag Flag--es'></span>
-        </span>
-      </div>
-      <div class="PhoneNumber-input">
-        <input id="tel" type="text" class="Input PhoneNumber-input-inner" />
-      </div>
-    </div>
-    <label class="Label" for="tel">Mobile phone</label>
+    <textarea class="Textarea" id="exampleTextarea2" rows="3"></textarea>
   </div>
 
   <div class='FormGroup FormGroup--floatingLabel'>

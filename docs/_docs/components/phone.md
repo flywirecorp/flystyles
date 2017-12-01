@@ -11,16 +11,35 @@ __Requires:__ `FormGroup`, `Input`, `Autocomplete`, `Flag`.
 
 #### Phone Number Input closed
 {% example html %}
-<div class="FormGroup">
-  <label class="Label" for="tel">Mobile phone</label>
-  <div class="PhoneNumber">
-    <div class='Autocomplete PhoneNumber-menu'>
-      <span class='Autocomplete-search PhoneNumber-menu-input'>
-        <span class='Flag Flag--es'></span>
-      </span>
+<div class="PhoneNumber">
+  <div class="FormGroup">
+    <label class="Label" for="tel">Default label</label>
+    <div class="PhoneNumber-field">
+      <div class='Autocomplete PhoneNumber-menu'>
+        <span class='Autocomplete-search PhoneNumber-menu-input'>
+          <span class='Flag Flag--es'></span>
+        </span>
+      </div>
+      <div class="PhoneNumber-input">
+        <input id="tel" type="text" class="Input PhoneNumber-input-inner" />
+      </div>
     </div>
-    <div class="PhoneNumber-input">
-      <input id="tel" type="text" class="Input PhoneNumber-input-inner" />
+  </div>
+</div>
+
+
+<div class="PhoneNumber">
+  <div class="FormGroup FormGroup--floatingLabel">
+    <label class="Label" for="tel">Floating label</label>
+    <div class="PhoneNumber-field">
+      <div class='Autocomplete PhoneNumber-menu'>
+        <span class='Autocomplete-search PhoneNumber-menu-input'>
+          <span class='Flag Flag--es'></span>
+        </span>
+      </div>
+      <div class="PhoneNumber-input">
+        <input id="tel" type="text" class="Input PhoneNumber-input-inner" />
+      </div>
     </div>
   </div>
 </div>
@@ -56,7 +75,7 @@ __Requires:__ `FormGroup`, `Input`, `Autocomplete`, `Flag`.
       </ul>
     </div>
     <div class="PhoneNumber-input">
-      <input id="tel" type="text" class="Input PhoneNumber-input-inner" />
+      <input id="tel3" type="text" class="Input PhoneNumber-input-inner" />
     </div>
   </div>
 </div>
