@@ -1,21 +1,11 @@
-//
-//  Textarea component
-//
-
-@import "../../../config";
-@import "../../../mixins";
-
-// base styles
-//
+@import "../../config";
+@import "../../mixins";
 
 .Textarea {
   @include form-field-base;
   padding: $font-size-base / 2;
   font-size: $form-field-font-size;
 }
-
-// state variations
-//
 
 .Textarea {
   @include form-field-error;

@@ -1,19 +1,11 @@
-//
-// Icon Component
-//
 @import "config";
 @import "mixins";
-
-// Icon base
-//
 
 .Icon {
   @include icon-base();
   @include icon-size(md);
 }
 
-// Sizes
-//
 @each $size in map-keys($icon-sizes) {
   .Icon--#{$size} {
     width: map-get($icon-sizes, $size);
@@ -21,8 +13,6 @@
   }
 }
 
-// Icons
-//
 @each $icon in map-keys($icons) {
   .Icon--#{$icon} {
     background-image: svg-url(map-get($icons, $icon));

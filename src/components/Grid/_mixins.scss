@@ -1,18 +1,11 @@
-//
-//  Grid Mixins
-//
 @import "../../mixins";
 
-// Grid Row
-//
 @mixin grid-row() {
   margin-left: ($grid-gutter / -2);
   margin-right: ($grid-gutter / -2);
   @include clearfix;
 }
 
-// Grid Column Base
-//
 @mixin grid-column-base() {
   position: relative;
   min-height: 1px; // Prevent collapsing
@@ -20,8 +13,6 @@
   padding-left: ($grid-gutter / 2);
 }
 
-// Grid column variation by size
-//
 @mixin grid-column-size($size) {
   float: left;
   width: percentage($size / $grid-columns);

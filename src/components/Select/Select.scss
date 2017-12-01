@@ -1,12 +1,5 @@
-//
-// Select Component
-//
-
 @import "./config";
-@import "../../../mixins";
-
-// base styles
-//
+@import "../../mixins";
 
 .Select {
   @include form-field-select;

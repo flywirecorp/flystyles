@@ -1,13 +1,10 @@
-@import "../../../config";
-@import "../../../mixins";
+@import "../../config";
+@import "../../mixins";
 
 .Input {
   @include form-field-base;
   @include form-field-size($form-field-height-base, $form-field-font-size);
 }
-
-// state variations
-//
 
 .Input {
   @include form-field-error;
