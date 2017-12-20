@@ -63,15 +63,3 @@
   opacity: 0.65;
 }
 
-// REFACTOR
-.Button {
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05);
-}
-
-.Button.Button--primary {
-  border-bottom: 2px solid #0f476b;
-
-  &:hover {
-    border-bottom: 2px solid lighten(#0f476b, 15%);
-  }
-}
