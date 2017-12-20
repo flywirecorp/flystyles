@@ -12,20 +12,21 @@
 }
 
 .FormGroup-hint {
-  display: block;
   margin: $form-group-hint-margin;
   font-size: $form-group-hint-font-size;
   font-weight: $form-group-hint-font-weight;
   line-height: $form-group-hint-line-height;
   color: $form-group-hint-color;
 
-  will-change: transform, opacity;
-  transition: 200ms transform, opacity cubic-bezier(0.53, 0.01, 0.36, 1.63);
-
+  max-height: 0;
   opacity: 0;
   transform: translateY(-10px);
 
+  will-change: transform, opacity, max-height;
+  transition: 200ms all;
+
   .FormGroup.is-focused & {
+    max-height: 100px;
     opacity: 1;
     transform: translateY(0);
   }
