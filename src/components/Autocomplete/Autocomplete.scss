@@ -8,6 +8,8 @@
 .Autocomplete-search {
   @include form-field-select;
   @include form-field-size($form-field-height-base, $form-field-font-size);
+  display: table-cell;
+  vertical-align: middle;
 
   .is-searching & {
     background-image: svg-url(map-get($icons, arrowUp)) !important;

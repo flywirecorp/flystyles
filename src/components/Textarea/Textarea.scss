@@ -5,6 +5,10 @@
   @include form-field-base;
   padding: $font-size-base / 2;
   font-size: $form-field-font-size;
+
+  .FormGroup--floatingLabel & {
+    padding-top: 24px;
+  }
 }
 
 .Textarea {

@@ -59,11 +59,14 @@
   .FormGroup--floatingLabel & {
     padding-top: 15px;
     font-size: rem(15px);
-    line-height: 44px;
   }
 
   .FormGroup--floatingLabel &::placeholder {
     color: transparent;
+  }
+
+  &::-ms-clear {
+    display: none;
   }
 }
 
@@ -77,16 +80,12 @@
   appearance: none;
   text-indent: 1px;
   text-overflow: "";
-
-  .FormGroup--floatingLabel & {
-    line-height: 36px;
-  }
 }
 
 @mixin form-field-size ($height, $font-size) {
   height: $height;
   padding: 0 $height / 5;
-  line-height: $height;
+  line-height: normal;
   font-size: $font-size;
 }
 
