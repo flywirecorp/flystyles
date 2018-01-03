@@ -16,6 +16,11 @@ file: components/FormElements/
     <p id="emailHelp" class="FormGroup-hint">We'll never share your email with anyone else.</p>
   </div>
 
+  <div style="width: 300px" class="FormGroup FormGroup--floatingLabel">
+    <input type="email" class="Input" id="exampleInputEmail3" aria-describedby="emailHelp" placeholder="Enter email" value="user@email.com" autocomplete="off">
+    <label title="This is a placeholder that does not fit inside their label" class="Label" for="exampleInputEmail3">This is a placeholder that does not fit inside their label</label>
+  </div>
+
   <div class="FormGroup FormGroup--floatingLabel">
     <input type="password" class="Input" id="exampleInputPassword2" placeholder="Password" autocomplete="off">
     <label class="Label" for="exampleInputPassword2">Password</label>

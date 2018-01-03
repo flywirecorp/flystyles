@@ -14,11 +14,16 @@
 .FormGroup--floatingLabel .Label {
   position: absolute;
   top: ($form-field-height-base / 2) - ($font-size-root / 2);
-  left: 10px;
+  left: 0;
   z-index: 1;
+  width: 100%;
+  padding: 0 10px;
   text-transform: none;
   font-size: $label-floating-font-size;
   color: $label-floating-color;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   will-change: font-size, transform;
   transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
