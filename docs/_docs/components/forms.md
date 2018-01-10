@@ -8,10 +8,11 @@ file: components/FormElements/
 #### Form example
 
 {% example html %}
+
 <form>
   <div class="FormGroup">
     <label class="Label" for="exampleInputEmail1">Email address</label>
-    <input type="email" class="Input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <input type="email" class="Input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
     <p class="FormGroup-hint">We'll never share your email with anyone else.</p>
   </div>
   <div class="FormGroup">
@@ -21,12 +22,12 @@ file: components/FormElements/
   </div>
   <div class="FormGroup">
     <label class="Label" for="exampleSelect1">Example select</label>
-    <select class="Select" id="exampleSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+    <select class="Select" id="exampleSelect1" required>
+      <option value="">Select something</option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
     </select>
     <p class="FormGroup-hint">This is an important decission.</p>
   </div>
@@ -51,7 +52,9 @@ file: components/FormElements/
 {% endexample %}
 
 ##### Readonly & disabled fields
+
 {% example html %}
+
 <div class='FormGroup'>
   <label class='Label'>Read only input</label>
   <input type='text' class='Input' value='This is the value' readonly />
@@ -64,6 +67,7 @@ file: components/FormElements/
 {% endexample %}
 
 #### Validation
+
 Flystyles includes validation styles for danger, warning, and success states on form controls.
 These styles can be applied either by adding the class `has-error` or `has-success` to the parent `FormGroup`, or adding to the child form element the variation `--error` or `--success`.
 
@@ -92,12 +96,12 @@ These styles can be applied either by adding the class `has-error` or `has-succe
 <div class="FormGroup has-error">
   <label class="Label" for="selectError">Select with error</label>
   <select class="Select" id="selectError">
-    <option>Option 1</option>
+    <option value="">Select something</option>
+    <option value="1">Option 1</option>
   </select>
 </div>
 
 {% endexample %}
-
 
 #### Input groups
 

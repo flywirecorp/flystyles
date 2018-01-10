@@ -8,10 +8,11 @@ file: components/FormElements/
 #### Form example
 
 {% example html %}
+
 <form>
 
   <div class="FormGroup FormGroup--floatingLabel has-value">
-    <input type="email" class="Input" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter email" value="user@email.com" autocomplete="off">
+    <input type="email" class="Input" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter email" value="user@email.com" autocomplete="off" required>
     <label class="Label" for="exampleInputEmail2">Email address</label>
     <p id="emailHelp" class="FormGroup-hint">We'll never share your email with anyone else.</p>
   </div>
@@ -33,7 +34,7 @@ file: components/FormElements/
   </div>
 
   <div class="FormGroup FormGroup--floatingLabel">
-    <select class="Select" id="exampleSelect2">
+    <select class="Select" id="exampleSelect2" required>
       <option>1</option>
       <option>2</option>
       <option>3</option>
@@ -59,7 +60,7 @@ file: components/FormElements/
     <label class="Label" for="sufixedInput2">Prefixed and sufixed input</label>
     <div class="InputGroup">
       <span class="InputGroup-context">$</span>
-      <input type="mail" class="Input InputGroup-input" placeholder="Enter your email" id="sufixedInput2" />
+      <input type="mail" class="Input InputGroup-input" placeholder="Enter your email" id="sufixedInput2" required />
       <span class="InputGroup-context">.00</span>
     </div>
   </div>

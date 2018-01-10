@@ -2,8 +2,8 @@
 //  forms mixins
 //
 
-@import "./utils";
-@import "../components/Icon/config";
+@import './utils';
+@import '../components/Icon/config';
 
 @mixin disabled-field {
   color: $form-field-disabled-color;
@@ -68,6 +68,10 @@
   &::-ms-clear {
     display: none;
   }
+
+  &:invalid {
+    box-shadow: none;
+  }
 }
 
 @mixin form-field-select {
@@ -79,7 +83,7 @@
   background-size: 0.8rem;
   appearance: none;
   text-indent: 1px;
-  text-overflow: "";
+  text-overflow: '';
 }
 
 @mixin form-field-size ($height, $font-size) {
@@ -97,7 +101,7 @@
 }
 
 @mixin form-field-error {
-  @include state-variation("error") {
+  @include state-variation('error') {
     background-image: svg-url(map-get($icons, danger));
     background-repeat: no-repeat;
     background-position: calc(100% - 1rem) center;
@@ -108,7 +112,7 @@
 }
 
 @mixin form-field-success {
-  @include state-variation("success") {
+  @include state-variation('success') {
     background-image: svg-url(map-get($icons, success));
     background-repeat: no-repeat;
     background-position: calc(100% - 1rem) center;
@@ -119,14 +123,14 @@
 }
 
 @mixin select-error {
-  @include state-variation("error") {
+  @include state-variation('error') {
     border: $form-field-border-error;
     box-shadow: $form-field-box-shadow-error;
   }
 }
 
 @mixin select-success {
-  @include state-variation("success") {
+  @include state-variation('success') {
     border: $form-field-border-success;
     box-shadow: $form-field-box-shadow-success;
   }
