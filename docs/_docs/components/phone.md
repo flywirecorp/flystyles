@@ -63,7 +63,7 @@ __Requires:__ `FormGroup`, `Input`, `Autocomplete`, `Flag`.
 
 {% example html %}
 <div class="FormGroup">
-  <label class="Label" for="tel">Mobile phone</label>
+  <label class="Label" for="tel4">Mobile phone</label>
   <div class="PhoneNumber">
     <div class='Autocomplete is-searching PhoneNumber-menu'>
       <span class='Autocomplete-search PhoneNumber-menu-input'>
@@ -88,9 +88,47 @@ __Requires:__ `FormGroup`, `Input`, `Autocomplete`, `Flag`.
       </ul>
     </div>
     <div class="PhoneNumber-input">
-      <input id="tel3" type="text" class="Input PhoneNumber-input-inner" />
+      <input id="tel4" type="text" class="Input PhoneNumber-input-inner" />
     </div>
   </div>
 </div>
 
+{% endexample %}
+
+#### Phone Input Disabled
+{% example html %}
+<div class="PhoneNumber">
+  <div class="FormGroup FormGroup--floatingLabel is-disabled">
+    <label class="Label" for="tel5">Floating label</label>
+    <div class="PhoneNumber-field">
+      <div class='Autocomplete PhoneNumber-menu'>
+        <span class='Autocomplete-search PhoneNumber-menu-input'>
+          <span class='Flag Flag--es'></span>
+        </span>
+      </div>
+      <div class="PhoneNumber-input">
+        <input id="tel5" type="text" class="Input PhoneNumber-input-inner" disabled />
+      </div>
+    </div>
+  </div>
+</div>
+{% endexample %}
+
+#### Phone Input Read Only
+{% example html %}
+<div class="PhoneNumber">
+  <div class="FormGroup FormGroup--floatingLabel is-readOnly">
+    <label class="Label" for="tel6">Floating label</label>
+    <div class="PhoneNumber-field">
+      <div class='Autocomplete PhoneNumber-menu'>
+        <span class='Autocomplete-search PhoneNumber-menu-input'>
+          <span class='Flag Flag--es'></span>
+        </span>
+      </div>
+      <div class="PhoneNumber-input">
+        <input id="tel6" type="text" class="Input PhoneNumber-input-inner" readonly value="+34 111111111" />
+      </div>
+    </div>
+  </div>
+</div>
 {% endexample %}

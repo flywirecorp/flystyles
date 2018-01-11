@@ -65,6 +65,20 @@
   .FormGroup--floatingLabel & {
     padding: 0 9.6px;
   }
+
+  .is-disabled & {
+    background-color: $form-field-disabled-background-color;
+    border-color: $form-field-disabled-border-color;
+
+    .Flag {
+      opacity: 0.6;
+    }
+  }
+
+  .is-readOnly & {
+    background-color: $form-field-read-only-background-color;
+    border-color: $form-field-read-only-border-color;
+  }
 }
 
 span.PhoneNumber-menu-input {
