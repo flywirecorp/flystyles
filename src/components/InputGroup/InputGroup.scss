@@ -17,10 +17,12 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
+
   .InputGroup &:first-child {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
+
   .InputGroup &:not(:first-child):not(:last-child) {
     border-radius: 0;
   }
@@ -54,5 +56,17 @@
     border-right: 0;
     border-top-left-radius: $form-field-border-radius;
     border-bottom-left-radius: $form-field-border-radius;
+  }
+
+  .is-disabled & {
+    color: $form-field-disabled-color;
+    background-color: $form-field-disabled-background-color;
+    border-color: $form-field-disabled-border-color;
+  }
+
+  .is-readOnly & {
+    color: $form-field-read-only-color;
+    background-color: $form-field-read-only-background-color;
+    border-color: $form-field-read-only-border-color;
   }
 }
