@@ -1,6 +1,6 @@
 {
   "name": "flystyles",
-  "version": "2.1.12",
+  "version": "2.1.13",
   "description": "Flywire UI Framework",
   "author": "Javier Arques <javier.arques@flywire.com>",
   "style": "dist/flystyles.css",
