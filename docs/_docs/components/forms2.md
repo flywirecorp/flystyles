@@ -56,6 +56,14 @@ file: components/FormElements/
     </div>
   </div>
 
+  <div class="FormGroup FormGroup--floatingLabel FormGroup--hasPrefix">
+    <label class="Label" for="prefixedInput5">Prefixed input</label>
+    <div class="InputGroup">
+      <span class="InputGroup-context">$</span>
+      <input type="mail" class="Input InputGroup-input" placeholder="Enter your email" id="prefixedInput5" required />
+    </div>
+  </div>
+
   <div class="FormGroup FormGroup--floatingLabel FormGroup--hasSuffix FormGroup--hasPrefix">
     <label class="Label" for="sufixedInput2">Prefixed and suffixed input</label>
     <div class="InputGroup">

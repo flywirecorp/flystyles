@@ -44,7 +44,7 @@
 // Prefixed or Suffixed Fields
 .FormGroup--floatingLabel.FormGroup--hasSuffix .Label,
 .FormGroup--floatingLabel.FormGroup--hasPrefix .Label {
-  width: calc(100% - $label-floating-symbol-width);
+  width: calc(100% - #{$label-floating-symbol-width});
 }
 
 .FormGroup--floatingLabel.FormGroup--hasPrefix .Label {
