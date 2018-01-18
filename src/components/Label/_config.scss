@@ -1,4 +1,4 @@
-@import "../../config";
+@import '../../config';
 
 $label-color: $body-color !default;
 $label-font-weight: $font-weight-regular !default;
@@ -10,3 +10,5 @@ $label-line-height: 1.4 !default;
 $label-floating-color: #657a8d !default;
 $label-floating-font-size: $font-size-sm !default;
 $label-floating-font-size-focus: 12px !default;
+$label-floating-padding-horizontal: 10px !default;
+$label-floating-symbol-width: 43px !default;

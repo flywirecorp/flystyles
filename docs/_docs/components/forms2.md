@@ -56,8 +56,8 @@ file: components/FormElements/
     </div>
   </div>
 
-  <div class="FormGroup FormGroup--floatingLabel FormGroup--symbolFirst">
-    <label class="Label" for="sufixedInput2">Prefixed and sufixed input</label>
+  <div class="FormGroup FormGroup--floatingLabel FormGroup--hasSuffix FormGroup--hasPrefix">
+    <label class="Label" for="sufixedInput2">Prefixed and suffixed input</label>
     <div class="InputGroup">
       <span class="InputGroup-context">$</span>
       <input type="mail" class="Input InputGroup-input" placeholder="Enter your email" id="sufixedInput2" required />
@@ -70,8 +70,9 @@ file: components/FormElements/
 ##### Disabled and Read Only Fields
 
 {% example html %}
+
 <form>
-  <div class="FormGroup FormGroup--floatingLabel FormGroup--symbolFirst is-readOnly">
+  <div class="FormGroup FormGroup--floatingLabel FormGroup--hasPrefix FormGroup--hasSuffix is-readOnly">
     <label class="Label" for="sufixedReadOnlyInput">Read only input group</label>
     <div class="InputGroup">
       <span class="InputGroup-context">$</span>
@@ -104,7 +105,7 @@ file: components/FormElements/
     </div>
   </div>
 
-  <div class="FormGroup FormGroup--floatingLabel FormGroup--symbolFirst is-disabled">
+  <div class="FormGroup FormGroup--floatingLabel FormGroup--hasPrefix is-disabled">
     <label class="Label" for="sufixedDisabledInput">Disabled input group</label>
     <div class="InputGroup">
       <span class="InputGroup-context">$</span>

@@ -1,4 +1,4 @@
-@import "./config";
+@import './config';
 
 .Label {
   margin: $label-margin;
@@ -17,7 +17,7 @@
   left: 0;
   z-index: 1;
   width: 100%;
-  padding: 0 10px;
+  padding: 0 $label-floating-padding-horizontal;
   text-transform: none;
   font-size: $label-floating-font-size;
   color: $label-floating-color;
@@ -41,6 +41,20 @@
   }
 }
 
-.FormGroup--symbolFirst .Label {
-  left: 44px;
+// Prefixed or Suffixed Fields
+.FormGroup--floatingLabel.FormGroup--hasSuffix .Label,
+.FormGroup--floatingLabel.FormGroup--hasPrefix .Label {
+  width: calc(100% - $label-floating-symbol-width);
+}
+
+.FormGroup--floatingLabel.FormGroup--hasPrefix .Label {
+  position: absolute;
+  left: $label-floating-symbol-width;
+}
+
+.FormGroup--floatingLabel.FormGroup--hasSuffix.FormGroup--hasPrefix .Label {
+  width: calc(
+    100% - #{$label-floating-symbol-width * 2} - #{$label-floating-padding-horizontal *
+      2}
+  );
 }
