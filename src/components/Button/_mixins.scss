@@ -36,6 +36,7 @@
     color: $color;
     text-decoration: none;
     background-color: $light-color;
+    text-decoration: none;
   }
 
   &:active,
@@ -62,6 +63,7 @@
     color: $color-hover;
     background-color: $light-color;
     box-shadow: none;
+    text-decoration: none;
   }
 
   &:active,
