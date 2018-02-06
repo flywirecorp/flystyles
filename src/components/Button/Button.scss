@@ -1,20 +1,9 @@
-//
-//  Button Component
-//
-
-@import "./config";
-@import "./mixins";
-
-// base styles
-//
+@import './config';
+@import './mixins';
 
 .Button {
   @include button-base;
-  @include button-size($button-size-base, $button-font-size-base);
 }
-
-// style variations
-//
 
 .Button--default {
   @include button-style(#fff, $body-color);
@@ -32,30 +21,24 @@
 }
 
 .Button--outline {
-  @include button-style-outline($button-outline-color, $color-brand-primary);
+  @include button-style-outline($button-outline-color);
 }
 
 .Button--outlineWhite {
-  @include button-style-outline($color-white, $color-brand-primary, $color-white, $color-brand-primary);
+  @include button-style-outline($color-white, $color-brand-primary);
 }
 
 @each $style in map-keys($button-styles) {
   .Button--outline#{capitalize($style)} {
     $current: map-get($button-styles, $style);
-    @include button-style-outline($current, $current);
+    @include button-style-outline($current);
   }
 }
-
-// block button
-//
 
 .Button--block {
   display: block;
   width: 100%;
 }
-
-// button disabled
-//
 
 .Button--disabled,
 .Button:disabled {
@@ -63,3 +46,26 @@
   opacity: 0.65;
 }
 
+.Button--withIcon {
+  position: relative;
+  padding: $button-padding-vertical $button-padding-horizontal;
+}
+
+.Button-icon {
+  position: absolute;
+  left: $button-padding-horizontal;
+  transform: translateY(-50%);
+  top: 50%;
+  display: inline-block;
+  height: $button-icon-height;
+  width: $button-icon-width;
+  margin-right: $spacer;
+  fill: currentColor;
+  max-width: $button-icon-max-width;
+  user-select: none;
+}
+
+.Button-text {
+  display: block;
+  padding-left: $button-icon-max-width;
+}

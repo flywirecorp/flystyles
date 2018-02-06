@@ -51,6 +51,22 @@ file: components/FormElements/
 </form>
 {% endexample %}
 
+##### Inline form
+
+{% example html %}
+
+<form>
+  <div class="GridRow">
+  <div class="FormGroup GridColumn GridColumn--fromXSmall-8">
+    <input type="text" class="Input" id="inlineField" aria-describedby="emailHelp" placeholder="Inline field" required>
+  </div>
+  <div class="FormGroup GridColumn GridColumn--fromXSmall-4">
+    <button type="button" class="Button Button--primary">Send</button>
+  </div>
+  </div>
+</form>
+{% endexample %}
+
 ##### Readonly & disabled fields
 
 {% example html %}
