@@ -7,7 +7,7 @@ file: base/typography.scss
 
 Those are the default styles for the default typography HTML tags.
 
-#### Headings
+#### Typography Headings
 
 {% example html %}
 <h1 class="type-h1">This is a h1</h1>

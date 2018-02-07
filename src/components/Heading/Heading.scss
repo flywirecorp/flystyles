@@ -1,0 +1,26 @@
+@import "../../mixins";
+@import "./config";
+
+.Heading {
+  font-weight: $heading-font-weight;
+}
+
+.Heading--huge {
+  font-size: $heading-size-mobile-huge;
+
+  @include media-up(medium) {
+    font-size: $heading-size-huge;
+  }
+}
+
+.Heading--large {
+  font-size: $heading-size-large;
+}
+
+.Heading--medium {
+  font-size: $heading-size-medium;
+}
+
+.Heading--small {
+  font-size: $heading-size-small;
+}
