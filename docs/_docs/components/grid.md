@@ -24,6 +24,7 @@ Don’t want your columns to simply stack in smaller devices? Use the extra smal
 </div>
 
 <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+
 <div class="GridRow">
   <div class="GridColumn GridColumn--fromXSmall-6 GridColumn--fromMedium-4">GridColumn GridColumn--fromXSmall-6 GridColumn--fromMedium-4</div>
   <div class="GridColumn GridColumn--fromXSmall-6 GridColumn--fromMedium-4">GridColumn GridColumn--fromXSmall-6 GridColumn--fromMedium-4</div>
@@ -31,6 +32,7 @@ Don’t want your columns to simply stack in smaller devices? Use the extra smal
 </div>
 
 <!-- Columns are always 50% wide, on mobile and desktop -->
+
 <div class="GridRow">
   <div class="GridColumn GridColumn--fromXSmall-6">GridColumn GridColumn--fromXSmall-6</div>
   <div class="GridColumn GridColumn--fromXSmall-6">GridColumn GridColumn--fromXSmall-6</div>
@@ -44,7 +46,6 @@ Add a class of the format `.GridRow--[breakpoint]-[columns-per-row]` to change t
 
 <div class="exampleView">
 {% example html %}
-
 <div class="GridRow GridRow--fromSmall-1 GridRow--fromMedium-2 GridRow--fromLarge-4">
   <div class="GridColumn">GridColumn</div>
   <div class="GridColumn">GridColumn</div>
@@ -53,27 +54,38 @@ Add a class of the format `.GridRow--[breakpoint]-[columns-per-row]` to change t
   <div class="GridColumn">GridColumn</div>
   <div class="GridColumn">GridColumn</div>
 </div>
-
 {% endexample %}
 </div>
 
+##### Offsets
+
+Move columns to the right using .GridColumn--fromMedium-offset-_ classes. These classes increase the left margin of a column by _ columns. For example, .GridColumn--fromMedium-offset-4 moves .GridColumn--fromMedium-4 over four columns.
+
+<div class="exampleView">
+{% example html %}
+<div class="GridRow">
+  <div class="GridColumn GridColumn--fromMedium-4 GridColumn--fromMedium-offset-2">GridColumn</div>
+  <div class="GridColumn GridColumn--fromMedium-4">GridColumn</div>
+</div>
+{% endexample %}
+</div>
 
 ##### Grid Configuration
 
 {% highlight scss %}
-$grid-columns:      12;
+$grid-columns: 12;
 $grid-gutter-width: 30px;
 
 $grid-breakpoints: (
-  // Extra small screen / phone
-  xs: 0,
-  // Small screen / phone
-  sm: 544px,
-  // Medium screen / tablet
-  md: 768px,
-  // Large screen / desktop
-  lg: 992px,
-  // Extra large screen / wide desktop
-  xl: 1200px
+// Extra small screen / phone
+xs: 0,
+// Small screen / phone
+sm: 544px,
+// Medium screen / tablet
+md: 768px,
+// Large screen / desktop
+lg: 992px,
+// Extra large screen / wide desktop
+xl: 1200px
 );
 {% endhighlight %}

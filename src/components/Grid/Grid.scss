@@ -2,8 +2,8 @@
 //  Grid Component
 //
 
-@import "../../config";
-@import "./mixins";
+@import '../../config';
+@import './mixins';
 
 .GridRow {
   @include grid-row();
@@ -22,8 +22,12 @@
         .GridColumn {
           float: left;
           width: 100% / $per-row;
-          &:nth-of-type(n) { clear: none; }
-          &:nth-of-type(#{$per-row}n+1) { clear: both; }
+          &:nth-of-type(n) {
+            clear: none;
+          }
+          &:nth-of-type(#{$per-row}n + 1) {
+            clear: both;
+          }
         }
       }
     }
@@ -36,6 +40,18 @@
     @for $i from 1 through $grid-columns {
       .GridColumn--from#{capitalize($breakpoint)}-#{$i} {
         @include grid-column-size($i);
+      }
+    }
+  }
+}
+
+// Offsets
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-up($breakpoint) {
+    @for $i from 1 through $grid-columns {
+      .GridColumn--from#{capitalize($breakpoint)}-offset-#{$i} {
+        $num: $i / $grid-columns;
+        margin-left: if($num == 0, 0, percentage($num));
       }
     }
   }

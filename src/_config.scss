@@ -31,18 +31,18 @@ $color-gray-dark: #666 !default;
 $color-gray-darker: #333 !default;
 
 $colors: (
-    "primary": $color-brand-primary,
-    "white": $color-white,
-    "black": $color-black,
-    "info": $color-info,
-    "success": $color-success,
-    "warning": $color-warning,
-    "danger": $color-danger,
-    "grayLighter": $color-gray-lighter,
-    "grayLight": $color-gray-light,
-    "gray": $color-gray,
-    "grayDark": $color-gray-dark,
-    "grayDarker": $color-gray-darker
+    'primary': $color-brand-primary,
+    'white': $color-white,
+    'black': $color-black,
+    'info': $color-info,
+    'success': $color-success,
+    'warning': $color-warning,
+    'danger': $color-danger,
+    'grayLighter': $color-gray-lighter,
+    'grayLight': $color-gray-light,
+    'gray': $color-gray,
+    'grayDark': $color-gray-dark,
+    'grayDarker': $color-gray-darker
   )
   !default;
 
@@ -83,7 +83,7 @@ $spacers: (
 
 $grid-breakpoints: (
     xSmall: 0,
-    small: 544px,
+    small: 576px,
     medium: 768px,
     large: 992px,
     xLarge: 1200px
@@ -101,7 +101,7 @@ $grid-columns: 12 !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-open-sans: "Open Sans", "Lucida Grande", Verdana, Arial,
+$font-family-open-sans: 'Open Sans', 'Lucida Grande', Verdana, Arial,
   sans-serif !default;
 $font-family-base: $font-family-open-sans !default;
 
@@ -115,11 +115,11 @@ $font-size-lg: 18px !default;
 $font-size-xl: 24px !default;
 
 $font-sizes: (
-  "xs": $font-size-xs,
-  "sm": $font-size-sm,
-  "md": $font-size-md,
-  "lg": $font-size-lg,
-  "xl": $font-size-xl
+  'xs': $font-size-xs,
+  'sm': $font-size-sm,
+  'md': $font-size-md,
+  'lg': $font-size-lg,
+  'xl': $font-size-xl
 );
 
 $line-height-base: 1.4 !default;
