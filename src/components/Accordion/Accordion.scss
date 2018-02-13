@@ -3,7 +3,6 @@
 .Accordion {
   border: $accordion-border-width solid $accordion-border-color;
   border-top: 0;
-  box-shadow: $accordion-box-shadow;
 }
 
 .Accordion-section {
@@ -68,4 +67,8 @@
   padding: $accordion-content-padding;
   font-size: $accordion-content-font-size;
   color: $accordion-content-color;
+
+  @include media-up(medium) {
+    padding: $accordion-content-padding-medium;
+  }
 }

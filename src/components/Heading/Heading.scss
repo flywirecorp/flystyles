@@ -14,7 +14,11 @@
 }
 
 .Heading--large {
-  font-size: $heading-size-large;
+  font-size: $heading-size-mobile-large;
+
+  @include media-up(medium) {
+    font-size: $heading-size-large;
+  }
 }
 
 .Heading--medium {
