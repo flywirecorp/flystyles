@@ -5,6 +5,10 @@
   position: relative;
   display: block;
   margin: $form-group-margin;
+
+  @include media-up(medium) {
+    margin: $from-group-margin-medium;
+  }
 }
 
 .FormGroup--inline {
@@ -12,7 +16,7 @@
 }
 
 .FormGroup-hint {
-  margin: $form-group-hint-margin;
+  margin: 0;
   font-size: $form-group-hint-font-size;
   font-weight: $form-group-hint-font-weight;
   line-height: $form-group-hint-line-height;
@@ -22,11 +26,12 @@
   opacity: 0;
   transform: translateY(-10px);
 
-  will-change: transform, opacity, max-height;
+  will-change: transform, opacity, max-height, margin;
   transition: 200ms all;
 
   .FormGroup.is-focused & {
     max-height: 100px;
+    margin: $form-group-hint-margin;
     opacity: 1;
     transform: translateY(0);
   }
