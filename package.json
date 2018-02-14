@@ -1,6 +1,6 @@
 {
   "name": "flystyles",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "description": "Flywire UI Framework",
   "author": "Javier Arques <javier.arques@flywire.com>",
   "style": "dist/flystyles.css",
@@ -27,7 +27,7 @@
   "homepage": "https://github.com/peertransfer/flystyles#readme",
   "devDependencies": {
     "autoprefixer": "^6.7.4",
-    "browser-sync": "^2.23.5",
+    "browser-sync": "^2.23.6",
     "clean-css-cli": "^4.1.10",
     "node-sass": "^4.6.1",
     "postcss-cli": "^3.0.0-beta"

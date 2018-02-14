@@ -1,14 +1,10 @@
-@import "./config";
-@import "../../mixins";
+@import './config';
+@import '../../mixins';
 
 .FormGroup {
   position: relative;
   display: block;
   margin: $form-group-margin;
-
-  @include media-up(medium) {
-    margin: $from-group-margin-medium;
-  }
 }
 
 .FormGroup--inline {
