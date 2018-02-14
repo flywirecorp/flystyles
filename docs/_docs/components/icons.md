@@ -10,15 +10,16 @@ Flystyles offers a SVG iconset.
 ##### Iconset
 
 {% example html %}
-<span class="Icon Icon--calendar Icon--xl margin-md"></span>
-<span class="Icon Icon--arrowDown Icon--xl margin-md"></span>
-<span class="Icon Icon--arrowUp Icon--xl margin-md"></span>
-<span class="Icon Icon--arrowLeft Icon--xl margin-md"></span>
-<span class="Icon Icon--arrowRight Icon--xl margin-md"></span>
-<span class="Icon Icon--success Icon--xl margin-md"></span>
-<span class="Icon Icon--danger Icon--xl margin-md"></span>
-<span class="Icon Icon--info Icon--xl margin-md"></span>
-<span class="Icon Icon--warning Icon--xl margin-md"></span>
+<span class="Icon Icon--calendar Icon--md margin-md"></span>
+<span class="Icon Icon--arrowDown Icon--md margin-md"></span>
+<span class="Icon Icon--arrowUp Icon--md margin-md"></span>
+<span class="Icon Icon--arrowLeft Icon--md margin-md"></span>
+<span class="Icon Icon--arrowRight Icon--md margin-md"></span>
+<span class="Icon Icon--success Icon--md margin-md"></span>
+<span class="Icon Icon--danger Icon--md margin-md"></span>
+<span class="Icon Icon--info Icon--md margin-md"></span>
+<span class="Icon Icon--warning Icon--md margin-md"></span>
+<span class="Icon Icon--close Icon--md margin-md"></span>
 {% endexample %}
 
 ##### Mixins

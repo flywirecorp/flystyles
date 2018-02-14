@@ -1,0 +1,70 @@
+@import './config';
+@import "../../mixins";
+
+.Modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $modal-zindex;
+  overflow: hidden;
+  outline: 0;
+  background-color: rgba($modal-background-color, $modal-background-opacity);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.Modal-dialog {
+  position: relative;
+  width: auto;
+  margin: $spacer;
+
+  .Modal--medium & {
+    max-width: $modal-width-medium;
+  }
+
+  .Modal--small & {
+    max-width: $modal-width-small;
+  }
+
+  @include media-up(small) {
+    max-width: $modal-width-small;
+    margin: 16vh auto;
+  }
+
+  animation: bounceIn 500ms cubic-bezier(0, 0.405, 0, 1.285);
+}
+
+.Modal-content {
+  position: relative;
+  padding: $modal-padding;
+  border-radius: $modal-border-radius;
+  background-color: #fff;
+  box-shadow: $modal-box-shadow;
+}
+
+.Modal-closeButton {
+  position: absolute;
+  right: ($modal-padding/2);
+  top: ($modal-padding/2);
+  z-index: 1;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+@keyframes bounceIn {
+  from {
+    opacity: 0;
+    transform: translate(0, -25%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
