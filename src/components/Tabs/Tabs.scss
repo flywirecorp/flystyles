@@ -1,0 +1,71 @@
+@import './config';
+
+.Tabs {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 $tabs-margin;
+}
+
+.TabList {
+  width: 100%;
+  display: flex;
+  flex-wrap: no-wrap;
+  margin-top: $tabs-tablist-margin-top;
+  border-bottom: 1px solid $tabs-tablist-border-color;
+}
+
+.Tab {
+  position: relative;
+  flex-grow: 1;
+  text-align: center;
+  padding: $tabs-tab-padding 0;
+}
+
+.Tab-link {
+  cursor: pointer;
+
+  &.is-active {
+    font-weight: bold;
+    padding-bottom: $tabs-link-padding-bottom;
+  }
+
+  &.is-disabled {
+    opacity: 0.3;
+  }
+}
+
+.Tab-link,
+.Tab-link:link,
+.Tab-link:visited {
+  font-size: rem(16px);
+  color: #38495b;
+  text-decoration: none;
+}
+
+.Tab-link:hover {
+  opacity: 0.8;
+
+  &.is-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}
+
+.Tab-underline {
+  display: none;
+
+  &.is-active {
+    display: block;
+    border-bottom: 4px solid #3497ff;
+    width: 64%;
+    background-color: red;
+    position: absolute;
+    left: 18%;
+    bottom: 0%;
+  }
+}
+
+.TabPanels {
+  width: 100%;
+  padding: $tabs-tabpanels-padding;
+}
