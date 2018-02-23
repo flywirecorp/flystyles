@@ -4,17 +4,17 @@
 
 The project can be installed via npm or yarn.
 
-
 ### npm
+
 ```bash
 npm install flystyles
 ```
 
 ### yarn
+
 ```bash
 yarn add flystyles
 ```
-
 
 # Build commands
 
@@ -31,6 +31,14 @@ Compile CSS:
 
 ```bash
 npm run build
+```
+
+# Docker commands
+
+Start the documentation:
+
+```
+docker-compose up
 ```
 
 # Documentation
@@ -131,7 +139,6 @@ src/
 |
 |- _config.scss           # Flystyles variables
 |– main.scss              # Main Sass file
-
 ```
 
 Files follow the same naming conventions described above: they are hyphen-delimited.
@@ -145,9 +152,7 @@ _base.scss
 _reset.scss
 _typography.scss
 _animations.scss
-
 ```
-
 
 ### COMPONENTS FOLDER
 
