@@ -18,7 +18,7 @@
 .Modal-dialog {
   position: relative;
   width: auto;
-  margin: $spacer;
+  margin: $spacer auto;
 
   .Modal--medium & {
     max-width: $modal-width-medium;
