@@ -10,6 +10,7 @@
   position: absolute;
   z-index: -1;
   width: 100%;
+  opacity: 0;
 }
 
 .Checkbox-label {
@@ -39,7 +40,7 @@
 .Checkbox-input:focus:checked ~ .Checkbox-label:before {
   background-color: $checkbox-checked-background-color;
   border-color: $checkbox-checked-border-color;
-  background-image: $checkbox-checked-background-image;
+  background-image: svg-url($checkbox-checked-svg);
   background-repeat: no-repeat;
   background-position: center;
 }
