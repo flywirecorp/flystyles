@@ -223,8 +223,10 @@ $form-field-border-error: 1px solid $color-danger !default;
 $form-field-box-shadow: inset 0 0 0 1px transparent !default;
 $form-field-box-shadow-hover: inset 0 0 0 1px transparent !default;
 $form-field-box-shadow-focus: inset 0 0 0 1px $color-brand-primary !default;
-$form-field-box-shadow-error: inset 0 0 0 1px $color-danger !default;
-$form-field-box-shadow-success: inset 0 0 0 1px $color-success !default;
+$form-field-box-shadow-error: inset 0 0 0 1px $color-danger,
+  0 0 4px 0 rgba($color-danger, 0.5) !default;
+$form-field-box-shadow-success: inset 0 0 0 1px $color-success,
+  0 0 4px 0 rgba($color-success, 0.5) !default;
 
 // Tables
 //

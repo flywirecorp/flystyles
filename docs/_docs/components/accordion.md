@@ -6,6 +6,7 @@ file: components/Accordion
 ---
 
 {% example html %}
+
   <div class="Accordion">
     <section class="Accordion-section has-success">
       <header class="Accordion-sectionHeader" data-js="accordion-trigger">

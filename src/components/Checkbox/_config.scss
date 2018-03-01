@@ -1,0 +1,27 @@
+@import '../../config';
+
+$checkbox-size: 20px !default;
+$checkbox-margin: 0 0 $spacer-lg 0 !default;
+$checkbox-border-color: $form-field-border-color !default;
+$checkbox-border-width: 1px !default;
+$checkbox-border-radius: 2px !default;
+$checkbox-background-color: $form-field-background !default;
+
+// checked
+$checkbox-checked-border-color: $color-brand-primary !default;
+$checkbox-checked-background-color: $color-brand-primary !default;
+$checkbox-checked-background-image: svg-url(
+    '<svg width="12" height="9" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 5.013L3.985 8 11 1" stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>'
+  )
+  !default;
+
+// focus
+$checkbox-focus-border-color: $color-brand-primary !default;
+$checkbox-focus-background-color: $color-brand-primary !default;
+
+// disabled
+$checkbox-disabled-border-color: $form-field-disabled-border-color !default;
+$checkbox-disabled-background-color: $form-field-disabled-background-color
+  !default;
