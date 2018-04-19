@@ -1,0 +1,94 @@
+.FileInput {
+  display: flex;
+  flex-direction: column;
+
+  @include media-up(small) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &-input {
+    display: flex;
+    cursor: pointer;
+    flex: 1;
+    margin-bottom: rem(8px);
+
+    button {
+      @include button-base;
+      @include button-style-outline($color-brand-primary);
+    }
+
+    span {
+      border: 1px solid $color-gray-lighter;
+      font-size: rem(14px);
+      height: rem(48px);
+      line-height: rem(48px);
+      overflow: hidden;
+      padding: 0 1rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+    }
+  }
+
+  &-hint {
+    font-size: rem(13px);
+    margin-bottom: 1rem;
+
+    @include media-up(small) {
+      flex-basis: 100%;
+      margin: 0;
+      order: 2;
+    }
+  }
+
+  &-submit {
+    @include button-base;
+    @include button-style($color-brand-primary);
+    transition: background 200ms ease-out;
+    position: relative;
+    min-height: 48px;
+
+    @include media-up(small) {
+      order: 1;
+      margin-bottom: rem(8px);
+    }
+  }
+
+  > input[type=file] {
+    left: 0;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+  }
+
+  &--uploading {
+    opacity: 0.3;
+    font-size: 0;
+
+    &:after {
+      content: " ";
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      position: relative;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      border-color: #fff transparent #fff #fff;
+      animation: spinner 1.2s linear infinite;
+      position: absolute;
+      top: calc(50% - 14px);
+      left: calc(50% - 14px); animation: spinner 1.2s linear infinite;
+    }
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

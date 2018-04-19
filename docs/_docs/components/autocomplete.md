@@ -41,9 +41,9 @@ Autocomplete component with autocomplete.
 
 {% example html %}
 <div class='FormGroup has-error'>
-  <label class='Label' for='drowpdown-example'>This is a label</label>
+  <label class='Label' for='dropdown-example-1'>This is a label</label>
   <div class='Autocomplete has-error'>
-    <input id='drowdown-example' type='text' class='Autocomplete-search' placeholder='Select one option...' />
+    <input id='dropdown-example-1' type='text' class='Autocomplete-search' placeholder='Select one option...' />
     <ul class='Autocomplete-options'>
       <li class='Autocomplete-option'>Op<span class='is-highlighted'>ción</span> 1</li>
       <li class='Autocomplete-option'>Op<span class='is-highlighted'>ción</span> 1</li>
@@ -60,9 +60,9 @@ Autocomplete component with autocomplete.
 
 {% example html %}
 <div class='FormGroup'>
-  <label class='Label' for='drowpdown-example'>This is a label</label>
+  <label class='Label' for='dropdown-example-2'>This is a label</label>
   <div class='Autocomplete Autocomplete--searchDisabled'>
-    <input id='drowdown-example' readonly type='text' class='Autocomplete-search' placeholder='Select one option...' />
+    <input id='dropdown-example-2' readonly type='text' class='Autocomplete-search' placeholder='Select one option...' />
   </div>
   <p class='FormGroup-feedback'>This field is required</p>
 </div>
