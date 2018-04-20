@@ -27,10 +27,6 @@ file: components/FormElements/Checkbox
     <input class="Checkbox-input" disabled name="cb-disabled" id="cb-disabled" type="checkbox" />
     <span class="Checkbox-label">This is a disabled checkbox</span>
   </label>
-  <label class="Checkbox" for="cb-disabled">
-    <input class="Checkbox-input" disabled checked name="cb-disabled" id="cb-disabled" type="checkbox" />
-    <span class="Checkbox-label">This is a disabled & checked checkbox</span>
-  </label>
 </div>
 {% endexample %}
 

@@ -1,5 +1,4 @@
 @import './config';
-@import '../../mixins';
 @import '../Label/mixins';
 
 .Checkbox {
@@ -36,20 +35,20 @@
   }
 }
 
-// focused
-.Checkbox-input:focus ~ .Checkbox-label:before {
-  border: 2px solid $color-brand-primary;
-  background-color: #fff;
-}
-
 // checked
 .Checkbox-input:checked ~ .Checkbox-label:before,
 .Checkbox-input:focus:checked ~ .Checkbox-label:before {
   background-color: $checkbox-checked-background-color;
   border-color: $checkbox-checked-border-color;
-  background-image: checked-icon(#fff);
+  background-image: svg-url($checkbox-checked-svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+// focused
+.Checkbox-input:focus ~ .Checkbox-label:before {
+  border: 2px solid $color-brand-primary;
+  background-color: #fff;
 }
 
 // disabled
@@ -58,14 +57,8 @@
   background-color: $form-field-disabled-background-color;
 }
 
-// checked & disabled
-.Checkbox-input:disabled:checked ~ .Checkbox-label:before {
-  border: 1px solid $form-field-disabled-border-color;
-  background-color: $form-field-disabled-background-color;
-  background-image: checked-icon($form-field-disabled-border-color);
-}
-
 // errors
+
 .Checkbox-label:before {
   .has-error & {
     border-color: $color-danger;
