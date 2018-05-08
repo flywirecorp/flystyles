@@ -8,30 +8,6 @@
     flex-wrap: wrap;
   }
 
-  &-input {
-    display: flex;
-    cursor: pointer;
-    flex: 1;
-    margin-bottom: rem(8px);
-
-    button {
-      @include button-base;
-      @include button-style-outline($color-brand-primary);
-    }
-
-    span {
-      border: 1px solid $color-gray-lighter;
-      font-size: rem(14px);
-      height: rem(48px);
-      line-height: rem(48px);
-      overflow: hidden;
-      padding: 0 1rem;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      width: 100%;
-    }
-  }
-
   &-hint {
     font-size: rem(13px);
     margin-bottom: 1rem;
@@ -49,6 +25,7 @@
     transition: background 200ms ease-out;
     position: relative;
     min-height: 48px;
+    width: 100%;
 
     @include media-up(small) {
       order: 1;
