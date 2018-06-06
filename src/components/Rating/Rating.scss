@@ -1,0 +1,73 @@
+@import '../../config';
+
+.Rating {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 400px;
+  margin: auto;
+
+  & > span {
+    color: #657A8D;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 0 8px;
+  }
+
+  & > span:first-child {
+    order: 1;
+  }
+
+  & > span:last-child {
+    order: 3;
+  }
+
+  @include media-up(medium) {
+    max-width: initial;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+.Rating-stars {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-bottom: 16px;
+
+  & > span:first-child {
+    margin-right: 0;
+  }
+
+  @include media-up(medium) {
+    order: 2;
+    width: fit-content;
+    margin-bottom: 0;
+  }
+}
+
+.Star {
+  color: #C3CFDD;
+  font-size: 32px !important;
+  order: 0;
+
+  @include media-up(medium) {
+    margin-right: 24px;
+  }
+
+  &.error {
+    color: red;
+  }
+}
+
+.Star:hover:before,
+.Star.selected:before,
+.Star:hover ~ .Star:before,
+.Star.selected ~ .Star:before {
+  color: #EDC200;
+  position: absolute;
+  content: "\2605";
+}
