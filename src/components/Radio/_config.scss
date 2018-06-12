@@ -2,7 +2,8 @@
 @import '../../mixins';
 
 $radio-size: 20px !default;
-$radio-margin: 0 0 $spacer-lg 0 !default;
+$radio-margin: 0 0 $spacer-md 0 !default;
+$radio-input-margin:0 $spacer-sm 0 0 !default;
 $radio-border-color: $form-field-border-color !default;
 $radio-border-width: 1px !default;
 $radio-border-radius: 100% !default;

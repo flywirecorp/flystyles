@@ -4,10 +4,9 @@
 .Radio {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     margin: $radio-margin;
-    position: relative;
-    padding-left: $spacer-xl;
+    position: relative;   
 }
 
 .Radio-input {
@@ -18,9 +17,7 @@
     border: $radio-border-width solid $radio-border-color;
     background-color: $radio-background-color;
     border-radius: $radio-border-radius;
-    position: absolute;
-    left: 0;
-    top: 0;
+    margin: $radio-input-margin;
     background-image: svg-url($radio-checked-svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -31,6 +28,8 @@
     margin: 0;
     position: relative;
     display: inline-block;
+    max-width: calc(100% - 2rem);
+    padding-left: $spacer-xs;
      & + .FormGroup-feedback {
         width: 100%;
     }

@@ -2,7 +2,8 @@
 @import '../../mixins';
 
 $checkbox-size: 20px !default;
-$checkbox-margin: 0 0 $spacer-lg 0 !default;
+$checkbox-margin: 0 0 $spacer-md 0 !default;
+$checkbox-input-margin:0 $spacer-sm 0 0 !default;
 $checkbox-border-color: $form-field-border-color !default;
 $checkbox-border-width: 1px !default;
 $checkbox-border-radius: 2px !default;

@@ -4,10 +4,9 @@
 .Checkbox {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    margin: $checkbox-margin;
+    align-items: flex-start;
     position: relative;
-    padding-left: $spacer-xl;
+    margin: $checkbox-margin;
 }
 
 .Checkbox-input {
@@ -18,9 +17,7 @@
     border: $checkbox-border-width solid $checkbox-border-color;
     background-color: $checkbox-background-color;
     border-radius: $checkbox-border-radius;
-    position: absolute;
-    left: 0;
-    top: 0;
+    margin: $checkbox-input-margin;
     background-image: svg-url($checkbox-checked-svg);
     background-repeat: no-repeat;
     background-position: center;  
@@ -31,6 +28,8 @@
     margin: 0;
     position: relative;
     display: inline-block;
+    max-width: calc(100% - 2rem);
+    padding-left: $spacer-xs;
     & + .FormGroup-feedback {
         width: 100%;
     }
