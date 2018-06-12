@@ -13,6 +13,9 @@ $checkbox-checked-border-color: $color-brand-primary !default;
 $checkbox-checked-background-color: $color-brand-primary !default;
 $checkbox-checked-svg: '<svg width="12" height="9" xmlns="http://www.w3.org/2000/svg"><path d="M1 5.013L3.985 8 11 1" stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"/></svg>'
   !default;
+$checkbox-checked-disabled-svg: '<svg width="12" height="9" xmlns="http://www.w3.org/2000/svg"><path d="M1 5.013L3.985 8 11 1" stroke="#000" opacity="0.2" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+  !default;
+
 
 // focus
 $checkbox-focus-border-color: $color-brand-primary !default;

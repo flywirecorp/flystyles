@@ -30,6 +30,18 @@ file: components/FormElements/Checkbox
 </div>
 {% endexample %}
 
+##### Checked disabled checkbox
+
+{% example html %}
+
+<div class="FormGroup marginBottom-0">
+  <label class="Checkbox" for="cb-disabledchecked">
+    <input class="Checkbox-input" disabled checked name="cb-disabledchecked" id="cb-disabledchecked" type="checkbox" />
+    <span class="Checkbox-label">This is a checked disabled checkbox</span>
+  </label>
+</div>
+{% endexample %}
+
 ##### Error checkbox
 
 {% example html %}

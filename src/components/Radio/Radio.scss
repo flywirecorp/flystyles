@@ -31,6 +31,9 @@
     margin: 0;
     position: relative;
     display: inline-block;
+     & + .FormGroup-feedback {
+        width: 100%;
+    }
 }
 
 // checked

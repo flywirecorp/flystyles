@@ -31,6 +31,9 @@
     margin: 0;
     position: relative;
     display: inline-block;
+    & + .FormGroup-feedback {
+        width: 100%;
+    }
 }
 
 // checked
@@ -48,12 +51,20 @@
     outline: none;
 }
 
-// disabled
-.Checkbox-input:disabled {
+// checked disabled
+
+.Checkbox-input:checked:disabled {
     border: 1px solid $form-field-disabled-border-color;
     background-color: $form-field-disabled-background-color;
+    background-image: svg-url($checkbox-checked-disabled-svg);
+}
+
+// disabled
+
+.Checkbox-input:disabled:not(:checked) {
     background-image: none;
 }
+
 
 // errors
 .has-error .Checkbox-input,
