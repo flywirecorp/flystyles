@@ -1,0 +1,24 @@
+@import '../../config';
+@import '../../mixins';
+
+$radio-size: 20px !default;
+$radio-margin: 0 0 $spacer-lg 0 !default;
+$radio-border-color: $form-field-border-color !default;
+$radio-border-width: 1px !default;
+$radio-border-radius: 100% !default;
+$radio-background-color: $form-field-background !default;
+
+// checked
+$radio-checked-border-color: $color-brand-primary !default;
+$radio-checked-background-color: $color-brand-primary !default;
+$radio-checked-svg: '<svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="4"  fill="white" /></svg>' !default;
+
+
+// focus
+$radio-focus-border-color: $color-brand-primary !default;
+$radio-focus-background-color: $color-brand-primary !default;
+
+// disabled
+$radio-disabled-border-color: $form-field-disabled-border-color !default;
+$radio-disabled-background-color: $form-field-disabled-background-color
+  !default;
