@@ -61,6 +61,7 @@
 // disabled
 
 .Checkbox-input:disabled:not(:checked) {
+    background-color: $form-field-disabled-background-color;
     background-image: none;
 }
 
