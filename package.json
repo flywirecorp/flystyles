@@ -29,7 +29,7 @@
     "autoprefixer": "^6.7.4",
     "browser-sync": "^2.23.6",
     "clean-css-cli": "^4.1.10",
-    "node-sass": "^4.6.1",
+    "node-sass": "^4.9.0",
     "postcss-cli": "^3.0.0-beta"
   },
   "postcss": {
