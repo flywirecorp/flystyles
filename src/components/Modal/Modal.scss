@@ -25,7 +25,7 @@
   position: relative;
   width: auto;
   flex-grow:1;
-  margin: $spacer auto;
+  margin: $spacer-lg auto;
 
   .Modal--medium & {
     max-width: $modal-width-medium;
