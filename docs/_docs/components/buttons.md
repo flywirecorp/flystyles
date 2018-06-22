@@ -17,6 +17,12 @@ Use button styles for actions in forms, dialogs, and more. Includes support for 
 <button class="Button Button--success" type="button">success</button>
 {% endexample %}
 
+##### Size variations
+
+{% example html %}
+<button class="Button Button--medium" type="button">medium</button>
+{% endexample %}
+
 ##### Block Button
 
 Create block level buttons—those that span the full width of a parent—by adding `.Button--block`;

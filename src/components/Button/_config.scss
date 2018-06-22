@@ -15,11 +15,27 @@ $button-padding: $button-padding-vertical $button-padding-horizontal !default;
 $button-line-height: 16px !default;
 $button-icon-max-width: 40px !default;
 
+
+
+$button-medium-font-size: rem(11px); 
+$button-medium-padding: 10px 12px;
+$button-medium-min-width: 0;
+
+
 $button-styles: (
     'primary': $color-brand-primary,
     'danger': $color-danger,
     'warning': $color-warning,
     'success': $color-success,
     'info': $color-info
+  )
+  !default;
+
+$button-sizes: (
+    'medium': (
+        'font-size': $button-medium-font-size, 
+        'padding': $button-medium-padding,
+        'min-width': $button-medium-min-width
+    ) 
   )
   !default;

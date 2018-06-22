@@ -51,6 +51,32 @@
   }
 }
 
+
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+
+@mixin button-sizes(){
+  $sizes: $button-sizes;
+   @each $i, $attribute in $sizes {
+    &--#{$i} {
+      font-size: #{map-deep-get($sizes,$i,font-size)};
+      padding: #{map-deep-get($sizes,$i,padding)};
+      min-width: #{map-deep-get($sizes,$i,min-width)};
+    }
+  }
+
+
+
+
+}
+
+
 @mixin button-style-outline($outline-color, $color-hover: #fff) {
   $dark-color: darken($outline-color, 8%);
   $light-color: lighten($outline-color, 6%);

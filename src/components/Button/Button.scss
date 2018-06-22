@@ -3,6 +3,7 @@
 
 .Button {
   @include button-base;
+  @include button-sizes;
 }
 
 .Button--default {
@@ -34,6 +35,9 @@
     @include button-style-outline($current);
   }
 }
+
+
+
 
 .Button--block {
   display: block;
