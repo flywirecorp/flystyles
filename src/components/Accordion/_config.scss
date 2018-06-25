@@ -3,6 +3,7 @@ $accordion-border-width: 1px !default;
 $accordion-title-font-size: rem(18px) !default;
 $accordion-title-color: #38495b !default;
 $accordion-title-font-weight: $font-weight-semi-bold !default;
+$accordion-title-width: calc(100% - 16px) !default;
 $accordion-header-active-background: #f8fafd !default;
 $accordion-header-success-border-color: #3eb734 !default;
 $accordion-header-padding: 32px !default;

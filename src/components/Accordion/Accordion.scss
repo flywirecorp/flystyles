@@ -3,6 +3,7 @@
 .Accordion {
   border: $accordion-border-width solid $accordion-border-color;
   border-top: 0;
+  counter-reset: section; 
 }
 
 .Accordion-section {
@@ -53,6 +54,16 @@
   font-size: $accordion-title-font-size;
   color: $accordion-title-color;
   font-weight: $accordion-title-font-weight;
+  width: $accordion-title-width;
+  display: inline-flex;
+
+  &::before {
+    display: inline-block;
+    padding-right: 0.2em;
+    counter-increment: section;
+    content: counter(section)".";   
+
+  }
 }
 
 .Accordion-sectionContentWrapper {
