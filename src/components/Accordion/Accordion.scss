@@ -56,14 +56,6 @@
   font-weight: $accordion-title-font-weight;
   width: $accordion-title-width;
   display: inline-flex;
-
-  &::before {
-    display: inline-block;
-    padding-right: 0.2em;
-    counter-increment: section;
-    content: counter(section)".";   
-
-  }
 }
 
 .Accordion-sectionContentWrapper {
