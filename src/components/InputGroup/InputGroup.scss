@@ -54,6 +54,8 @@
   }
   .InputGroup &:first-child {
     border-right: 0;
+    padding: 0;
+    width: $input-group-context-first-width;
     border-top-left-radius: $form-field-border-radius;
     border-bottom-left-radius: $form-field-border-radius;
   }
