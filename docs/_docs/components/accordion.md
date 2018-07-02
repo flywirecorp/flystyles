@@ -10,7 +10,7 @@ file: components/Accordion
   <div class="Accordion">
     <section class="Accordion-section has-success">
       <header class="Accordion-sectionHeader" data-js="accordion-trigger">
-        <h3 class="Accordion-sectionTitle"><span class="paddingRight-xs">1.</span> This is the first step</h3>
+        <h5 class="display-inlineFlex marginBottom-0"><span class="paddingRight-xs">1.</span> This is the first step</h5>
       </header>
       <div class="Accordion-sectionContentWrapper">
         <div class="Accordion-sectionContent">
@@ -20,7 +20,7 @@ file: components/Accordion
     </section>
     <section class="Accordion-section is-active">
       <header class="Accordion-sectionHeader" data-js="accordion-trigger">
-        <h3 class="Accordion-sectionTitle"><span class="paddingRight-xs">2.</span> This is the second section</h3>
+        <h5 class="display-inlineFlex marginBottom-0"><span class="paddingRight-xs">2.</span> This is the second section</h5>
       </header>
       <div class="Accordion-sectionContentWrapper">
         <div class="Accordion-sectionContent">
@@ -30,7 +30,7 @@ file: components/Accordion
     </section>
     <section class="Accordion-section">
       <header class="Accordion-sectionHeader" data-js="accordion-trigger">
-        <h3 class="Accordion-sectionTitle"><span class="paddingRight-xs">3.</span> This is the third section</h3>
+        <h5 class="display-inlineFlex marginBottom-0"><span class="paddingRight-xs">3.</span> This is the third section</h5>
       </header>
       <div class="Accordion-sectionContentWrapper">
         <div class="Accordion-sectionContent">
