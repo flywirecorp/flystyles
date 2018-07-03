@@ -54,6 +54,27 @@
 }
 
 //
+//  Color contrast using YIQ colorspace
+//  https://en.wikipedia.org/wiki/YIQ
+//
+@mixin color-contrast($background) {
+  $r: red($background);
+  $g: green($background);
+  $b: blue($background);
+  $black: rgba(0,0,0,0.7) !default;
+  $white: #ffffff !default;
+
+  $yiq: (($r*299)+($g*587)+($b*114))/1000;
+
+  @if ($yiq >= 148) {
+    color: $black;
+  }
+  @else {
+    color: $white;
+  }
+}
+
+//
 //  Remove default list style
 //
 @mixin unstyled-list {

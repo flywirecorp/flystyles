@@ -4,6 +4,8 @@
 
 @each $color in map-keys($colors) {
   .bg-#{$color} {
+    @include color-contrast(map-get($colors, $color)); 
     background-color: map-get($colors, $color) !important;
+
   }
 }
