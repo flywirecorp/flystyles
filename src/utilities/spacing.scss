@@ -21,6 +21,14 @@
   .marginLeft-#{$size} {
     margin-left: $current-space !important;
   }
+  .marginH--#{$size} {
+    margin-left: $current-space !important;
+    margin-right: $current-space !important;
+  }
+  .marginV--#{$size} {
+    margin-bottom: $current-space !important;
+    margin-top: $current-space !important;
+  }
 
   .padding-#{$size} {
     padding: $current-space !important;
@@ -36,6 +44,14 @@
   }
   .paddingLeft-#{$size} {
     padding-left: $current-space !important;
+  }
+  .paddingH-#{$size} {
+    padding-left: $current-space !important;
+    padding-right: $current-space !important;
+  }
+  .paddingV-#{$size} {
+    padding-top: $current-space !important;
+    padding-bottom: $current-space !important;
   }
 }
 
@@ -89,6 +105,6 @@
 
 // Margin Vertical (top and bottom)
 .marginVertical-md {
-  margin-right: $spacer !important;
-  margin-left: $spacer !important;
+  margin-top: $spacer !important;
+  margin-bottom: $spacer !important;
 }

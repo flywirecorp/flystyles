@@ -11,6 +11,12 @@
   }
 }
 
+.Textarea--outline {
+    background-color: white;
+    border-radius: $spacer-xs;
+    resize: none;
+}
+
 .Textarea {
   @include form-field-error;
   @include form-field-success;
