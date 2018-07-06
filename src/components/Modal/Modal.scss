@@ -29,6 +29,10 @@
     max-width: $modal-width-small;
   }
 
+  .Modal--large & {
+    max-width: $modal-width-large;
+  }
+
   @include media-up(small) {
     max-width: $modal-width-small;
     
