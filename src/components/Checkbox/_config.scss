@@ -23,6 +23,5 @@ $checkbox-focus-border-color: $color-brand-primary !default;
 $checkbox-focus-background-color: $color-brand-primary !default;
 
 // disabled
-$checkbox-disabled-border-color: $form-field-disabled-border-color !default;
-$checkbox-disabled-background-color: $form-field-disabled-background-color
-  !default;
+$checkbox-disabled-border-color: $color-gray-lighter !default;
+$checkbox-disabled-background-color: $color-gray-lighter !default;

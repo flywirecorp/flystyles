@@ -30,6 +30,7 @@
     display: inline-block;
     max-width: calc(100% - 2rem);
     padding-left: $spacer-xs;
+    cursor: default;
     & + .FormGroup-feedback {
         width: 100%;
     }
@@ -50,21 +51,22 @@
     outline: none;
 }
 
-// checked disabled
-
-.Checkbox-input:checked:disabled {
-    border: 1px solid $form-field-disabled-border-color;
-    background-color: $form-field-disabled-background-color;
-    background-image: svg-url($checkbox-checked-disabled-svg);
-}
-
 // disabled
 
-.Checkbox-input:disabled:not(:checked) {
-    background-color: $form-field-disabled-background-color;
+.Checkbox-input:disabled {
+    background-color: $checkbox-disabled-background-color;
+    border-color: $checkbox-disabled-border-color;
     background-image: none;
+    & + .Checkbox-label {
+        pointer-events: none;
+    }
 }
 
+// checked disabled
+
+.Checkbox-input:checked:disabled {    
+    background-image: svg-url($checkbox-checked-disabled-svg);
+}
 
 // errors
 .has-error .Checkbox-input,

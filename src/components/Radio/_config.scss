@@ -20,6 +20,5 @@ $radio-focus-border-color: $color-brand-primary !default;
 $radio-focus-background-color: $color-brand-primary !default;
 
 // disabled
-$radio-disabled-border-color: $form-field-disabled-border-color !default;
-$radio-disabled-background-color: $form-field-disabled-background-color
-  !default;
+$radio-disabled-border-color: $color-gray-lighter !default;
+$radio-disabled-background-color: $color-gray-lighter !default;

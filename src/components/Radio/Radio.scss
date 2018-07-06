@@ -30,6 +30,7 @@
     display: inline-block;
     max-width: calc(100% - 2rem);
     padding-left: $spacer-xs;
+    cursor: default;
      & + .FormGroup-feedback {
         width: 100%;
     }
@@ -52,8 +53,8 @@
 
 // // disabled
 .Radio-input:disabled {
-    border: 1px solid $form-field-disabled-border-color;
-    background-color: $form-field-disabled-background-color;
+    border-color: $radio-disabled-border-color;
+    background-color: $radio-disabled-background-color;
     background-image: none;
 }
 
