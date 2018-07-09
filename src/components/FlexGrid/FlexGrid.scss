@@ -1,0 +1,56 @@
+//
+//  FlexGrid Component
+//
+
+@import '../../config';
+@import './mixins';
+
+
+.FlexGridRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.FlexGridColumn {
+  flex: 0 0 auto;
+}
+
+
+// gridRow variations, same width cols
+// inspired by foundation block grid
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-up($breakpoint) {
+    @for $per-row from 1 through $grid-columns {
+      .FlexGridRow--from#{capitalize($breakpoint)}-#{$per-row} {
+        .FlexGridColumn {
+          width: 100% / $per-row;
+          flex-basis: 100% / $per-row;
+        }
+      }
+    }
+  }
+}
+
+// Create breakpoint/size columns variants
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-up($breakpoint) {
+    @for $i from 1 through $grid-columns {
+      .FlexGridColumn--from#{capitalize($breakpoint)}-#{$i} {
+        @include flexGrid-column-size($i);
+      }
+    }
+  }
+}
+
+// Offsets
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-up($breakpoint) {
+    @for $i from 1 through $grid-columns {
+      .FlexGridColumn--from#{capitalize($breakpoint)}-offset-#{$i} {
+        $num: $i / $grid-columns;
+        margin-left: if($num == 0, 0, percentage($num));
+      }
+    }
+  }
+}

@@ -341,6 +341,17 @@ pre code {
   border-radius: 6px;
 }
 
+.exampleView .FlexGridRow > .FlexGridColumn,
+.exampleView .FlexGridRow > [class^='FlexGridColumn'] {
+  min-height: 4rem;
+  padding: 0.75rem;
+  font-size: 14px;
+  color: #fff;
+  background-color: rgba(#7a8fa2, 1);
+  border: 2px solid #fff;
+  border-radius: 6px;
+}
+
 // Modal
 
 .code-example .Modal {
