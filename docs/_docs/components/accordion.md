@@ -1,6 +1,6 @@
 ---
 title: Accordion
-description: Drawer component to separete content in sections
+description: Drawer component to separate content in sections
 category: components
 file: components/Accordion
 ---

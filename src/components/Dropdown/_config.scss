@@ -1,0 +1,7 @@
+@import '../../config';
+@import '../../mixins';
+
+%DropdownUpward {
+  top: auto;
+  bottom: calc(3.5rem - 100%);
+}

@@ -352,6 +352,19 @@ pre code {
   border-radius: 6px;
 }
 
+// Dropdown
+.code-example .Dropdown {
+  text-align: right;
+}
+
+.code-example .Dropdown-options {
+  text-align: left;
+}
+
+.code-example .Dropdown-selectedOption {
+  display: inline-block;
+}
+
 // Modal
 
 .code-example .Modal {

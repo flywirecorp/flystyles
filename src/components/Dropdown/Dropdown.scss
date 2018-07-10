@@ -1,0 +1,119 @@
+@import './config';
+
+
+.Dropdown {
+  position: relative;
+  font-size: rem(14px);
+}
+
+.Dropdown-selectedOption {
+  cursor: pointer;
+  padding-right: 30px;
+  display: block;
+  background: transparent svg-url(map-get($icons, arrowDown)) no-repeat;
+  background-position: calc(100% - 0.8rem) center;
+  background-size: 0.8rem;
+  appearance: none;
+
+  .is-open & {
+    background-image: svg-url(map-get($icons, arrowUp));
+  }
+}
+
+.Dropdown-options {
+  display: none;
+  background: $color-white;
+  border: 1px solid #dae0e4;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  position: absolute;
+  right: 0;
+  margin-top: 12px;
+  padding: 0;
+  list-style-type: none;
+  width: 226px;
+  padding: 10px 0;
+  z-index: 1;
+
+  .is-open & {
+    display: block;
+    z-index: 2;
+  }
+
+  // CSS triangle
+  &::before {
+    border: 9px solid transparent;
+    border-bottom-color: $form-field-border-color;
+    top: -9px;
+    right: 9px;
+  }
+
+  &::after {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #fff;
+    right: 10px;
+    top: -8px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: inline-block;
+    border-top-width: 0;
+    position: absolute;
+  }
+}
+
+.Dropdown-options--upwardRight {
+  @extend %DropdownUpward;
+  left: auto;
+  right: 0;
+
+  &::before,
+  &::after {
+    top: auto;
+    border-bottom-width: 0;
+  }
+
+  &::before {
+    bottom: -9px;
+    border-top-width: 9px;
+    border-top-color: $form-field-border-color;
+  }
+
+  &::after {
+    bottom: -8px;
+    border-top: 8px solid white;
+  }
+}
+
+.Dropdown-options--upwardLeft {
+  @extend .Dropdown-options--upwardRight;
+  left: 100%;
+  margin-left: -2.75rem;
+  right: auto;
+
+  &::before {
+    right: auto;
+    left: 1rem;
+  }
+
+  &::after {
+    right: auto;
+    left: calc(1rem + 1px);
+  }
+}
+
+.Dropdown-option {
+  padding: 10px 20px;
+
+  &:hover {
+    cursor: pointer;
+    background: #f5f8fa;
+  }
+
+  &.is-selected {
+    font-weight: $font-weight-bold;
+  }
+}
