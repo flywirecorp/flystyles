@@ -19,6 +19,7 @@
   transition: all 200ms ease-out;
   overflow: hidden;
   text-decoration: none;
+  box-shadow: $button-box-shadow;
 
   &:focus {
     outline: 0;
@@ -31,6 +32,7 @@
 
   background: $bg;
   color: $color;
+ 
 
   &:hover {
     color: $color;

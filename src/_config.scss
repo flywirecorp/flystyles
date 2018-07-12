@@ -10,7 +10,7 @@
 // Brand colors
 
 $color-brand-primary-light: #0090d2 !default;
-$color-brand-primary: #0084c0 !default;
+$color-brand-primary: #147BD1 !default;
 $color-brand-primary-dark: #0f476b !default;
 
 // UI colors
@@ -102,6 +102,8 @@ $grid-columns: 12 !default;
 // Font, line-height, and color for body text, headings, and more.
 
 $font-family-open-sans: 'Open Sans', 'Lucida Grande', Verdana, Arial,
+  sans-serif !default;
+$font-family-open-sans: 'Rubik', 'Lucida Grande', Verdana, Arial,
   sans-serif !default;
 $font-family-base: $font-family-open-sans !default;
 

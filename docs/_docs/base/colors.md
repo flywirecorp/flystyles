@@ -10,7 +10,7 @@ colors:
       color: "#0090D2"
     - name: Primary
       variable: $color-brand-primary
-      color: "#0084C0"
+      color: "#147BD1"
     - name: Primary Dark
       variable: $color-brand-primary-dark
       color: "#0F476B"
