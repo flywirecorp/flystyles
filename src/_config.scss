@@ -101,11 +101,9 @@ $grid-columns: 12 !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-open-sans: 'Open Sans', 'Lucida Grande', Verdana, Arial,
+$font-family-rubik: 'Rubik', 'Open Sans','Lucida Grande', Verdana, Arial,
   sans-serif !default;
-$font-family-open-sans: 'Rubik', 'Lucida Grande', Verdana, Arial,
-  sans-serif !default;
-$font-family-base: $font-family-open-sans !default;
+$font-family-base: $font-family-rubik !default;
 
 $font-size-root: 16px !default;
 $font-size-base: 1rem !default;
@@ -130,9 +128,9 @@ $line-height-sm: 1.5 !default;
 
 $font-weight-light: 300 !default;
 $font-weight-regular: 400 !default;
-$font-weight-semi-bold: 600 !default;
+$font-weight-semi-bold: 500 !default;
 $font-weight-bold: 700 !default;
-$font-weight-extra-bold: 800 !default;
+$font-weight-extra-bold: 700 !default;
 $font-weight-base: $font-weight-regular !default;
 
 // Border radius
