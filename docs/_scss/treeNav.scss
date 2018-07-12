@@ -25,7 +25,7 @@ $treeNav-transition: 200ms all;
   padding: 12px;
   padding-left: 40px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 500;
   color: #98a5b1;
   text-transform: uppercase;
 }
@@ -49,12 +49,12 @@ $treeNav-transition: 200ms all;
 
   &:hover {
     color: $treeNav-link-color-active;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   &.is-selected {
     color: $treeNav-link-color-active;
-    font-weight: 600;
+    font-weight: 700;
     border-left-color: #3497ff;
     background: rgba(#1f2d3d, 0.05);
   }

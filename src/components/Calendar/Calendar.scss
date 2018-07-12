@@ -42,6 +42,7 @@
 .Calendar-weekday {
   color: $calendar-weekday-color;
   text-align: center;
+  font-weight: $font-weight-semi-bold;
 }
 
 .Calendar-weekday,
@@ -61,7 +62,7 @@
 
   &.is-selected,
   &--selected {
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-semi-bold;
     color: #fff;
     background: $calendar-day-color-active;
     border-color: transparent;

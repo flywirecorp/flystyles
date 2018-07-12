@@ -18,6 +18,23 @@ select.Select {
     text-indent: 0;
     background-image: none !important;
   }
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+  }
+
+  //   border: none;
+  // }
+}
+
+
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+option:not(:checked) {
+  color: black; /* prevent <option>s from becoming transparent as well */
 }
 
 // select multiple

@@ -154,7 +154,7 @@ Easily extend form controls by adding text, buttons, or button groups on either 
   <label class="Label" for="sufixed">Input with sufix</label>
   <div class="InputGroup">
     <input type="mail" class="Input Input--xl InputGroup-input" placeholder="Enter your email" id="sufixed" />
-    <span class="InputGroup-context fontSize-lg">@flywire.com</span>
+    <span class="InputGroup-context">@flywire.com</span>
   </div>
 </div>
 {% endexample %}

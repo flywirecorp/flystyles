@@ -46,6 +46,7 @@
   vertical-align: middle;
   background: $input-group-context-background;
   border: $form-field-border;
+  font-size: $form-field-font-size;
 
   .InputGroup &:last-child {
     border-left: 0;

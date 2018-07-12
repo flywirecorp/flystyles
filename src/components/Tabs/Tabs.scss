@@ -24,7 +24,7 @@
   margin: 0 $tabs-link-margin;
 
   &.is-active {
-    font-weight: bold;
+    font-weight: $font-weight-semi-bold;
     padding-bottom: $tabs-link-padding-bottom;
     border-bottom: 4px solid #3497ff;
   }
