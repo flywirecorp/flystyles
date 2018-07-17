@@ -49,6 +49,12 @@ file: components/FormElements/
     <textarea class="Textarea" id="exampleTextarea2" rows="3"></textarea>
   </div>
 
+   <div class="FormGroup FormGroup--floatingLabel has-error">
+    <label class="Label" for="exampleTextarea2">Example textarea</label>
+    <textarea class="Textarea" id="exampleTextarea2" rows="3"></textarea>
+    <p class="FormGroup-feedback">This is a required field</p>
+  </div>
+
   <div class='FormGroup FormGroup--floatingLabel'>
     <label class='Label' for='drowpdown-example-2'>This is a label</label>
     <div class='Autocomplete'>
