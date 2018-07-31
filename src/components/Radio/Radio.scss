@@ -37,6 +37,7 @@
 }
 
 // checked
+.Radio-input:active,
 .Radio-input:checked,
 .Radio-input:focus:checked {
     outline: none;
@@ -68,7 +69,7 @@
     outline: none;
 }
 
-.has-error .Radio-input:checked {
+.has-error .Radio-input:active, .has-error .Radio-input:checked  {
     box-shadow: none;
     background-color: $radio-checked-background-color;
     border-color: $radio-checked-border-color;
