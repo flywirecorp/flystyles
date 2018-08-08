@@ -42,7 +42,6 @@
   }
 
   &:active,
-  &:visited,
   &.Button--active,
   &.is-active {
     background-color: $dark-color;
@@ -72,9 +71,6 @@
       min-width: #{map-deep-get($sizes,$i,min-width)};
     }
   }
-
-
-
 
 }
 
