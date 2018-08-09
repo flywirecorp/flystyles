@@ -95,11 +95,13 @@ For the moment, the project is hosted on Netlifly [flystyles.netlify.com](http:/
 
 #### Create a new version
 
-To create a new version you have to use the npm command [version](https://docs.npmjs.com/cli/version). It will generate the new dist files, add a release tag and push to master.
+To create a new version you have to use the npm command [version](https://docs.npmjs.com/cli/version). It will generate the new dist files, add a release tag and push to the branch you are.
 
 ```bash
 npm version [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease | from-git]
 ```
+
+Then create a PR and request the review from other project commiters. Once accepted and merged to master, execute `npm publish` from master branch.
 
 ## Architecture
 
