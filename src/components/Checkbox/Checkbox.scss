@@ -37,6 +37,7 @@
 }
 
 // checked
+.Checkbox-input:active,
 .Checkbox-input:checked,
 .Checkbox-input:focus:checked {
     outline: none;
@@ -79,7 +80,7 @@
     outline: none;
 }
 
-.has-error .Checkbox-input:checked {
+.has-error .Checkbox-input:active, .has-error .Checkbox-input:checked {
     box-shadow: none;
     background-color: $checkbox-checked-background-color;
     border-color: $checkbox-checked-border-color;

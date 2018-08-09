@@ -1,5 +1,6 @@
 @import '../../config';
 
+
 .Rating {
   display: flex;
   justify-content: space-between;
@@ -37,6 +38,7 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   margin-bottom: 16px;
+  cursor: pointer;
 
   & > span:first-child {
     margin-right: 0;
@@ -50,7 +52,7 @@
 }
 
 .Star {
-  color: #C3CFDD;
+  color: $color-gray-light;
   font-size: 32px !important;
   order: 0;
 
@@ -67,7 +69,7 @@
 .Star.selected:before,
 .Star:hover ~ .Star:before,
 .Star.selected ~ .Star:before {
-  color: #EDC200;
+  color: $color-rating; 
   position: absolute;
   content: "\2605";
 }
