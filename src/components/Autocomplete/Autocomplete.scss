@@ -34,6 +34,7 @@
 .Autocomplete-search {
   @include select-success;
   @include select-error;
+  text-overflow: ellipsis;
 }
 
 .Autocomplete-options {
@@ -65,13 +66,13 @@
 }
 
 .Autocomplete-option {
-  min-height: $autocomplete-option-height;
-  padding: 0.4rem rem(8px);
+  height: $autocomplete-option-height;
+  padding: 0 rem(8px);
+  overflow: hidden;
   font-size: rem(15px);
-  line-height: 1.2;
-  display: flex;
-  flex-wrap: wrap;
-  align-items:center;
+  line-height: $autocomplete-option-height;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   &.is-active {
     color: #fff;
@@ -80,7 +81,6 @@
 
   .is-highlighted {
     border-bottom: 1px dotted #aaa;
-    margin-top: 1px;
   }
 }
 
