@@ -5,12 +5,13 @@ category: components
 file: components/Flag/Flag.scss
 ---
 
-i18n flags used in telephone input and country selector. Flag size: 16px x 11px.
+i18n flags used in telephone input and country selector. Flag size: 21px x 16px.
 CSS sprite from [flag-sprites.com](https://www.flag-sprites.com/).
 
 {% example html %}
-<span class='Flag Flag--es'></span>
-<span class='Flag Flag--us'></span>
-<span class='Flag Flag--uk'></span>
-<span class='Flag Flag--cn'></span>
+<span class='Flag Flag--af'></span>
+<span class='Flag Flag--al'></span>
+<span class='Flag Flag--dz'></span>
+<span class='Flag Flag--as'></span>
+<span class='Flag Flag--ad'></span>
 {% endexample %}
