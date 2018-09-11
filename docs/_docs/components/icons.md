@@ -16,6 +16,7 @@ Flystyles offers a SVG iconset.
 <span class="Icon Icon--arrowLeft Icon--md margin-md"></span>
 <span class="Icon Icon--arrowRight Icon--md margin-md"></span>
 <span class="Icon Icon--success Icon--md margin-md"></span>
+<span class="Icon Icon--checkmark Icon--md margin-md"></span>
 <span class="Icon Icon--danger Icon--md margin-md"></span>
 <span class="Icon Icon--info Icon--md margin-md"></span>
 <span class="Icon Icon--warning Icon--md margin-md"></span>
