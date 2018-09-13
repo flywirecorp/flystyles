@@ -4,6 +4,7 @@
   display: block;
   width: 100%;
 }
+
 .PhoneNumber-field {
   display: table;
   width: 100%;
@@ -48,6 +49,26 @@
 .PhoneNumber-option-flag,
 .PhoneNumber-option-country {
   margin-right: 0.5rem;
+}
+
+.PhoneNumber-option {
+  display: flex;
+  align-items: center;
+}
+
+.PhoneNumber-option-flag {
+  min-width: 21px;
+}
+
+.PhoneNumber-option-flag,
+.PhoneNumber-option-country {
+  margin-right: 0.5rem;
+}
+
+.PhoneNumber-option-country {
+  line-height: 1.2;
+  max-width: calc(100% - 3rem);
+  white-space: normal;
 }
 
 .PhoneNumber-menu-options {
