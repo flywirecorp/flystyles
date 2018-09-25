@@ -35,6 +35,7 @@
   @include select-success;
   @include select-error;
   text-overflow: ellipsis;
+  padding-left: rem(16px);
 }
 
 .Autocomplete-options {
@@ -66,13 +67,9 @@
 }
 
 .Autocomplete-option {
-  height: $autocomplete-option-height;
-  padding: 0 rem(8px);
-  overflow: hidden;
+  min-height: $autocomplete-option-height;
+  padding: rem(16px);
   font-size: rem(15px);
-  line-height: $autocomplete-option-height;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 
   &.is-active {
     color: #fff;
