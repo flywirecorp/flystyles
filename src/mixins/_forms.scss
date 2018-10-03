@@ -39,8 +39,8 @@
   }
 
   &:focus {
-    border: $form-field-border-focus;
-    box-shadow: $form-field-box-shadow-focus;
+    border: $form-field-border-focus !important;
+    box-shadow: $form-field-box-shadow-focus !important;
   }
 
   &::placeholder {
@@ -69,8 +69,8 @@
     display: none;
   }
 
-  &:invalid {
-    box-shadow: none;
+  &:not(output) {
+    box-shadow: inherit;
   }
 }
 

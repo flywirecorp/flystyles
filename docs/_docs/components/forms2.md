@@ -29,7 +29,7 @@ file: components/FormElements/
 
   <div class="FormGroup FormGroup--floatingLabel has-error">
     <input type="email" class="Input" id="errorInput" />
-    <label class="Label" for="errorInput">Enter your name</label>
+    <label class="Label" for="errorInput">Enter your email</label>
     <p class="FormGroup-feedback">This is a required field</p>
   </div>
 
