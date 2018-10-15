@@ -14,4 +14,5 @@ CSS sprite from [flag-sprites.com](https://www.flag-sprites.com/).
 <span class='Flag Flag--dz'></span>
 <span class='Flag Flag--as'></span>
 <span class='Flag Flag--ad'></span>
+<span class='Flag Flag--kr'></span>
 {% endexample %}
