@@ -15,6 +15,8 @@ Use button styles for actions in forms, dialogs, and more. Includes support for 
 <button class="Button Button--warning" type="button">warning</button>
 <button class="Button Button--info" type="button">info</button>
 <button class="Button Button--success" type="button">success</button>
+<button class="Button" type="button">default</button>
+<button class="Button Button--primary" disabled type="button">disabled</button>
 {% endexample %}
 
 ##### Size variations

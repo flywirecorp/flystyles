@@ -6,18 +6,23 @@
   @include button-sizes;
 }
 
+.Button,
 .Button--default {
-  @include button-style(#fff, $body-color);
-  border: $form-field-border;
+  @include button-style($color-white, $color-brand-primary);
+  border: $button-border;
 
   &:hover {
-    border: 1px solid darken($form-field-border-color, 15%);
+    border-color: darken($button-border-color, 5%);
   }
 }
 
 @each $style in map-keys($button-styles) {
   .Button--#{$style} {
     @include button-style(map-get($button-styles, $style));
+    border-color: map-get($button-styles, $style);
+    &:hover {
+      border-color: darken(map-get($button-styles, $style), 2%);
+    }
   }
 }
 
@@ -36,9 +41,6 @@
   }
 }
 
-
-
-
 .Button--block {
   display: block;
   width: 100%;
@@ -48,6 +50,11 @@
 .Button:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+  border: $button-border;
+  color: $color-gray;
+  border-radius: 3px;
+  background-color: transparent;
+  box-shadow: 0 -1px 4px 0 rgba(0,0,0,0.05), 0 2px 4px 0 rgba(0,0,0,0.05);
 }
 
 .Button--withIcon {
