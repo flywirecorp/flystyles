@@ -14,11 +14,9 @@ $button-padding-horizontal: 24px !default;
 $button-padding: $button-padding-vertical $button-padding-horizontal !default;
 $button-line-height: 16px !default;
 $button-icon-max-width: 40px !default;
-
-
-$button-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.17); 
-
-
+$button-border-color: #e0e0e0;
+$button-border: 1px solid $button-border-color;
+$button-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.05); 
 
 $button-medium-font-size: rem(11px); 
 $button-medium-padding: 10px 12px;
