@@ -1,0 +1,23 @@
+@import '../../config';
+@import '../../mixins';
+
+$switch-height: $spacer-xl !default;
+$switch-width: 60px !default;
+$switch-margin: 0 0 $spacer-md 0 !default;
+$switch-input-margin:0 $spacer-sm 0 0 !default;
+
+$switch-border-radius: $switch-height !default;
+$switch-background-color: #e0e0e3 !default;
+
+$switch-background-width: $switch-height !default;
+$switch-background-pos: $switch-background-width / 2;
+$switch-circle-width: 11;
+
+// checked
+
+$switch-checked-background-color: $color-brand-primary !default;
+
+
+// disabled
+
+$switch-disabled-background-color: $color-gray-lighter !default;

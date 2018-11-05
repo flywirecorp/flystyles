@@ -1,0 +1,5 @@
+@import './config';
+
+@function switch-circle($color) {
+  @return svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="#{$switch-background-width}" height="#{$switch-background-width}"><circle cx="#{$switch-background-pos}" cy="#{$switch-background-pos}" r="#{$switch-circle-width}" fill="#{$color}"/></svg>');
+}

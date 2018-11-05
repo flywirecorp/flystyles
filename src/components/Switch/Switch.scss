@@ -1,0 +1,76 @@
+@import "./config";
+@import "./mixins";
+@import "../Label/mixins";
+
+.Switch {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    margin: $switch-margin;
+}
+
+.Switch-input {
+    appearance: none;
+    border: none;
+    height: $switch-height;
+    width: $switch-width;
+    display: inline-block;
+    background-color: $switch-background-color;
+    border-radius: $switch-border-radius;
+    margin: 0;
+    background-image: switch-circle($color-gray);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    transition: background 0.15s ease-out;
+    background-blend-mode: normal;
+
+    &:focus {
+        outline: none;
+    }
+
+    + .Switch-label {
+        padding-left: $spacer-md;
+    }
+}
+
+.Switch-label {
+    @include label;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    max-width: calc(100% - #{$switch-width});
+    cursor: default;
+}
+
+// checked
+.Switch-input:active:not(:disabled),
+.Switch-input:checked:not(:disabled),
+.Switch-input:focus:checked:not(:disabled) {
+    background-color: $switch-checked-background-color;
+    background-image: switch-circle(white);
+    background-position: 100% 0;
+    outline: none;
+}
+
+// disabled
+
+.Switch-input:disabled {
+    pointer-events: none;
+    background-blend-mode: multiply;
+    background-color: $switch-disabled-background-color;
+    background-image: switch-circle($color-gray-light);
+
+    & + .Switch-label {
+        pointer-events: none;
+    }
+}
+
+// checked disabled
+
+.Switch-input:checked:disabled {
+    background-image: switch-circle(white);
+    background-position: 100% 0;
+    background-color: $switch-disabled-background-color;
+    background-blend-mode: screen;
+}
