@@ -1,27 +1,25 @@
 @import '../../config';
 
 $button-size-base: $form-field-height-base !default;
-
 $button-font-weight: $font-weight-semi-bold !default;
 $button-font-family: $font-family-base !default;
 $button-border-radius: 3px !default;
-$button-font-size: rem(13px) !default;
+$button-font-size: $font-size-xs !default;
 $button-outline-color: #939fac !default;
 $button-size-base: $form-field-height-base;
 $button-min-width: 136px !default;
-$button-padding-vertical: 16px !default;
-$button-padding-horizontal: 24px !default;
+$button-padding-vertical: $spacer-md !default;
+$button-padding-horizontal: $spacer-lg !default;
 $button-padding: $button-padding-vertical $button-padding-horizontal !default;
-$button-line-height: 16px !default;
+$button-line-height: 1.05 !default;
 $button-icon-max-width: 40px !default;
 $button-border-color: #e0e0e0;
 $button-border: 1px solid $button-border-color;
-$button-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.05); 
-
+$button-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.17); 
 $button-medium-font-size: rem(11px); 
 $button-medium-padding: 10px 12px;
 $button-medium-min-width: 0;
-
+$button-primary-disabled-background: #147BD1;
 
 $button-styles: (
     'primary': $color-brand-primary,
