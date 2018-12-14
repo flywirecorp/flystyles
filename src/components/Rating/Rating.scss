@@ -8,18 +8,18 @@
     max-width: 400px;
     margin: auto;
 
-    &>span {
+    & > span {
       color: #657a8d;
       font-weight: $font-weight-semi-bold;
       line-height: 20px;
       padding: 0 8px;
     }
 
-    &>span:first-child {
+    & > span:first-child {
       order: 1;
     }
 
-    &>span:last-child {
+    & > span:last-child {
       order: 3;
     }
 
@@ -40,7 +40,7 @@
   margin-bottom: 16px;
   cursor: pointer;
 
-  &>span:first-child {
+  & > span:first-child {
     margin-right: 0;
   }
 
@@ -67,8 +67,8 @@
 
 .Star:hover:before,
 .Star.selected:before,
-.Star:hover~.Star:before,
-.Star.selected~.Star:before {
+.Star:hover ~ .Star:before,
+.Star.selected ~ .Star:before {
   color: $color-rating;
   position: absolute;
   content: "\2605";
@@ -80,11 +80,14 @@
 }
 
 .Rating-items {
-  display: flex;
+  display: block;
   width: 100%;
   border: 1px solid $border-grey-color;
   border-radius: 3px;
   box-shadow: inset 0 1px 5px 0 rgba(0, 0, 0, 0.03);
+  @include media-up(small) {
+    display: flex;
+  }
 }
 
 .Rating-label {
@@ -92,6 +95,7 @@
   cursor: pointer;
   position: relative;
   margin: 0;
+  width: 100%;
 
   &:first-child .Rating-value {
     border-radius: 3px 0 0 3px;
@@ -131,8 +135,24 @@
     }
   }
 
-  .Rating-input:checked+.Rating-value {
+  .Rating-input:checked + .Rating-value {
     background-color: rgba(224, 224, 227, 0.4);
+  }
+
+  @include media-down(small) {
+    .Rating-value {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid $border-grey-color;
+    }
+    &:first-child .Rating-value {
+      border-radius: 3px 3px 0 0;
+    }
+
+    &:last-child .Rating-value {
+      border-radius: 0 0 3px 3px;
+      border-bottom: none;
+    }
   }
 }
 
