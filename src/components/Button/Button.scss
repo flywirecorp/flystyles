@@ -10,9 +10,16 @@
 .Button--default {
   @include button-style($color-white, $color-brand-primary);
   border: $button-border;
-
+  box-shadow: $button-box-shadow; 
   &:hover {
+    background-color: rgba(224,224,227,0.4);
     border-color: darken($button-border-color, 5%);
+  }
+  &:focus{
+    box-shadow: $button-box-shadow; 
+  }
+  &:active{
+    background-color: rgba(224,224,227,0.8);
   }
 }
 
@@ -51,15 +58,24 @@
   cursor: not-allowed;
   opacity: 0.5;
   border: $button-border;
-  color: $color-gray;
   border-radius: 3px;
   background-color: transparent;
   box-shadow: 0 -1px 4px 0 rgba(0,0,0,0.05), 0 2px 4px 0 rgba(0,0,0,0.05);
 }
 
+.Button--primary.Button--disabled, .Button--primary:disabled {
+  background-color: $button-primary-disabled-background;
+  color: $color-white;
+  border-color: transparent;
+}
+
 .Button--withIcon {
   position: relative;
   padding: $button-padding-vertical $button-padding-horizontal;
+  box-shadow: $button-box-shadow, inset 0px 0px 0px 2px transparentize($color-brand-primary, 1);
+  &:focus {
+    box-shadow: $button-box-shadow, inset 0px 0px 0px 2px $color-brand-primary;
+  }
 }
 
 .Button-icon {
