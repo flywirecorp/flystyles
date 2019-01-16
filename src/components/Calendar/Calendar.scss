@@ -9,63 +9,129 @@
   background: $calendar-background;
   border: $calendar-border;
   border-radius: $calendar-border-radius;
-}
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05);
 
-.Calendar-header {
-  display: flex;
-  padding: $spacer-sm;
-  background: #f8fafd;
-  text-align: center;
-  border-top-left-radius: $calendar-border-radius;
-  border-top-right-radius: $calendar-border-radius;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
+  .Select {
+    border: none;
+    background-image: svg-url($iconDown);
+    background-size: 10px 6px;
+    background-position: calc(100% - 12px) $spacer;
+    text-align: right;
+  }
 
-.Calendar-header-navItem {
-  width: auto !important;
-  height: 36px !important;
-  min-width: auto;
-  line-height: 36px !important;
-  padding: 0 12px !important;
+  .Calendar-header {
+    display: flex;
+    padding: 15px $spacer-sm 0;
+    text-align: center;
+    border-top-left-radius: $calendar-border-radius;
+    border-top-right-radius: $calendar-border-radius;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    .Calendar-header-navItem {
+      width: auto;
+      height: 36px;
+      min-width: auto;
+      line-height: 36px;
+      padding: 0 12px;
+      box-shadow: none;
+      border: none;
+      margin: 0;
+      background-color: transparent;
+      &:hover {
+        background-color: $calendar-day-color-hover;
+      }
+    }
+
+    .Icon--arrowLeft,
+    .Icon--arrowRight {
+      background-size: $spacer auto;
+      width: $spacer;
+      height: $spacer;
+    }
+
+    .Icon--arrowLeft {
+      background-image: svg-url($iconLeft);
+    }
+
+    .Icon--arrowRight {
+      background-image: svg-url($iconRight);
+    }
+  }
 }
 
 .Calendar-table {
-  width: 100%;
+  width: $calendar-mobile-width;
   overflow: hidden;
   table-layout: fixed;
   border: 0;
-  border-bottom-right-radius: $calendar-border-radius;
-  border-bottom-left-radius: $calendar-border-radius;
+  margin: -2px auto $spacer-lg;
+
+  @include media-up(small) {
+    width: $calendar-width;
+  }
+}
+
+.Calendar-weekday,
+.Calendar-day {
+  padding: 0;
+  width: $calendar-day-mobile-size;
+  height: $calendar-day-mobile-size;
+  transition: all 200ms ease-in-out;
+  line-height: 1;
+
+  @include media-up(small) {
+    width: $calendar-day-size;
+    height: $calendar-day-size;
+  }
 }
 
 .Calendar-weekday {
   color: $calendar-weekday-color;
   text-align: center;
-  font-weight: $font-weight-semi-bold;
-}
-
-.Calendar-weekday,
-.Calendar-day {
-  padding: 3.3% 0;
-  transition: all 200ms ease-in-out;
+  font-weight: $font-weight-regular;
 }
 
 .Calendar-day {
   text-align: center;
   cursor: pointer;
-  border: $calendar-border;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    width: $calendar-day-mobile-size;
+    height: $calendar-day-mobile-size;
+    position: absolute;
+    top: 0;
+    left: calc(50% - (#{$calendar-day-mobile-size} / 2));
+    border-radius: 100%;
+    background-color: $calendar-day-color-default;
+    z-index: -1;
+    transition: background-color 0.1s ease-out;
+
+    @include media-up(small) {
+      width: $calendar-day-size;
+      height: $calendar-day-size;
+      top: 0;
+      left: 0;
+    }
+  }
 
   &:hover {
-    background-color: #f5f8fa;
+    &:before {
+      background-color: $calendar-day-color-hover;
+    }
   }
 
   &.is-selected,
   &--selected {
     font-weight: $font-weight-semi-bold;
-    color: #fff;
-    background: $calendar-day-color-active;
-    border-color: transparent;
+    color: $color-white;
+
+    &:before {
+      background-color: $calendar-day-color-active;
+    }
   }
 
   &.is-current,
@@ -75,18 +141,19 @@
 
   &.is-disabled,
   &--disabled {
-    color: rgba($calendar-day-color, 0.5);
+    color: rgba($color-gray, 0.5);
     cursor: auto;
-    background: #f1f3f6;
+    background: #fafafa;
   }
 
   &.is-current.is-selected {
-    color: #fff;
+    color: $color-white;
   }
 
   tr &:first-child {
     border-left: 0;
   }
+
   tr &:last-child {
     border-right: 0;
   }

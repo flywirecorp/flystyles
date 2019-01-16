@@ -1,58 +1,75 @@
-@import "../../config";
-@import "../../mixins";
+@import '../../config';
+@import '../../mixins';
 
 .Datepicker {
   position: relative;
+  .Datepicker-input {
+    padding-right: $spacer-xxl;
+  }
 }
 
 .Datepicker-calendar {
   position: absolute;
-  top: calc(100% + 4px);
+  top: calc(100% + #{$spacer-lg});
   z-index: 2;
   display: none;
   max-width: 100%;
+  width: 100%;
+  right: 0;
 
   @include media-up(small) {
-    max-width: 320px;
+    max-width: 334px;
   }
 
   // Top triangle
 
-  &::before {
-    content: "";
-    display: inline-block;
-    border-left: 9px solid transparent;
-    border-right: 9px solid transparent;
-    border-bottom: 9px solid #ccc;
-    border-top: 0;
+  &:before {
+    border-color: transparent;
+    border-width: 9px;
     border-bottom-color: $form-field-border-color;
-    position: absolute;
-
     top: -9px;
-    left: 18px;
+    right: 18px;
   }
 
-  &::after {
-    content: "";
-    display: inline-block;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid #fff;
-    border-top: 0;
-    position: absolute;
-
-    border-bottom-color: #f8fafd;
-    left: 19px;
+  &:after {
+    border-color: transparent;
+    border-width: 8px;
+    border-bottom-color: $color-white;
+    right: 19px;
     top: -8px;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    border-style: solid;
+    border-top-width: 0;
   }
 
   .Datepicker.is-open & {
     display: block;
   }
+
 }
 
 // Calendar icon
 .Datepicker .InputGroup-context {
   cursor: pointer;
   width: 50px;
+  border-left: none;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+
+  .Icon--calendar {
+    width: 20px;
+    height: 20px;
+  }
 }

@@ -1,10 +1,19 @@
-@import "../../config";
-
+@import '../../config';
+$calendar-background: $color-white !default;
 $calendar-border: 1px solid $form-field-border-color !default;
-$calendar-border-radius: $global-border-radius !default;
-$calendar-weekday-color: $color-gray-dark !default;
+$calendar-border-radius: $spacer-xs !default;
 $calendar-day-color: $body-color !default;
-$calendar-day-color-active: rgba($color-brand-primary, .85) !default;
-$calendar-font-size: rem(15px) !default;
-$calendar-background: #fff !default;
+$calendar-day-color-active: hsla(207.3, 82.5%, 44.9%, 0.9) !default;
+$calendar-day-color-default: hsla(207.3, 82.5%, 44.9%, 0) !default;
+$calendar-day-color-hover: hsla(207.3, 20%, 98%,1) !default;
+$calendar-day-mobile-size: $spacer-lg !default;
+$calendar-day-size: rem(40.5px) !default;
+$calendar-font-size: $font-size-xs !default;
 $calendar-text-transform: capitalize !default;
+$calendar-weekday-color: $body-color !default;
+$calendar-mobile-width: 100% !default;
+$calendar-width: calc(#{$calendar-day-size} * 7) !default;
+
+$iconDown:'<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"><polyline fill="none" stroke="#{$color-gray}" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" points="0 0 4 4 8 0" transform="translate(1 1)"/></svg>';
+$iconLeft:'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12"><path fill="#{$color-gray}" fill-rule="evenodd" d="M3.41425,5.00025 L6.70725,1.70725 C7.09825,1.31625 7.09825,0.68425 6.70725,0.29325 C6.31625,-0.09775 5.68425,-0.09775 5.29325,0.29325 L0.29325,5.29325 C-0.09775,5.68425 -0.09775,6.31625 0.29325,6.70725 L5.29325,11.70725 C5.48825,11.90225 5.74425,12.00025 6.00025,12.00025 C6.25625,12.00025 6.51225,11.90225 6.70725,11.70725 C7.09825,11.31625 7.09825,10.68425 6.70725,10.29325 L3.41425,7.00025 L15.00025,7.00025 C15.55325,7.00025 16.00025,6.55225 16.00025,6.00025 C16.00025,5.44825 15.55325,5.00025 15.00025,5.00025 L3.41425,5.00025 Z"/></svg>';
+$iconRight:'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12"><path fill="#{$color-gray}" fill-rule="evenodd" d="M15.00025,5.00025 L3.41425,5.00025 L6.70725,1.70725 C7.09825,1.31625 7.09825,0.68425 6.70725,0.29325 C6.31625,-0.09775 5.68425,-0.09775 5.29325,0.29325 L0.29325,5.29325 C-0.09775,5.68425 -0.09775,6.31625 0.29325,6.70725 L5.29325,11.70725 C5.48825,11.90225 5.74425,12.00025 6.00025,12.00025 C6.25625,12.00025 6.51225,11.90225 6.70725,11.70725 C7.09825,11.31625 7.09825,10.68425 6.70725,10.29325 L3.41425,7.00025 L15.00025,7.00025 C15.55325,7.00025 16.00025,6.55225 16.00025,6.00025 C16.00025,5.44825 15.55325,5.00025 15.00025,5.00025" transform="rotate(-180 8 6)"/></svg>';
