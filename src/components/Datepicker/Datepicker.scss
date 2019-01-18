@@ -1,8 +1,13 @@
 @import '../../config';
 @import '../../mixins';
 
+$datepickerPosition: calc(100% + #{$spacer-md});
+$datepickerBeforePosition: -9px;
+$datepickerAfterPosition: -8px;
+
 .Datepicker {
   position: relative;
+
   .Datepicker-input {
     padding-right: $spacer-xxl;
   }
@@ -10,7 +15,7 @@
 
 .Datepicker-calendar {
   position: absolute;
-  top: calc(100% + #{$spacer-lg});
+  top: $datepickerPosition;
   z-index: 2;
   display: none;
   max-width: 100%;
@@ -27,7 +32,7 @@
     border-color: transparent;
     border-width: 9px;
     border-bottom-color: $form-field-border-color;
-    top: -9px;
+    top: $datepickerBeforePosition;
     right: 18px;
   }
 
@@ -36,7 +41,7 @@
     border-width: 8px;
     border-bottom-color: $color-white;
     right: 19px;
-    top: -8px;
+    top: $datepickerAfterPosition;
   }
 
   &:before,
@@ -52,6 +57,27 @@
     display: block;
   }
 
+  .Datepicker.is-reverse & {
+    top: auto;
+    bottom: $datepickerPosition;
+
+    &:before {
+      border: 9px solid transparent;
+      border-top-color: $form-field-border-color;
+      bottom: $datepickerBeforePosition;
+    }
+    &:after {
+      border: 8px solid transparent;
+      border-top-color: $color-white;
+      bottom: $datepickerAfterPosition;
+    }
+    &:before,
+    &:after {
+      top: auto;
+      border-bottom-width: 0;
+    }
+
+  }
 }
 
 // Calendar icon
@@ -72,4 +98,15 @@
     width: 20px;
     height: 20px;
   }
+}
+
+.is-readOnly,
+.is-disabled {
+  .Datepicker .InputGroup-context {
+    background-color: transparent;
+  }
+}
+
+.has-error .Datepicker .InputGroup-context {
+  opacity: 0;
 }
