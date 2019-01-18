@@ -30,6 +30,7 @@
 
     .Calendar-header-navItem {
       width: auto;
+      text-align-last: right;
       height: 36px;
       min-width: auto;
       line-height: 36px;
@@ -38,8 +39,14 @@
       border: none;
       margin: 0;
       background-color: transparent;
+
       &:hover {
         background-color: $calendar-day-color-hover;
+      }
+
+      @include media-down(small) {
+        padding: 0;
+        font-size: 0.8rem;
       }
     }
 
