@@ -1,4 +1,4 @@
-@import "./config";
+@import './config';
 
 .PhoneNumber-field {
   display: block;
@@ -31,11 +31,12 @@
   display: table-cell;
   width: $phone-number-menu-input-width;
   vertical-align: top;
+  position: static;
 }
 
 .PhoneNumber-menu-options {
   top: calc(100% - 1px);
-  width: $phone-number-menu-options-width;
+  width: 100%;
 }
 
 .PhoneNumber-option-dial {
@@ -78,9 +79,21 @@
 .PhoneNumber-menu-input {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  position: relative;
+  z-index: 3;
 
   .is-searching & {
     border-bottom-left-radius: 0;
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      width: calc(100% - 2px);
+      height: 3px; 
+      left:1px;
+      bottom: -2px;
+      background-color: $color-white;
+    }
   }
 
   .FormGroup--floatingLabel & {
@@ -99,7 +112,12 @@
   .is-readOnly & {
     background-color: $form-field-read-only-background-color;
     border-color: $form-field-read-only-border-color;
-  }
+  }  
+
+}
+
+.PhoneNumber .is-searching .Autocomplete-options {
+  border-top: 2px solid $form-field-border-color-focus !important;
 }
 
 span.PhoneNumber-menu-input {
