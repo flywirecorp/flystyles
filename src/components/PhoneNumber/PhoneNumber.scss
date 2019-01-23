@@ -31,7 +31,26 @@
   display: table-cell;
   width: $phone-number-menu-input-width;
   vertical-align: top;
-  position: static;
+
+  &.is-searching {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
+}
+
+.PhoneNumber-menu {
+  display: table-cell;
+  width: $phone-number-menu-input-width;
+  vertical-align: top;
+
+  .is-searching & {
+   
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+
+  }
 }
 
 .PhoneNumber-menu-options {
@@ -80,17 +99,19 @@
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   position: relative;
+  pointer-events: none;
   z-index: 3;
-
+  
   .is-searching & {
     border-bottom-left-radius: 0;
-    &:after{
+
+    &:after {
       content: '';
       display: block;
       position: absolute;
       width: calc(100% - 2px);
-      height: 3px; 
-      left:1px;
+      height: 3px;
+      left: 1px;
       bottom: -2px;
       background-color: $color-white;
     }
@@ -112,7 +133,7 @@
   .is-readOnly & {
     background-color: $form-field-read-only-background-color;
     border-color: $form-field-read-only-border-color;
-  }  
+  }
 
 }
 
