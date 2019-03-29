@@ -1,150 +1,169 @@
 @import './config';
 
 .PhoneNumber-field {
-  display: block;
-  width: 100%;
+    display: block;
+    width: 100%;
 }
 
 .PhoneNumber-field {
-  display: table;
-  width: 100%;
+    display: table;
+    width: 100%;
 }
 
 .PhoneNumber-input {
-  display: table-cell;
-  vertical-align: top;
+    display: table-cell;
+    vertical-align: top;
 }
 
 .PhoneNumber-input-inner,
 .PhoneNumber-input-inner.Input {
-  border-left-width: 0 !important;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+    border-left-width: 0 !important;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .PhoneNumber-input-inner:focus,
 .PhoneNumber-input-inner.Input:focus {
-  border-left-width: 1px !important;
+    border-left-width: 1px !important;
 }
 
 .PhoneNumber-menu {
-  display: table-cell;
-  width: $phone-number-menu-input-width;
-  vertical-align: top;
+    display: table-cell;
+    width: $phone-number-menu-input-width;
+    vertical-align: top;
 
-  &.is-searching {
-    position: absolute;
-    width: 100%;
-    z-index: 10;
-  }
+    &.is-searching {
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+    }
 }
 
 .PhoneNumber-menu {
-  display: table-cell;
-  width: $phone-number-menu-input-width;
-  vertical-align: top;
+    display: table-cell;
+    width: $phone-number-menu-input-width;
+    vertical-align: top;
 
-  .is-searching & {
-   
-    position: absolute;
-    width: 100%;
-    z-index: 2;
-
-  }
+    .is-searching & {
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+    }
 }
 
 .PhoneNumber-menu-options {
-  top: calc(100% - 1px);
-  width: 100%;
+    top: calc(100% - 1px);
+    width: 100%;
 }
 
 .PhoneNumber-option-dial {
-  color: $phone-number-option-dial-color;
+    color: $phone-number-option-dial-color;
 
-  .is-active & {
-    color: $phone-number-option-dial-color-active;
-  }
+    .is-active & {
+        color: $phone-number-option-dial-color-active;
+    }
 }
 
 .PhoneNumber-option-flag,
 .PhoneNumber-option-country {
-  margin-right: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .PhoneNumber-option {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .PhoneNumber-option-flag {
-  min-width: 21px;
+    min-width: 21px;
 }
 
 .PhoneNumber-option-flag,
 .PhoneNumber-option-country {
-  margin-right: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .PhoneNumber-option-country {
-  line-height: 1.2;
-  max-width: calc(100% - 3rem);
-  white-space: normal;
+    line-height: 1.2;
+    max-width: calc(100% - 3rem);
+    white-space: normal;
 }
 
 .PhoneNumber-menu-options {
-  transition: $phone-number-options-transition;
+    transition: $phone-number-options-transition;
 }
 
 .PhoneNumber-menu-input {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  position: relative;
-  pointer-events: none;
-  z-index: 3;
-  
-  .is-searching & {
-    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    position: relative;
+    pointer-events: none;
+    z-index: 3;
+    padding: 0 0 0 $spacer-sm;
+    background-image: none;
+    width: $phone-number-menu-input-width;
+
+    .is-searching & {
+        border-bottom-left-radius: 0;
+        background-image: none;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: calc(100% - 2px);
+            height: 3px;
+            left: 1px;
+            bottom: -2px;
+            background-color: $color-white;
+        }
+    }
 
     &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      width: calc(100% - 2px);
-      height: 3px;
-      left: 1px;
-      bottom: -2px;
-      background-color: $color-white;
+        content: '';
+        display: inline-block;
+        width: $spacer-md;
+        height: $spacer-sm;
+        background-position: $spacer-xs 0;
+        background-repeat: no-repeat;
+        background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"><polyline fill="none" stroke="#637282" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" points="295 22 299 26 303 22" transform="translate(-294 -21)"/></svg>'
+            );
     }
-  }
 
-  .FormGroup--floatingLabel & {
-    padding: 0 9.6px;
-  }
+    .is-searching & {
+        &:after {
+            transform: rotate(180deg);
+            transform-origin: center 3px;
+            opacity: 0.8;
+        }
 
-  .is-disabled & {
-    background-color: $form-field-disabled-background-color;
-    border-color: $form-field-disabled-border-color;
-
-    .Flag {
-      opacity: 0.6;
     }
-  }
 
-  .is-readOnly & {
-    background-color: $form-field-read-only-background-color;
-    border-color: $form-field-read-only-border-color;
-  }
+    &:empty {
+        text-align: right;
+        padding-right: $spacer-md;
 
+    }
+
+    .FormGroup--floatingLabel & {
+        padding: 0 9.6px;
+    }
+
+    .is-disabled & {
+        background-color: $form-field-disabled-background-color;
+        border-color: $form-field-disabled-border-color;
+    }
+
+    .is-readOnly & {
+        background-color: $form-field-read-only-background-color;
+        border-color: $form-field-read-only-border-color;
+    }
 }
 
 .PhoneNumber .is-searching .Autocomplete-options {
-  border-top: 2px solid $form-field-border-color-focus !important;
-}
-
-span.PhoneNumber-menu-input {
-  min-width: 60px;
+    border-top: 2px solid $form-field-border-color-focus !important;
 }
 
 .PhoneNumber .FormGroup--floatingLabel .Label {
-  left: 60px;
+    left: $phone-number-menu-input-width;
 }
