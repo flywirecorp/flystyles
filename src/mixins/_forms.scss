@@ -76,7 +76,7 @@
 
 @mixin form-field-select {
   @include form-field-base;
-  padding-right: $spacer-xl !important;
+  padding-right: $spacer-xl;
   background-image: svg-url(map-get($icons, arrowDown));
   background-repeat: no-repeat;
   background-position: calc(100% - 0.8rem) center;

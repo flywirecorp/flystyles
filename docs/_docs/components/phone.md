@@ -7,7 +7,7 @@ file: components/FormElements/PhoneNumber.scss
 
 Special component for typing a Telephone Number. This component is created by a mix of multiple components (FormGroup, Input, Autocomplete, and Flag).
 
-__Requires:__ `FormGroup`, `Input`, `Autocomplete`, `Flag`.
+__Requires:__ `FormGroup`, `Input`, `Autocomplete`.
 
 #### Phone Number Input closed
 {% example html %}
@@ -17,7 +17,7 @@ __Requires:__ `FormGroup`, `Input`, `Autocomplete`, `Flag`.
     <div class="PhoneNumber-field">
       <div class='Autocomplete PhoneNumber-menu'>
         <span class='Autocomplete-search PhoneNumber-menu-input'>
-          <span class='Flag Flag--es'></span>
+         +1684
         </span>
       </div>
       <div class="PhoneNumber-input">
@@ -47,7 +47,7 @@ __Requires:__ `FormGroup`, `Input`, `Autocomplete`, `Flag`.
     <div class="PhoneNumber-field">
       <div class='Autocomplete PhoneNumber-menu'>
         <span class='Autocomplete-search PhoneNumber-menu-input'>
-          <span class='Flag Flag--es'></span>
+          +36
         </span>
       </div>
       <div class="PhoneNumber-input">
@@ -67,21 +67,18 @@ __Requires:__ `FormGroup`, `Input`, `Autocomplete`, `Flag`.
     <div class="PhoneNumber-field">
       <div class='Autocomplete is-searching PhoneNumber-menu'>
         <span class='Autocomplete-search PhoneNumber-menu-input'>
-          <span class='Flag Flag--es'></span>
+          +86
         </span>
         <ul class='Autocomplete-options PhoneNumber-menu-options'>
           <li class='Autocomplete-option PhoneNumber-option'>
-            <span class='Flag Flag--cn PhoneNumber-option-flag'></span>
             <span class='PhoneNumber-option-country'>China (中国)</span>
             <span class='PhoneNumber-option-dial'>+86</span>
           </li>
           <li class='Autocomplete-option PhoneNumber-option is-active'>
-            <span class='Flag Flag--es PhoneNumber-option-flag'></span>
             <span class='PhoneNumber-option-country'>Spain (España)</span>
             <span class='PhoneNumber-option-dial'>+34</span>
           </li>
           <li class='Autocomplete-option PhoneNumber-option'>
-            <span class='Flag Flag--us PhoneNumber-option-flag'></span>
             <span class='PhoneNumber-option-country'>United States</span>
             <span class='PhoneNumber-option-dial'>+1</span>
           </li>
@@ -103,7 +100,7 @@ __Requires:__ `FormGroup`, `Input`, `Autocomplete`, `Flag`.
     <div class="PhoneNumber-field">
       <div class='Autocomplete PhoneNumber-menu'>
         <span class='Autocomplete-search PhoneNumber-menu-input'>
-          <span class='Flag Flag--es'></span>
+          +86 
         </span>
       </div>
       <div class="PhoneNumber-input">
@@ -122,11 +119,11 @@ __Requires:__ `FormGroup`, `Input`, `Autocomplete`, `Flag`.
     <div class="PhoneNumber-field">
       <div class='Autocomplete PhoneNumber-menu'>
         <span class='Autocomplete-search PhoneNumber-menu-input'>
-          <span class='Flag Flag--es'></span>
+          +86
         </span>
       </div>
       <div class="PhoneNumber-input">
-        <input id="tel6" type="text" class="Input PhoneNumber-input-inner" readonly value="+34 111111111" />
+        <input id="tel6" type="text" class="Input PhoneNumber-input-inner" readonly value="111111111" />
       </div>
     </div>
   </div>

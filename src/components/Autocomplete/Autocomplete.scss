@@ -1,5 +1,5 @@
-@import "./config";
-@import "../../mixins";
+@import './config';
+@import '../../mixins';
 
 .Autocomplete {
   position: relative;
@@ -12,9 +12,9 @@
   vertical-align: middle;
 
   .is-searching & {
-    background-image: svg-url(map-get($icons, arrowUp)) !important;
-    border: $form-field-border-focus !important;
-    box-shadow: $form-field-box-shadow-focus !important;
+    background-image: svg-url(map-get($icons, arrowUp)) ;
+    border: $form-field-border-focus ;
+    box-shadow: $form-field-box-shadow-focus;
   }
 
   .Autocomplete--searchDisabled & {
@@ -60,8 +60,8 @@
   .is-searching & {
     max-height: $autocomplete-visible-options * $autocomplete-option-height;
     visibility: visible;
-    border: 2px solid $form-field-border-color-focus !important;
-    border-top: 1px solid lighten($form-field-border-color, 10%) !important;
+    border: 2px solid $form-field-border-color-focus;
+    border-top: 1px solid lighten($form-field-border-color, 10%);
     opacity: 1;
   }
 }
