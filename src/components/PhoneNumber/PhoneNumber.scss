@@ -124,10 +124,12 @@
         display: inline-block;
         width: $spacer-md;
         height: $spacer-sm;
-        background-position: $spacer-xs 0;
+        margin: 0 $spacer-xs;
+        background-position: 0 0;
         background-repeat: no-repeat;
-        background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"><polyline fill="none" stroke="#637282" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" points="295 22 299 26 303 22" transform="translate(-294 -21)"/></svg>'
-            );
+        background-image: svg-url(
+            '<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"><polyline fill="none" stroke="#637282" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" points="295 22 299 26 303 22" transform="translate(-294 -21)"/></svg>'
+        );
     }
 
     .is-searching & {
@@ -136,13 +138,11 @@
             transform-origin: center 3px;
             opacity: 0.8;
         }
-
     }
 
     &:empty {
         text-align: right;
         padding-right: $spacer-md;
-
     }
 
     .FormGroup--floatingLabel & {
@@ -162,8 +162,14 @@
 
 .PhoneNumber .is-searching .Autocomplete-options {
     border-top: 2px solid $form-field-border-color-focus !important;
+    overflow-y: auto;
+}
+
+.PhoneNumber .is-searching + .PhoneNumber-input .PhoneNumber-input-inner {
+    padding-left: $phone-number-menu-input-width + $spacer-sm;
 }
 
 .PhoneNumber .FormGroup--floatingLabel .Label {
     left: $phone-number-menu-input-width;
+    top: 14px;
 }
