@@ -62,32 +62,40 @@ __Requires:__ `FormGroup`, `Input`, `Autocomplete`.
 
 
 {% example html %}
-<div class="FormGroup PhoneNumber">
-  <label class="Label" for="tel4">Mobile phone</label>
+<div class="PhoneNumber ">
+  <div class="FormGroup FormGroup--floatingLabel">
+  <label class="Label" for="tel4">Floating label</label>
     <div class="PhoneNumber-field">
       <div class='Autocomplete is-searching PhoneNumber-menu'>
-        <span class='Autocomplete-search PhoneNumber-menu-input'>
-          +86
-        </span>
+        <span class='Autocomplete-search PhoneNumber-menu-input'>+1684</span>
         <ul class='Autocomplete-options PhoneNumber-menu-options'>
-          <li class='Autocomplete-option PhoneNumber-option'>
+          <li class='Autocomplete-option PhoneNumber-option is-active'>
             <span class='PhoneNumber-option-country'>China (中国)</span>
             <span class='PhoneNumber-option-dial'>+86</span>
           </li>
-          <li class='Autocomplete-option PhoneNumber-option is-active'>
+          <li class='Autocomplete-option PhoneNumber-option '>
             <span class='PhoneNumber-option-country'>Spain (España)</span>
             <span class='PhoneNumber-option-dial'>+34</span>
           </li>
           <li class='Autocomplete-option PhoneNumber-option'>
-            <span class='PhoneNumber-option-country'>United States</span>
-            <span class='PhoneNumber-option-dial'>+1</span>
+            <span class='PhoneNumber-option-country'>Albania</span>
+            <span class='PhoneNumber-option-dial'>+355</span>
+          </li>
+           <li class='Autocomplete-option PhoneNumber-option'>
+            <span class='PhoneNumber-option-country'>Algeria</span>
+            <span class='PhoneNumber-option-dial'>+213</span>
+          </li>
+           <li class='Autocomplete-option PhoneNumber-option'>
+            <span class='PhoneNumber-option-country'>American Samoa</span>
+            <span class='PhoneNumber-option-dial'>+1684</span>
           </li>
         </ul>
       </div>
       <div class="PhoneNumber-input">
-        <input id="tel4" type="text" class="Input PhoneNumber-input-inner" />
+        <input id="tel4" type="text" class="Input PhoneNumber-input-inner" value="33333333"/>
       </div>
-    </div>  
+    </div>
+    </div>    
 </div>
 
 {% endexample %}
