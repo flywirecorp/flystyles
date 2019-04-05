@@ -68,6 +68,7 @@ __Requires:__ `FormGroup`, `Input`, `Autocomplete`.
     <div class="PhoneNumber-field">
       <div class='Autocomplete is-searching PhoneNumber-menu'>
         <span class='Autocomplete-search PhoneNumber-menu-input'>+1684</span>
+        <div class="PhoneNumber-menu-fakeInput"></div>
         <ul class='Autocomplete-options PhoneNumber-menu-options'>
           <li class='Autocomplete-option PhoneNumber-option is-active'>
             <span class='PhoneNumber-option-country'>China (中国)</span>
