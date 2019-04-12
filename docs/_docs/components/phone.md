@@ -27,7 +27,7 @@ __Requires:__ `FormGroup`, `Input`, `Autocomplete`.
   </div>
 </div>
 
-<div class="PhoneNumber with-1">
+<div class="PhoneNumber width-1">
   <div class="FormGroup">
     <label class="Label" for="tel1">Default label</label>
     <div class="PhoneNumber-field">
@@ -43,7 +43,7 @@ __Requires:__ `FormGroup`, `Input`, `Autocomplete`.
   </div>
 </div>
 
-<div class="PhoneNumber with-2">
+<div class="PhoneNumber width-2">
   <div class="FormGroup FormGroup--floatingLabel">
     <label class="Label" for="tel2">Floating label</label>
     <div class="PhoneNumber-field">
@@ -57,7 +57,7 @@ __Requires:__ `FormGroup`, `Input`, `Autocomplete`.
   </div>
 </div>
 
-<div class="PhoneNumber with-3">
+<div class="PhoneNumber width-3">
   <div class="FormGroup FormGroup--floatingLabel">
     <label class="Label" for="tel3">Floating label</label>
     <div class="PhoneNumber-field">
