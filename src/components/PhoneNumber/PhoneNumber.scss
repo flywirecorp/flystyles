@@ -225,6 +225,10 @@
         width: $width-1;
     }
 
+     .PhoneNumber-menu.is-searching {
+        width: 100%;
+    }
+
     .is-searching + .PhoneNumber-input .PhoneNumber-input-inner {
         padding-left: $width-1 + $spacer-sm + $spacer-xs;
     }
