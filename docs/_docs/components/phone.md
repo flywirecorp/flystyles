@@ -78,7 +78,7 @@ __Requires:__ `FormGroup`, `Input`, `Autocomplete`.
 
 
 {% example html %}
-<div class="PhoneNumber with-3">
+<div class="PhoneNumber width-3">
   <div class="FormGroup FormGroup--floatingLabel">
   <label class="Label" for="tel4">Floating label</label>
     <div class="PhoneNumber-field">
