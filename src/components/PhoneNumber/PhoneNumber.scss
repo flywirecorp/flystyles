@@ -124,7 +124,7 @@
         display: inline-block;
         width: $spacer-md;
         height: $spacer-sm;
-        margin: 0 $spacer-xs;
+        margin: 0 $spacer-sm;
         background-position: 0 0;
         background-repeat: no-repeat;
         background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"><polyline fill="none" stroke="#637282" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" points="295 22 299 26 303 22" transform="translate(-294 -21)"/></svg>'
@@ -134,7 +134,7 @@
     .is-searching & {
         &:after {
             transform: rotate(180deg);
-            transform-origin: center 3px;
+            transform-origin: 5px 3px;
             opacity: 0.8;
         }
     }

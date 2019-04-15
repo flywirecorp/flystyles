@@ -1,11 +1,11 @@
 @import '../../config';
 
+$width-1: $spacer-xxxxl + $spacer-sm !default;
+$width-2: $width-1 + $spacer-sm !default;
+$width-3: $width-2 + $spacer-sm !default;
+$width-4: $width-3 + $spacer-sm !default;
 $phone-number-menu-options-width: 300px !default;
-$phone-number-menu-input-width: 90px !default;
+$phone-number-menu-input-width: $width-4;
 $phone-number-option-dial-color: rgba($body-color, 0.5) !default;
 $phone-number-option-dial-color-active: rgba($color-white, 0.5) !default;
 $phone-number-options-transition: none !default;
-
-$width-3:80px !default;
-$width-2:60px !default;
-$width-1:60px !default;
