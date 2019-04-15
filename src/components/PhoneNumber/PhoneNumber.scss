@@ -145,7 +145,7 @@
     }
 
     .FormGroup--floatingLabel & {
-        padding: 0 9.6px;
+        padding: 0 0 0 8px;
     }
 
     .is-disabled & {
@@ -181,3 +181,57 @@
     height: 100%;
     opacity: 0;
 }
+
+.PhoneNumber.width-3 {
+    .PhoneNumber-menu, .PhoneNumber-menu-input {
+        width: $width-3;
+    }
+
+    .PhoneNumber-menu.is-searching {
+        width: 100%;
+    }
+
+    .is-searching + .PhoneNumber-input .PhoneNumber-input-inner {
+        padding-left: $width-3 + $spacer-sm + $spacer-xs;
+    }
+
+    .FormGroup--floatingLabel .Label {
+        left: $width-3;
+        max-width: calc(100% - #{$width-3});
+    }
+
+    
+}
+
+.PhoneNumber.width-2 {
+    .PhoneNumber-menu , .PhoneNumber-menu-input{
+        width: $width-2;
+    }
+    .PhoneNumber-menu.is-searching {
+        width: 100%;
+    }
+
+    .is-searching + .PhoneNumber-input .PhoneNumber-input-inner {
+        padding-left: $width-2 + $spacer-sm + $spacer-xs;
+    }
+
+    .FormGroup--floatingLabel .Label {
+        left: $width-2;
+        max-width: calc(100% - #{$width-2});
+    }
+}
+.PhoneNumber.width-1 {
+    .PhoneNumber-menu, .PhoneNumber-menu-input {
+        width: $width-1;
+    }
+
+    .is-searching + .PhoneNumber-input .PhoneNumber-input-inner {
+        padding-left: $width-1 + $spacer-sm + $spacer-xs;
+    }
+
+    .FormGroup--floatingLabel .Label {
+        left: $width-1;
+        max-width: calc(100% - #{$width-1});
+    }
+}
+
