@@ -104,7 +104,7 @@ __Requires:__ `FormGroup`, `Input`, `Autocomplete`.
           </li>
            <li class='Autocomplete-option PhoneNumber-option'>
             <span class='PhoneNumber-option-country'>American Samoa</span>
-            <span class='PhoneNumber-option-dial'>+1 684</span>
+            <span class='PhoneNumber-option-dial'>+ 1684</span>
           </li>
         </ul>
       </div>
