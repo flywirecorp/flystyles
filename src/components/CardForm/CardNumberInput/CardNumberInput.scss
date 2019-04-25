@@ -1,0 +1,18 @@
+.CardNumberInput > input {
+  background-position: calc(100% - 1rem) center;
+  background-repeat: no-repeat;
+  padding-right: 3rem;
+  background-image: svg-url(map-get($icons, card));
+}
+
+.CardNumberInput.visa:not(.has-error) > input {
+  background-image: svg-url(map-get($icons, visa));
+}
+
+.CardNumberInput.mc:not(.has-error) > input {
+  background-image: svg-url(map-get($icons, mastercard));
+}
+
+.CardNumberInput.amex:not(.has-error) > input {
+  background-image: svg-url(map-get($icons, amex));
+}
