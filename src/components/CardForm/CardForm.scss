@@ -1,0 +1,60 @@
+@import './config';
+@import './CardNumberInput/CardNumberInput';
+@import './CVVInput/CVVInput';
+
+.CardForm {
+  margin-bottom: $spacer-sm;
+}
+
+.CardForm-Buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin: -$spacer-sm;
+
+  & button {
+    flex-grow: 1;
+    margin: $spacer-sm;
+
+    @include media-up(large) {
+      display: inline;
+      max-width: 160px;
+    }
+  }
+}
+
+.CardForm > * {
+  @include media-up(large) {
+    padding: 0 $spacer-sm;
+  }
+}
+
+.CardForm-Input {
+  &>.Label {
+    width: calc(100% - 1rem);
+  }
+
+  @include media-up(large) {
+    display: inline-block;
+    width: 50%;
+    box-sizing: border-box;
+
+    &>p {
+      position: absolute;
+    }
+
+    &>.Label {
+      width: calc(100% - 2rem);
+      left: .5rem;
+    }
+
+    &--ExpiryDate {
+      width: 30%;
+    }
+
+
+    &--CVV {
+      width: 20%;
+    }
+  }
+}
