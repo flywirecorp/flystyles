@@ -4,17 +4,18 @@
 
 .CardForm {
   margin-bottom: $spacer-sm;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .CardForm-Buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  margin: -$spacer-sm;
 
   & button {
     flex-grow: 1;
-    margin: $spacer-sm;
 
     @include media-up(large) {
       display: inline;
@@ -23,20 +24,16 @@
   }
 }
 
-.CardForm > * {
-  @include media-up(large) {
-    padding: 0 $spacer-sm;
-  }
-}
-
 .CardForm-Input {
+  width: 100%;
+
   &>.Label {
-    width: calc(100% - 1rem);
+    width: 100%;
   }
 
   @include media-up(large) {
     display: inline-block;
-    width: 50%;
+    width: calc(50% - 8px);
     box-sizing: border-box;
 
     &>p {
@@ -44,17 +41,16 @@
     }
 
     &>.Label {
-      width: calc(100% - 2rem);
-      left: .5rem;
+      width: 100%;
     }
 
     &--ExpiryDate {
-      width: 30%;
+      width: calc(30% - 8px);
     }
 
 
     &--CVV {
-      width: 20%;
+      width: calc(20% - 8px);
     }
   }
 }
