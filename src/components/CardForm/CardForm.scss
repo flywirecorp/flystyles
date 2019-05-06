@@ -16,10 +16,12 @@
 
   & button {
     flex-grow: 1;
+    margin-bottom: $spacer-md;
 
     @include media-up(large) {
       display: inline;
       max-width: 160px;
+      margin-left: $spacer-md;
     }
   }
 }
