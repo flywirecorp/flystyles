@@ -17,6 +17,10 @@
     background-size: 10px 6px;
     background-position: calc(100% - 12px) $spacer;
     text-align: right;
+
+    &.Calendar-header-navItem {
+      padding-right: 24px !important;
+    }
   }
 
   .Calendar-header {
