@@ -16,3 +16,7 @@
 .CardNumberInput.amex:not(.has-error) > input {
   background-image: svg-url(map-get($icons, amex));
 }
+
+.CardNumberInput.unionpay:not(.has-error) > input {
+  background-image: svg-url(map-get($icons, unionpay));
+}
