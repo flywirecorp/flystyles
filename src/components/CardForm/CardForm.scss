@@ -7,6 +7,10 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  &--Compressed {
+    margin-bottom: 0;
+  }
 }
 
 .CardForm-Buttons {
@@ -27,6 +31,7 @@
 }
 
 .CardForm-Input {
+  $inputComponent: &;
   width: 100%;
 
   &>.Label {
@@ -50,9 +55,44 @@
       width: calc(30% - 16px);
     }
 
-
     &--CVV {
       width: calc(20% - 8px);
     }
+
+    &--Compressed {
+      &>.FormGroup-feedback {
+        position: relative;
+      }
+    }
   }
+
+  &--Compressed {
+    margin-bottom: 16px;
+
+    &>.FormGroup-feedback {
+      margin-top: 4px;
+    }
+    
+    &#{$inputComponent}--Name {
+      width: calc(50% - 8px);
+    }
+    &#{$inputComponent}--Surname {
+      width: calc(50% - 8px);
+    }
+    &#{$inputComponent}--CardNumber {
+      width: 100%
+    }
+    &#{$inputComponent}--ExpiryDate {
+      min-width: 141px;
+      max-width: 170px;
+      width: 39%;
+    }
+    &#{$inputComponent}--CVV {
+      max-width: 120px;
+      width: 29%;
+      margin-right: auto;
+      margin-left: 16px;
+    }
+  }
+  
 }
