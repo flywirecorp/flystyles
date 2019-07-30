@@ -14,7 +14,8 @@
     "docs": "node docs.js",
     "start": "node docs.js",
     "version": "npm run build && git add -A dist",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "yalc:publish": "npm run build && yalc publish --push"
   },
   "repository": {
     "type": "git",
