@@ -2,93 +2,95 @@
 @import '../Label/mixins';
 
 .Checkbox {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    position: relative;
-    margin: $checkbox-margin;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  position: relative;
+  margin: $checkbox-margin;
 }
 
 .Checkbox-input {
-    appearance: none;
-    width: $checkbox-size;
-    height: $checkbox-size;
-    display: inline-block;
-    border: $checkbox-border-width solid $checkbox-border-color;
-    background-color: $checkbox-background-color;
-    border-radius: $checkbox-border-radius;
-    margin: $checkbox-input-margin;
-    background-image: svg-url($checkbox-checked-svg);
-    background-repeat: no-repeat;
-    background-position: center;  
+  appearance: none;
+  width: $checkbox-size;
+  height: $checkbox-size;
+  display: inline-block;
+  border: $checkbox-border-width solid $checkbox-border-color;
+  background-color: $checkbox-background-color;
+  border-radius: $checkbox-border-radius;
+  margin: $checkbox-input-margin;
+  background-image: svg-url($checkbox-checked-svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .Checkbox-label {
-    @include label;
-    margin: 0;
-    position: relative;
-    display: inline-block;
-    max-width: calc(100% - 2rem);
-    padding-left: $spacer-xs;
-    cursor: default;
-    & + .FormGroup-feedback {
-        width: 100%;
-    }
+  @include label;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  max-width: calc(100% - 2rem);
+  padding-left: $spacer-xs;
+  cursor: default;
+  & + .FormGroup-feedback {
+    width: 100%;
+  }
 }
 
 // checked
 .Checkbox-input:active,
 .Checkbox-input:checked,
 .Checkbox-input:focus:checked {
-    outline: none;
-    background-color: $checkbox-checked-background-color;
-    border-color: $checkbox-checked-border-color;
+  outline: none;
+  background-color: $checkbox-checked-background-color;
+  border-color: $checkbox-checked-border-color;
 }
 
 // focused
-.Checkbox-label:focus .Checkbox-input, .Checkbox-input:focus {
-    border: 2px solid $color-brand-primary;
-    background-color: #fff;
-    outline: none;
+.Checkbox-label:focus .Checkbox-input,
+.Checkbox-input:focus {
+  border: 2px solid $color-brand-primary;
+  background-color: #fff;
+  outline: none;
 }
 
 // disabled
 
 .Checkbox-input:disabled {
-    background-color: $checkbox-disabled-background-color;
-    border-color: $checkbox-disabled-border-color;
-    background-image: none;
-    & + .Checkbox-label {
-        pointer-events: none;
-    }
+  background-color: $checkbox-disabled-background-color;
+  border-color: $checkbox-disabled-border-color;
+  background-image: none;
+  & + .Checkbox-label {
+    pointer-events: none;
+  }
 }
 
 // checked disabled
 
-.Checkbox-input:checked:disabled {    
-    background-image: svg-url($checkbox-checked-disabled-svg);
+.Checkbox-input:checked:disabled {
+  background-image: svg-url($checkbox-checked-disabled-svg);
 }
 
 // errors
 .has-error .Checkbox-input,
 .has-error .Checkbox-input:focus {
-    border-color: $color-danger;
-    background-color: #ffffff;
-    border: 2px solid #ec2941;
-    box-shadow: 0 0 4px 0 rgba(237, 41, 65, 0.5);
-    border-radius: 2px;
-    outline: none;
+  border-color: $color-danger;
+  background-color: #ffffff;
+  border: 2px solid #e3162b;
+  box-shadow: 0 0 4px 0 rgba(237, 41, 65, 0.5);
+  border-radius: 2px;
+  outline: none;
 }
 
-.has-error .Checkbox-input:active, .has-error .Checkbox-input:checked {
-    box-shadow: none;
-    background-color: $checkbox-checked-background-color;
-    border-color: $checkbox-checked-border-color;
+.has-error .Checkbox-input:active,
+.has-error .Checkbox-input:checked {
+  box-shadow: none;
+  background-color: $checkbox-checked-background-color;
+  border-color: $checkbox-checked-border-color;
 }
 
 // MultipleCheckbox
 .MultipleCheckbox {
-    .Checkbox:last-child {
-        margin-bottom: 0;
-    }
+  .Checkbox:last-child {
+    margin-bottom: 0;
+  }
 }
