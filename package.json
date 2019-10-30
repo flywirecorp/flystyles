@@ -28,10 +28,10 @@
   "homepage": "https://github.com/peertransfer/flystyles#readme",
   "devDependencies": {
     "autoprefixer": "^6.7.4",
-    "browser-sync": "^2.23.6",
-    "clean-css-cli": "^4.1.10",
-    "node-sass": "^4.9.0",
-    "postcss-cli": "^3.0.0-beta"
+    "browser-sync": "^2.26.7",
+    "clean-css-cli": "^4.3.0",
+    "node-sass": "^4.13.0",
+    "postcss-cli": "^3.2.0"
   },
   "postcss": {
     "plugins": {
