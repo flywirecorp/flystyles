@@ -1,10 +1,16 @@
 @import '../../config';
 
-$icon-sizes: (xs: 14px, sm: 18px, md: 22px, lg: 36px, xl: 48px, xxl: 64px)
-  !default;
+$icon-sizes: (
+  xs: 14px,
+  sm: 18px,
+  md: 22px,
+  lg: 36px,
+  xl: 48px,
+  xxl: 64px
+) !default;
 
 $icon-calendar-color: $body-color !default;
-$icon-arrow-down-color: #657a8d !default;
+$icon-arrow-down-color: #5a687b !default;
 $icon-arrow-up-color: $color-gray-light !default;
 $icon-arrow-left-color: $color-gray !default;
 $icon-arrow-right-color: $color-gray !default;
@@ -12,7 +18,7 @@ $icon-danger-color: $color-danger !default;
 $icon-success-color: $color-success !default;
 $icon-info-color: $color-info !default;
 $icon-warning-color: $color-warning !default;
-$icon-close-color: #657a8d !default;
+$icon-close-color: #5a687b !default;
 $icon-checkmark-color: $color-success;
 
 $icons: (
