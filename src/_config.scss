@@ -10,7 +10,7 @@
 // Brand colors
 
 $color-brand-primary-light: #0090d2 !default;
-$color-brand-primary: #147BD1 !default;
+$color-brand-primary: #1274c4 !default;
 $color-brand-primary-dark: #0f476b !default;
 
 // UI colors
@@ -33,20 +33,19 @@ $color-gray-darker: #333 !default;
 $border-grey-color: #dae0e4 !default;
 
 $colors: (
-    'primary': $color-brand-primary,
-    'white': $color-white,
-    'black': $color-black,
-    'info': $color-info,
-    'success': $color-success,
-    'warning': $color-warning,
-    'danger': $color-danger,
-    'grayLighter': $color-gray-lighter,
-    'grayLight': $color-gray-light,
-    'gray': $color-gray,
-    'grayDark': $color-gray-dark,
-    'grayDarker': $color-gray-darker
-  )
-  !default;
+  'primary': $color-brand-primary,
+  'white': $color-white,
+  'black': $color-black,
+  'info': $color-info,
+  'success': $color-success,
+  'warning': $color-warning,
+  'danger': $color-danger,
+  'grayLighter': $color-gray-lighter,
+  'grayLight': $color-gray-light,
+  'gray': $color-gray,
+  'grayDark': $color-gray-dark,
+  'grayDarker': $color-gray-darker
+) !default;
 
 // Spacing
 //
@@ -84,13 +83,12 @@ $spacers: (
 // adapting to different screen sizes, for use in media queries.
 
 $grid-breakpoints: (
-    xSmall: 0,
-    small: 576px,
-    medium: 768px,
-    large: 992px,
-    xLarge: 1200px
-  )
-  !default;
+  xSmall: 0,
+  small: 576px,
+  medium: 768px,
+  large: 992px,
+  xLarge: 1200px
+) !default;
 
 // Grid columns
 //
@@ -103,7 +101,7 @@ $grid-columns: 12 !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-rubik: 'Rubik', 'Open Sans','Lucida Grande', Verdana, Arial,
+$font-family-rubik: 'Rubik', 'Open Sans', 'Lucida Grande', Verdana, Arial,
   sans-serif !default;
 $font-family-base: $font-family-rubik !default;
 
@@ -192,8 +190,7 @@ $form-field-background: #fdfdfd !default;
 $form-field-color: $body-color !default;
 $form-field-border-width: 1px !default;
 $form-field-border-color: #dae0e4 !default;
-$form-field-border: $form-field-border-width solid $form-field-border-color
-  !default;
+$form-field-border: $form-field-border-width solid $form-field-border-color !default;
 
 $form-field-border-color-focus: $color-brand-primary !default;
 $form-field-border-width-focus: 1px !default;
@@ -205,7 +202,7 @@ $form-field-border-width-hover: 1px !default;
 $form-field-border-hover: $form-field-border-width-hover solid
   $form-field-border-color-hover !default;
 
-$form-field-placeholder-color: rgba(#657a8d, 0.6) !default;
+$form-field-placeholder-color: rgba(#5a687b, 0.6) !default;
 
 $form-field-height-base: 48px !default;
 

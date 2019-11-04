@@ -9,7 +9,7 @@
     margin: auto;
 
     & > span {
-      color: #657a8d;
+      color: #5a687b;
       font-weight: $font-weight-semi-bold;
       line-height: 20px;
       padding: 0 8px;
@@ -71,7 +71,7 @@
 .Star.selected ~ .Star:before {
   color: $color-rating;
   position: absolute;
-  content: "\2605";
+  content: '\2605';
 }
 
 .Rating-huge {
