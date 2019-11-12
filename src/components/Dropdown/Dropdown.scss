@@ -114,6 +114,9 @@
 
   &.is-selected {
     font-weight: $font-weight-semi-bold;
+  }
+
+  &.is-active {
     background: #fafafa;
   }
 }
