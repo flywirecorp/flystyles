@@ -7,7 +7,8 @@ file: components/Dropdown
 
 {% example html %}
 
-<div class="Dropdown is-open"><span class="Dropdown-selectedOption">English</span>
+<div class="Dropdown is-open">
+  <button class="Dropdown-selectedOption">English</button>
   <ul class="Dropdown-options">
       <li class="Dropdown-option is-selected" data-label="English">English</li>
       <li class="Dropdown-option" data-label="Español">Español</li>
