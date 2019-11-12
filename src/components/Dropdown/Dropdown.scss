@@ -6,9 +6,9 @@
 }
 
 .Dropdown-selectedOption {
-  cursor: pointer;
+  border: 0;
   padding-right: 30px;
-  display: block;
+  display: inline-block;
   background: transparent svg-url(map-get($icons, arrowDown)) no-repeat;
   background-position: calc(100% - 0.8rem) center;
   background-size: 0.8rem;
@@ -114,5 +114,9 @@
 
   &.is-selected {
     font-weight: $font-weight-semi-bold;
+  }
+
+  &.is-active {
+    background: #fafafa;
   }
 }
