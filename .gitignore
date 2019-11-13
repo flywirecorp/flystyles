@@ -3,7 +3,6 @@ _site
 
 # Ignore ruby files
 .bundle
-.tool-versions
 vendor/cache
 vendor/bundle
 
