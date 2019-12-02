@@ -13,7 +13,7 @@ file: components/Datepicker/Datepicker.scss
     <div class="InputGroup">
       <input type="mail" class="Datepicker-input Input InputGroup-input" placeholder="dd/mm/aaaa" id="birthday" />
       <span class="InputGroup-context">
-        <span class="Icon Icon--calendar"></span>
+        <button class="Icon Icon--calendar"></button>
       </span>
     </div>
     <div class="Calendar Datepicker-calendar">
@@ -58,49 +58,49 @@ file: components/Datepicker/Datepicker.scss
         </thead>
         <tbody>
           <tr>
-            <td class="Calendar-day is-disabled">30</td>
-            <td class="Calendar-day is-disabled">31</td>
-            <td class="Calendar-day">1</td>
-            <td class="Calendar-day">2</td>
-            <td class="Calendar-day">3</td>
-            <td class="Calendar-day">4</td>
-            <td class="Calendar-day">5</td>
+            <td role="button" tabIndex="0" class="Calendar-day is-disabled">30</td>
+            <td role="button" tabIndex="0" class="Calendar-day is-disabled">31</td>
+            <td role="button" tabIndex="0" class="Calendar-day">1</td>
+            <td role="button" tabIndex="0" class="Calendar-day">2</td>
+            <td role="button" tabIndex="0" class="Calendar-day">3</td>
+            <td role="button" tabIndex="0" class="Calendar-day">4</td>
+            <td role="button" tabIndex="0" class="Calendar-day">5</td>
           </tr>
           <tr>
-            <td class="Calendar-day">6</td>
-            <td class="Calendar-day">7</td>
-            <td class="Calendar-day">8</td>
-            <td class="Calendar-day">9</td>
-            <td class="Calendar-day">10</td>
-            <td class="Calendar-day">11</td>
-            <td class="Calendar-day">12</td>
+            <td role="button" tabIndex="0" class="Calendar-day">6</td>
+            <td role="button" tabIndex="0" class="Calendar-day">7</td>
+            <td role="button" tabIndex="0" class="Calendar-day">8</td>
+            <td role="button" tabIndex="0" class="Calendar-day">9</td>
+            <td role="button" tabIndex="0" class="Calendar-day">10</td>
+            <td role="button" tabIndex="0" class="Calendar-day">11</td>
+            <td role="button" tabIndex="0" class="Calendar-day">12</td>
           </tr>
           <tr>
-            <td class="Calendar-day">13</td>
-            <td class="Calendar-day">14</td>
-            <td class="Calendar-day">15</td>
-            <td class="Calendar-day">16</td>
-            <td class="Calendar-day is-selected">17</td>
-            <td class="Calendar-day">18</td>
-            <td class="Calendar-day">19</td>
+            <td role="button" tabIndex="0" class="Calendar-day">13</td>
+            <td role="button" tabIndex="0" class="Calendar-day">14</td>
+            <td role="button" tabIndex="0" class="Calendar-day">15</td>
+            <td role="button" tabIndex="0" class="Calendar-day">16</td>
+            <td role="button" tabIndex="0" class="Calendar-day is-selected">17</td>
+            <td role="button" tabIndex="0" class="Calendar-day">18</td>
+            <td role="button" tabIndex="0" class="Calendar-day">19</td>
           </tr>
           <tr>
-            <td class="Calendar-day">20</td>
-            <td class="Calendar-day">21</td>
-            <td class="Calendar-day">22</td>
-            <td class="Calendar-day">23</td>
-            <td class="Calendar-day">24</td>
-            <td class="Calendar-day">25</td>
-            <td class="Calendar-day">26</td>
+            <td role="button" tabIndex="0" class="Calendar-day">20</td>
+            <td role="button" tabIndex="0" class="Calendar-day">21</td>
+            <td role="button" tabIndex="0" class="Calendar-day">22</td>
+            <td role="button" tabIndex="0" class="Calendar-day">23</td>
+            <td role="button" tabIndex="0" class="Calendar-day">24</td>
+            <td role="button" tabIndex="0" class="Calendar-day">25</td>
+            <td role="button" tabIndex="0" class="Calendar-day">26</td>
           </tr>
           <tr>
-            <td class="Calendar-day">27</td>
-            <td class="Calendar-day">28</td>
-            <td class="Calendar-day">29</td>
-            <td class="Calendar-day">30</td>
-            <td class="Calendar-day is-current">31</td>
-            <td class="Calendar-day is-disabled">1</td>
-            <td class="Calendar-day is-disabled">2</td>
+            <td role="button" tabIndex="0" class="Calendar-day">27</td>
+            <td role="button" tabIndex="0" class="Calendar-day">28</td>
+            <td role="button" tabIndex="0" class="Calendar-day">29</td>
+            <td role="button" tabIndex="0" class="Calendar-day">30</td>
+            <td role="button" tabIndex="0" class="Calendar-day is-current">31</td>
+            <td role="button" tabIndex="0" class="Calendar-day is-disabled">1</td>
+            <td role="button" tabIndex="0" class="Calendar-day is-disabled">2</td>
           </tr>
         </tbody>
       </table>
