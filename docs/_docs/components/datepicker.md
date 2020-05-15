@@ -6,7 +6,6 @@ file: components/Datepicker/Datepicker.scss
 ---
 
 {% example html %}
-
 <div class="FormGroup FormGroup--floatingLabel">
   <label class="Label" for="birthday">Birthday</label>
   <div class="Datepicker is-open">
@@ -107,5 +106,4 @@ file: components/Datepicker/Datepicker.scss
     </div>
   </div>
 </div>
-
 {% endexample %}

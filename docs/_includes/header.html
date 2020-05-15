@@ -1,7 +1,7 @@
 <header class="docs-header">
   <div class="docs-header-content">
     <a href="/" class="docs-logo">
-      <img src="/images/logo.svg" alt="flywire">
+      <img src="{{ '/images/logo.svg' | prepend: site.baseurl | prepend: site.url }}" alt="flywire">
     </a>
 
     <ul class="docs-menu upToMedium-hidden">
@@ -9,9 +9,9 @@
       {% for node in sorted_pages %}
         {% if node.path contains '.md' or node.path contains '.html' %}
           {% if page.url == node.url %}
-            <li class="active"><a href="{{node.url}}" class="active">{{node.title}}</a></li>
+            <li class="active"><a href="{{ node.url | prepend: site.baseurl | prepend: site.url }}" class="active">{{node.title}}</a></li>
           {% else %}
-            <li><a href="{{node.url}}">{{node.title}}</a></li>
+            <li><a href="{{ node.url | prepend: site.baseurl | prepend: site.url }}">{{node.title}}</a></li>
           {% endif %}
         {% endif %}
       {% endfor %}
@@ -23,9 +23,9 @@
         {% if node.path contains '.md' or node.path contains '.html' %}
           {% if page.url == node.url %}
             <li class="active"><a href="{{node.url}}" class="active">{{node.title}}</a></li>
-            <option value="{{node.url}}" selected>{{node.title}}</option>
+            <option value="{{ node.url | prepend: site.baseurl | prepend: site.url }}" selected>{{node.title}}</option>
           {% else %}
-            <option value="{{node.url}}">{{node.title}}</option>
+            <option value="{{ node.url | prepend: site.baseurl | prepend: site.url }}">{{node.title}}</option>
           {% endif %}
         {% endif %}
       {% endfor %}

@@ -6,7 +6,6 @@ file: components/Dropdown
 ---
 
 {% example html %}
-
 <div class="Dropdown is-open">
   <button class="Dropdown-selectedOption">English</button>
   <ul class="Dropdown-options">
@@ -19,5 +18,4 @@ file: components/Dropdown
       <li class="Dropdown-option" data-label="汉语">汉语</li>
   </ul>
 </div>
-
 {% endexample %}
