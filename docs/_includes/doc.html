@@ -7,7 +7,7 @@
 
       {% if doc.file != nil %}
       <p class="docs-type-subsection-file">
-        <img src="/images/file.svg" alt="file icon"/>
+        <img src="{{ '/images/file.svg' | prepend: site.baseurl | prepend: site.url }}" alt="file icon">
         {{ doc.file }}
       </p>
       {% endif %}
