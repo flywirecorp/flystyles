@@ -107,6 +107,6 @@ $datepickerAfterPosition: -8px;
   }
 }
 
-.has-error .Datepicker .InputGroup-context {
-  opacity: 0;
+.has-error > .Datepicker > .InputGroup > input {
+  background-image: none !important;
 }
