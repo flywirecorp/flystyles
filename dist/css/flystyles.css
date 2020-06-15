@@ -2303,7 +2303,7 @@ p,
   transition: all 200ms ease-out;
   overflow: hidden;
   text-decoration: none;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.17), inset 0px 0px 0px 2px transparent; }
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08), inset 0px 0px 0px 2px transparent; }
   .Button:focus {
     outline: 0; }
   .Button--medium {
@@ -2316,7 +2316,7 @@ p,
   background: #fff;
   color: #1274c4;
   border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.17); }
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
   .Button:hover,
   .Button--default:hover {
     color: #1274c4;
@@ -2541,7 +2541,7 @@ p,
 .Button--withIcon {
   position: relative;
   padding: 16px 24px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.17), inset 0px 0px 0px 2px rgba(18, 116, 196, 0); }
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08), inset 0px 0px 0px 2px rgba(18, 116, 196, 0); }
   .Button--withIcon:focus {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.17), inset 0px 0px 0px 2px #1274c4; }
 
