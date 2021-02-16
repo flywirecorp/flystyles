@@ -1,0 +1,52 @@
+.InputGroup {
+  display: table;
+  width: 100%;
+  border-collapse: separate; }
+
+.InputGroup-input {
+  display: table-cell;
+  margin: 0;
+  white-space: nowrap;
+  vertical-align: middle; }
+  .InputGroup .InputGroup-input:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
+  .InputGroup .InputGroup-input:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; }
+  .InputGroup .InputGroup-input:not(:first-child):not(:last-child) {
+    border-radius: 0; }
+  .InputGroup-input:hover .InputGroup-input,
+  .InputGroup-input:hover .InputGroup-context {
+    border: 1px solid #bdc7ce; }
+
+.InputGroup-context {
+  display: table-cell;
+  width: 1%;
+  height: 100%;
+  padding: 0 16px;
+  color: #1b2733;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background: #fdfdfd;
+  border: 1px solid #dae0e4;
+  font-size: 14px; }
+  .InputGroup .InputGroup-context:last-child {
+    border-left: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px; }
+  .InputGroup .InputGroup-context:first-child {
+    border-right: 0;
+    padding: 0;
+    width: 64px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px; }
+  .is-disabled .InputGroup-context {
+    color: rgba(27, 39, 51, 0.5);
+    background-color: #f8f9f9;
+    border-color: #eaeef1; }
+  .is-readOnly .InputGroup-context {
+    color: inherit;
+    background-color: #f4f5f6;
+    border-color: #dae0e4; }

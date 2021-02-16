@@ -1,0 +1,68 @@
+.FormGroup {
+  position: relative;
+  display: block;
+  margin: 0 0 32px 0; }
+
+.FormGroup--inline {
+  display: inline-block; }
+
+.FormGroup-hint {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #5a687b;
+  max-height: 0;
+  opacity: 0;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  will-change: transform, opacity, max-height, margin;
+  -webkit-transition: 200ms all;
+  transition: 200ms all; }
+  .FormGroup.is-focused .FormGroup-hint {
+    max-height: 100px;
+    margin: 8px 0 0 0;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+
+.FormGroup-feedback {
+  display: none;
+  margin: 8px 0 0 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: #5a687b;
+  font-size: 12px;
+  line-height: 1.4;
+  -webkit-animation-name: slideInUp;
+          animation-name: slideInUp;
+  -webkit-animation-duration: 200ms;
+          animation-duration: 200ms;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  .has-error .FormGroup-feedback, .FormGroup-feedback--error {
+    display: block;
+    color: #d63442; }
+  .has-success .FormGroup-feedback, .FormGroup-feedback--success {
+    display: block;
+    color: #48b985; }
+
+@-webkit-keyframes slideInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }

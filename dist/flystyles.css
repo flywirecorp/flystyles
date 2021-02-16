@@ -5892,7 +5892,7 @@ p,
     margin: 0 8px;
     background-position: 0 0;
     background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpolyline fill='none' stroke='%23637282' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' points='295 22 299 26 303 22' transform='translate(-294 -21)'/%3E%3C/svg%3E"); }
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='185 19 10 7'%3E%3Cpath fill='%235a687b' fill-rule='evenodd' d='M194.82 20.819l-.713-.68c-.198-.192-.518-.192-.714-.002L190 23.416l-3.423-3.303c-.2-.19-.518-.19-.716 0l-.713.68c-.196.186-.196.49 0 .678l4.494 4.33c.2.186.52.186.715 0l4.466-4.302c.2-.188.2-.492 0-.68z'/%3E%3C/svg%3E"); }
   .is-searching .PhoneNumber-menu-input:after {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);

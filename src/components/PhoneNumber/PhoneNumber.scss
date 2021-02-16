@@ -1,4 +1,5 @@
 @import './config';
+@import '../../mixins';
 
 .PhoneNumber-field {
     display: block;
@@ -126,8 +127,7 @@
         margin: 0 $spacer-sm;
         background-position: 0 0;
         background-repeat: no-repeat;
-        background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"><polyline fill="none" stroke="#637282" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" points="295 22 299 26 303 22" transform="translate(-294 -21)"/></svg>'
-            );
+        background-image: svg-url(map-get($icons, arrowDown)) ;
     }
 
     .is-searching & {

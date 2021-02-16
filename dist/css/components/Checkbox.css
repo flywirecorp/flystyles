@@ -1,0 +1,87 @@
+.Checkbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  margin: 0 0 16px 0; }
+
+.Checkbox-input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border: 1px solid #dae0e4;
+  background-color: #fdfdfd;
+  border-radius: 2px;
+  margin: 0 8px 0 0;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='12' height='9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5.013L3.985 8 11 1' stroke='%23FFF' stroke-width='2' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.Checkbox-label {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #1b2733;
+  text-transform: none;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  max-width: calc(100% - 2rem);
+  padding-left: 4px;
+  cursor: default; }
+  .Checkbox-label + .FormGroup-feedback {
+    width: 100%; }
+
+.Checkbox-input:active,
+.Checkbox-input:checked,
+.Checkbox-input:focus:checked {
+  outline: none;
+  background-color: #1274c4;
+  border-color: #1274c4; }
+
+.Checkbox-label:focus .Checkbox-input,
+.Checkbox-input:focus {
+  border: 2px solid #1274c4;
+  background-color: #fff;
+  outline: none; }
+
+.Checkbox-input:disabled {
+  background-color: #eee;
+  border-color: #eee;
+  background-image: none; }
+  .Checkbox-input:disabled + .Checkbox-label {
+    pointer-events: none; }
+
+.Checkbox-input:checked:disabled {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='12' height='9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5.013L3.985 8 11 1' stroke='%23000' opacity='0.2' stroke-width='2' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+
+.has-error .Checkbox-input,
+.has-error .Checkbox-input:focus {
+  border-color: #d63442;
+  background-color: #ffffff;
+  border: 2px solid #e3162b;
+  box-shadow: 0 0 4px 0 rgba(237, 41, 65, 0.5);
+  border-radius: 2px;
+  outline: none; }
+
+.has-error .Checkbox-input:active,
+.has-error .Checkbox-input:checked {
+  box-shadow: none;
+  background-color: #1274c4;
+  border-color: #1274c4; }
+
+.MultipleCheckbox .Checkbox:last-child {
+  margin-bottom: 0; }
