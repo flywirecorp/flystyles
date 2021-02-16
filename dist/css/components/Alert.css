@@ -1,0 +1,23 @@
+.Alert {
+  padding: 16px;
+  margin-bottom: 16px;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: #1b2733;
+  font-size: 14px; }
+
+.Alert--danger {
+  background-color: #fae6e8;
+  border-left: 4px solid #d63442; }
+
+.Alert--warning {
+  background-color: #fff4c4;
+  border-left: 4px solid #edc200; }
+
+.Alert--info {
+  background-color: #d6ecff;
+  border-left: 4px solid #008bff; }
+
+.Alert--success {
+  background-color: #e3f4ec;
+  border-left: 4px solid #48b985; }

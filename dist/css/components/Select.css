@@ -1,0 +1,99 @@
+.Select {
+  display: block;
+  width: 100%;
+  font-family: "Rubik", "Open Sans", "Lucida Grande", Verdana, Arial, sans-serif;
+  font-size: 14px;
+  color: #1b2733;
+  background-color: #fdfdfd;
+  border: 1px solid #dae0e4;
+  border-radius: 2px;
+  outline: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-transition: 200ms border, background, box-shadow, color ease-in-out;
+  transition: 200ms border, background, box-shadow, color ease-in-out;
+  will-change: border, background, color;
+  padding-right: 32px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='185 19 10 7'%3E%3Cpath fill='%235a687b' fill-rule='evenodd' d='M194.82 20.819l-.713-.68c-.198-.192-.518-.192-.714-.002L190 23.416l-3.423-3.303c-.2-.19-.518-.19-.716 0l-.713.68c-.196.186-.196.49 0 .678l4.494 4.33c.2.186.52.186.715 0l4.466-4.302c.2-.188.2-.492 0-.68z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 0.8rem) center;
+  background-size: 0.8rem;
+  appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  height: 48px;
+  padding: 0 9.6px;
+  line-height: normal;
+  font-size: 14px; }
+  .Select:hover {
+    border: 1px solid #bdc7ce;
+    box-shadow: inset 0 0 0 1px transparent; }
+  .Select:focus {
+    border: 1px solid #1274c4;
+    box-shadow: inset 0 0 0 1px #1274c4; }
+  .Select::-webkit-input-placeholder {
+    color: rgba(90, 104, 123, 0.6);
+    opacity: 1; }
+  .Select:-ms-input-placeholder {
+    color: rgba(90, 104, 123, 0.6);
+    opacity: 1; }
+  .Select::placeholder {
+    color: rgba(90, 104, 123, 0.6);
+    opacity: 1; }
+  .Select:disabled {
+    color: rgba(27, 39, 51, 0.5);
+    border-color: #eaeef1;
+    background-color: #f8f9f9;
+    cursor: not-allowed; }
+  .Select[readonly] {
+    color: inherit;
+    border-color: #dae0e4;
+    background-color: #f4f5f6;
+    cursor: not-allowed; }
+  .FormGroup--floatingLabel .Select {
+    padding-top: 15px;
+    font-size: 0.9375rem; }
+  .FormGroup--floatingLabel .Select::-webkit-input-placeholder {
+    color: transparent; }
+  .FormGroup--floatingLabel .Select:-ms-input-placeholder {
+    color: transparent; }
+  .FormGroup--floatingLabel .Select::placeholder {
+    color: transparent; }
+  .Select::-ms-clear {
+    display: none; }
+  .Select:invalid {
+    box-shadow: none; }
+
+select.Select::-ms-expand {
+  display: none; }
+
+@media all and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
+  select.Select {
+    padding-right: 0 !important;
+    text-indent: 0;
+    background-image: none !important; } }
+
+select.Select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000; }
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000; }
+
+option:not(:checked) {
+  color: black;
+  /* prevent <option>s from becoming transparent as well */ }
+
+.Select--multiple {
+  height: auto;
+  background-image: none; }
+
+.has-success .Select, .Select--success {
+  border: 1px solid #48b985;
+  box-shadow: inset 0 0 0 1px #48b985, 0 0 4px 0 rgba(72, 185, 133, 0.5); }
+
+.has-error .Select, .Select--error {
+  border: 1px solid #d63442;
+  box-shadow: inset 0 0 0 1px #d63442, 0 0 4px 0 rgba(214, 52, 66, 0.5); }

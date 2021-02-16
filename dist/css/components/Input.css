@@ -1,0 +1,74 @@
+.Input {
+  display: block;
+  width: 100%;
+  font-family: "Rubik", "Open Sans", "Lucida Grande", Verdana, Arial, sans-serif;
+  font-size: 14px;
+  color: #1b2733;
+  background-color: #fdfdfd;
+  border: 1px solid #dae0e4;
+  border-radius: 2px;
+  outline: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-transition: 200ms border, background, box-shadow, color ease-in-out;
+  transition: 200ms border, background, box-shadow, color ease-in-out;
+  will-change: border, background, color;
+  height: 48px;
+  padding: 0 9.6px;
+  line-height: normal;
+  font-size: 14px; }
+  .Input:hover {
+    border: 1px solid #bdc7ce;
+    box-shadow: inset 0 0 0 1px transparent; }
+  .Input:focus {
+    border: 1px solid #1274c4;
+    box-shadow: inset 0 0 0 1px #1274c4; }
+  .Input::-webkit-input-placeholder {
+    color: rgba(90, 104, 123, 0.6);
+    opacity: 1; }
+  .Input:-ms-input-placeholder {
+    color: rgba(90, 104, 123, 0.6);
+    opacity: 1; }
+  .Input::placeholder {
+    color: rgba(90, 104, 123, 0.6);
+    opacity: 1; }
+  .Input:disabled {
+    color: rgba(27, 39, 51, 0.5);
+    border-color: #eaeef1;
+    background-color: #f8f9f9;
+    cursor: not-allowed; }
+  .Input[readonly] {
+    color: inherit;
+    border-color: #dae0e4;
+    background-color: #f4f5f6;
+    cursor: not-allowed; }
+  .FormGroup--floatingLabel .Input {
+    padding-top: 15px;
+    font-size: 0.9375rem; }
+  .FormGroup--floatingLabel .Input::-webkit-input-placeholder {
+    color: transparent; }
+  .FormGroup--floatingLabel .Input:-ms-input-placeholder {
+    color: transparent; }
+  .FormGroup--floatingLabel .Input::placeholder {
+    color: transparent; }
+  .Input::-ms-clear {
+    display: none; }
+  .Input:invalid {
+    box-shadow: none; }
+
+.has-error .Input, .Input--error {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='3' height='14' viewBox='0 0 3 14' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='translate(-8 -3)' fill='%23d63442' fill-rule='evenodd'%3E%3Cpath d='M8 3h3v7l-1 3H9l-1-3'/%3E%3Ccircle cx='9.5' cy='15.5' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 1rem) center;
+  background-size: 3px 14px;
+  box-shadow: inset 0 0 0 1px #d63442, 0 0 4px 0 rgba(214, 52, 66, 0.5);
+  border: 1px solid #d63442; }
+
+.has-success .Input, .Input--success {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='13' viewBox='200 41 16 13'%3E%3Cpath fill='none' stroke='%2348b985' stroke-width='2' d='M214.595 42.493L205 52l-3.877-3.97' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 1rem) center;
+  background-size: 16px 13px;
+  box-shadow: inset 0 0 0 1px #48b985, 0 0 4px 0 rgba(72, 185, 133, 0.5);
+  border: 1px solid #48b985; }

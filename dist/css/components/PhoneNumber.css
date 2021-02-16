@@ -1,0 +1,175 @@
+.PhoneNumber-field {
+  display: block;
+  width: 100%; }
+
+.PhoneNumber-field {
+  display: table;
+  width: 100%; }
+
+.PhoneNumber-input {
+  display: table-cell;
+  vertical-align: top; }
+
+.PhoneNumber-input-inner,
+.PhoneNumber-input-inner.Input {
+  border-left-width: 0 !important;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.PhoneNumber-input-inner:focus,
+.PhoneNumber-input-inner.Input:focus {
+  border-left-width: 1px !important; }
+
+.PhoneNumber-menu {
+  display: table-cell;
+  width: 96px;
+  vertical-align: top; }
+  .PhoneNumber-menu.is-searching {
+    position: absolute;
+    width: 100%;
+    z-index: 5; }
+
+.PhoneNumber-menu {
+  display: table-cell;
+  width: 96px;
+  vertical-align: top; }
+  .is-searching .PhoneNumber-menu {
+    position: absolute;
+    width: 100%;
+    z-index: 2; }
+
+.PhoneNumber-menu-options {
+  top: calc(100% - 1px);
+  width: 100%; }
+
+.PhoneNumber-option-dial {
+  color: rgba(27, 39, 51, 0.5); }
+  .is-active .PhoneNumber-option-dial {
+    color: rgba(255, 255, 255, 0.5); }
+
+.PhoneNumber-option-flag,
+.PhoneNumber-option-country {
+  margin-right: 0.5rem; }
+
+.PhoneNumber-option {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.PhoneNumber-option-flag {
+  min-width: 21px; }
+
+.PhoneNumber-option-flag,
+.PhoneNumber-option-country {
+  margin-right: 0.5rem; }
+
+.PhoneNumber-option-country {
+  line-height: 1.2;
+  max-width: calc(100% - 3rem);
+  white-space: normal; }
+
+.PhoneNumber-menu-options {
+  -webkit-transition: none;
+  transition: none; }
+
+.PhoneNumber-menu-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  position: relative;
+  z-index: 3;
+  padding: 0 0 0 8px;
+  background-image: none;
+  width: 96px; }
+  .is-searching .PhoneNumber-menu-input {
+    border-bottom-left-radius: 0;
+    background-image: none; }
+    .is-searching .PhoneNumber-menu-input:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: calc(100% - 2px);
+      height: 3px;
+      left: 1px;
+      bottom: -2px;
+      background-color: #fff; }
+  .PhoneNumber-menu-input:after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 8px;
+    margin: 0 8px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"><polyline fill="none" stroke="#637282" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" points="295 22 299 26 303 22" transform="translate(-294 -21)"/></svg>'); }
+  .is-searching .PhoneNumber-menu-input:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: 5px 3px;
+            transform-origin: 5px 3px;
+    opacity: 0.8; }
+  .PhoneNumber-menu-input:empty {
+    text-align: right;
+    padding-right: 16px; }
+  .FormGroup--floatingLabel .PhoneNumber-menu-input {
+    padding: 0 0 0 8px; }
+  .is-disabled .PhoneNumber-menu-input {
+    background-color: #f8f9f9;
+    border-color: #eaeef1; }
+  .is-readOnly .PhoneNumber-menu-input {
+    background-color: #f4f5f6;
+    border-color: #dae0e4; }
+
+.PhoneNumber .is-searching .Autocomplete-options {
+  border-top: 2px solid #1274c4 !important;
+  overflow-y: auto; }
+
+.PhoneNumber .is-searching + .PhoneNumber-input .PhoneNumber-input-inner {
+  padding-left: 104px; }
+
+.PhoneNumber .FormGroup--floatingLabel .Label {
+  left: 96px;
+  top: 14px; }
+
+.PhoneNumber.width-3 .PhoneNumber-menu, .PhoneNumber.width-3 .PhoneNumber-menu-input {
+  width: 88px; }
+
+.PhoneNumber.width-3 .PhoneNumber-menu.is-searching {
+  width: 100%; }
+
+.PhoneNumber.width-3 .is-searching + .PhoneNumber-input .PhoneNumber-input-inner {
+  padding-left: 100px; }
+
+.PhoneNumber.width-3 .FormGroup--floatingLabel .Label {
+  left: 88px;
+  max-width: calc(100% - 88px); }
+
+.PhoneNumber.width-2 .PhoneNumber-menu, .PhoneNumber.width-2 .PhoneNumber-menu-input {
+  width: 80px; }
+
+.PhoneNumber.width-2 .PhoneNumber-menu.is-searching {
+  width: 100%; }
+
+.PhoneNumber.width-2 .is-searching + .PhoneNumber-input .PhoneNumber-input-inner {
+  padding-left: 92px; }
+
+.PhoneNumber.width-2 .FormGroup--floatingLabel .Label {
+  left: 80px;
+  max-width: calc(100% - 80px); }
+
+.PhoneNumber.width-1 .PhoneNumber-menu, .PhoneNumber.width-1 .PhoneNumber-menu-input {
+  width: 72px; }
+
+.PhoneNumber.width-1 .PhoneNumber-menu.is-searching {
+  width: 100%; }
+
+.PhoneNumber.width-1 .is-searching + .PhoneNumber-input .PhoneNumber-input-inner {
+  padding-left: 84px; }
+
+.PhoneNumber.width-1 .FormGroup--floatingLabel .Label {
+  left: 72px;
+  max-width: calc(100% - 72px); }
