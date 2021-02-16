@@ -16,7 +16,7 @@ function buildDistFile(options = {}) {
     mkdirp(getDirName(options.dest), function (err) {
       if (err) reject(err);
 
-      postcss([autoprefixer])
+      postcss([autoprefixer()])
         .process(result.css)
         .then((result) => {
           fs.writeFile(options.dest, result.css, function (err) {
@@ -31,7 +31,7 @@ function buildDistFile(options = {}) {
 Promise.all([
   buildDistFile({
     src: "./src/flystyles.scss",
-    dest: "./dist/css/flystyles.css",
+    dest: "./dist/flystyles.css",
   }),
 
   [
@@ -57,7 +57,7 @@ Promise.all([
   ].forEach(function (component) {
     buildDistFile({
       src: `./src/components/${component}/${component}.scss`,
-      dest: `./dist/css/components/${component}.css`,
+      dest: `./dist/components/${component}.css`,
     });
   }),
 ]).then(() => {
