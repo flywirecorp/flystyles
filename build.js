@@ -29,9 +29,11 @@ function buildDistFile(options = {}) {
 }
 
 Promise.all([
-  buildDistFile({
-    src: "./src/flystyles.scss",
-    dest: "./dist/flystyles.css",
+  ["flystyles", "utilities", "reboot"].forEach(function (filename) {
+    buildDistFile({
+      src: `./src/${filename}.scss`,
+      dest: `./dist/${filename}.css`,
+    });
   }),
 
   [
