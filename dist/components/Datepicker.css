@@ -1,0 +1,79 @@
+.Datepicker {
+  position: relative; }
+  .Datepicker .Datepicker-input {
+    padding-right: 40px; }
+
+.Datepicker-calendar {
+  position: absolute;
+  top: calc(100% + 16px);
+  z-index: 2;
+  display: none;
+  max-width: 100%;
+  width: 100%;
+  right: 0; }
+  @media (min-width: 576px) {
+    .Datepicker-calendar {
+      max-width: 334px; } }
+  .Datepicker-calendar:before {
+    border-color: transparent;
+    border-width: 9px;
+    border-bottom-color: #dae0e4;
+    top: -9px;
+    right: 18px; }
+  .Datepicker-calendar:after {
+    border-color: transparent;
+    border-width: 8px;
+    border-bottom-color: #fff;
+    right: 19px;
+    top: -8px; }
+  .Datepicker-calendar:before, .Datepicker-calendar:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    border-style: solid;
+    border-top-width: 0; }
+  .Datepicker.is-open .Datepicker-calendar {
+    display: block; }
+  .Datepicker.is-reverse .Datepicker-calendar {
+    top: auto;
+    bottom: calc(100% + 16px); }
+    .Datepicker.is-reverse .Datepicker-calendar:before {
+      border: 9px solid transparent;
+      border-top-color: #dae0e4;
+      bottom: -9px; }
+    .Datepicker.is-reverse .Datepicker-calendar:after {
+      border: 8px solid transparent;
+      border-top-color: #fff;
+      bottom: -8px; }
+    .Datepicker.is-reverse .Datepicker-calendar:before, .Datepicker.is-reverse .Datepicker-calendar:after {
+      top: auto;
+      border-bottom-width: 0; }
+
+.Datepicker .InputGroup-context {
+  cursor: pointer;
+  width: 50px;
+  border-left: none;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  border: none; }
+  .Datepicker .InputGroup-context .Icon--calendar {
+    width: 20px;
+    height: 20px; }
+
+.is-readOnly .Datepicker .InputGroup-context,
+.is-disabled .Datepicker .InputGroup-context {
+  background-color: transparent; }
+
+.has-error > .Datepicker > .InputGroup > input {
+  background-image: none !important; }

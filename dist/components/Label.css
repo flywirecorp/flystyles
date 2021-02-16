@@ -1,0 +1,46 @@
+.Label {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #1b2733;
+  text-transform: none;
+  cursor: pointer; }
+
+.FormGroup--floatingLabel .Label {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 0 10px;
+  text-transform: none;
+  font-size: 14px;
+  color: #5a687b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  will-change: font-size, transform;
+  -webkit-transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1); }
+
+.FormGroup--floatingLabel.is-focused .Label,
+.FormGroup--floatingLabel.has-value .Label,
+.FormGroup--floatingLabel .Input:focus + .Label,
+.FormGroup--floatingLabel .Select:focus + .Label,
+.FormGroup--floatingLabel .Textarea:focus + .Label,
+.FormGroup--floatingLabel .Autocomplete.is-searching + .Label {
+  font-size: 12px;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px); }
+
+.FormGroup--floatingLabel.FormGroup--hasSuffix .Label,
+.FormGroup--floatingLabel.FormGroup--hasPrefix .Label {
+  width: calc(100% - 64px); }
+
+.FormGroup--floatingLabel.FormGroup--hasPrefix .Label {
+  position: absolute;
+  left: 64px; }
+
+.FormGroup--floatingLabel.FormGroup--hasSuffix.FormGroup--hasPrefix .Label {
+  width: calc( 100% - 128px - 20px); }
