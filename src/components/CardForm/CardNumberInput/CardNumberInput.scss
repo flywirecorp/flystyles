@@ -20,3 +20,7 @@
 .CardNumberInput.unionpay:not(.has-error) > input {
   background-image: svg-url(map-get($icons, unionpay));
 }
+
+.CardNumberInput.jcb:not(.has-error) > input {
+  background-image: svg-url(map-get($icons, jcb));
+}
