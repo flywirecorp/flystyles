@@ -24,3 +24,7 @@
 .CardNumberInput.jcb:not(.has-error) > input {
   background-image: svg-url(map-get($icons, jcb));
 }
+
+.CardNumberInput.disc:not(.has-error) > input {
+  background-image: svg-url(map-get($icons, discover));
+}
