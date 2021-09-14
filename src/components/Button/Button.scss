@@ -69,6 +69,14 @@
   border-color: transparent;
 }
 
+.Button--primary:hover {
+  background-color: $button-primary-hover-background;
+}
+
+.Button--secondary:hover {
+  background-color: $button-secondary-hover-background;
+}
+
 .Button--withIcon {
   position: relative;
   padding: $button-padding-vertical $button-padding-horizontal;
