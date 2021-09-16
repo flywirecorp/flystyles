@@ -19,7 +19,7 @@
   outline: none;
 }
 
-.cvvInput-Icon-Tooltip:hover + .cvvInput-Label-Tooltip {
+.cvvInput-Icon-Tooltip:hover,.cvvInput:focus + .cvvInput-Label-Tooltip {
   opacity: 1;
 }
 
