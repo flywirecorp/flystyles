@@ -19,8 +19,16 @@
   outline: none;
 }
 
-.cvvInput-Icon-Tooltip:hover,.cvvInput:focus + .cvvInput-Label-Tooltip {
+.cvvInput-Icon-Tooltip:hover + .cvvInput-Label-Tooltip {
   opacity: 1;
+}
+
+.cvvInput:focus + .cvvInput-Label-Tooltip {
+  opacity: 1 !important;
+}
+
+.cvvInput:blur + .cvvInput-Label-Tooltip {
+  opacity: 0 !important;
 }
 
 @media (hover: none) {
