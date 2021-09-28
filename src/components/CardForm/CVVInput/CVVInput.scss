@@ -19,19 +19,6 @@
   outline: none;
 }
 
-.cvvInput-Icon-Tooltip:hover + .cvvInput-Label-Tooltip {
-  opacity: 1;
-}
-
-@media (hover: none) {
-  .cvvInput-Icon-Tooltip:checked + .cvvInput-Label-Tooltip {
-    opacity: 1;
-  }
-  .cvvInput-Icon-Tooltip:not(:checked) + .cvvInput-Label-Tooltip {
-    opacity: 0;
-  }
-}
-
 .cvvInput-Label-Tooltip {
   position: absolute;
   display: block;

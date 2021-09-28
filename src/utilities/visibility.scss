@@ -3,6 +3,14 @@
 // Visibility utilities
 //
 
+.opacity-0 {
+  opacity: 0 !important;
+}
+
+.opacity-1 {
+  opacity: 1 !important;
+}
+
 // Responsive visibility utilities
 
 @each $bp in map-keys($grid-breakpoints) {
