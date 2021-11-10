@@ -1,6 +1,8 @@
+@use "sass:math";
+
 @import "../../mixins";
 
 @mixin flexGrid-column-size($size) {
-  width: percentage($size / $grid-columns);
-  flex-basis: percentage($size / $grid-columns);
+  width: percentage(math.div($size, $grid-columns));
+  flex-basis: percentage(math.div($size, $grid-columns));
 }

@@ -51,8 +51,8 @@
 
 .Modal-closeButton {
   position: absolute;
-  right: ($modal-padding/2);
-  top: ($modal-padding/2);
+  right: ($modal-padding*0.5);
+  top: ($modal-padding*0.5);
   z-index: 1;
   border: none;
   background: none;

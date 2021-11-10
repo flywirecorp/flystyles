@@ -7,7 +7,7 @@
 // Floating label variation
 .FormGroup--floatingLabel .Label {
   position: absolute;
-  top: ($form-field-height-base / 2) - ($font-size-root / 2);
+  top: ($form-field-height-base * 0.5) - ($font-size-root * 0.5);
   left: 0;
   z-index: 1;
   width: 100%;
