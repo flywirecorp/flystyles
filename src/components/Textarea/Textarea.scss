@@ -3,7 +3,7 @@
 
 .Textarea {
   @include form-field-base;
-  padding: $font-size-base / 2;
+  padding: $font-size-base * 0.5;
   font-size: $form-field-font-size;
 
   .FormGroup--floatingLabel & {

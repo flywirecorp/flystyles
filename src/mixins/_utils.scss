@@ -5,15 +5,17 @@
 // Removes the unit (e.g. px, em, rem) from a value, returning the number only.
 // @param {Number} $num - Number to strip unit from.
 // @returns {Number} The same number, sans unit.
+@use "sass:math";
+
 @function strip-unit($num) {
-  @return $num / ($num * 0 + 1);
+  @return math.div($num, $num * 0 + 1);
 }
 
 // Converts pixels to rem
 // @param {String} $pixels
 // @returns {String} returns the unit in rem's
 @function rem($pixels) {
-  @return #{$pixels / $font-size-root}rem;
+  @return #{math.div($pixels, $font-size-root)}rem;
 }
 
 // Clearfix
@@ -64,7 +66,7 @@
   $black: rgba(0,0,0,0.7) !default;
   $white: #ffffff !default;
 
-  $yiq: (($r*299)+($g*587)+($b*114))/1000;
+  $yiq: (($r*299)+($g*587)+($b*114))*0.001;
 
   @if ($yiq >= 148) {
     color: $black;

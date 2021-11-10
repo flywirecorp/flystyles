@@ -9,6 +9,8 @@
 
 // Brand colors
 
+@use "sass:math";
+
 $color-brand-primary-light: #0090d2 !default;
 $color-brand-primary: #1274c4 !default;
 $color-brand-primary-dark: #0f476b !default;
@@ -123,7 +125,7 @@ $font-sizes: (
 );
 
 $line-height-base: 1.4 !default;
-$line-height-lg: (4 / 3) !default;
+$line-height-lg: math.div(4, 3) !default;
 $line-height-sm: 1.5 !default;
 
 $font-weight-light: 300 !default;

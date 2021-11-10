@@ -88,7 +88,7 @@
 
 @mixin form-field-size ($height, $font-size) {
   height: $height;
-  padding: 0 $height / 5;
+  padding: 0 $height * 0.2;
   line-height: normal;
   font-size: $font-size;
 }
