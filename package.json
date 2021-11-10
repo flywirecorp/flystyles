@@ -7,7 +7,7 @@
   "sass": "src/flystyles.scss",
   "main": "./dist",
   "scripts": {
-    "css:build": "node_modules/.bin/node-sass src/flystyles.scss dist/css/flystyles.css",
+    "css:build": "node_modules/.bin/sass src/flystyles.scss dist/css/flystyles.css",
     "css:autoprefix": "node_modules/.bin/postcss --use autoprefixer -o dist/css/flystyles.css dist/css/flystyles.css",
     "css:minify": "node_modules/.bin/cleancss -o dist/css/flystyles.min.css dist/css/flystyles.css",
     "build": "npm run css:build && npm run css:autoprefix && npm run css:minify",
@@ -30,8 +30,8 @@
     "autoprefixer": "^6.7.4",
     "browser-sync": "^2.26.7",
     "clean-css-cli": "^4.3.0",
-    "node-sass": "^4.13.0",
-    "postcss-cli": "^3.2.0"
+    "postcss-cli": "^3.2.0",
+    "sass": "^1.43.4"
   },
   "postcss": {
     "plugins": {

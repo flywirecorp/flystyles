@@ -2,6 +2,8 @@
 //  Grid Component
 //
 
+@use "sass:math";
+
 @import '../../config';
 @import './mixins';
 
@@ -21,7 +23,7 @@
       .GridRow--from#{capitalize($breakpoint)}-#{$per-row} {
         .GridColumn {
           float: left;
-          width: 100% / $per-row;
+          width: math.div(100%, $per-row);
           &:nth-of-type(n) {
             clear: none;
           }
@@ -50,7 +52,7 @@
   @include media-up($breakpoint) {
     @for $i from 1 through $grid-columns {
       .GridColumn--from#{capitalize($breakpoint)}-offset-#{$i} {
-        $num: $i / $grid-columns;
+        $num: math.div($i, $grid-columns);
         margin-left: if($num == 0, 0, percentage($num));
       }
     }

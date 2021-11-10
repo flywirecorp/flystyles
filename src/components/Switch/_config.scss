@@ -10,7 +10,7 @@ $switch-border-radius: $switch-height !default;
 $switch-background-color: #e0e0e3 !default;
 
 $switch-background-width: $switch-height !default;
-$switch-background-pos: $switch-background-width / 2;
+$switch-background-pos: $switch-background-width * 0.5;
 $switch-circle-width: 11;
 
 // checked
