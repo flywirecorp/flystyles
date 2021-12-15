@@ -48,7 +48,7 @@
   $encoded:'';
   $slice: 1500;
   $index: 0;
-  $loops: ceil(str-length($svg)/$slice);
+  $loops: ceil(str-length(calc($svg)/$slice));
   @for $i from 1 through $loops {
     $chunk: str-slice($svg, $index, $index + $slice - 1);
     $chunk: str-replace($chunk,'"','\'');
