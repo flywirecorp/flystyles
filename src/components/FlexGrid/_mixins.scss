@@ -3,6 +3,6 @@
 @import "../../mixins";
 
 @mixin flexGrid-column-size($size) {
-  width: percentage(math.div($size, $grid-columns));
-  flex-basis: percentage(math.div($size, $grid-columns));
+  width: math.div(($size * 1%), $grid-columns);
+  flex-basis: math.div(($size * 1%), $grid-columns);
 }
