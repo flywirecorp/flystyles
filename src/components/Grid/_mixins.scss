@@ -17,5 +17,5 @@
 
 @mixin grid-column-size($size) {
   float: left;
-  width: math.div(($size * 1%), $grid-columns);
+  width: percentage(math.div($size, $grid-columns));
 }
