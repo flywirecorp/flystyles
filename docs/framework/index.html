@@ -89,7 +89,7 @@ To compile a new version:</p>
 
 <h1 id="documentation">Documentation</h1>
 
-<p>All components in flysyles are documented in <code class="language-plaintext highlighter-rouge">/docs</code> folder. The styleguide is created with Jekyll.</p>
+<p>All components in flysyles are documented in <code class="language-plaintext highlighter-rouge">/docs</code> folder.</p>
 
 <h2 id="installation-1">Installation</h2>
 
@@ -98,38 +98,9 @@ To compile a new version:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm run css:docs</code></pre></div></div>
 
-<h2 id="working">Working</h2>
-
-<h3 id="styleguide-driven-development">Styleguide Driven Development</h3>
-
-<p>Styleguide Driven Development (SDD) is a practice that encourages the separation of UX, Design &amp; Frontend from Backend concerns. This is achieved by developing the UI separately in a styleguide.</p>
-
-<p>By separating the UI and backend tasks so they don’t rely on each other, it allows teams to iterate fast on prototypes and designs without having to make changes to the backend. With careful planning they should plug-and-play together nicely.</p>
-
-<h3 id="creating-new-components">Creating new components</h3>
-
-<p>To document a new component, a new markdown file has to be added to <code class="language-plaintext highlighter-rouge">src/_docs/components</code>. This file has a <a href="https://jekyllrb.com/docs/frontmatter/">Front Matter</a> where you have to specify the category and the name of the component:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-title: Buttons
-description: Button component description
-category: components
----
-</code></pre></div></div>
-
-<h3 id="browser-sync">Browser Sync</h3>
-
-<p>To help in developing workflow, a Browser Sync is provided that watch local changes and refresh the browser. That way, when we need a new component, It can be created directly in the styleguide that gets the styles from Flystyles, achieving the Styleguide Driven Development (SDD).</p>
-
-<p>To run the server, execute:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install
-</span>npm run docs
-</code></pre></div></div>
-
 <h4 id="deploy">Deploy</h4>
 
-<p>For the moment, the project is hosted on Netlifly <a href="https://peertransfer.github.io/flystyles">peertransfer.github.io/flystyles</a>. The project is deployed whenever you push to master automatically.</p>
+<p>For the moment, the project is hosted on GitHub Pages <a href="https://peertransfer.github.io/flystyles">peertransfer.github.io/flystyles</a>. The project is deployed whenever you push to master automatically.</p>
 
 <h4 id="create-a-new-version">Create a new version</h4>
 
