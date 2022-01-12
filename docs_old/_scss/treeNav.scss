@@ -1,0 +1,61 @@
+//
+//  treeNav
+//  Tree Navigation
+$treeNav-link-color-default: #38495b;
+$treeNav-link-color-active: #212b36;
+$treeNav-transition: 200ms all;
+
+.treeNav {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  a,
+  a:active,
+  a:focus,
+  a:hover,
+  a:link {
+    text-decoration: none;
+  }
+}
+
+.treeNav-parentLink {
+  position: relative;
+  display: block;
+  padding: 12px;
+  padding-left: 40px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #98a5b1;
+  text-transform: uppercase;
+}
+
+.treeNav-children {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-size: 15px;
+  list-style: none;
+}
+
+.treeNav-childLink {
+  display: block;
+  padding: 12px;
+  padding-left: 40px;
+  color: $treeNav-link-color-default;
+  border-left: 3px solid transparent;
+  font-weight: 400;
+  transition: $treeNav-transition;
+
+  &:hover {
+    color: $treeNav-link-color-active;
+    font-weight: 500;
+  }
+
+  &.is-selected {
+    color: $treeNav-link-color-active;
+    font-weight: 700;
+    border-left-color: #3497ff;
+    background: rgba(#1f2d3d, 0.05);
+  }
+}

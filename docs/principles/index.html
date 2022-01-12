@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Flywire Styleguide</title>
+  <meta name="description" content="Common UI patterns used through Flywire apps">
+
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="canonical" href="../principles/index.html">
+  <!-- <link rel="alternate" type="application/rss+xml" title="Flywire Styleguide" href="http://peertransfer.github.io/flystyles/feed.xml"> -->
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+</head>
+
+<body class="fullPage">
+  <header class="docs-header">
+  <div class="docs-header-content">
+    <a href="/" class="docs-logo">
+      <img src="../images/logo.svg" alt="flywire">
+    </a>
+
+    <ul class="docs-menu upToMedium-hidden">
+          
+            <li><a href="../index.html">UI Pattern Library</a></li>
+          
+            <li><a href="../framework/index.html">Framework</a></li>
+          
+            <li class="active"><a href="../principles/index.html" class="active">Principles</a></li>
+          
+            <li><a href="../css-guidelines/index.html">CSS Guidelines</a></li>
+          
+            <li><a href="../resources/index.html">Resources</a></li>
+      
+    </ul>
+
+    <select data-js="mobile-menu" class="Select fromMedium-hidden docs-menu-mobile" name="nav">
+          
+            <option value="../index.html">UI Pattern Library</option>
+          
+            <option value="../framework/index.html">Framework</option>
+          
+            <li class="active"><a href="/principles/index.html" class="active">Principles</a></li>
+            <option value="../principles/index.html" selected>Principles</option>
+          
+            <option value="../css-guidelines/index.html">CSS Guidelines</option>
+          
+            <option value="../resources/index.html">Resources</option>
+      
+    </select>
+
+  </div>
+</header>
+
+  <main class="wrapper">
+    <article class="docs-content markdown-body">
+      <h1 id="frontent-principles">Frontent principles</h1>
+
+<p>This principles are strongly based on Nicolas Gallagher <a href="https://github.com/suitcss/suit">SUIT CSS framework</a>.</p>
+
+<p>Large web applications generally have a lot of CSS files and often have many developers working on those files simultaneously, developers need a CSS architecture that is maintainable, manageable, and scalable. This is the key to follow a component-based architecture in our CSS.</p>
+
+<p>A component-based system allows for the implementation and composition of loosely coupled, independent units into well-defined composite objects. Components are encapsulated but are able to interoperate via interfaces/events.</p>
+
+<h3 id="modularity">Modularity</h3>
+
+<p>Each component should have a single focus and contain everything necessary to realise a specific part of the UI. Components may contain HTML, CSS, JavaScript, and associated assets without making assumptions about the outer rendering context.</p>
+
+<h3 id="composable-and-configurable">Composable and configurable</h3>
+
+<p>Composability is concerned with the inter-relationships of components. Composable systems have components that can be assembled in various combinations, as required.</p>
+
+<p>Configuration is done via variables that are provided and used by components.</p>
+
+<h3 id="loose-coupling">Loose coupling</h3>
+
+<p>Components should not directly modify the presentation or behaviour of their dependencies. Relying on interfaces and events for inter-component communication results in a loose coupling.</p>
+
+<p>Attempting to reuse too much code across components can increase their coupling. <strong>Isolation is more important than avoiding the repetition of superficially similar code</strong>.</p>
+
+<h3 id="content-independent-components">Content-independent components</h3>
+
+<p>The most reusable components are those that are independent of the content.</p>
+
+<p>We shouldn’t be afraid of making the connections between layers clear and explicit rather than having class names rigidly reflect specific content. Doing this doesn’t make classes “unsemantic”, it just means that their semantics are not derived from the content. We shouldn’t be afraid to include additional HTML elements if they help create more robust, flexible, and reusable components. Doing so does not make the HTML “unsemantic”, it just means that you use elements beyond the bare minimum needed to markup the content.</p>
+
+<p>For example, instead of:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ol class="features"&gt;
+   &lt;li&gt;[feature content]&lt;/li&gt;
+   &lt;li&gt;[feature content]&lt;/li&gt;
+   &lt;li&gt;[feature content]&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre></div></div>
+
+<p>we can use:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ol class="numberedList"&gt;
+   &lt;li class="numberedList-item"&gt;[feature content]&lt;/li&gt;
+   &lt;li class="numberedList-item"&gt;[feature content]&lt;/li&gt;
+   &lt;li class="numberedList-item"&gt;[feature content]&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre></div></div>
+
+<h2 id="readings">Readings</h2>
+
+<ul>
+  <li><a href="https://github.com/suitcss/suit/blob/master/doc/design-principles.md">Suit CSS design principles</a></li>
+  <li><a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">About HTML semantics and front-end architecture </a></li>
+  <li><a href="http://cssguidelin.es/">CSS Guidelines by Harry Roberts</a></li>
+  <li><a href="https://github.com/chris-pearce/css-guidelines">CSS Guidelines by Chris Pearce</a></li>
+  <li><a href="https://sass-guidelin.es">Sass Guidelines by Hugo Giraudel</a></li>
+</ul>
+
+<h2 id="keep-in-mind">Keep in mind</h2>
+
+<p>Modularity, DRY, SRP, etc. is never a goal, just an approach. Don’t let the pursuit of theory get in the way of actual productivity.</p>
+
+    </article>
+  </main>
+
+  <footer class="docs-footer">
+  <div class="wrapper">
+    <p><a href="http://flywire.com">flywire.com</a> style guide and pattern library</p>
+  </div>
+</footer>
+
+  <script type="text/javascript" src="../javascript/main.js"></script>
+</body>
+
+</html>

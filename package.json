@@ -11,8 +11,8 @@
     "css:autoprefix": "node_modules/.bin/postcss --use autoprefixer -o dist/css/flystyles.css dist/css/flystyles.css",
     "css:minify": "node_modules/.bin/cleancss -o dist/css/flystyles.min.css dist/css/flystyles.css",
     "build": "npm run css:build && npm run css:autoprefix && npm run css:minify",
-    "docs": "node docs.js",
-    "start": "node docs.js",
+    "css:docs": "sass docs/_scss/main.scss docs/css/main.css --style=expanded",
+    "css:docs:compressed": "sass docs/_scss/main.scss docs/css/main.css --style=compressed",
     "version": "npm run build && git add -A dist",
     "postversion": "git push && git push --tags",
     "yalc:publish": "npm run build && yalc publish --push"
@@ -27,11 +27,9 @@
   },
   "homepage": "https://github.com/peertransfer/flystyles#readme",
   "devDependencies": {
-    "autoprefixer": "^6.7.4",
-    "browser-sync": "^2.26.7",
     "clean-css-cli": "^4.3.0",
     "postcss-cli": "^3.2.0",
-    "sass": "^1.43.4"
+    "sass": "^1.47.0"
   },
   "postcss": {
     "plugins": {
