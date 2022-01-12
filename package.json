@@ -12,7 +12,6 @@
     "css:minify": "node_modules/.bin/cleancss -o dist/css/flystyles.min.css dist/css/flystyles.css",
     "build": "npm run css:build && npm run css:autoprefix && npm run css:minify",
     "css:docs": "sass docs/_scss/main.scss docs/css/main.css --style=expanded",
-    "css:docs:compressed": "sass docs/_scss/main.scss docs/css/main.css --style=compressed",
     "version": "npm run build && git add -A dist",
     "postversion": "git push && git push --tags",
     "yalc:publish": "npm run build && yalc publish --push"
