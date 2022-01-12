@@ -12,8 +12,8 @@
   <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet">
 
   <link rel="stylesheet" href="../css/main.css">
-  <link rel="canonical" href="http://peertransfer.github.io/flystyles/framework">
-  <link rel="alternate" type="application/rss+xml" title="Flywire Styleguide" href="http://peertransfer.github.io/flystyles/feed.xml">
+  <link rel="canonical" href="https://peertransfer.github.io/flystyles/framework">
+  <link rel="alternate" type="application/rss+xml" title="Flywire Styleguide" href="https://peertransfer.github.io/flystyles/feed.xml">
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 </head>
 
@@ -26,30 +26,30 @@
 
     <ul class="docs-menu upToMedium-hidden">
           
-            <li><a href="http://peertransfer.github.io/flystyles">UI Pattern Library</a></li>
+            <li><a href="/..">UI Pattern Library</a></li>
           
-            <li class="active"><a href="http://peertransfer.github.io/flystyles/framework" class="active">Framework</a></li>
+            <li class="active"><a href="../framework" class="active">Framework</a></li>
           
-            <li><a href="http://peertransfer.github.io/flystyles/principles">Principles</a></li>
+            <li><a href="../principles">Principles</a></li>
           
-            <li><a href="http://peertransfer.github.io/flystyles/css-guidelines">CSS Guidelines</a></li>
+            <li><a href="../css-guidelines">CSS Guidelines</a></li>
           
-            <li><a href="http://peertransfer.github.io/flystyles/resources">Resources</a></li>
+            <li><a href="../resources">Resources</a></li>
       
     </ul>
 
     <select data-js="mobile-menu" class="Select fromMedium-hidden docs-menu-mobile" name="nav">
           
-            <option value="http://peertransfer.github.io/flystyles">UI Pattern Library</option>
+            <option value="/..">UI Pattern Library</option>
           
-            <li class="active"><a href="http://peertransfer.github.io/flystyles/framework" class="active">Framework</a></li>
-            <option value="http://peertransfer.github.io/flystyles/framework" selected>Framework</option>
+            <li class="active"><a href="../framework" class="active">Framework</a></li>
+            <option value="../framework" selected>Framework</option>
           
-            <option value="http://peertransfer.github.io/flystyles/principles">Principles</option>
+            <option value="../principles">Principles</option>
           
-            <option value="http://peertransfer.github.io/flystyles/css-guidelines">CSS Guidelines</option>
+            <option value="../css-guidelines">CSS Guidelines</option>
           
-            <option value="http://peertransfer.github.io/flystyles/resources">Resources</option>
+            <option value="../resources">Resources</option>
       
     </select>
 
@@ -93,21 +93,10 @@ To compile a new version:</p>
 
 <h2 id="installation-1">Installation</h2>
 
-<p>Docs are made using <a href="https://jekyllrb.com/">Jekyll</a>.
-To install Jekyll:</p>
+<p>Docs are a static website created in <code class="language-plaintext highlighter-rouge">/docs</code> that will need to recompile SCSS when it is changed,
+  using next command:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span>
-</code></pre></div></div>
-
-<p>To create the build files (in <code class="language-plaintext highlighter-rouge">_site</code> folder) execute:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll build
-</code></pre></div></div>
-
-<p>To launch jekyll local server:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm run css:docs</code></pre></div></div>
 
 <h2 id="working">Working</h2>
 
@@ -140,7 +129,7 @@ category: components
 
 <h4 id="deploy">Deploy</h4>
 
-<p>For the moment, the project is hosted on Netlifly <a href="http://flystyles.netlify.com/">flystyles.netlify.com</a>. The project is deployed whenever you push to master automatically.</p>
+<p>For the moment, the project is hosted on Netlifly <a href="https://peertransfer.github.io/flystyles">peertransfer.github.io/flystyles</a>. The project is deployed whenever you push to master automatically.</p>
 
 <h4 id="create-a-new-version">Create a new version</h4>
 
@@ -242,7 +231,7 @@ _responsive.scss
 
   <footer class="docs-footer">
   <div class="wrapper">
-    <p><a href="http://flywire.com">flywire.com</a> style guide and pattern library</p>
+    <p><a href="https://flywire.com">flywire.com</a> style guide and pattern library</p>
   </div>
 </footer>
 
