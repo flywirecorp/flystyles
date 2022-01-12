@@ -1,10 +1,9 @@
 #!/bin/bash
-# echo "Starting the Jekyll Action"
 
-# bundle install
-# bundle exec jekyll build --config _config.yml,_config.gh.yml
+echo "Compilling SASS files"
+npm run css:docs
+echo "Compilation completed"
 
-# echo "Jekyll build done"
 echo "Publishing to ${GITHUB_REPOSITORY} on branch ${remote_branch}"
 echo 
 echo "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
