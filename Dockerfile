@@ -1,5 +1,11 @@
-FROM ruby:2.7.1
+FROM node:12
 
-COPY action.sh /action.sh
+ENV APP /src
+RUN mkdir -p $APP
 
-ENTRYPOINT ["/action.sh"]
+COPY package.json $APP/package.json
+COPY package-lock.json $APP/package-lock.json
+
+WORKDIR $APP
+
+CMD ["npm", "run", "build"]
