@@ -1,13 +1,17 @@
 #!/bin/bash
-echo "Starting the Jekyll Action"
 
-bundle install
-bundle exec jekyll build --config _config.yml,_config.gh.yml
+echo "Compilling SASS files"
+npm run css:docs
+echo "Compilation completed"
 
-echo "Jekyll build done"
 echo "Publishing to ${GITHUB_REPOSITORY} on branch ${remote_branch}"
+echo 
+echo "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+echo "${GITHUB_ACTOR}"
+echo "${GITHUB_ACTOR}@users.noreply.github.com"
+echo 
 
-cd _site && \
+cd docs && \
 remote_repo="https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" && \
 remote_branch="gh-pages" && \
 git init && \

@@ -35,28 +35,17 @@ npm run build
 
 # Documentation
 
-All components in flysyles are documented in `/docs` folder. The styleguide is created with Jekyll.
+Documentation is a static website stored in `/docs` folder. Accessing to `/dics/index.html` can be seen in local.
 
-## Installation
+## Build documentation
 
-Docs are made using [Jekyll](https://jekyllrb.com/).
-To install Jekyll:
+Documentation updates will be done directly in its html files form `/docs/**` and documentation styles need to be modified in `/docs/_scss` and recompiled:
 
 ```bash
 bundle install
 ```
 
-To create the build files (in `_site` folder) execute:
-
-```bash
-bundle exec jekyll build
-```
-
-To launch jekyll local server:
-
-```bash
-bundle exec jekyll serve
-```
+NOTE: this include `/scr` changes, but only for documentation
 
 ## Working
 
@@ -66,32 +55,9 @@ Styleguide Driven Development (SDD) is a practice that encourages the separation
 
 By separating the UI and backend tasks so they don’t rely on each other, it allows teams to iterate fast on prototypes and designs without having to make changes to the backend. With careful planning they should plug-and-play together nicely.
 
-### Creating new components
-
-To document a new component, a new markdown file has to be added to `src/_docs/components`. This file has a [Front Matter](https://jekyllrb.com/docs/frontmatter/) where you have to specify the category and the name of the component:
-
-```
----
-title: Buttons
-description: Button component description
-category: components
----
-```
-
-### Browser Sync
-
-To help in developing workflow, a Browser Sync is provided that watch local changes and refresh the browser. That way, when we need a new component, It can be created directly in the styleguide that gets the styles from Flystyles, achieving the Styleguide Driven Development (SDD).
-
-To run the server, execute:
-
-```bash
-npm install
-npm run docs
-```
-
 #### Deploy
 
-For the moment, the project is hosted on Netlifly [flystyles.netlify.com](http://flystyles.netlify.com/). The project is deployed whenever you push to master automatically.
+For the moment, the project is hosted on GitHub Pages [peertransfer.github.io/flystyles](https://peertransfer.github.io/flystyles). The project is deployed whenever you push to master automatically.
 
 #### Create a new version
 

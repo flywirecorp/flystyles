@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Flywire Styleguide</title>
+  <meta name="description" content="Common UI patterns used through Flywire apps">
+
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="canonical" href="https://peertransfer.github.io/flystyles/framework">
+  <link rel="alternate" type="application/rss+xml" title="Flywire Styleguide" href="https://peertransfer.github.io/flystyles/feed.xml">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+</head>
+
+<body class="fullPage">
+  <header class="docs-header">
+  <div class="docs-header-content">
+    <a href="/" class="docs-logo">
+      <img src="../images/logo.svg" alt="flywire">
+    </a>
+
+    <ul class="docs-menu upToMedium-hidden">
+          
+            <li><a href="../">UI Pattern Library</a></li>
+          
+            <li class="active"><a href="../framework" class="active">Framework</a></li>
+          
+            <li><a href="../principles">Principles</a></li>
+          
+            <li><a href="../css-guidelines">CSS Guidelines</a></li>
+          
+            <li><a href="../resources">Resources</a></li>
+      
+    </ul>
+
+    <select data-js="mobile-menu" class="Select fromMedium-hidden docs-menu-mobile" name="nav">
+          
+            <option value="../">UI Pattern Library</option>
+          
+            <li class="active"><a href="../framework" class="active">Framework</a></li>
+            <option value="../framework" selected>Framework</option>
+          
+            <option value="../principles">Principles</option>
+          
+            <option value="../css-guidelines">CSS Guidelines</option>
+          
+            <option value="../resources">Resources</option>
+      
+    </select>
+
+  </div>
+</header>
+
+  <main class="wrapper">
+    <article class="docs-content markdown-body">
+      <h1 id="flystyles">Flystyles</h1>
+
+<h2 id="installation">Installation</h2>
+
+<p>The project can be installed via npm or yarn.</p>
+
+<h3 id="npm">npm</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>flystyles
+</code></pre></div></div>
+
+<h3 id="yarn">yarn</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add flystyles
+</code></pre></div></div>
+
+<h1 id="build-commands">Build commands</h1>
+
+<p>A compiled version of the CSS is provided in <code class="language-plaintext highlighter-rouge">/dist</code> folder.
+To compile a new version:</p>
+
+<p>Install dependencies:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span>
+</code></pre></div></div>
+
+<p>Compile CSS:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm run build
+</code></pre></div></div>
+
+<h1 id="documentation">Documentation</h1>
+
+<p>All components in flysyles are documented in <code class="language-plaintext highlighter-rouge">/docs</code> folder.</p>
+
+<h2 id="installation-1">Installation</h2>
+
+<p>Docs are a static website created in <code class="language-plaintext highlighter-rouge">/docs</code> that will need to recompile SCSS when it is changed,
+  using next command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm run css:docs</code></pre></div></div>
+
+<h4 id="deploy">Deploy</h4>
+
+<p>For the moment, the project is hosted on GitHub Pages <a href="https://peertransfer.github.io/flystyles">peertransfer.github.io/flystyles</a>. The project is deployed whenever you push to master automatically.</p>
+
+<h4 id="create-a-new-version">Create a new version</h4>
+
+<p>To create a new version you have to use the npm command <a href="https://docs.npmjs.com/cli/version">version</a>. It will generate the new dist files, add a release tag and push to master.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm version <span class="o">[</span>&lt;newversion&gt; | major | minor | patch | premajor | preminor | prepatch | prerelease | from-git]
+</code></pre></div></div>
+
+<h2 id="architecture">Architecture</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>src/
+|
+|- styles
+|
+|   – mixins/
+|      |– _responsive.scss   # Responsive mixins
+|      |– _typography.scss   # Typography mixins
+|      …                     # Etc
+|
+|   – base/
+|       |– _normalize.scss    # Reset/normalize
+|       |– _typography.scss   # Typography rules
+|       |- _animations.scss   # CSS Animations
+|       …                     # Etc.
+|
+|   – utilities/
+|       |– _spacing.scss      # Margins, paddings, ...
+|       |– _responsive.scss   # Brakpoints visibility classes
+|       …                     # Etc.
+|
+|- components/
+|   |– Button/_Button.scss    # Buttons
+|   |– Grid/_Grid.scss        # Grid
+|   …                         # Etc.
+|
+|- _config.scss           # Flystyles variables
+|– main.scss              # Main Sass file
+
+</code></pre></div></div>
+
+<p>Files follow the same naming conventions described above: they are hyphen-delimited.</p>
+
+<h3 id="base-folder">BASE FOLDER</h3>
+
+<p>The base/ folder holds what we might call the boilerplate code for the project. In there, you might find the reset file, some typographic rules, and probably a stylesheet defining some standard styles for commonly used HTML elements (that I like to call _base.scss).</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_base.scss
+_reset.scss
+_typography.scss
+_animations.scss
+
+</code></pre></div></div>
+
+<h3 id="components-folder">COMPONENTS FOLDER</h3>
+
+<p>For smaller components, there is the components/ folder. There are usually a lot of files in components/ since the whole site/application should be mostly composed of tiny modules.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_media.scss
+_carousel.scss
+_thumbnails.scss
+</code></pre></div></div>
+
+<h3 id="mixins-folder">MIXINS FOLDER</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">mixins/</code> folder gathers all Sass tools and helpers used across the project. Every global variable, function, mixin and placeholder should be put in here. This files dont’s produce any output.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_responsive.scss
+_typography.scss
+</code></pre></div></div>
+
+<h3 id="themes-folder">THEMES FOLDER</h3>
+
+<p>Custom theme specific styles.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_theme.scss
+_admin.scss
+</code></pre></div></div>
+
+<h3 id="utilities-folder">UTILITIES FOLDER</h3>
+
+<p>Utilities are low-level. They have a very narrow scope and may end up being used frequently, due to their separation from the semantics of the document and the theming of a component. As a result, once a class is in significant use great care should be taken when introducing any modifications to it.</p>
+
+<p>Utilities make use of <code class="language-plaintext highlighter-rouge">!important</code> to ensure that their styles always apply ahead of those defined in a component’s dedicated CSS.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_spacing.scss
+_responsive.scss
+</code></pre></div></div>
+
+<h3 id="config-file-_configscss">CONFIG FILE <code class="language-plaintext highlighter-rouge">_config.scss</code></h3>
+
+<p>The configuration file where all variables are defined. Copy this file to override the Flystyles defaults without modifying key, versioned files.</p>
+
+<h3 id="main-file-flystylesscss">MAIN FILE <code class="language-plaintext highlighter-rouge">flystyles.scss</code></h3>
+
+<p>The main file should be the only Sass file from the whole code base not to begin with an underscore. This file should not contain anything but @import and comments.</p>
+
+    </article>
+  </main>
+
+  <footer class="docs-footer">
+  <div class="wrapper">
+    <p><a href="https://flywire.com">flywire.com</a> style guide and pattern library</p>
+  </div>
+</footer>
+
+  <script type="text/javascript" src="../javascript/main.js"></script>
+</body>
+
+</html>

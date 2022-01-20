@@ -1,0 +1,521 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Flywire Styleguide</title>
+  <meta name="description" content="Common UI patterns used through Flywire apps">
+
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="canonical" href="https://peertransfer.github.io/flystyles/css-guidelines">
+  <link rel="alternate" type="application/rss+xml" title="Flywire Styleguide" href="https://peertransfer.github.io/flystyles/feed.xml">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+</head>
+
+<body class="fullPage">
+  <header class="docs-header">
+  <div class="docs-header-content">
+    <a href="/" class="docs-logo">
+      <img src="../images/logo.svg" alt="flywire">
+    </a>
+
+    <ul class="docs-menu upToMedium-hidden">
+      
+            <li><a href="../">UI Pattern Library</a></li>
+          
+            <li><a href="../framework">Framework</a></li>
+          
+            <li><a href="../principles">Principles</a></li>
+          
+            <li class="active"><a href="../css-guidelines" class="active">CSS Guidelines</a></li>
+          
+            <li><a href="../resources">Resources</a></li>
+      
+    </ul>
+
+    <select data-js="mobile-menu" class="Select fromMedium-hidden docs-menu-mobile" name="nav">  
+          
+            <option value="../">UI Pattern Library</option>
+          
+            <option value="../framework">Framework</option>
+          
+            <option value="../principles">Principles</option>
+          
+            <li class="active"><a href="../css-guidelines" class="active">CSS Guidelines</a></li>
+            <option value="../css-guidelines" selected>CSS Guidelines</option>
+          
+            <option value="../resources">Resources</option>
+       
+    </select>
+
+  </div>
+</header>
+
+  <main class="wrapper">
+    <article class="docs-content markdown-body">
+      <h1 id="css-guidelines">CSS Guidelines</h1>
+
+<ol>
+  <li><a href="#1-format">Format</a>
+    <ul>
+      <li><a href="#declaration-order">Declaration order</a></li>
+    </ul>
+  </li>
+  <li><a href="#2-naming-conventions">Naming Conventions</a>
+    <ul>
+      <li><a href="#components">Components</a></li>
+      <li><a href="#utilities">Utilities</a></li>
+      <li><a href="#js-hacks">JS Hacks</a></li>
+    </ul>
+  </li>
+  <li><a href="#3-commenting">Commenting</a> (NOT FINISHED)
+    <ul>
+      <li><a href="#sass-comments">Sass comments</a></li>
+      <li><a href="#css-comments">CSS Comments</a></li>
+    </ul>
+  </li>
+  <li><a href="#4-sass-specific">Sass specific</a>
+    <ul>
+      <li><a href="#variables">Variables</a></li>
+    </ul>
+  </li>
+  <li><a href="#5-tooling-todo">Tooling (TODO)</a></li>
+  <li><a href="#6-further-reading">Further reading</a></li>
+</ol>
+
+<h2 id="1-format">1. Format</h2>
+
+<p>The chosen code format must ensure that code is: easy to read; easy to clearly
+comment; minimizes the chance of accidentally introducing errors; and results
+in useful diffs and blames.</p>
+
+<ul>
+  <li>Two (2) spaces indents, no tabs;</li>
+  <li>Ideally, 80-characters wide lines;</li>
+  <li>Meaningful use of whitespace.</li>
+  <li>Use one discrete selector per line in multi-selector rulesets.</li>
+  <li>Include a single space before the opening brace of a ruleset.</li>
+  <li>Include one declaration per line in a declaration block.</li>
+  <li>Use one level of indentation for each declaration.</li>
+  <li>Use lowercase and shorthand hex values, e.g., <code class="language-plaintext highlighter-rouge">#aaa</code>.</li>
+  <li><em>Where allowed</em>, avoid specifying units for zero-values, e.g., <code class="language-plaintext highlighter-rouge">margin: 0</code>.</li>
+  <li>Include a space after each comma in comma-separated property or function
+values.</li>
+  <li>Include a semi-colon at the end of the last declaration in a declaration
+block.</li>
+  <li>Separate each ruleset by a blank line.</li>
+  <li>Single declarations can use single-lineformat.</li>
+  <li>Long, comma-separated property values - such as collections of gradients or
+shadows - can be arranged across multiple lines in an effort to improve
+readability and produce more useful diffs.</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.selector-1</span><span class="o">,</span>
+<span class="nc">.selector-2</span><span class="o">,</span>
+<span class="nc">.selector-3</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s1">"text"</span><span class="o">]</span> <span class="p">{</span>
+  <span class="nl">-webkit-box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+  <span class="nl">-moz-box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+  <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="n">helvetica</span><span class="p">,</span> <span class="n">arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#333</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="n">linear-gradient</span><span class="p">(</span><span class="m">#fff</span><span class="p">,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0.8</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="nc">.selector-a</span><span class="o">,</span>
+<span class="nc">.selector-b</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.selector-1</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">10%</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.selector-2</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">20%</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.selector-3</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">30%</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nc">.selector</span> <span class="p">{</span>
+    <span class="nl">background-image</span><span class="p">:</span>
+        <span class="n">linear-gradient</span><span class="p">(</span><span class="m">#fff</span><span class="p">,</span> <span class="m">#ccc</span><span class="p">),</span>
+        <span class="n">linear-gradient</span><span class="p">(</span><span class="m">#f3c</span><span class="p">,</span> <span class="m">#4ec</span><span class="p">);</span>
+    <span class="nl">box-shadow</span><span class="p">:</span>
+        <span class="m">1px</span> <span class="m">1px</span> <span class="m">1px</span> <span class="m">#000</span><span class="p">,</span>
+        <span class="m">2px</span> <span class="m">2px</span> <span class="m">1px</span> <span class="m">1px</span> <span class="m">#ccc</span> <span class="nb">inset</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="declaration-order">Declaration order</h3>
+
+<p>If declarations are to be consistently ordered, it should be in accordance with
+a single, simple principle.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.selector</span> <span class="p">{</span>
+  <span class="c">/* Positioning */</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">z-index</span><span class="p">:</span> <span class="m">10</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+
+  <span class="c">/* Display &amp; Box Model */</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+  <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+  <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">10px</span> <span class="nb">solid</span> <span class="m">#333</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+
+  <span class="c">/* Color */</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="m">#000</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#fff</span>
+
+  <span class="c">/* Text */</span>
+  <span class="n">font-family</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">1.4</span><span class="p">;</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">right</span><span class="p">;</span>
+
+  <span class="c">/* Other */</span>
+  <span class="nl">cursor</span><span class="p">:</span> <span class="nb">pointer</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="2-naming-conventions">2.Naming conventions</h2>
+
+<h3 id="components">Components</h3>
+
+<p>The CSS responsible for component-specific styling.</p>
+
+<p>Syntax: <code class="language-plaintext highlighter-rouge">&lt;ComponentName&gt;[-descendentName][--modifierName]</code></p>
+
+<p>We use a BEM-like naming convention., meaning Block, Element, Modifier, is a front-end methodology coined by developers working at Yandex. Whilst BEM is a complete methodology, here we are only concerned with its naming convention. Further, the naming convention here only is BEM-like; the principles are exactly the same, but the actual syntax differs slightly.</p>
+
+<p>BEM splits components’ classes into three groups:</p>
+
+<ul>
+  <li><strong>Block</strong>: The sole root of the component.</li>
+  <li><strong>Element</strong>: A component part of the Block.</li>
+  <li><strong>Modifier</strong>: A variant or extension of the Block.</li>
+</ul>
+
+<p>This has several benefits when reading and writing HTML and CSS:</p>
+
+<ul>
+  <li>It helps to distinguish between the classes for the root of the component,
+descendent elements, and modifications.</li>
+  <li>It keeps the specificity of selectors low.</li>
+  <li>It helps to decouple presentation semantics from document semantics.</li>
+</ul>
+
+<h4 id="componentname">ComponentName</h4>
+
+<p>The component’s name must be written in <strong>UpperCamelCase</strong>.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.MyComponent</span> <span class="p">{</span> <span class="c">/* … */</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"MyComponent"</span><span class="nt">&gt;</span>
+  …
+<span class="nt">&lt;/article&gt;</span>
+</code></pre></div></div>
+
+<h4 id="componentnamemodifiername">ComponentName–modifierName</h4>
+
+<p>A component modifier is a class that modifies the presentation of the base
+component in some form (e.g., for a certain configuration of the component).
+Modifier names must be written in camelCase and be separated from the
+component name by two hyphens. The class should be included in the HTML <em>in
+addition</em> to the base component class.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* Core button */</span>
+<span class="nc">.Button</span> <span class="p">{</span> <span class="c">/* … */</span> <span class="p">}</span>
+<span class="c">/* Default button style */</span>
+<span class="nc">.Button--default</span> <span class="p">{</span> <span class="c">/* … */</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"Button Button--default"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>…<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+
+<h4 id="componentname-descendentname">ComponentName-descendentName</h4>
+
+<p>A component descendent is a class that is attached to a descendent node of a component. It’s responsible for applying presentation directly to the
+descendent on behalf of a particular component. Descendent names must be
+written in camelCase.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"Tweet"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"Tweet-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"Tweet-avatar"</span> <span class="na">src=</span><span class="s">""</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+    …
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Tweet-bodyText"</span><span class="nt">&gt;</span>
+    …
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/article&gt;</span>
+</code></pre></div></div>
+
+<h4 id="componentnameis-stateofcomponent">ComponentName.is-stateOfComponent</h4>
+
+<p>Use <code class="language-plaintext highlighter-rouge">is-stateName</code> or <code class="language-plaintext highlighter-rouge">has-stateName</code> to reflect changes to a component’s state. Normally used for javascript interactions. The state name must be camelCase.
+<strong>Never style these classes directly; they should always be used as an adjoining class.</strong></p>
+
+<p>This means that the same state names can be used in multiple contexts, but
+every component must define its own styles for the state (as they are scoped to
+the component).</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.Tweet</span> <span class="p">{</span> <span class="c">/* … */</span> <span class="p">}</span>
+<span class="nc">.Tweet.is-expanded</span> <span class="p">{</span> <span class="c">/* … */</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"Tweet is-expanded"</span><span class="nt">&gt;</span>
+  …
+<span class="nt">&lt;/article&gt;</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"Input has-error"</span><span class="nt">&gt;</span>
+  …
+<span class="nt">&lt;/article&gt;</span>
+</code></pre></div></div>
+
+<h3 id="utilities">Utilities</h3>
+
+<p>Low-level structural and positional traits. Utilities can be applied directly to any element within a component.</p>
+
+<p>Syntax: <code class="language-plaintext highlighter-rouge">&lt;property&gt;-&lt;value&gt;-[sm|md|lg]</code></p>
+
+<h4 id="property-value-size">property-value-size</h4>
+
+<p>Utilities must use a camelCase name. What follows is an example of how various utilities can be used to create a simple structure within a component.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"clearfix"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"float-left"</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"display-block"</span> <span class="na">src=</span><span class="s">""</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fromSmallSize-textAlign-center fromMediumSize-textAlign-left"</span><span class="nt">&gt;</span>
+    …
+  <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h4 id="responsive-utilities">Responsive utilities</h4>
+
+<p>Certain utilities have responsive variants using the patterns: <code class="language-plaintext highlighter-rouge">from&lt;breakpoint&gt;-&lt;property&gt;-&lt;value&gt;</code>. For examle: <code class="language-plaintext highlighter-rouge">fromMedium-textAlign-center</code>.</p>
+
+<h4 id="visibility-utilities">Visibility utilities</h4>
+
+<p>Syntax: <code class="language-plaintext highlighter-rouge">fromSmallSize-hidden</code> or <code class="language-plaintext highlighter-rouge">upToLargeSize-hidden</code>.</p>
+
+<p>Visibility classes let you show or hide elements based on screen size or device orientation. You can use visibility classes to control which elements users see depending on their browsing environment.</p>
+
+<h3 id="js-hacks">JS Hacks</h3>
+
+<p>Data-* attributes are used to bind the HTML to a JS Component. For example:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">data-toggler</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h2 id="3-commenting">3. Commenting</h2>
+
+<p>We need to create classes self explanatory, to not be necessary to explain the code. But at times the code is not enough.</p>
+
+<h4 id="sass-comments">Sass comments</h4>
+
+<p>We use Sass comments <code class="language-plaintext highlighter-rouge">//</code>, instead of CSS <code class="language-plaintext highlighter-rouge">/* */</code>. These comments will never be visible in the compiled CSS.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">//</span> <span class="nt">This</span> <span class="nt">is</span> <span class="nt">my</span> <span class="nt">comment</span>
+<span class="nc">.selector</span> <span class="p">{}</span>
+</code></pre></div></div>
+
+<p>If you want to display comments in the compiled CSS, you have to use CSS comments, type C.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c">/**
+ * Images.
+ */</span>
+
+<span class="nt">img</span> <span class="p">{</span>
+  <span class="nl">max-width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">font-style</span><span class="p">:</span> <span class="nb">italic</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>When do we use comments?:</strong></p>
+
+<p>At the beginning of a file:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="o">//</span>
+<span class="o">//</span> <span class="nt">Button</span> <span class="nt">Component</span>
+<span class="o">//</span> <span class="nt">this</span> <span class="nt">is</span> <span class="nt">the</span> <span class="nt">description</span><span class="o">,</span> <span class="nt">if</span> <span class="nt">needed</span>
+<span class="o">//</span>
+
+</code></pre></div></div>
+
+<p>At the beginning of a section:</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nc">.Component</span> <span class="p">{</span>
+  <span class="nc">...</span>
+<span class="p">}</span>
+
+<span class="c1">// Variations</span>
+<span class="c1">//</span>
+<span class="c1">// Variation</span>
+<span class="nc">.Component--variation</span> <span class="p">{</span>
+  <span class="nc">...</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>When you have to explain some line of CSS, when needed:</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.selector</span> <span class="p">{</span>
+  <span class="c1">// why z-index is used?</span>
+  <span class="nl">z-index</span><span class="p">:</span> <span class="m">3</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="css-comments">CSS Comments</h4>
+
+<p>CSS comments follows the <a href="https://github.com/necolas/idiomatic-css">Idiomatic CSS style guide </a>:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* ==========================================================================
+   Section comment block
+   ========================================================================== */</span>
+
+<span class="c">/* Sub-section comment block
+   ========================================================================== */</span>
+
+<span class="c">/**
+ * Short description using Doxygen-style comment format
+ *
+ * The first sentence of the long description starts here and continues on this
+ * line for a while finally concluding here at the end of this paragraph.
+ *
+ * The long description is ideal for more detailed explanations and
+ * documentation. It can include example HTML, URLs, or any other information
+ * that is deemed necessary or useful.
+ *
+ * @tag This is a tag named 'tag'
+ *
+ * TODO: This is a todo statement that describes an atomic task to be completed
+ *   at a later date. It wraps after 80 characters and following lines are
+ *   indented by 2 spaces.
+ */</span>
+
+<span class="c">/* Basic comment */</span>
+</code></pre></div></div>
+
+<h2 id="4-sass-specific">4. Sass specific</h2>
+
+<ul>
+  <li>Limit nesting to 1 level deep. Reassess any nesting more than 2 levels deep.
+This prevents overly-specific CSS selectors.</li>
+  <li>Avoid selector nesting, if you have to nest then limit it to one level deep.</li>
+  <li>Always place <code class="language-plaintext highlighter-rouge">@extend</code> statements on the first lines of a declaration
+block.</li>
+  <li>Where possible, group <code class="language-plaintext highlighter-rouge">@include</code> statements at the top of a declaration
+block, after any <code class="language-plaintext highlighter-rouge">@extend</code> statements.</li>
+  <li>Only use the parent selector reference (&amp;) for these use cases
+    <ul>
+      <li>Appending it to pseudo classes (<code class="language-plaintext highlighter-rouge">&amp;:focus</code>, <code class="language-plaintext highlighter-rouge">&amp;:hover</code>, <code class="language-plaintext highlighter-rouge">&amp;:first-child</code>).</li>
+      <li>Appending it to pseudo elements (<code class="language-plaintext highlighter-rouge">&amp;::after</code>, <code class="language-plaintext highlighter-rouge">&amp;::before</code>).</li>
+      <li>Appending it to State hooks in order to chain it to the selector it’s referencing (<code class="language-plaintext highlighter-rouge">&amp;.is-loading</code>).</li>
+      <li>Referencing itself when combined with any of the above to avoid duplicating CSS properties.</li>
+    </ul>
+  </li>
+  <li>Never Write Vendor Prefixes, we use <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> instead.</li>
+  <li>Variablize All Common Numbers and Colors.</li>
+  <li>Insert Media Queries in the element/class/component.</li>
+</ul>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.selector-1</span> <span class="p">{</span>
+  <span class="k">@extend</span> <span class="nc">.other-rule</span><span class="p">;</span>
+  <span class="k">@include</span> <span class="nd">clearfix</span><span class="p">();</span>
+  <span class="k">@include</span> <span class="nd">box-sizing</span><span class="p">(</span><span class="n">border-box</span><span class="p">);</span>
+
+  <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
+    <span class="nt">color</span><span class="nd">:red</span>
+  <span class="p">}</span>
+
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="variables">Variables</h3>
+
+<p>Only create variables when it makes sense to do so. Do not initiate new variables for the heck of it, it won’t help. A new variable should be created only when all of the following criteria are met:</p>
+
+<ul>
+  <li>The value is repeated at least twice</li>
+  <li>The value is likely to be updated at least once</li>
+</ul>
+
+<h4 id="default-flag">!default Flag</h4>
+
+<p>When building a library, a framework, a grid system or any piece of Sass that is intended to be distributed and used by external developers, all configuration variables should be defined with the <code class="language-plaintext highlighter-rouge">!default</code> flag so they can be overwritten.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span><span class="nt">baseline</span><span class="o">:</span> <span class="err">1</span><span class="nt">em</span> <span class="o">!</span><span class="nt">default</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>Thanks to this, a developer can define their own $baseline variable before importing your library without seeing their value redefined.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">//</span> <span class="nt">Developer</span><span class="err">’</span><span class="nt">s</span> <span class="nt">own</span> <span class="nt">variable</span>
+<span class="err">$</span><span class="nt">baseline</span><span class="o">:</span> <span class="err">2</span><span class="nt">em</span><span class="o">;</span>
+
+<span class="o">//</span> <span class="nt">Your</span> <span class="nt">library</span> <span class="nt">declaring</span> <span class="err">`$</span><span class="nt">baseline</span><span class="err">`</span>
+<span class="k">@import</span> <span class="s2">'your-library'</span><span class="p">;</span>
+
+<span class="o">//</span> <span class="err">$</span><span class="nt">baseline</span> <span class="o">==</span> <span class="err">2</span><span class="nt">em</span><span class="o">;</span>
+</code></pre></div></div>
+
+<h3 id="multiple-variables-or-maps">Multiple Variables Or Maps</h3>
+
+<p>There are advantages of using maps rather than multiple distinct variables. The main one is the ability to loop over a map, which is not possible with distinct variables.</p>
+
+<p>Another pro of using a map is the ability to create a little getter function to provide a friendlier API. For instance, consider the following Sass code:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span><span class="nt">z-indexes</span><span class="o">:</span> <span class="o">(</span>
+  <span class="s2">'modal'</span><span class="o">:</span> <span class="err">5000</span><span class="o">,</span>
+  <span class="s2">'dropdown'</span><span class="o">:</span> <span class="err">4000</span><span class="o">,</span>
+  <span class="s2">'default'</span><span class="o">:</span> <span class="err">1</span><span class="o">,</span>
+  <span class="s2">'below'</span><span class="o">:</span> <span class="nt">-1</span><span class="o">,</span>
+<span class="o">);</span>
+
+<span class="k">@function</span> <span class="n">z</span><span class="p">(</span><span class="err">$</span><span class="n">layer</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="n">map-get</span><span class="p">(</span><span class="err">$</span><span class="n">z-indexes</span><span class="p">,</span> <span class="err">$</span><span class="n">layer</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="5-tooling-todo">5. Tooling (TODO)</h2>
+
+<p>Tools to help frontend development: linters (eslint, scsslint), .editorconf, documentation (sassdoc.doc)</p>
+
+<h2 id="6-further-reading">6. Further reading</h2>
+
+<ul>
+  <li><a href="https://github.com/suitcss/suit/tree/master/doc">Suit CSS, Nicolas Gallagher</a></li>
+  <li><a href="https://github.com/necolas/idiomatic-css">Idiomatic CSS, Nicolas Gallagher</a></li>
+  <li><a href="http://cssguidelin.es/">CSS Guidelines, Harry Roberts</a></li>
+  <li><a href="https://github.com/chris-pearce/css-guidelines">CSS Guidelines, Chris Pearce</a></li>
+  <li>[Battling BEM: 10 Common Problems And How To Avoid Them] (https://www.smashingmagazine.com/2016/06/battling-bem-extended-edition-common-problems-and-how-to-avoid-them/)</li>
+</ul>
+
+    </article>
+  </main>
+
+  <footer class="docs-footer">
+  <div class="wrapper">
+    <p><a href="https://flywire.com">flywire.com</a> style guide and pattern library</p>
+  </div>
+</footer>
+
+
+  <script type="text/javascript" src="../javascript/main.js"></script>
+</body>
+
+</html>
