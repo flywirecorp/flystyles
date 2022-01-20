@@ -11,7 +11,7 @@
     "css:autoprefix": "node_modules/.bin/postcss --use autoprefixer -o dist/css/flystyles.css dist/css/flystyles.css",
     "css:minify": "node_modules/.bin/cleancss -o dist/css/flystyles.min.css dist/css/flystyles.css",
     "build": "npm run css:build && npm run css:autoprefix && npm run css:minify",
-    "css:docs": "sass docs/_scss/main.scss docs/css/main.css --style=expanded",
+    "css:docs": "node_modules/.bin/sass docs/_scss/main.scss docs/css/main.css --style=expanded",
     "version": "npm run build && npm run css:docs && git add -A dist",
     "postversion": "git push && git push --tags",
     "yalc:publish": "npm run build && yalc publish --push"
