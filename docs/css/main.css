@@ -8284,7 +8284,6 @@ tr .Calendar-day:last-child {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   position: relative;
-  z-index: 3;
   padding: 0 0 0 8px;
   background-image: none;
   width: 96px;
